@@ -41,23 +41,31 @@ Si algo de aquí contradice la especificación, manda la especificación salvo d
 
 ## Estructura
 
+Multipágina: cada sección es una carpeta con `index.html` **generado** por `tools/build-pages.mjs` (no editar a mano;
+cambiar `content/` o el generador y ejecutar `npm run pages`). Rutas en `content/routes.json`.
+
 ```
-/                  index.html (PWA), manifest.webmanifest, sw.js
+/                  index.html (Inicio), manifest.webmanifest, sw.js
+ponencia/ marco/ plantilla/ inclusiva/ ia/ lunes/ bibliografia/ buscar/   (secciones)
 presentacion/      motor de diapositivas (notas: ?notas)
 plantilla/         plantilla socrática
 ia/                banco de prompts
 bibliografia/
 content/           texto (es/en)
-css/               tokens.css, base.css, components.css, a11y.css
-js/                app, router, a11y, tts, picto, search, prompts, socratic, i18n
+css/               tokens-color.css (generado), tokens.css, base.css, components.css, a11y.css
+js/                boot (clásico, en <head>), app, router, i18n, ui, a11y, types.d.ts; después tts, picto, search, prompts, socratic
 assets/            icons/, qr/, img/, fonts/
 tools/             scripts Node de desarrollo (no se ejecutan en producción)
 docs/              guion.md, especificacion.md, pruebas de prompts
 ```
 
-## Previsualizar
+## Previsualizar y comprobar
 
-`python -m http.server 8000` en la raíz y abrir http://localhost:8000/. No usar `file://`.
+- `python -m http.server 8000` en la raíz y abrir http://localhost:8000/. No usar `file://`.
+- Para simular el subdirectorio de Pages, sirve la carpeta padre en el puerto 8765 y abre http://127.0.0.1:8765/pensar-en-digital/.
+- `npm run typecheck`: TypeScript estricto sobre el JSDoc; tiene que dar 0 errores.
+- `npm run check:ui`: axe, overflow y errores de consola en todas las rutas y esquemas (necesita el servidor del 8765 y Chrome o Edge).
+- `npm run tokens` / `npm run icons` / `npm run pages`: regeneran los archivos derivados.
 
 ## Workflow de GitHub Pages
 

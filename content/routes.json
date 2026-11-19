@@ -1,0 +1,11 @@
+[
+  { "id": "inicio", "path": "", "icon": "home", "bar": true, "rail": true },
+  { "id": "ponencia", "path": "ponencia/", "icon": "co_present", "bar": false, "rail": true },
+  { "id": "marco", "path": "marco/", "icon": "school", "bar": false, "rail": false },
+  { "id": "plantilla", "path": "plantilla/", "icon": "psychology", "bar": true, "rail": true },
+  { "id": "inclusiva", "path": "inclusiva/", "icon": "diversity_3", "bar": false, "rail": false },
+  { "id": "ia", "path": "ia/", "icon": "smart_toy", "bar": true, "rail": true },
+  { "id": "lunes", "path": "lunes/", "icon": "rocket_launch", "bar": false, "rail": false },
+  { "id": "bibliografia", "path": "bibliografia/", "icon": "library_books", "bar": false, "rail": true },
+  { "id": "buscar", "path": "buscar/", "icon": "search", "bar": false, "rail": false }
+]

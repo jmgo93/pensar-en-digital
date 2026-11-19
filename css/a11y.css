@@ -1,0 +1,174 @@
+/* Accesibilidad: foco, salto al contenido, interlineado WCAG 1.4.12, movimiento reducido,
+   colores forzados y transiciones entre páginas. */
+
+:focus-visible {
+  outline: 3px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+  border-radius: var(--md-sys-shape-corner-extra-small);
+}
+
+.btn:focus-visible,
+.icon-btn:focus-visible,
+.chip:focus-visible,
+.fab:focus-visible,
+.drawer-item:focus-visible,
+.switch:focus-visible {
+  border-radius: var(--md-sys-shape-corner-full);
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: calc(0.5rem + env(safe-area-inset-top));
+  inset-inline-start: 0.5rem;
+  z-index: 1000;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font: var(--md-sys-typescale-label-large);
+  text-decoration: none;
+  translate: 0 -200%;
+}
+
+.skip-link:focus {
+  translate: 0 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* WCAG 1.4.12 Espaciado del texto. */
+:root[data-spacing="wide"] body,
+:root[data-spacing="wide"] body * {
+  line-height: 1.8 !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+}
+
+:root[data-spacing="wide"] main p,
+:root[data-spacing="wide"] main li {
+  margin-block-end: 2em;
+}
+
+:root[data-spacing="wide"] .icon {
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+  line-height: 1 !important;
+}
+
+/* Texto grande (≥ 150 %) en pantallas estrechas: el contenido escala al 200 %, pero el cromo
+   (barra superior y barra de navegación) se compacta para no ocupar media pantalla.
+   Las etiquetas siguen disponibles para lectores de pantalla. */
+@media (max-width: 599.98px) {
+  :root[data-large] .brand-name,
+  :root[data-large] .nav-bar .label {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  :root[data-large] .top-app-bar .brand { flex: 1; }
+
+  :root[data-large] .nav-bar {
+    min-block-size: 0;
+    padding-block: 0.375rem calc(0.375rem + env(safe-area-inset-bottom));
+  }
+
+  :root[data-large] {
+    --pd-navbar-h: 3.25rem;
+  }
+
+  :root[data-large] .hero h1,
+  :root[data-large] .page-header h1 {
+    font-size: max(1.25rem, 10vw);
+    line-height: 1.2;
+  }
+}
+
+/* Alto contraste: bordes más marcados en componentes. */
+:root[data-scheme$="-hc"] .card-elevated,
+:root[data-scheme$="-hc"] .card-filled {
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+:root[data-scheme$="-hc"] a {
+  text-decoration-thickness: 0.12em;
+}
+
+/* Modo de colores forzados (Windows). */
+@media (forced-colors: active) {
+  .switch,
+  .chip,
+  .btn,
+  .card,
+  .nav-item .indicator {
+    border: 1px solid CanvasText;
+  }
+  .nav-item[aria-current="page"] .indicator,
+  .drawer-item[aria-current="page"] {
+    outline: 2px solid Highlight;
+  }
+}
+
+/* Transiciones entre páginas (View Transitions entre documentos). */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root) {
+    animation: vt-out var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-emphasized-accelerate) both;
+  }
+
+  ::view-transition-new(root) {
+    animation: vt-in var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized-decelerate) both;
+  }
+}
+
+@keyframes vt-out {
+  to { opacity: 0; translate: 0 -0.5rem; }
+}
+
+@keyframes vt-in {
+  from { opacity: 0; translate: 0 1.5rem; }
+}
+
+/* Movimiento reducido: sin animaciones ni transiciones. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after,
+  ::backdrop {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .ripple { display: none; }
+}
+
+@media print {
+  .top-app-bar,
+  .nav-bar,
+  .nav-rail,
+  .skip-link,
+  .snackbar-host,
+  dialog {
+    display: none !important;
+  }
+  .app {
+    display: block;
+  }
+}

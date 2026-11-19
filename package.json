@@ -1,0 +1,20 @@
+{
+  "name": "pensar-en-digital",
+  "private": true,
+  "description": "Herramientas de desarrollo (no se usan en producción: el sitio no tiene paso de build).",
+  "type": "module",
+  "scripts": {
+    "tokens": "node tools/build-tokens.mjs",
+    "pages": "node tools/build-pages.mjs",
+    "icons": "node tools/build-icons.mjs",
+    "typecheck": "tsc -p jsconfig.json",
+    "check:ui": "node tools/check-ui.mjs http://127.0.0.1:8765/pensar-en-digital/",
+    "serve": "python -m http.server 8000"
+  },
+  "devDependencies": {
+    "@material/material-color-utilities": "0.3.0",
+    "axe-core": "4.14.1",
+    "puppeteer-core": "25.18.1",
+    "typescript": "7.0.2"
+  }
+}

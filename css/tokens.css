@@ -1,0 +1,76 @@
+/* Tokens M3 no cromáticos: tipografía, forma, elevación, movimiento, estado.
+   Los colores están en tokens-color.css (generado). Unidades en rem para escalar con --pd-font-scale. */
+
+@font-face {
+  font-family: "Material Symbols Rounded";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../assets/fonts/material-symbols-rounded.woff2") format("woff2");
+}
+
+:root {
+  /* Escala de letra del panel de accesibilidad (1 – 2). */
+  --pd-font-scale: 1;
+
+  /* Tipografía: pila del sistema (decisión de rendimiento, ver TAREAS.md). */
+  --md-ref-typeface-plain: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --md-ref-typeface-brand: var(--md-ref-typeface-plain);
+
+  /* Escala tipográfica M3: tamaño / interlineado / peso / tracking. */
+  --md-sys-typescale-display-large: 400 3.5625rem/4rem var(--md-ref-typeface-brand);
+  --md-sys-typescale-display-medium: 400 2.8125rem/3.25rem var(--md-ref-typeface-brand);
+  --md-sys-typescale-display-small: 400 2.25rem/2.75rem var(--md-ref-typeface-brand);
+  --md-sys-typescale-headline-large: 400 2rem/2.5rem var(--md-ref-typeface-brand);
+  --md-sys-typescale-headline-medium: 400 1.75rem/2.25rem var(--md-ref-typeface-brand);
+  --md-sys-typescale-headline-small: 400 1.5rem/2rem var(--md-ref-typeface-brand);
+  --md-sys-typescale-title-large: 400 1.375rem/1.75rem var(--md-ref-typeface-brand);
+  --md-sys-typescale-title-medium: 500 1rem/1.5rem var(--md-ref-typeface-plain);
+  --md-sys-typescale-title-small: 500 0.875rem/1.25rem var(--md-ref-typeface-plain);
+  --md-sys-typescale-body-large: 400 1rem/1.5rem var(--md-ref-typeface-plain);
+  --md-sys-typescale-body-medium: 400 0.875rem/1.25rem var(--md-ref-typeface-plain);
+  --md-sys-typescale-body-small: 400 0.75rem/1rem var(--md-ref-typeface-plain);
+  --md-sys-typescale-label-large: 500 0.875rem/1.25rem var(--md-ref-typeface-plain);
+  --md-sys-typescale-label-medium: 500 0.75rem/1rem var(--md-ref-typeface-plain);
+  --md-sys-typescale-label-small: 500 0.6875rem/1rem var(--md-ref-typeface-plain);
+
+  /* Forma. */
+  --md-sys-shape-corner-extra-small: 0.25rem;
+  --md-sys-shape-corner-small: 0.5rem;
+  --md-sys-shape-corner-medium: 0.75rem;
+  --md-sys-shape-corner-large: 1rem;
+  --md-sys-shape-corner-extra-large: 1.75rem;
+  --md-sys-shape-corner-full: 999px;
+
+  /* Elevación (sombras con el color shadow del esquema). */
+  --pd-shadow: color-mix(in srgb, var(--md-sys-color-shadow) 30%, transparent);
+  --pd-shadow-ambient: color-mix(in srgb, var(--md-sys-color-shadow) 15%, transparent);
+  --md-sys-elevation-level0: none;
+  --md-sys-elevation-level1: 0 1px 2px var(--pd-shadow), 0 1px 3px 1px var(--pd-shadow-ambient);
+  --md-sys-elevation-level2: 0 1px 2px var(--pd-shadow), 0 2px 6px 2px var(--pd-shadow-ambient);
+  --md-sys-elevation-level3: 0 1px 3px var(--pd-shadow), 0 4px 8px 3px var(--pd-shadow-ambient);
+  --md-sys-elevation-level4: 0 2px 3px var(--pd-shadow), 0 6px 10px 4px var(--pd-shadow-ambient);
+
+  /* Movimiento M3. */
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-duration-short4: 200ms;
+  --md-sys-motion-duration-medium2: 300ms;
+  --md-sys-motion-duration-medium4: 400ms;
+
+  /* Opacidad de las capas de estado. */
+  --md-sys-state-hover: 0.08;
+  --md-sys-state-focus: 0.1;
+  --md-sys-state-pressed: 0.1;
+  --md-sys-state-dragged: 0.16;
+
+  /* Medidas. */
+  --pd-touch: 3rem; /* 48 dp */
+  --pd-gutter: 1rem;
+  --pd-content-max: 52rem;
+  --pd-topbar-h: 4rem;
+  --pd-navbar-h: 5rem;
+  --pd-rail-w: 5.5rem;
+}

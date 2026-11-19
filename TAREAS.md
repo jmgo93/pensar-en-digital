@@ -37,6 +37,13 @@ Cada fase termina con un commit. Sin push hasta que se pida.
 - Pruebas en dispositivos reales (Android e iOS) a cargo del usuario.
 - Prompts: se entrega una hoja de pruebas completa y el usuario los prueba con la web ya publicada.
 - El repositorio está en `c:\Dev\Ponencia\pensar-en-digital`.
+- **Arquitectura multipágina** (decisión de la Fase 1):
+  - Cada sección es una carpeta con su `index.html` (`ponencia/`, `marco/`, `plantilla/`, `inclusiva/`, `ia/`, `lunes/`, `bibliografia/`, `buscar/`). Así cada sección tiene URL propia para QR y accesos directos y funciona sin JS de enrutado.
+  - Las páginas las genera `tools/build-pages.mjs` desde `content/`.
+  - Las transiciones entre páginas usan View Transitions entre documentos y, sin soporte, la navegación es normal.
+  - La sección 4 de la especificación ("¿Digitalización o innovación?") vive en `plantilla/`.
+- `@material/material-color-utilities` está fijada en 0.3.0, porque la 0.4.0 publica imports ESM rotos.
+- Panel de accesibilidad: la lectura en voz alta y los pictogramas aparecen como "Próximamente" hasta la Fase 4.
 
 ---
 
@@ -54,25 +61,33 @@ Cada fase termina con un commit. Sin push hasta que se pida.
 
 Depende de: 0.6.
 
-- [ ] **1.1 Tokens M3** (`css/tokens.css`) a partir de la semilla naranja: esquemas claro, oscuro y de alto contraste (claro y oscuro), más escala tipográfica, formas, elevación y movimiento.
+> **Resultado (20/11):**
+> - `npm run check:ui` pasa sin problemas: axe-core (WCAG 2.2 A/AA y buenas prácticas) en las 9 rutas, en claro, oscuro, los 2 de alto contraste e inglés.
+> - Sin scroll horizontal de 320 a 1440 px, también con letra al 200 % e interlineado amplio.
+> - Sin errores de consola. `npm run typecheck` (TS estricto sobre JSDoc) da 0 errores.
+> - Informe de contraste en `docs/contraste.md`: 0 fallos en los 4 esquemas.
+> - Fuente de iconos: 62 iconos, 10,9 KB.
+> - Con letra ≥ 150 % en móvil, el cromo se compacta: el nombre de la barra y las etiquetas de la barra inferior quedan solo para lectores de pantalla.
+
+- [x] **1.1 Tokens M3** (`css/tokens.css`) a partir de la semilla naranja: esquemas claro, oscuro y de alto contraste (claro y oscuro), más escala tipográfica, formas, elevación y movimiento.
   - Generados una sola vez con `material-color-utilities` (script en `tools/`); el resultado se guarda en CSS.
   - Criterio: un informe de contraste (`tools/` → `docs/contraste.md`) muestra ≥ 4.5:1 en texto y ≥ 3:1 en la interfaz para cada par de roles usado. No hay texto naranja claro sobre blanco.
-- [ ] **1.2 Fuentes e iconos locales:** subset de Material Symbols Rounded (woff2) con los iconos usados y pila del sistema.
+- [x] **1.2 Fuentes e iconos locales:** subset de Material Symbols Rounded (woff2) con los iconos usados y pila del sistema.
   - Criterio: la fuente de iconos pesa menos de 100 KB y no hay peticiones externas.
-- [ ] **1.3 Layout responsive:** top app bar, navigation bar inferior (móvil) y navigation rail (≥ 600 px), con `viewport-fit=cover` y `env(safe-area-inset-*)`.
+- [x] **1.3 Layout responsive:** top app bar, navigation bar inferior (móvil) y navigation rail (≥ 600 px), con `viewport-fit=cover` y `env(safe-area-inset-*)`.
   - Criterio: sin scroll horizontal de 320 px a 1920 px; las áreas táctiles miden ≥ 48 dp.
-- [ ] **1.4 Router y transiciones:** rutas relativas al subdirectorio, View Transitions con alternativa, `prefers-reduced-motion`, ripple y snackbar.
+- [x] **1.4 Router y transiciones:** rutas relativas al subdirectorio, View Transitions con alternativa, `prefers-reduced-motion`, ripple y snackbar.
   - Criterio: funciona servido en `/pensar-en-digital/` (prueba local con un subdirectorio) y con el botón atrás.
-- [ ] **1.5 Panel de accesibilidad** (`accessibility_new`): letra al 100–200 %, tema claro/oscuro/sistema, alto contraste, interlineado WCAG 1.4.12 e idioma es/en.
+- [x] **1.5 Panel de accesibilidad** (`accessibility_new`): letra al 100–200 %, tema claro/oscuro/sistema, alto contraste, interlineado WCAG 1.4.12 e idioma es/en.
   - TTS y pictogramas aparecen como interruptores ya maquetados, pero se conectan en la Fase 4.
   - Las preferencias se guardan en `localStorage` con try/catch.
   - Criterio: con la letra al 200 % nada se corta; se maneja entero con teclado; el foco queda atrapado en el diálogo y vuelve al cerrarlo.
-- [ ] **1.6 Footer común:** licencias, atribución de Claude, ARASAAC, Material Symbols y línea del CEP (enlace pendiente de P2).
+- [x] **1.6 Footer común:** licencias, atribución de Claude, ARASAAC, Material Symbols y línea del CEP (enlace pendiente de P2).
   - Criterio: aparece en todas las rutas.
-- [ ] **1.7 Infraestructura i18n** (`js/i18n.js`): cambia `lang` y los textos de la interfaz desde `content/`.
-- [ ] **1.8 Landmarks, "Saltar al contenido" y foco visible.**
+- [x] **1.7 Infraestructura i18n** (`js/i18n.js`): cambia `lang` y los textos de la interfaz desde `content/`.
+- [x] **1.8 Landmarks, "Saltar al contenido" y foco visible.**
   - Criterio: axe sin errores en el esqueleto.
-- [ ] **1.9 DEMO al usuario** → parar hasta recibir el visto bueno. Commit "Fase 1".
+- [~] **1.9 DEMO al usuario** → parar hasta recibir el visto bueno. Commit "Fase 1".
 
 ## Fase 2 · Contenido verificado y buscador
 
