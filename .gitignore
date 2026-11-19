@@ -1,0 +1,20 @@
+# Dependencias y herramientas locales
+node_modules/
+.lighthouseci/
+.cache/
+coverage/
+
+# Logs y temporales
+*.log
+*.tmp
+tmp/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / secretos
+.env
+.env.*
+.claude/settings.local.json
