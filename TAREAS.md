@@ -9,12 +9,11 @@ Cada fase termina con un commit. Sin push hasta que se pida.
 
 | # | Asunto | Bloquea | Estado |
 |---|---|---|---|
-| P6 | ¿Los días 25 y 26 son dos sesiones de la misma ponencia? ¿A qué hora y en qué sede exacta? (solo para portada y guion; no bloquea) | 5.3 | Abierta |
 | P7 | Cuenta de Google para crear el formulario de votación (lo crea el usuario con las preguntas que redacto) | 5.4 | Abierta |
 
 ### Decisiones tomadas
 
-- Fecha: 25 y 26 de noviembre de 2026, Almería. **Plazo real: la web tiene que estar publicada y probada antes del 25/11.** Prioridad: lo que se proyecta y lo que usa el público ese día.
+- Fecha: 25 y 26 de noviembre de 2026, Almería. **La fecha, la hora y el lugar no aparecen en la web.** **Plazo real: la web tiene que estar publicada y probada antes del 25/11.** Prioridad: lo que se proyecta y lo que usa el público ese día.
 - Contacto del CEP para el footer: https://www.juntadeandalucia.es/educacion/portales/web/cep-almeria
 - Votación: Google Forms (opción b del §0), gratuito, sin registro para el público y sin límite de participantes. Los planes gratuitos de Mentimeter y Wooclap limitan el número de participantes, algo inviable en un auditorio (lo verifico en la tarea 5.4). Resultados: gráfico de la hoja de respuestas en otra pestaña o embebido.
 - Inglés: PWA, plantilla, prompts y presentación bilingües; guion solo en español.
@@ -87,7 +86,7 @@ Depende de: 0.6.
 - [x] **1.7 Infraestructura i18n** (`js/i18n.js`): cambia `lang` y los textos de la interfaz desde `content/`.
 - [x] **1.8 Landmarks, "Saltar al contenido" y foco visible.**
   - Criterio: axe sin errores en el esqueleto.
-- [~] **1.9 DEMO al usuario** → parar hasta recibir el visto bueno. Commit "Fase 1".
+- [x] **1.9 DEMO al usuario** (aprobada el 20/11) → parar hasta recibir el visto bueno. Commit "Fase 1".
 
 ## Fase 2 · Contenido verificado y buscador
 
