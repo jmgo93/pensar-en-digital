@@ -103,6 +103,12 @@ const page = (route) => {
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#fff8f6">
   <link rel="icon" href="${rel}assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="${rel}manifest.webmanifest">
+  <link rel="apple-touch-icon" href="${rel}assets/icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Pensar en Digital">
   <link rel="canonical" href="${site.url}${route.path}">
   <link rel="preload" href="${rel}assets/fonts/material-symbols-rounded.woff2" as="font" type="font/woff2" crossorigin>
 ${css}

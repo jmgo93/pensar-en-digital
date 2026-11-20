@@ -65,7 +65,8 @@ docs/              guion.md, especificacion.md, pruebas de prompts
 - Para simular el subdirectorio de Pages, sirve la carpeta padre en el puerto 8765 y abre http://127.0.0.1:8765/pensar-en-digital/.
 - `npm run typecheck`: TypeScript estricto sobre el JSDoc; tiene que dar 0 errores.
 - `npm run check:ui`: axe, overflow y errores de consola en todas las rutas y esquemas (necesita el servidor del 8765 y Chrome o Edge).
-- `npm run tokens` / `npm run icons` / `npm run pages`: regeneran los archivos derivados.
+- `npm run tokens` / `icons` / `app-icons` / `picto` / `blank`: regeneran recursos derivados (raramente).
+- **Antes de cada commit que se vaya a publicar: `npm run build:all`** (páginas, índice de búsqueda, hoja de pruebas y lista de precarga del SW). Si no se regenera `sw-precache.js`, los usuarios no reciben la nueva versión.
 
 ## Workflow de GitHub Pages
 

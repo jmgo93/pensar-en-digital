@@ -13,6 +13,15 @@ import { renderSearch } from './search.js';
 import { renderPrompts } from './prompts.js';
 import { renderSocratic } from './socratic.js';
 import { loadSources } from './content.js';
+import { applyTts } from './tts.js';
+import { applyPicto } from './picto.js';
+import { registerSW } from './pwa.js';
+
+/** Controles de voz y pictogramas según las preferencias. */
+const applyModes = () => {
+  applyTts();
+  applyPicto();
+};
 
 /** Pinta el contenido de la sección actual (si lo tiene). */
 const renderView = async () => {
@@ -23,6 +32,7 @@ const renderView = async () => {
     else if (id === 'ia') await renderPrompts();
     else if (id === 'plantilla') await renderSocratic();
     else await renderSection(id);
+    applyModes();
   } catch (err) {
     console.error('No se pudo pintar la sección', err);
   }
@@ -70,6 +80,7 @@ const initShortcuts = () => {
 };
 
 const init = async () => {
+  registerSW();
   initRipple();
   initA11yPanel();
   initDrawer();
@@ -87,6 +98,7 @@ const init = async () => {
       renderView();
     });
     document.addEventListener('pd:profilechange', renderView);
+    document.addEventListener('pd:prefschange', applyModes);
     await renderView();
   } catch (err) {
     console.error('No se pudieron cargar los textos de interfaz', err);

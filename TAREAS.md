@@ -117,6 +117,12 @@ Depende de: Fase 1 aprobada; P1 y P4 para algunas piezas.
 
 ## Fase 3 · Plantilla socrática y banco de prompts
 
+> **Resultado (20/11):**
+> - Plantilla `plantilla/`: 7 dimensiones con repreguntas por respuesta, resultado (espectro y barras) con propuestas citadas, impresión/PDF, texto, "Abrir en IA" y PDF en blanco es/en (`npm run blank`).
+> - Banco `ia/`: guía de 6 puntos y 23 tarjetas en 10 categorías con variantes por etapa, variables rellenables y Copiar/Gemini/ChatGPT/Claude/Compartir.
+> - "Abrir en IA" comprobado el 20/11: ChatGPT `?q=` funciona; Claude `/new?q=` conserva el parámetro tras iniciar sesión (precarga por verificar); Gemini no precarga, así que se copia y se avisa.
+> - `docs/pruebas-prompts.md` (`npm run prompt-tests`) para la prueba real.
+
 Depende de: Fase 2 (contenido y perfil).
 
 - [x] **3.1 Stepper socrático** sobre una actividad concreta. Dimensiones: ICAP, SAMR, exigencia cognitiva, DUA, resistencia a la IA, evaluación y datos.
@@ -132,18 +138,34 @@ Depende de: Fase 2 (contenido y perfil).
 
 ## Fase 4 · TTS, ARASAAC y PWA offline
 
+> **Resultado (20/11):**
+> - Lectura en voz alta (`js/tts.js`):
+>   - Botón en cada bloque y FAB "Escuchar la página". Lee por fragmentos y resalta el que suena.
+>   - Gestiona `voiceschanged` y los errores. La pausa recuerda la posición.
+>   - El panel avisa de que en iOS solo hay voces de Apple. Probado con la voz es-ES del sistema.
+> - ARASAAC: endpoints verificados (`/v1/pictograms/{es|en}/bestsearch|search/{palabra}`, imágenes `_300.png`, CORS).
+>   - `content/picto-map.json` precalculado (`npm run picto`; 0 = sin pictograma).
+>   - Caché en localStorage y SW stale-while-revalidate. Atribución en el modo y en el footer.
+> - PWA:
+>   - Manifest con iconos any, maskable y monochrome, y accesos directos a IA, Plantilla y Bibliografía. Metadatos de iOS.
+>   - DevTools: **0 errores** de instalabilidad y de manifest.
+>   - SW con precarga generada (`npm run sw`): las 9 rutas funcionan **sin conexión** tras la primera visita.
+>   - Aviso "Nueva versión disponible" probado.
+>   - Instalación: botón propio con `beforeinstallprompt` y bottom sheet de iOS.
+> - **Antes de cada push: `npm run build:all`**; si no, la versión del SW no cambia.
+
 Depende de: Fases 2 y 3.
 
-- [ ] **4.1 TTS:** reproducir/pausar en cada bloque y leer toda la página, con voz `es-ES` o `en-*` según el idioma.
+- [x] **4.1 TTS:** reproducir/pausar en cada bloque y leer toda la página, con voz `es-ES` o `en-*` según el idioma.
   - Resalta el fragmento que se lee y gestiona `voiceschanged` y los errores.
   - La ayuda explica que en iOS solo hay voces de Apple.
-- [ ] **4.2 Verificar los endpoints de ARASAAC** en la documentación oficial (búsqueda y URLs de imagen; idioma `es`/`en`).
-- [ ] **4.3 Modo pictográfico:** tokenizado, palabras vacías, tira de pictogramas, caché (Cache API + `localStorage`) y `content/picto-map.json` precalculado (`tools/`).
+- [x] **4.2 Verificar los endpoints de ARASAAC** en la documentación oficial (búsqueda y URLs de imagen; idioma `es`/`en`).
+- [x] **4.3 Modo pictográfico:** tokenizado, palabras vacías, tira de pictogramas, caché (Cache API + `localStorage`) y `content/picto-map.json` precalculado (`tools/`).
   - Atribución visible en el modo y en el footer.
-- [ ] **4.4 Manifest:** rutas relativas, iconos de 192/512 (maskable y monochrome), `shortcuts` (IA, Plantilla, Bibliografía) y metadatos de iOS.
-- [ ] **4.5 Service worker:** precache del shell y del contenido, stale-while-revalidate para ARASAAC y banner de "Nueva versión disponible".
+- [x] **4.4 Manifest:** rutas relativas, iconos de 192/512 (maskable y monochrome), `shortcuts` (IA, Plantilla, Bibliografía) y metadatos de iOS.
+- [x] **4.5 Service worker:** precache del shell y del contenido, stale-while-revalidate para ARASAAC y banner de "Nueva versión disponible".
   - Criterio: con DevTools offline, todas las rutas funcionan tras la primera visita.
-- [ ] **4.6 Instalación:** botón propio en Android (`beforeinstallprompt`) y bottom sheet de iOS.
+- [x] **4.6 Instalación:** botón propio en Android (`beforeinstallprompt`) y bottom sheet de iOS.
   - Criterio: DevTools → Manifest sin errores de instalabilidad. Commit "Fase 4".
 
 ## Fase 5 · Presentación, QR y guion

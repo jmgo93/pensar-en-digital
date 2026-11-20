@@ -5,6 +5,7 @@
  */
 import { h, icon, openModal, snackbar } from './ui.js';
 import { t, setLang, applyI18n, loadStrings } from './i18n.js';
+import { supported as ttsSupported } from './tts.js';
 
 const MIN_SCALE = 100;
 const MAX_SCALE = 200;
@@ -160,13 +161,18 @@ const buildBody = () => {
       prefs.lang,
       (value) => notifySaved(setLang(/** @type {import('./types').Lang} */ (value))),
     ),
-    switchRow('a11y-tts', 'a11y.tts', prefs.tts, (on) => notifySaved(window.pdPrefs.set({ tts: on })), {
-      disabled: true,
-      hintKey: 'a11y.soon',
+    switchRow('a11y-tts', 'a11y.tts', prefs.tts && ttsSupported(), (on) => {
+      notifySaved(window.pdPrefs.set({ tts: on }));
+      document.dispatchEvent(new CustomEvent('pd:prefschange'));
+    }, {
+      disabled: !ttsSupported(),
+      hintKey: ttsSupported() ? 'a11y.ttsHint' : 'a11y.ttsUnsupported',
     }),
-    switchRow('a11y-picto', 'a11y.picto', prefs.picto, (on) => notifySaved(window.pdPrefs.set({ picto: on })), {
-      disabled: true,
-      hintKey: 'a11y.soon',
+    switchRow('a11y-picto', 'a11y.picto', prefs.picto, (on) => {
+      notifySaved(window.pdPrefs.set({ picto: on }));
+      document.dispatchEvent(new CustomEvent('pd:prefschange'));
+    }, {
+      hintKey: 'a11y.pictoHint',
     }),
   );
 };
@@ -182,6 +188,7 @@ const buildPanel = () => {
     document.dispatchEvent(new CustomEvent('pd:langchange', { detail: window.pdPrefs.get().lang }));
     const fresh = buildBody();
     snackbar(saved ? t('a11y.resetDone') : t('a11y.storageOff'));
+    document.dispatchEvent(new CustomEvent('pd:prefschange'));
     inner.querySelector('.sheet-body')?.replaceWith(fresh);
   };
 

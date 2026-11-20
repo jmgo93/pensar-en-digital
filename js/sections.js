@@ -7,6 +7,7 @@ import { loadContent, loadSources, loc, paragraphs, easyRead, inline, citeLabel 
 import { h, icon } from './ui.js';
 import { t } from './i18n.js';
 import { fromRoot } from './router.js';
+import { installCard } from './pwa.js';
 import { getStage, byProfile, stageChips, profileCard, openProfilePicker, loadProfiles } from './profile.js';
 
 /** @typedef {import('./types').Localized} L */
@@ -41,6 +42,7 @@ const renderInicio = async (view) => {
   /** @type {any} */
   const c = await loadContent('inicio');
   view.replaceChildren(
+    ...[installCard()].filter((x) => x !== null),
     blockCard({ id: 'tesis', icon: 'lightbulb', title: loc(c.thesis.title), body: loc(c.thesis.body), easy: c.thesis.lecturaFacil, variant: 'card-accent' }),
     blockCard({ id: 'puente', icon: 'swap_horiz', title: loc(c.bridge.title), body: loc(c.bridge.body), easy: c.bridge.lecturaFacil }),
     h('blockquote', { class: 'pull-quote', 'data-tts': '' }, icon('format_quote'), h('p', {}, loc(c.question))),

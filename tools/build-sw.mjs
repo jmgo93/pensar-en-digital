@@ -1,0 +1,48 @@
+// @ts-check
+/**
+ * Genera sw-precache.js: la lista de archivos que el service worker precarga y una versión
+ * (hash del contenido). Cualquier cambio en un archivo publicado cambia la versión y activa el aviso
+ * "Nueva versión disponible". Ejecutar SIEMPRE antes de publicar: `npm run sw` (lo hace `npm run build:all`).
+ */
+import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { join, relative, sep } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = fileURLToPath(new URL('..', import.meta.url));
+const INCLUDE_DIRS = ['css', 'js', 'content', 'assets', 'presentacion', 'ponencia', 'marco', 'plantilla', 'inclusiva', 'ia', 'lunes', 'bibliografia', 'buscar'];
+const ROOT_FILES = ['index.html', 'manifest.webmanifest'];
+const EXCLUDE = [/\.d\.ts$/, /\.md$/, /(^|\/)\./];
+
+/** @param {string} dir @returns {string[]} */
+const walk = (dir) =>
+  readdirSync(dir).flatMap((name) => {
+    const full = join(dir, name);
+    return statSync(full).isDirectory() ? walk(full) : [full];
+  });
+
+const files = [
+  ...ROOT_FILES,
+  ...INCLUDE_DIRS.flatMap((d) => {
+    try {
+      return walk(join(root, d)).map((f) => relative(root, f).split(sep).join('/'));
+    } catch {
+      return [];
+    }
+  }),
+]
+  .filter((f) => !EXCLUDE.some((re) => re.test(f)))
+  .sort();
+
+const hash = createHash('sha256');
+for (const f of files) hash.update(f).update(readFileSync(join(root, f)));
+const version = hash.digest('hex').slice(0, 12);
+
+// Las páginas se precachean por su URL de carpeta ("ia/") además de "ia/index.html".
+const urls = files.flatMap((f) => (f.endsWith('index.html') ? [f.replace(/index\.html$/, '') || './', f] : [f]));
+
+writeFileSync(
+  join(root, 'sw-precache.js'),
+  `// GENERADO por tools/build-sw.mjs — no editar a mano.\nself.PD_VERSION = '${version}';\nself.PD_PRECACHE = ${JSON.stringify(urls, null, 0)};\n`,
+);
+console.log(`sw-precache.js: ${urls.length} URL, versión ${version}.`);

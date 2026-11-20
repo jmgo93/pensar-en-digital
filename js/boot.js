@@ -70,6 +70,8 @@
     // Texto grande: el shell compacta su cromo en pantallas estrechas (css/a11y.css).
     if (scale >= 1.5) root.dataset.large = '';
     else delete root.dataset.large;
+    if (prefs.picto) root.dataset.picto = '';
+    else delete root.dataset.picto;
     if (prefs.spacing) root.dataset.spacing = 'wide';
     else delete root.dataset.spacing;
     root.lang = prefs.lang;

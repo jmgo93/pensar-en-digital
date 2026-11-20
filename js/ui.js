@@ -58,20 +58,27 @@ let snackHost = null;
 
 /**
  * Muestra un snackbar (anunciado por lectores de pantalla mediante aria-live).
+ * Con `action`, añade un botón y no se cierra solo.
  * @param {string} message
- * @param {number} [ms]
+ * @param {number | { ms?: number, action?: string, onAction?: () => void }} [opts]
  */
-export const snackbar = (message, ms = 4000) => {
+export const snackbar = (message, opts = 4000) => {
+  const o = typeof opts === 'number' ? { ms: opts } : opts;
   snackHost ??= document.querySelector('.snackbar-host');
   if (!snackHost) return;
   snackHost.replaceChildren();
-  const bar = h('div', { class: 'snackbar' }, message);
-  snackHost.append(bar);
-  setTimeout(() => {
+  const bar = h('div', { class: 'snackbar' }, h('span', {}, message));
+  const close = () => {
     bar.classList.add('is-leaving');
     bar.addEventListener('animationend', () => bar.remove(), { once: true });
     if (reducedMotion()) bar.remove();
-  }, ms);
+  };
+  if (o.action) {
+    bar.append(
+      h('button', { type: 'button', class: 'btn btn-text snack-action interactive', onclick: () => { close(); o.onAction?.(); } }, o.action),
+    );
+  } else setTimeout(close, o.ms ?? 4000);
+  snackHost.append(bar);
 };
 
 /**
