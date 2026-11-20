@@ -15,7 +15,7 @@ Cada fase termina con un commit. Push autorizado (20/11): cada push publica en P
 
 - Fecha: 25 y 26 de noviembre de 2026, Almería. **La fecha, la hora y el lugar no aparecen en la web.** **Plazo real: la web tiene que estar publicada y probada antes del 25/11.** Prioridad: lo que se proyecta y lo que usa el público ese día.
 - Contacto del CEP para el footer: https://www.juntadeandalucia.es/educacion/portales/web/cep-almeria
-- Votación: Google Forms (opción b del §0), gratuito, sin registro para el público y sin límite de participantes. Los planes gratuitos de Mentimeter y Wooclap limitan el número de participantes, algo inviable en un auditorio (lo verifico en la tarea 5.4). Resultados: gráfico de la hoja de respuestas en otra pestaña o embebido.
+- Votación: Google Forms (opción b del §0), gratuito, sin registro para el público y sin límite de participantes. Se descartan Mentimeter y Wooclap: no hay cuenta, y Forms con Apps Script es gratuito y se integra en la web. Los límites de sus planes gratuitos no se han verificado. Resultados: un contador en Apps Script alimenta la pantalla propia `presentacion/resultados.html` (ver `docs/votaciones.md`).
 - Inglés: PWA, plantilla, prompts y presentación bilingües; guion solo en español.
 - Votación sin conexión: la diapositiva muestra la pregunta y se vota a mano alzada.
 
