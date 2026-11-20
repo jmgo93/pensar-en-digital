@@ -202,3 +202,8 @@ main > * {
     font: var(--md-sys-typescale-display-small);
   }
 }
+
+/* Mientras JS pinta la sección, se reserva el espacio para evitar saltos (CLS). */
+#view[aria-busy="true"] {
+  min-block-size: 100dvh;
+}

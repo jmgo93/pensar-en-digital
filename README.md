@@ -2,50 +2,98 @@
 
 **Competencia Digital Docente para generar conocimiento**
 
-Web de apoyo a la ponencia *"Competencia Digital Docente como medio para generar conocimiento en el alumnado"* (Juan María Gámez Ortiz), dirigida al profesorado en prácticas de la provincia de Almería.
+Web de apoyo a la ponencia *"Competencia Digital Docente como medio para generar conocimiento en el alumnado"* (Juan María Gámez Ortiz), dirigida al profesorado en prácticas de la provincia de Almería: Primaria, ESO y Bachillerato, Escuelas Oficiales de Idiomas y Conservatorios.
 
-- Sitio: <https://jmgo93.github.io/pensar-en-digital/>
-- Presentación: <https://jmgo93.github.io/pensar-en-digital/presentacion/>
-
-> 🚧 En construcción. El estado del proyecto está en [TAREAS.md](TAREAS.md).
+- Web (PWA instalable, funciona sin conexión): <https://jmgo93.github.io/pensar-en-digital/>
+- Presentación: <https://jmgo93.github.io/pensar-en-digital/presentacion/> · notas del ponente: `?notas`
 
 ## Qué incluye
 
 | Entregable | Ruta |
 |---|---|
-| PWA de apoyo (instalable, funciona sin conexión) | `/` |
-| Presentación web 16:9 | `/presentacion/` |
-| Plantilla socrática "¿Digitalización o innovación?" | `/plantilla/` |
+| PWA: Inicio, La ponencia, Marco CDD, Escuela inclusiva + digital, Ideas para el lunes, Bibliografía, Buscador | `/`, `/ponencia/`, `/marco/`, `/inclusiva/`, `/lunes/`, `/bibliografia/`, `/buscar/` |
+| Plantilla socrática "¿Digitalización o innovación?" (+ PDF en blanco) | `/plantilla/` |
 | Banco de prompts de IA | `/ia/` |
-| Bibliografía | `/bibliografia/` |
-| Guion con notas del ponente | `/docs/guion.md` |
+| Presentación 16:9 con votaciones en directo | `/presentacion/` |
+| Pantalla de resultados de votación | `/presentacion/resultados.html?v=v1` |
+| Guion con notas y tiempos | [`docs/guion.md`](docs/guion.md) |
+| QR en SVG | [`assets/qr/`](assets/qr/) |
+
+Accesibilidad: WCAG 2.2 AA, tamaño de letra del 100 al 200 %, tema claro, oscuro o del sistema, alto contraste, interlineado amplio, lectura en voz alta, modo pictográfico (ARASAAC) y español o inglés.
 
 ## Previsualizar en local
 
-Es HTML, CSS y JavaScript nativos, sin paso de build.
+Es HTML, CSS y JavaScript nativos (ES modules). No hay paso de build para publicar.
 
 ```bash
 git clone https://github.com/jmgo93/pensar-en-digital.git
 cd pensar-en-digital
-python -m http.server 8000      # en macOS/Linux: python3 -m http.server 8000
+python3 -m http.server 8000      # en Windows: python -m http.server 8000
 ```
 
-Abre <http://localhost:8000/>. El service worker necesita `http://localhost` o HTTPS: no abras los archivos con doble clic (`file://`).
+Abre <http://localhost:8000/>. No abras los archivos con doble clic (`file://`): el service worker necesita `http://localhost` o HTTPS.
+
+Para reproducir el subdirectorio de GitHub Pages, sirve la **carpeta padre** y abre `http://localhost:8000/pensar-en-digital/`.
 
 ## Actualizar el contenido
 
-Todo el texto vive en [`content/`](content/) (JSON/Markdown, en español e inglés). La presentación, la PWA y el buscador leen de ahí.
-Después de editar el contenido, regenera los archivos derivados (índice del buscador, mapa de pictogramas, QR) con los scripts de [`tools/`](tools/) y súbelos junto con el cambio. Las instrucciones detalladas se añadirán en la Fase 6.
+Todo el texto está en [`content/`](content/), en JSON y en español e inglés. Es la única fuente para la PWA, la presentación, el buscador y el guion.
+
+| Archivo | Contenido |
+|---|---|
+| `ui.json` | Textos de la interfaz |
+| `routes.json` | Secciones y menú |
+| `inicio.json`, `ponencia.json`, `marco.json`, `inclusiva.json`, `lunes.json` | Secciones |
+| `fuentes.json` | Bibliografía APA 7 (cítala en el texto con `[@id]`) |
+| `prompts.json` | Banco de prompts |
+| `plantilla.json` | Plantilla socrática |
+| `presentacion.json` | Diapositivas y notas (máximo 20 palabras por diapositiva) |
+| `votaciones.json` | Preguntas de votación |
+| `perfiles.json` | Etapas y especialidades |
+| `site.json` | URL, licencia, contacto del CEP y endpoint de votación |
+
+Después de editar, regenera los archivos derivados y comprueba:
+
+```bash
+npm install                 # una vez (solo herramientas de desarrollo)
+npm run build:all           # páginas, índice de búsqueda, QR, guion, hoja de pruebas y precarga del service worker
+npm run typecheck           # TypeScript estricto sobre JSDoc
+npm run check:html          # validación HTML
+npm run check:links         # enlaces externos (bibliografía)
+npm run check:ui            # axe + desbordes en todas las rutas (necesita el servidor del puerto 8765 sirviendo la carpeta padre)
+```
+
+**Ejecuta siempre `npm run build:all` antes de subir cambios.** Si no, el service worker no detecta la nueva versión y los móviles con la app instalada seguirán viendo la anterior.
+
+Otros generadores (raramente necesarios): `npm run tokens` (colores M3), `icons` (subset de iconos), `app-icons` (iconos PWA), `picto` (mapa ARASAAC) y `blank` (PDF de la plantilla en blanco).
 
 ## Publicar en GitHub Pages
 
 1. En el repositorio: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-2. Cada `push` a `main` ejecuta [`.github/workflows/pages.yml`](.github/workflows/pages.yml) y publica el sitio.
+2. Cada `push` a `main` ejecuta [`.github/workflows/pages.yml`](.github/workflows/pages.yml) en tres pasos: **check → build → deploy**. El primero incluye:
+   - tipos;
+   - archivos generados al día;
+   - validación HTML;
+   - axe en todas las rutas y esquemas;
+   - enlaces internos;
+   - Lighthouse CI;
+   - enlaces externos (solo avisa, no bloquea).
+
+   Si falla una comprobación, no se publica.
+
+## Votaciones en directo
+
+Google Forms y un contador en Apps Script alimentan las barras de la presentación. Puesta en marcha en [`docs/votaciones.md`](docs/votaciones.md).
+
+## Pruebas manuales
+
+- [`docs/pruebas-prompts.md`](docs/pruebas-prompts.md): prompts y "Abrir en IA" en Gemini, ChatGPT y Claude.
+- [`docs/pruebas-dispositivos.md`](docs/pruebas-dispositivos.md): instalación, modo sin conexión, voz, pictogramas, safe areas y letra al 200 % en Android e iOS.
 
 ## Licencias
 
-- Contenido: CC BY 4.0 · Código: MIT (ver `LICENSE`).
-- Pictogramas: Sergio Palao, propiedad del Gobierno de Aragón, distribuidos por ARASAAC bajo CC BY-NC-SA 4.0. Esta licencia es distinta de la del resto del contenido.
+- **Contenido y código: CC BY-NC-SA 4.0** (Atribución-NoComercial-CompartirIgual). No se permite el uso comercial. Ver [`LICENSE`](LICENSE).
+- Pictogramas: Sergio Palao. Propiedad: Gobierno de Aragón. Origen: ARASAAC. Licencia CC BY-NC-SA 4.0.
 - Iconos: Material Symbols (Apache 2.0).
 
 Elaborado con la ayuda de Claude (Anthropic).

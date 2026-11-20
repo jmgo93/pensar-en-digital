@@ -24,7 +24,7 @@ Cada fase termina con un commit. Push autorizado (20/11): cada push publica en P
 - La ponencia anterior se menciona de forma genérica (sin nombre ni enlace).
 - Especialidades: listas cerradas por etapa, con la opción "Otra / General".
 - Idiomas: español (por defecto) e inglés, elegibles.
-- Licencias: CC BY 4.0 para el contenido y MIT para el código; ARASAAC con CC BY-NC-SA 4.0 aparte.
+- Licencias: **CC BY-NC-SA 4.0 para contenido y código** (cambio pedido el 20/11: sin uso comercial, como ARASAAC). Sustituye a la propuesta inicial CC BY 4.0 + MIT.
 - Todo funciona 100 % offline; las funciones online (votación, Abrir en IA, ARASAAC no precalculado) se usan si hay wifi.
 - Proyección desde el equipo de la sala (1920×1080 por defecto), con mando y teclado.
 - Sin fecha límite.
@@ -201,13 +201,24 @@ Depende de: Fase 2 (contenido), P1, P3 y P4.
 
 ## Fase 6 · Verificación y publicación
 
+> **Resultado (20/11):**
+> - Lighthouse móvil en la web publicada (antes de las optimizaciones de esta fase):
+>   - Accesibilidad, Buenas prácticas y SEO: **100**.
+>   - Rendimiento: 99 en Inicio, 98 en Plantilla, 88 en Marco y 77 en IA, por CLS y por el pintado de tarjetas. Corregido (reserva de espacio, `modulepreload`, pintado por tandas); **pendiente de volver a medir tras el despliegue**.
+> - axe sin errores en todas las rutas, en 4 esquemas, inglés y letra al 200 %, también en la presentación, las notas y los resultados.
+> - HTML válido (`npm run check:html`).
+> - Enlaces externos: 30/30 correctos (`npm run check:links`; los DOI se comprueban con la API de doi.org).
+> - CI: `pages.yml` con `check → build → deploy`. La comprobación incluye tipos, archivos generados al día, HTML, axe, enlaces internos y Lighthouse CI (rendimiento como aviso, porque el servidor de CI no comprime); los enlaces externos solo avisan.
+> - Licencia cambiada a **CC BY-NC-SA 4.0** para todo (petición del 20/11), en `LICENSE`, el pie, las diapositivas y los PDF.
+> - `docs/pruebas-dispositivos.md`: checklist para Android e iOS reales.
+
 Depende de: Fases 1–5.
 
-- [ ] **6.1 Lighthouse móvil** ≥ 95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO, en todas las rutas.
-- [ ] **6.2 axe-core sin errores** y contraste comprobado en los 3 esquemas.
-- [ ] **6.3 Job de comprobación en `pages.yml`** (validación HTML, enlaces rotos, axe, Lighthouse CI); el despliegue depende de él.
-- [ ] **6.4 Checklist de pruebas en dispositivos** (`docs/pruebas-dispositivos.md`) para el usuario: instalación, offline, TTS, pictogramas, safe areas y letra al 200 %, en Android e iOS.
-- [ ] **6.5 `LICENSE`** (CC BY 4.0 para el contenido y MIT para el código) y README final.
-- [ ] **6.6 Footer en todas las rutas** y enlace del CEP (P2).
+- [~] **6.1 Lighthouse móvil** ≥ 95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO, en todas las rutas.
+- [x] **6.2 axe-core sin errores** y contraste comprobado en los 3 esquemas.
+- [x] **6.3 Job de comprobación en `pages.yml`** (validación HTML, enlaces rotos, axe, Lighthouse CI); el despliegue depende de él.
+- [x] **6.4 Checklist de pruebas en dispositivos** (`docs/pruebas-dispositivos.md`) para el usuario: instalación, offline, TTS, pictogramas, safe areas y letra al 200 %, en Android e iOS.
+- [x] **6.5 `LICENSE`** (CC BY-NC-SA 4.0 para contenido y código) y README final.
+- [x] **6.6 Footer en todas las rutas** y enlace del CEP (P2).
 - [x] **6.7a Pages activado** (Source: GitHub Actions) y primer despliegue OK el 20/11.
 - [ ] **6.7b Comprobación final** de la URL publicada. Commit "Fase 6".

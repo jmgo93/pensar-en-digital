@@ -112,12 +112,30 @@ export const renderPrompts = async () => {
   const grid = h('div', { class: 'prompt-grid' });
   const count = h('p', { class: 'muted', role: 'status' });
 
+  /** @type {symbol | null} */
+  let drawToken = null;
   const draw = () => {
     const cards = byProfile(bank.cards, (c) => c.stages).filter(
       (c) => (!filter.category || c.category === filter.category) && (!filter.stage || c.stages.includes(filter.stage)),
     );
-    grid.replaceChildren(...cards.map((c) => renderCard(c, cats.get(c.category), stageLabels)));
+    // Primeras tarjetas al momento; el resto por tandas para no bloquear el hilo principal.
+    const FIRST = location.hash ? cards.length : 4;
+    grid.replaceChildren(...cards.slice(0, FIRST).map((c) => renderCard(c, cats.get(c.category), stageLabels)));
     count.textContent = t('ia.count', { n: cards.length });
+    const rest = cards.slice(FIRST);
+    const token = (drawToken = Symbol('draw'));
+    const idle = window.requestIdleCallback ?? ((/** @type {() => void} */ cb) => setTimeout(cb, 16));
+    if (rest.length) grid.dataset.pending = '';
+    const step = () => {
+      if (token !== drawToken) return;
+      if (!rest.length) {
+        delete grid.dataset.pending;
+        return;
+      }
+      grid.append(...rest.splice(0, 4).map((c) => renderCard(c, cats.get(c.category), stageLabels)));
+      idle(step);
+    };
+    idle(step);
   };
 
   /** @type {HTMLButtonElement[]} */

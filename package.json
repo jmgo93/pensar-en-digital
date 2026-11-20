@@ -1,6 +1,7 @@
 {
   "name": "pensar-en-digital",
   "private": true,
+  "license": "CC-BY-NC-SA-4.0",
   "description": "Herramientas de desarrollo (no se usan en producción: el sitio no tiene paso de build).",
   "type": "module",
   "scripts": {
@@ -18,11 +19,16 @@
     "prompt-tests": "node tools/build-prompt-tests.mjs",
     "typecheck": "tsc -p jsconfig.json",
     "check:ui": "node tools/check-ui.mjs http://127.0.0.1:8765/pensar-en-digital/",
+    "check:links": "node tools/check-links.mjs",
+    "check:html": "html-validate \"*.html\" \"*/*.html\"",
     "serve": "python -m http.server 8000"
   },
   "devDependencies": {
     "@material/material-color-utilities": "0.3.0",
     "axe-core": "4.14.1",
+    "html-validate": "11.21.1",
+    "lighthouse": "13.6.0",
+    "linkinator": "8.1.0",
     "puppeteer-core": "25.18.1",
     "qrcode": "1.5.4",
     "typescript": "7.0.2"

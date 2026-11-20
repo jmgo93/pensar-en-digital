@@ -81,7 +81,7 @@ try {
         await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
         await page.goto(new URL(route.path, base).href, { waitUntil: 'networkidle0' });
         await page.evaluate(() => document.fonts.ready);
-        await page.waitForFunction(() => !document.querySelector('#view[aria-busy]'), { timeout: 5000 }).catch(() => errors.push('#view sigue en aria-busy'));
+        await page.waitForFunction(() => !document.querySelector('#view[aria-busy], [data-pending]'), { timeout: 15000 }).then(() => new Promise((r) => setTimeout(r, 400))).catch(() => errors.push('#view sigue en aria-busy'));
 
         const tag = `${variant.name} @ ${vp.name}`;
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);

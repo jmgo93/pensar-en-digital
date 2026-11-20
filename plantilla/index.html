@@ -25,6 +25,21 @@
   <link rel="stylesheet" href="../css/a11y.css">
   <script src="../js/boot.js"></script>
   <script type="module" src="../js/app.js"></script>
+  <link rel="modulepreload" href="../js/i18n.js">
+  <link rel="modulepreload" href="../js/router.js">
+  <link rel="modulepreload" href="../js/ui.js">
+  <link rel="modulepreload" href="../js/a11y.js">
+  <link rel="modulepreload" href="../js/content.js">
+  <link rel="modulepreload" href="../js/sections.js">
+  <link rel="modulepreload" href="../js/profile.js">
+  <link rel="modulepreload" href="../js/search.js">
+  <link rel="modulepreload" href="../js/prompts.js">
+  <link rel="modulepreload" href="../js/socratic.js">
+  <link rel="modulepreload" href="../js/ai.js">
+  <link rel="modulepreload" href="../js/tts.js">
+  <link rel="modulepreload" href="../js/picto.js">
+  <link rel="modulepreload" href="../js/picto-words.js">
+  <link rel="modulepreload" href="../js/pwa.js">
 </head>
 <body data-route="plantilla">
   <a class="skip-link" href="#main" data-i18n="app.skip">Saltar al contenido</a>
@@ -40,7 +55,7 @@
       </div>
     </header>
 
-    <nav class="nav-rail" aria-label="Navegación principal" data-i18n-attr="aria-label:app.nav">
+    <nav class="nav-rail" aria-label="Navegación lateral" data-i18n-attr="aria-label:app.navRail">
       <button type="button" class="icon-btn interactive menu-btn" data-action="drawer" aria-haspopup="dialog" aria-label="Todas las secciones" title="Todas las secciones" data-i18n-attr="aria-label:app.menu;title:app.menu"><span class="icon" aria-hidden="true">menu</span></button>
       <a class="nav-item" href="../"><span class="indicator"><span class="icon" aria-hidden="true">home</span></span><span class="label" data-i18n="route.inicio.short">Inicio</span></a>
       <a class="nav-item" href="../ponencia/"><span class="indicator"><span class="icon" aria-hidden="true">co_present</span></span><span class="label" data-i18n="route.ponencia.short">Ponencia</span></a>
@@ -59,12 +74,12 @@
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 Juan María Gámez Ortiz · <span data-i18n="footer.licensePre">Contenido bajo licencia</span> <a href="https://creativecommons.org/licenses/by/4.0/deed.es" rel="license" data-i18n="footer.license">CC BY 4.0 (Atribución)</a> · <span data-i18n="footer.claude">Elaborado con la ayuda de Claude (Anthropic)</span></p>
+      <p>© 2026 Juan María Gámez Ortiz · <span data-i18n="footer.licensePre">Contenido bajo licencia</span> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="license" data-i18n="footer.license">CC BY-NC-SA 4.0 (Atribución-NoComercial-CompartirIgual)</a> · <span data-i18n="footer.claude">Elaborado con la ayuda de Claude (Anthropic)</span></p>
       <p><span data-i18n="footer.cep">¿Formación en tu centro, grupo de trabajo o curso? Contacta con el</span> <a href="https://www.juntadeandalucia.es/educacion/portales/web/cep-almeria" data-i18n="footer.cepLink">CEP de Almería</a> <span data-i18n="footer.cepAfter">y pregunta por Juan María Gámez.</span></p>
-      <p><span data-i18n="footer.arasaacPre">Pictogramas: Sergio Palao. Propiedad: Gobierno de Aragón. Origen:</span> <a href="https://arasaac.org/">ARASAAC</a>. <span data-i18n="footer.arasaacLic">Licencia</span> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">CC BY-NC-SA 4.0</a> <span data-i18n="footer.arasaacNote">(distinta de la del resto del contenido).</span> <span data-i18n="footer.icons">Iconos: Material Symbols (Apache 2.0).</span></p>
+      <p><span data-i18n="footer.arasaacPre">Pictogramas: Sergio Palao. Propiedad: Gobierno de Aragón. Origen:</span> <a href="https://arasaac.org/">ARASAAC</a>. <span data-i18n="footer.arasaacLic">Licencia</span> <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">CC BY-NC-SA 4.0</a> <span data-i18n="footer.arasaacNote">(la misma licencia no comercial que el resto del contenido).</span> <span data-i18n="footer.icons">Iconos: Material Symbols (Apache 2.0).</span></p>
     </footer>
 
-    <nav class="nav-bar" aria-label="Navegación principal" data-i18n-attr="aria-label:app.nav">
+    <nav class="nav-bar" aria-label="Navegación inferior" data-i18n-attr="aria-label:app.navBar">
       <a class="nav-item" href="../"><span class="indicator"><span class="icon" aria-hidden="true">home</span></span><span class="label" data-i18n="route.inicio.short">Inicio</span></a>
       <a class="nav-item" href="../plantilla/" aria-current="page"><span class="indicator"><span class="icon" aria-hidden="true">psychology</span></span><span class="label" data-i18n="route.plantilla.short">¿Innovación?</span></a>
       <a class="nav-item" href="../ia/"><span class="indicator"><span class="icon" aria-hidden="true">smart_toy</span></span><span class="label" data-i18n="route.ia.short">IA</span></a>

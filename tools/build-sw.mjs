@@ -35,7 +35,12 @@ const files = [
   .sort();
 
 const hash = createHash('sha256');
-for (const f of files) hash.update(f).update(readFileSync(join(root, f)));
+// Se normalizan los finales de línea para que la versión sea la misma en Windows y en CI.
+const TEXT = /\.(html|css|js|mjs|json|webmanifest|svg|md|txt)$/;
+for (const f of files) {
+  const buf = readFileSync(join(root, f));
+  hash.update(f).update(TEXT.test(f) ? buf.toString('utf8').replace(/\r\n/g, '\n') : buf);
+}
 const version = hash.digest('hex').slice(0, 12);
 
 // Las páginas se precachean por su URL de carpeta ("ia/") además de "ia/index.html".

@@ -71,7 +71,7 @@ ${dims}
   <p class="label">${T.position}</p><div class="lines big"></div>
   <p class="label">${T.improve}</p><div class="lines"></div>
 </section>
-<footer>© ${site.year} ${esc(site.author)} · CC BY 4.0 · ${esc(ui[lang]['footer.claude'])} · ${site.url}plantilla/</footer>
+<footer>© ${site.year} ${esc(site.author)} · ${site.licenseShort} · ${esc(ui[lang]['footer.claude'])} · ${site.url}plantilla/</footer>
 </body></html>`;
 };
 

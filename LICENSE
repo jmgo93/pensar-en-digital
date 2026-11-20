@@ -1,0 +1,44 @@
+Pensar en Digital · Competencia Digital Docente para generar conocimiento
+Copyright (c) 2026 Juan María Gámez Ortiz
+
+================================================================================
+LICENCIA: Creative Commons Atribución-NoComercial-CompartirIgual 4.0
+Internacional (CC BY-NC-SA 4.0)
+================================================================================
+
+Se aplica a TODO el material original de este repositorio: contenido (textos,
+presentación, guion, plantilla socrática, banco de prompts, PDF, en content/,
+docs/ y assets/) y código (HTML, CSS, JavaScript, service worker, scripts de
+tools/ y configuración).
+
+Puedes copiar, redistribuir y adaptar este material siempre que:
+
+  - Atribución: reconozcas la autoría ("Juan María Gámez Ortiz, Pensar en
+    Digital, CC BY-NC-SA 4.0"), enlaces a la licencia e indiques si has
+    hecho cambios.
+  - NoComercial: no lo uses con fines comerciales. No se permite venderlo,
+    incluirlo en productos o servicios de pago ni usarlo en formaciones o
+    actividades con ánimo de lucro.
+  - CompartirIgual: si lo adaptas o transformas, distribuyas tu versión con
+    esta misma licencia.
+
+Para usos no cubiertos por esta licencia (por ejemplo, comerciales), contacta
+con el autor a través del CEP de Almería.
+
+Resumen: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es
+Texto legal completo: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.es
+
+================================================================================
+RECURSOS DE TERCEROS (con sus propias licencias)
+================================================================================
+
+- Pictogramas ARASAAC: autor Sergio Palao. Propiedad: Gobierno de Aragón.
+  Origen: ARASAAC (https://arasaac.org). Licencia CC BY-NC-SA 4.0. No se
+  redistribuyen en este repositorio: se cargan desde ARASAAC.
+- Iconos: Material Symbols Rounded (Google), licencia Apache 2.0
+  (https://www.apache.org/licenses/LICENSE-2.0). Subconjunto en
+  assets/fonts/material-symbols-rounded.woff2.
+- Las referencias de la bibliografía pertenecen a sus autores y editores; aquí
+  solo se citan y enlazan.
+
+Elaborado con la ayuda de Claude (Anthropic).

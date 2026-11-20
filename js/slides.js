@@ -111,7 +111,7 @@ const slideEl = (s, i, total, ctx) =>
     'section',
     { class: `slide slide-${s.type}`, 'data-index': i, 'aria-roledescription': t('slides.slide'), 'aria-label': `${i + 1} / ${total}` },
     slideContent(s, ctx),
-    h('footer', { class: 's-footer' }, h('span', {}, `© ${ctx.site.year} ${ctx.site.author} · CC BY 4.0 · ${t('footer.claude')}`), h('span', {}, `${i + 1} / ${total}`)),
+    h('footer', { class: 's-footer' }, h('span', {}, `© ${ctx.site.year} ${ctx.site.author} · ${ctx.site.licenseShort} · ${t('footer.claude')}`), h('span', {}, `${i + 1} / ${total}`)),
   );
 
 /** Escala el lienzo 1920×1080 a la ventana. */

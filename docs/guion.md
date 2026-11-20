@@ -237,4 +237,4 @@ Plantilla: una actividad, siete preguntas, propuestas de mejora. Banco: 23 promp
 
 > Gracias
 
-Agradece. Recuerda que todo el material es CC BY 4.0: pueden usarlo y adaptarlo citando. Formación en centros: a través del CEP de Almería.
+Agradece. Recuerda que todo el material es CC BY-NC-SA 4.0: pueden usarlo y adaptarlo citando la autoría, sin fines comerciales y compartiendo con la misma licencia. Formación en centros: a través del CEP de Almería.

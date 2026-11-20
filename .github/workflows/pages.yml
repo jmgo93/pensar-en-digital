@@ -1,26 +1,67 @@
-# Publica el sitio estático en GitHub Pages.
-# El job de comprobación (validación HTML, enlaces, axe, Lighthouse CI) se añade en la Fase 6.
+# Comprueba y publica el sitio estático en GitHub Pages.
+# check → build → deploy: si falla una comprobación, no se publica.
 name: Pages
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Tipos (JSDoc + @ts-check)
+        run: npm run typecheck
+
+      - name: Archivos generados al día (páginas, índice, QR, guion ≤ 20 palabras, precarga del SW)
+        run: |
+          npm run build:all
+          git diff --exit-code
+
+      - name: Validación HTML
+        run: npm run check:html
+
+      - name: Servidor local
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 &
+          sleep 2
+
+      - name: Accesibilidad (axe), desbordes y errores de consola en todas las rutas y esquemas
+        run: node tools/check-ui.mjs http://127.0.0.1:8000/
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+
+      - name: Enlaces internos rotos
+        run: npx linkinator http://127.0.0.1:8000/ --recurse --skip "^https?://(?!127\.0\.0\.1)"
+
+      - name: Lighthouse CI
+        run: npx @lhci/cli@0.16.1 autorun
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+
+      - name: Enlaces externos (bibliografía y fuentes; aviso, no bloquea)
+        continue-on-error: true
+        run: npm run check:links
+
+  build:
+    needs: check
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -28,5 +69,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: .
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v4

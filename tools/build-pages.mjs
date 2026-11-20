@@ -41,6 +41,10 @@ const icon = (name) => `<span class="icon" aria-hidden="true">${name}</span>`;
 const navItem = (r, current, rel) =>
   `<a class="nav-item" href="${rel}${r.path}"${r.id === current ? ' aria-current="page"' : ''}><span class="indicator">${icon(r.icon)}</span><span class="label" data-i18n="route.${r.id}.short">${tx(`route.${r.id}.short`)}</span></a>`;
 
+/** Módulos que importa app.js (modulepreload evita la cadena de peticiones). */
+const NL = '\n';
+const MODULES = ['i18n', 'router', 'ui', 'a11y', 'content', 'sections', 'profile', 'search', 'prompts', 'socratic', 'ai', 'tts', 'picto', 'picto-words', 'pwa'];
+
 /** Secciones cuyo contenido pinta js/sections.js o js/search.js. */
 const RENDERED = new Set(['ponencia', 'marco', 'plantilla', 'inclusiva', 'ia', 'lunes', 'bibliografia', 'buscar']);
 
@@ -114,6 +118,7 @@ const page = (route) => {
 ${css}
   <script src="${rel}js/boot.js"></script>
   <script type="module" src="${rel}js/app.js"></script>
+${MODULES.map((m) => `  <link rel="modulepreload" href="${rel}js/${m}.js">`).join(NL)}
 </head>
 <body data-route="${route.id}">
   <a class="skip-link" href="#main" data-i18n="app.skip">${tx('app.skip')}</a>
@@ -129,7 +134,7 @@ ${css}
       </div>
     </header>
 
-    <nav class="nav-rail" ${label('app.nav').replace(/ title="[^"]*"/, '').replace(';title:app.nav', '')}>
+    <nav class="nav-rail" aria-label="${tx('app.navRail')}" data-i18n-attr="aria-label:app.navRail">
       <button type="button" class="icon-btn interactive menu-btn" data-action="drawer" aria-haspopup="dialog" ${label('app.menu')}>${icon('menu')}</button>
       ${routes.filter((r) => r.rail).map((r) => navItem(r, route.id, rel)).join('\n      ')}
     </nav>
@@ -143,7 +148,7 @@ ${css}
       <p><span data-i18n="footer.arasaacPre">${tx('footer.arasaacPre')}</span> <a href="${site.arasaacUrl}">ARASAAC</a>. <span data-i18n="footer.arasaacLic">${tx('footer.arasaacLic')}</span> <a href="${site.licenseArasaacUrl}">CC BY-NC-SA 4.0</a> <span data-i18n="footer.arasaacNote">${tx('footer.arasaacNote')}</span> <span data-i18n="footer.icons">${tx('footer.icons')}</span></p>
     </footer>
 
-    <nav class="nav-bar" ${label('app.nav').replace(/ title="[^"]*"/, '').replace(';title:app.nav', '')}>
+    <nav class="nav-bar" aria-label="${tx('app.navBar')}" data-i18n-attr="aria-label:app.navBar">
       ${routes.filter((r) => r.bar).map((r) => navItem(r, route.id, rel)).join('\n      ')}
       <button type="button" class="nav-item" data-action="drawer" aria-haspopup="dialog"><span class="indicator">${icon('menu')}</span><span class="label" data-i18n="app.more">${tx('app.more')}</span></button>
     </nav>

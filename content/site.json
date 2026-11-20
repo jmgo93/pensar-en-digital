@@ -4,7 +4,7 @@
   "author": "Juan María Gámez Ortiz",
   "year": 2026,
   "cepUrl": "https://www.juntadeandalucia.es/educacion/portales/web/cep-almeria",
-  "licenseContentUrl": "https://creativecommons.org/licenses/by/4.0/deed.es",
+  "licenseContentUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es",
   "licenseArasaacUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es",
   "arasaacUrl": "https://arasaac.org/",
   "materialSymbolsUrl": "https://fonts.google.com/icons",
@@ -13,5 +13,6 @@
     "en"
   ],
   "defaultLanguage": "es",
-  "votingEndpoint": ""
+  "votingEndpoint": "",
+  "licenseShort": "CC BY-NC-SA 4.0"
 }

@@ -47,6 +47,8 @@ export interface Site {
   year: number;
   cepUrl: string;
   licenseContentUrl: string;
+  /** Nombre corto de la licencia del contenido y el código. */
+  licenseShort: string;
   licenseArasaacUrl: string;
   arasaacUrl: string;
   materialSymbolsUrl: string;

@@ -45,7 +45,7 @@
     "a11y.saved": "Preferencias guardadas",
     "a11y.resetDone": "Preferencias restablecidas",
     "a11y.storageOff": "Tu navegador no permite guardar preferencias: se aplicarán solo en esta visita",
-    "footer.license": "CC BY 4.0 (Atribución)",
+    "footer.license": "CC BY-NC-SA 4.0 (Atribución-NoComercial-CompartirIgual)",
     "footer.claude": "Elaborado con la ayuda de Claude (Anthropic)",
     "footer.cep": "¿Formación en tu centro, grupo de trabajo o curso? Contacta con el",
     "footer.cepLink": "CEP de Almería",
@@ -54,7 +54,7 @@
     "footer.licensePre": "Contenido bajo licencia",
     "footer.arasaacPre": "Pictogramas: Sergio Palao. Propiedad: Gobierno de Aragón. Origen:",
     "footer.arasaacLic": "Licencia",
-    "footer.arasaacNote": "(distinta de la del resto del contenido).",
+    "footer.arasaacNote": "(la misma licencia no comercial que el resto del contenido).",
     "home.sections": "Secciones",
     "home.cta.plantilla": "Analiza tu actividad",
     "home.cta.ia": "Banco de prompts",
@@ -154,7 +154,7 @@
     "tts.pause": "Pausar",
     "tts.error": "No se pudo leer en voz alta. Prueba de nuevo.",
     "tts.noVoice": "No hay voz en este idioma en tu dispositivo: se usará la predeterminada.",
-    "picto.attribution": "Pictogramas: Sergio Palao. Propiedad: Gobierno de Aragón. Origen: ARASAAC (arasaac.org). Licencia CC BY-NC-SA 4.0, distinta de la del resto del contenido.",
+    "picto.attribution": "Pictogramas: Sergio Palao. Propiedad: Gobierno de Aragón. Origen: ARASAAC (arasaac.org). Licencia CC BY-NC-SA 4.0.",
     "pwa.update": "Hay una nueva versión disponible",
     "pwa.reload": "Actualizar",
     "pwa.offlineReady": "Lista para usar sin conexión",
@@ -181,7 +181,9 @@
     "slides.stage.primaria": "Primaria",
     "slides.stage.eso": "ESO y Bachillerato",
     "slides.stage.eoi": "Escuela Oficial de Idiomas",
-    "slides.stage.conservatorio": "Conservatorio"
+    "slides.stage.conservatorio": "Conservatorio",
+    "app.navBar": "Navegación inferior",
+    "app.navRail": "Navegación lateral"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -229,7 +231,7 @@
     "a11y.saved": "Preferences saved",
     "a11y.resetDone": "Preferences reset",
     "a11y.storageOff": "Your browser does not allow saving preferences: they will apply only during this visit",
-    "footer.license": "CC BY 4.0 (Attribution)",
+    "footer.license": "CC BY-NC-SA 4.0 (Attribution-NonCommercial-ShareAlike)",
     "footer.claude": "Made with the help of Claude (Anthropic)",
     "footer.cep": "Training for your school, working group or course? Contact the",
     "footer.cepLink": "CEP de Almería",
@@ -238,7 +240,7 @@
     "footer.licensePre": "Content licensed under",
     "footer.arasaacPre": "Pictograms: Sergio Palao. Owner: Government of Aragon. Source:",
     "footer.arasaacLic": "Licence",
-    "footer.arasaacNote": "(different from the rest of the content).",
+    "footer.arasaacNote": "(the same non-commercial licence as the rest of the content).",
     "home.sections": "Sections",
     "home.cta.plantilla": "Analyse your activity",
     "home.cta.ia": "Prompt bank",
@@ -338,7 +340,7 @@
     "tts.pause": "Pause",
     "tts.error": "Could not read aloud. Try again.",
     "tts.noVoice": "There is no voice for this language on your device: the default one will be used.",
-    "picto.attribution": "Pictograms: Sergio Palao. Owner: Government of Aragon. Source: ARASAAC (arasaac.org). Licence CC BY-NC-SA 4.0, different from the rest of the content.",
+    "picto.attribution": "Pictograms: Sergio Palao. Owner: Government of Aragon. Source: ARASAAC (arasaac.org). Licence CC BY-NC-SA 4.0.",
     "pwa.update": "A new version is available",
     "pwa.reload": "Update",
     "pwa.offlineReady": "Ready to use offline",
@@ -365,6 +367,8 @@
     "slides.stage.primaria": "Primary",
     "slides.stage.eso": "Secondary and Baccalaureate",
     "slides.stage.eoi": "Official Language School",
-    "slides.stage.conservatorio": "Conservatoire"
+    "slides.stage.conservatorio": "Conservatoire",
+    "app.navBar": "Bottom navigation",
+    "app.navRail": "Side navigation"
   }
 }
