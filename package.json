@@ -12,7 +12,9 @@
     "picto": "node tools/build-picto-map.mjs",
     "app-icons": "node tools/build-app-icons.mjs",
     "sw": "node tools/build-sw.mjs",
-    "build:all": "npm run pages && npm run search && npm run prompt-tests && npm run sw",
+    "qr": "node tools/build-qr.mjs",
+    "guion": "node tools/build-guion.mjs",
+    "build:all": "npm run pages && npm run search && npm run prompt-tests && npm run qr && npm run guion && npm run sw",
     "prompt-tests": "node tools/build-prompt-tests.mjs",
     "typecheck": "tsc -p jsconfig.json",
     "check:ui": "node tools/check-ui.mjs http://127.0.0.1:8765/pensar-en-digital/",
@@ -22,6 +24,7 @@
     "@material/material-color-utilities": "0.3.0",
     "axe-core": "4.14.1",
     "puppeteer-core": "25.18.1",
+    "qrcode": "1.5.4",
     "typescript": "7.0.2"
   }
 }

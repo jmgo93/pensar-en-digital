@@ -166,7 +166,22 @@
     "install.ios.step2": "Elige «Añadir a pantalla de inicio».",
     "install.ios.step3": "Pulsa «Añadir». La encontrarás como «Pensar en Digital».",
     "install.done": "App instalada",
-    "install.other": "Usa el menú del navegador y elige «Instalar aplicación» o «Añadir a pantalla de inicio»."
+    "install.other": "Usa el menú del navegador y elige «Instalar aplicación» o «Añadir a pantalla de inicio».",
+    "slides.slide": "Diapositiva",
+    "slides.deck": "Presentación",
+    "slides.vote": "Vota",
+    "slides.current": "Ahora",
+    "slides.next": "Siguiente",
+    "slides.end": "Fin de la presentación",
+    "slides.resetTimer": "Reiniciar cronómetro",
+    "slides.planned": "Previsto",
+    "slides.behind": "vas tarde",
+    "slides.ahead": "vas pronto",
+    "slides.notes": "Notas del ponente",
+    "slides.stage.primaria": "Primaria",
+    "slides.stage.eso": "ESO y Bachillerato",
+    "slides.stage.eoi": "Escuela Oficial de Idiomas",
+    "slides.stage.conservatorio": "Conservatorio"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -335,6 +350,21 @@
     "install.ios.step2": "Choose “Add to Home Screen”.",
     "install.ios.step3": "Tap “Add”. You will find it as “Pensar en Digital”.",
     "install.done": "App installed",
-    "install.other": "Use your browser menu and choose “Install app” or “Add to Home Screen”."
+    "install.other": "Use your browser menu and choose “Install app” or “Add to Home Screen”.",
+    "slides.slide": "Slide",
+    "slides.deck": "Presentation",
+    "slides.vote": "Vote",
+    "slides.current": "Now",
+    "slides.next": "Next",
+    "slides.end": "End of presentation",
+    "slides.resetTimer": "Reset timer",
+    "slides.planned": "Planned",
+    "slides.behind": "behind by",
+    "slides.ahead": "ahead by",
+    "slides.notes": "Speaker notes",
+    "slides.stage.primaria": "Primary",
+    "slides.stage.eso": "Secondary and Baccalaureate",
+    "slides.stage.eoi": "Official Language School",
+    "slides.stage.conservatorio": "Conservatoire"
   }
 }

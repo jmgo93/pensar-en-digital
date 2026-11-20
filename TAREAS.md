@@ -170,21 +170,33 @@ Depende de: Fases 2 y 3.
 
 ## Fase 5 · Presentación, QR y guion
 
+> **Resultado (20/11):**
+> - `presentacion/` (`js/slides.js`, `css/slides.css`, `content/presentacion.json`): 35 diapositivas en 6 bloques, en español e inglés.
+>   - Lienzo 1920×1080 escalado; texto de 40 px o más; 20 palabras como máximo por diapositiva (lo comprueba `npm run guion`).
+>   - Revisada a 1920×1080 vista al 25 %.
+> - Control:
+>   - Teclado y mando: ←/→, Av/Re Pág, espacio, Inicio/Fin, B/. (negro), F (pantalla completa), N (notas), T (cronómetro), número + Intro.
+>   - Gestos y Gamepad API.
+> - Notas `?notas`: sincronizadas por BroadcastChannel en las dos direcciones, con diapositiva actual y siguiente, cronómetro con marcas previstas y "vas tarde / vas pronto".
+> - Impresión a PDF: una diapositiva por página (35 páginas). axe sin errores en la presentación y en las notas.
+> - QR SVG (`npm run qr`) para las 9 secciones y la presentación; los de las votaciones se generan al rellenar `formUrl`. En diapositiva miden 520 px (48 % del alto) y llevan la URL corta debajo.
+> - `docs/guion.md` generado desde la misma fuente (`npm run guion`).
+
 Depende de: Fase 2 (contenido), P1, P3 y P4.
 
-- [ ] **5.1 Motor de diapositivas** 16:9, con los mismos tokens.
+- [x] **5.1 Motor de diapositivas** 16:9, con los mismos tokens.
   - Teclado y mando: flechas, PageUp/PageDown, espacio, Inicio/Fin, `B`/`.` para pantalla negra y `F` para pantalla completa. También gamepad y gestos.
-- [ ] **5.2 Notas en otra ventana** (`?notas`), sincronizadas con BroadcastChannel; temporizador con las marcas del guion; impresión a PDF.
-- [ ] **5.3 Diapositivas por bloques (45 min):** máximo 20 palabras por diapositiva, cuerpo de 32 px o más y una idea por diapositiva.
+- [x] **5.2 Notas en otra ventana** (`?notas`), sincronizadas con BroadcastChannel; temporizador con las marcas del guion; impresión a PDF.
+- [x] **5.3 Diapositivas por bloques (45 min):** máximo 20 palabras por diapositiva, cuerpo de 32 px o más y una idea por diapositiva.
 - [~] **5.4 Votación en directo.**
   - [x] Preguntas en `content/votaciones.json` (v1 gancho, v2 ICAP, v3 IA, v4 cierre), 1 pregunta por formulario para cumplir los 3 toques.
   - [x] Apps Script `tools/apps-script/votaciones.gs`: crea los formularios, publica un contador en JSON/JSONP y vacía las respuestas entre sesiones.
   - [x] `js/votes.js` (consulta cada 4 s, JSONP de respaldo, modo demo) y `presentacion/resultados.html` (pantalla de proyección, ← / →).
   - [x] Instrucciones en `docs/votaciones.md`.
   - [ ] Conectar: `votingEndpoint` en `content/site.json` y `formUrl` en cada votación (P7). Prueba real de extremo a extremo.
-  - [ ] Integrar las barras en las diapositivas.
-- [ ] **5.5 QR en SVG** (`tools/` → `assets/qr/`) para cada sección. En las diapositivas ocupan ≥ 35 % del alto, con la URL legible debajo.
-- [ ] **5.6 `docs/guion.md`** con tiempos y notas del ponente.
+  - [x] Integrar las barras en las diapositivas (4 diapositivas de votación con sondeo en directo y mensaje de mano alzada sin conexión).
+- [x] **5.5 QR en SVG** (`tools/` → `assets/qr/`) para cada sección. En las diapositivas ocupan ≥ 35 % del alto, con la URL legible debajo.
+- [x] **5.6 `docs/guion.md`** con tiempos y notas del ponente.
   - Criterio: legible al simular 1920×1080 al 25 %. Commit "Fase 5".
 
 ## Fase 6 · Verificación y publicación

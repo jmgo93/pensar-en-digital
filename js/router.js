@@ -39,9 +39,13 @@ export const currentRouteId = () => document.body.dataset.route ?? 'inicio';
  */
 export const transition = async (update) => {
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduced || typeof document.startViewTransition !== 'function') {
+  if (reduced || document.hidden || typeof document.startViewTransition !== 'function') {
     await update();
     return;
   }
-  await document.startViewTransition(update).updateCallbackDone;
+  const vt = document.startViewTransition(update);
+  // Si la transición se aborta (pestaña oculta, otra transición), el cambio de DOM ya se ha hecho.
+  vt.ready.catch(() => undefined);
+  vt.finished.catch(() => undefined);
+  await vt.updateCallbackDone.catch(() => undefined);
 };
