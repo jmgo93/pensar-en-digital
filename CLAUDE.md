@@ -32,9 +32,14 @@ Si algo de aquí contradice la especificación, manda la especificación salvo d
 - Iconos: subset local de Material Symbols Rounded. Tipografía: pila del sistema.
 - Nombres de archivo en minúsculas con guiones; identificadores JS en camelCase e inglés; textos visibles nunca en el código, siempre en `content/`.
 
+## Carga de JavaScript
+
+- `app.js` carga el núcleo (i18n, router, ui, a11y, content, pwa). Los renderizadores de cada sección (`sections`, `search`, `prompts`, `socratic`) y los modos (`tts`, `picto`) se importan **bajo demanda**. Cada página precarga solo sus módulos (`modulepreload` en `build-pages.mjs`).
+
 ## Contenido e idiomas
 
 - Única fuente de verdad: `content/*.json` / `*.md`. La PWA, la presentación y el buscador leen de ahí.
+- Licencia: **CC BY-NC-SA 4.0** para contenido y código (sin uso comercial).
 - Bilingüe **es / en**, elegible por el usuario (por defecto `es`). Cada texto tiene su versión en ambos idiomas; `<html lang>` se actualiza al cambiar.
 - Los bloques clave llevan `lecturaFacil` (resumen en lectura fácil) para el modo pictográfico.
 - Archivos derivados (índice del buscador, `content/picto-map.json`, `assets/qr/*.svg`) se generan con scripts Node en `tools/`, ejecutados a mano, y **se versionan**. Nunca se editan a mano.
@@ -64,6 +69,7 @@ docs/              guion.md, especificacion.md, pruebas de prompts
 - `python -m http.server 8000` en la raíz y abrir http://localhost:8000/. No usar `file://`.
 - Para simular el subdirectorio de Pages, sirve la carpeta padre en el puerto 8765 y abre http://127.0.0.1:8765/pensar-en-digital/.
 - `npm run typecheck`: TypeScript estricto sobre el JSDoc; tiene que dar 0 errores.
+- `npm run check:html` (html-validate), `npm run check:links` (enlaces externos; DOI por API), `npm run check:lighthouse` (mediana de 3 pasadas en la web publicada; objetivo ≥ 95).
 - `npm run check:ui`: axe, overflow y errores de consola en todas las rutas y esquemas (necesita el servidor del 8765 y Chrome o Edge).
 - `npm run tokens` / `icons` / `app-icons` / `picto` / `blank`: regeneran recursos derivados (raramente).
 - **Antes de cada commit que se vaya a publicar: `npm run build:all`** (páginas, índice de búsqueda, hoja de pruebas y lista de precarga del SW). Si no se regenera `sw-precache.js`, los usuarios no reciben la nueva versión.
@@ -72,7 +78,7 @@ docs/              guion.md, especificacion.md, pruebas de prompts
 
 - `.github/workflows/pages.yml`: en cada push a `main` sube la raíz del repo como artefacto y la publica con `actions/deploy-pages`.
 - Pages debe estar configurado en *Settings → Pages → Source: GitHub Actions*.
-- En la Fase 6 se añade un job previo de comprobación (validación HTML, enlaces rotos, axe, Lighthouse CI); el despliegue depende de él.
+- Jobs `check → build → deploy`: tipos, archivos generados al día (`git diff --exit-code` tras `build:all`), HTML, axe, enlaces internos y Lighthouse CI. Los enlaces externos solo avisan. Si `check` falla, no se publica.
 - Lighthouse ya no tiene categoría PWA (eliminada en v12): la instalabilidad se verifica con DevTools → Application → Manifest y la lista de TAREAS.md.
 
 ## Forma de trabajar

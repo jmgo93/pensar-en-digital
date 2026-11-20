@@ -20,6 +20,7 @@
     "typecheck": "tsc -p jsconfig.json",
     "check:ui": "node tools/check-ui.mjs http://127.0.0.1:8765/pensar-en-digital/",
     "check:links": "node tools/check-links.mjs",
+    "check:lighthouse": "node tools/check-lighthouse.mjs",
     "check:html": "html-validate \"*.html\" \"*/*.html\"",
     "serve": "python -m http.server 8000"
   },

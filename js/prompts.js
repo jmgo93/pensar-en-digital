@@ -119,21 +119,23 @@ export const renderPrompts = async () => {
       (c) => (!filter.category || c.category === filter.category) && (!filter.stage || c.stages.includes(filter.stage)),
     );
     // Primeras tarjetas al momento; el resto por tandas para no bloquear el hilo principal.
-    const FIRST = location.hash ? cards.length : 4;
+    const FIRST = location.hash ? cards.length : 2;
     grid.replaceChildren(...cards.slice(0, FIRST).map((c) => renderCard(c, cats.get(c.category), stageLabels)));
     count.textContent = t('ia.count', { n: cards.length });
     const rest = cards.slice(FIRST);
     const token = (drawToken = Symbol('draw'));
-    const idle = window.requestIdleCallback ?? ((/** @type {() => void} */ cb) => setTimeout(cb, 16));
+    /** @type {(cb: (d: { timeRemaining: () => number }) => void) => void} */
+    const idle = window.requestIdleCallback ?? ((cb) => setTimeout(() => cb({ timeRemaining: () => 8 }), 16));
     if (rest.length) grid.dataset.pending = '';
-    const step = () => {
+    /** Una tarjeta cada vez, mientras quede tiempo libre en el fotograma: sin tareas largas. */
+    const step = (/** @type {{ timeRemaining: () => number }} */ deadline) => {
       if (token !== drawToken) return;
-      if (!rest.length) {
-        delete grid.dataset.pending;
-        return;
-      }
-      grid.append(...rest.splice(0, 4).map((c) => renderCard(c, cats.get(c.category), stageLabels)));
-      idle(step);
+      do {
+        const next = rest.shift();
+        if (next) grid.append(renderCard(next, cats.get(next.category), stageLabels));
+      } while (rest.length && deadline.timeRemaining() > 6);
+      if (rest.length) idle(step);
+      else delete grid.dataset.pending;
     };
     idle(step);
   };
