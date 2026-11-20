@@ -1,0 +1,40 @@
+{
+  "thesis": {
+    "title": { "es": "La idea central", "en": "The core idea" },
+    "body": {
+      "es": [
+        "La competencia digital docente no consiste en dominar herramientas. Consiste en **diseñar situaciones en las que el alumnado construye conocimiento** con lo digital.",
+        "Digitalizar no es innovar: pasar una ficha a PDF o un examen a un formulario cambia el soporte, no lo que el alumnado tiene que pensar."
+      ],
+      "en": [
+        "Teacher digital competence is not about mastering tools. It is about **designing situations in which students build knowledge** with digital technology.",
+        "Digitising is not innovating: turning a worksheet into a PDF or a test into an online form changes the medium, not what students have to think about."
+      ]
+    },
+    "lecturaFacil": {
+      "es": "Usar el ordenador no es lo importante. Lo importante es que los alumnos piensen y aprendan cosas nuevas.",
+      "en": "Using the computer is not what matters. What matters is that students think and learn new things."
+    }
+  },
+  "bridge": {
+    "title": { "es": "Puente con la ponencia anterior", "en": "Bridge with the previous talk" },
+    "body": {
+      "es": [
+        "La ponencia anterior habló de **para quién** (escuela inclusiva: diversidad, convivencia, igualdad) y de **en qué clima** (ambientes de aprendizaje: clima de aula, motivación, aprendizaje cooperativo).",
+        "Esta habla de **con qué y cómo**: cómo lo digital multiplica todo eso… o lo destruye."
+      ],
+      "en": [
+        "The previous talk dealt with **for whom** (inclusive schools: diversity, coexistence, equality) and **in what climate** (learning environments: classroom climate, motivation, cooperative learning).",
+        "This one is about **with what and how**: how digital technology multiplies all of that… or destroys it."
+      ]
+    },
+    "lecturaFacil": {
+      "es": "Antes hablamos de todos los alumnos y de una clase agradable. Ahora hablamos de cómo la tecnología puede ayudar o hacer daño.",
+      "en": "Before, we talked about all students and a pleasant classroom. Now we talk about how technology can help or harm."
+    }
+  },
+  "question": {
+    "es": "¿Qué tiene que pensar el alumno ahora que antes no pensaba?",
+    "en": "What do students have to think about now that they did not think about before?"
+  }
+}

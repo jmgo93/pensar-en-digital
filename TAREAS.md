@@ -90,17 +90,30 @@ Depende de: 0.6.
 
 ## Fase 2 · Contenido verificado y buscador
 
+> **Resultado (20/11):**
+> - 25 referencias APA 7 en `content/fuentes.json`, todas comprobadas: DOI resueltos y metadatos sacados de Crossref; BOE, BOJA y EUR-Lex consultados directamente.
+> - MRCDD verificado en el BOE: áreas, las 15 competencias de las áreas 3 a 6 y las etapas A, B y C. Sigue vigente: no hay actualización publicada.
+> - Marco andaluz verificado:
+>   - Orden de 29/03/2021: DigCompOrg para centros, DigCompEdu para profesorado y DigComp para alumnado.
+>   - Resolución de 01/08/2025 (Código Escuela 4.0, PAD en Séneca, Rúbrica TDE; vigente en 2025-26 y 2026-27).
+>   - Orden de 11/05/2025 (acreditación).
+> - DigComp vigente: 3.0 (JRC, 2025).
+> - Contenido en español e inglés en `content/` (inicio, ponencia, marco, inclusiva, lunes, perfiles); se pinta con `js/sections.js`.
+> - Perfil (etapa + especialidad): se pregunta en el primer acceso a Inicio y ordena y filtra los ejemplos.
+> - Buscador `buscar/` (`js/search.js`): índice generado con `npm run search`; tolera tildes y errores (distancia ≤ 1–2), resalta coincidencias, atajo `/` y enlazable con `?q=`.
+> - `npm run check:ui` sin problemas.
+
 Depende de: Fase 1 aprobada; P1 y P4 para algunas piezas.
 
-- [ ] **2.1 Esquema de contenido** (JSDoc `@typedef`): bloques con `es`/`en`, `lecturaFacil`, etapas, icono y fuentes.
-- [ ] **2.2 Verificación de los marcos con fuente oficial:** MRCDD (BOE 16/05/2022) y DigCompEdu, DigComp en su versión vigente, CAST UDL 3.0, ICAP (Chi & Wylie, 2014), SAMR, TPACK, Reglamento (UE) 2024/1689 art. 4, RGPD/LOPDGDD y marco andaluz (Plan de Actuación Digital, Séneca, Moodle Centros).
+- [x] **2.1 Esquema de contenido** (JSDoc `@typedef`): bloques con `es`/`en`, `lecturaFacil`, etapas, icono y fuentes.
+- [x] **2.2 Verificación de los marcos con fuente oficial:** MRCDD (BOE 16/05/2022) y DigCompEdu, DigComp en su versión vigente, CAST UDL 3.0, ICAP (Chi & Wylie, 2014), SAMR, TPACK, Reglamento (UE) 2024/1689 art. 4, RGPD/LOPDGDD y marco andaluz (Plan de Actuación Digital, Séneca, Moodle Centros).
   - Criterio: cada afirmación normativa enlaza a su fuente; lo que no se pueda verificar queda en "Pendiente".
-- [ ] **2.3 Secciones:** Inicio, La ponencia, Marco CDD (áreas 3–6 y niveles A1–C2), Escuela inclusiva + digital (tabla puente y antes/después por etapa), Ideas para el lunes.
-- [ ] **2.4 Bibliografía APA 7** con filtros por tema.
+- [x] **2.3 Secciones:** Inicio, La ponencia, Marco CDD (áreas 3–6 y niveles A1–C2), Escuela inclusiva + digital (tabla puente y antes/después por etapa), Ideas para el lunes.
+- [x] **2.4 Bibliografía APA 7** con filtros por tema.
   - Criterio: todos los enlaces responden; ninguna referencia es inventada.
-- [ ] **2.5 Perfil** (etapa y especialidad) que filtra y ordena los ejemplos, con selección en el primer acceso y posibilidad de cambiarlo.
-- [ ] **2.6 Buscador:** índice generado (`tools/build-search-index`), tolerante a tildes y errores leves, con resaltado y atajo `/`.
-- [ ] **2.7 Traducción al inglés** del contenido (según P4). Commit "Fase 2".
+- [x] **2.5 Perfil** (etapa y especialidad) que filtra y ordena los ejemplos, con selección en el primer acceso y posibilidad de cambiarlo.
+- [x] **2.6 Buscador:** índice generado (`tools/build-search-index`), tolerante a tildes y errores leves, con resaltado y atajo `/`.
+- [x] **2.7 Traducción al inglés** del contenido (según P4). Commit "Fase 2".
 
 ## Fase 3 · Plantilla socrática y banco de prompts
 

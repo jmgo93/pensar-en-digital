@@ -133,7 +133,7 @@ main {
   inline-size: 100%;
   max-inline-size: var(--pd-content-max);
   margin-inline: auto;
-  padding: 1.5rem var(--pd-gutter) 3rem;
+  padding: 1.5rem min(var(--pd-gutter), 5vw) 3rem;
   outline: none;
 }
 
@@ -153,7 +153,12 @@ main {
 
 .stack {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1rem;
+}
+
+main > * {
+  min-inline-size: 0;
 }
 
 .grid-cards {

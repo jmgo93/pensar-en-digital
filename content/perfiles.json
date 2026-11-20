@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "id": "primaria",
+      "label": { "es": "Primaria", "en": "Primary" },
+      "icon": "school",
+      "specialties": [
+        { "es": "Educación Primaria", "en": "Primary Education" },
+        { "es": "Inglés", "en": "English" },
+        { "es": "Francés", "en": "French" },
+        { "es": "Educación Física", "en": "Physical Education" },
+        { "es": "Música", "en": "Music" },
+        { "es": "Pedagogía Terapéutica", "en": "Special Educational Needs (PT)" },
+        { "es": "Audición y Lenguaje", "en": "Speech and Language (AL)" }
+      ]
+    },
+    {
+      "id": "eso",
+      "label": { "es": "ESO y Bachillerato", "en": "Secondary and Baccalaureate" },
+      "icon": "menu_book",
+      "specialties": [
+        { "es": "Lengua Castellana y Literatura", "en": "Spanish Language and Literature" },
+        { "es": "Matemáticas", "en": "Mathematics" },
+        { "es": "Geografía e Historia", "en": "Geography and History" },
+        { "es": "Biología y Geología", "en": "Biology and Geology" },
+        { "es": "Física y Química", "en": "Physics and Chemistry" },
+        { "es": "Inglés", "en": "English" },
+        { "es": "Francés", "en": "French" },
+        { "es": "Tecnología", "en": "Technology" },
+        { "es": "Informática", "en": "Computer Science" },
+        { "es": "Educación Física", "en": "Physical Education" },
+        { "es": "Música", "en": "Music" },
+        { "es": "Dibujo", "en": "Art and Design" },
+        { "es": "Filosofía", "en": "Philosophy" },
+        { "es": "Latín y Griego", "en": "Latin and Greek" },
+        { "es": "Economía", "en": "Economics" },
+        { "es": "Orientación Educativa", "en": "School Counselling" }
+      ]
+    },
+    {
+      "id": "eoi",
+      "label": { "es": "Escuela Oficial de Idiomas", "en": "Official Language School (EOI)" },
+      "icon": "translate",
+      "specialties": [
+        { "es": "Inglés", "en": "English" },
+        { "es": "Francés", "en": "French" },
+        { "es": "Alemán", "en": "German" },
+        { "es": "Italiano", "en": "Italian" },
+        { "es": "Árabe", "en": "Arabic" },
+        { "es": "Chino", "en": "Chinese" },
+        { "es": "Español para extranjeros", "en": "Spanish as a foreign language" }
+      ]
+    },
+    {
+      "id": "conservatorio",
+      "label": { "es": "Conservatorio de Música y Danza", "en": "Music and Dance Conservatoire" },
+      "icon": "music_note",
+      "specialties": [
+        { "es": "Lenguaje Musical", "en": "Music Theory" },
+        { "es": "Instrumento", "en": "Instrument" },
+        { "es": "Piano", "en": "Piano" },
+        { "es": "Canto", "en": "Singing" },
+        { "es": "Armonía y Análisis", "en": "Harmony and Analysis" },
+        { "es": "Historia de la Música", "en": "History of Music" },
+        { "es": "Danza Clásica", "en": "Classical Dance" },
+        { "es": "Danza Española", "en": "Spanish Dance" },
+        { "es": "Danza Contemporánea", "en": "Contemporary Dance" },
+        { "es": "Flamenco", "en": "Flamenco" }
+      ]
+    }
+  ],
+  "other": { "es": "Otra / General", "en": "Other / General" }
+}

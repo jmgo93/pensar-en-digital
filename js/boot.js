@@ -16,6 +16,9 @@
     lang: 'es',
     tts: false,
     picto: false,
+    stage: null,
+    specialty: null,
+    profileAsked: false,
   };
 
   let storageOk = true;
@@ -94,7 +97,8 @@
       return write(current);
     },
     reset: () => {
-      current = { ...DEFAULTS };
+      // Restablecer accesibilidad no borra el perfil.
+      current = { ...DEFAULTS, stage: current.stage, specialty: current.specialty, profileAsked: current.profileAsked };
       apply(current);
       return write(current);
     },

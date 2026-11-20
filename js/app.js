@@ -8,6 +8,19 @@ import { loadStrings, applyI18n, getLang, t } from './i18n.js';
 import { initA11yPanel } from './a11y.js';
 import { initRipple, openModal } from './ui.js';
 import { fromRoot, currentRouteId } from './router.js';
+import { renderSection } from './sections.js';
+import { renderSearch } from './search.js';
+
+/** Pinta el contenido de la sección actual (si lo tiene). */
+const renderView = async () => {
+  const id = currentRouteId();
+  try {
+    if (id === 'buscar') await renderSearch();
+    else await renderSection(id);
+  } catch (err) {
+    console.error('No se pudo pintar la sección', err);
+  }
+};
 
 /** Título del documento en el idioma activo. */
 const updateTitle = () => {
@@ -63,7 +76,12 @@ const init = async () => {
       applyI18n();
       updateTitle();
     }
-    document.addEventListener('pd:langchange', updateTitle);
+    document.addEventListener('pd:langchange', () => {
+      updateTitle();
+      renderView();
+    });
+    document.addEventListener('pd:profilechange', renderView);
+    await renderView();
   } catch (err) {
     console.error('No se pudieron cargar los textos de interfaz', err);
   }

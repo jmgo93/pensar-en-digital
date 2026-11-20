@@ -76,11 +76,12 @@ try {
         page.on('response', (r) => r.status() >= 400 && errors.push(`${r.status()} ${r.url()}`));
         await page.setViewport({ width: vp.width, height: vp.height, deviceScaleFactor: 1 });
         await page.evaluateOnNewDocument((p) => {
-          localStorage.setItem('pd-prefs', JSON.stringify(p));
+          localStorage.setItem('pd-prefs', JSON.stringify({ profileAsked: true, ...p }));
         }, variant.prefs);
         await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
         await page.goto(new URL(route.path, base).href, { waitUntil: 'networkidle0' });
         await page.evaluate(() => document.fonts.ready);
+        await page.waitForFunction(() => !document.querySelector('#view[aria-busy]'), { timeout: 5000 }).catch(() => errors.push('#view sigue en aria-busy'));
 
         const tag = `${variant.name} @ ${vp.name}`;
         const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
@@ -98,7 +99,7 @@ try {
           for (const v of result.violations) fail(`${tag}: axe ${v.id} (${v.impact}) → ${v.nodes.map((n) => n.target.join(' ')).slice(0, 3).join(' | ')}`);
         }
 
-        if (shotsDir && (route.id === 'inicio' || route.id === 'ia')) {
+        if (shotsDir && ['inicio', 'marco', 'inclusiva', 'bibliografia'].includes(route.id) && vp.name !== 'movil320') {
           await page.screenshot({ path: `${shotsDir}/${route.id}-${variant.name}-${vp.name}.png`, fullPage: false });
         }
         await page.close();

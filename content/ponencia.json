@@ -1,0 +1,132 @@
+{
+  "intro": {
+    "es": "45 minutos en seis bloques. Este resumen sigue el mismo orden que las diapositivas.",
+    "en": "45 minutes in six blocks. This summary follows the same order as the slides."
+  },
+  "blocks": [
+    {
+      "id": "b1",
+      "minutes": [0, 5],
+      "icon": "co_present",
+      "title": { "es": "Puente y gancho", "en": "Bridge and hook" },
+      "summary": {
+        "es": [
+          "Partimos de la ponencia anterior: *para quién* y *en qué clima*. Hoy: *con qué y cómo*.",
+          "Votación: dos versiones de una misma tarea. Una la resuelve una IA en segundos; la otra exige datos propios, contraste con un compañero y una propuesta defendida ante el centro."
+        ],
+        "en": [
+          "We start from the previous talk: *for whom* and *in what climate*. Today: *with what and how*.",
+          "Vote: two versions of the same task. An AI solves one in seconds; the other requires students' own data, comparison with a classmate and a proposal defended before the school."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "Votamos. Una tarea la hace una máquina sola. La otra necesita que los alumnos piensen.",
+        "en": "We vote. A machine can do one task alone. The other needs students to think."
+      }
+    },
+    {
+      "id": "b2",
+      "minutes": [5, 10],
+      "icon": "school",
+      "title": { "es": "El MRCDD en una diapositiva", "en": "The framework in one slide" },
+      "summary": {
+        "es": [
+          "El Marco de Referencia de la Competencia Digital Docente tiene seis áreas [@mrcdd]. Cuatro de ellas (3 a 6) miran directamente al aula: enseñar, evaluar, empoderar al alumnado y desarrollar su competencia digital.",
+          "Por eso proponemos una lectura: la competencia docente se nota en **lo que consigue hacer el alumnado**, no en la lista de aplicaciones del profesorado."
+        ],
+        "en": [
+          "The Spanish Teacher Digital Competence Framework (MRCDD) has six areas [@mrcdd]. Four of them (3 to 6) look directly at the classroom: teaching, assessing, empowering students and developing their digital competence.",
+          "Hence our reading: teacher competence shows in **what students manage to do**, not in the teacher's list of apps."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "Un buen profesor digital se nota en lo que aprenden sus alumnos.",
+        "en": "A good digital teacher shows in what their students learn."
+      }
+    },
+    {
+      "id": "b3",
+      "minutes": [10, 20],
+      "icon": "psychology",
+      "title": { "es": "De consumir a construir", "en": "From consuming to constructing" },
+      "summary": {
+        "es": [
+          "**ICAP como filtro** [@icap]: el compromiso cognitivo puede ser pasivo (recibir), activo (manipular), constructivo (generar algo nuevo) o interactivo (co-construir con otros). Según Chi y Wylie, el aprendizaje tiende a aumentar en ese orden.",
+          "**SAMR como antipatrón**: subir de «sustitución» a «redefinición» no garantiza aprendizaje. El modelo se centra en la tecnología, no en lo que piensa el alumnado, y tiene poca base empírica [@samr-critica]. Úsalo para describir, no como meta.",
+          "TPACK recuerda que el conocimiento tecnológico solo sirve unido al pedagógico y al de la materia [@tpack]."
+        ],
+        "en": [
+          "**ICAP as a filter** [@icap]: cognitive engagement can be passive (receiving), active (manipulating), constructive (generating something new) or interactive (co-constructing with others). According to Chi and Wylie, learning tends to increase in that order.",
+          "**SAMR as an anti-pattern**: moving up from “substitution” to “redefinition” does not guarantee learning. The model centres on technology, not on what students think, and has little empirical grounding [@samr-critica]. Use it to describe, not as a goal.",
+          "TPACK reminds us that technological knowledge only works when combined with pedagogical and content knowledge [@tpack]."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "Mirar o copiar enseña poco. Crear y hablar con otros enseña más.",
+        "en": "Watching or copying teaches little. Creating and talking with others teaches more."
+      }
+    },
+    {
+      "id": "b4",
+      "minutes": [20, 32],
+      "icon": "diversity_3",
+      "title": { "es": "Lo digital al servicio de la escuela inclusiva", "en": "Digital at the service of inclusive schools" },
+      "summary": {
+        "es": [
+          "Cinco temas de la ponencia anterior y su versión digital: diversidad → DUA; convivencia → ciberconvivencia y bienestar digital; igualdad → sesgos de la IA y brecha de uso; clima y motivación → retroalimentación y gamificación con sentido; cooperativo → coautoría con interdependencia real.",
+          "Con ejemplos de antes y después en Primaria, ESO y Bachillerato, Escuelas Oficiales de Idiomas y Conservatorios."
+        ],
+        "en": [
+          "Five topics from the previous talk and their digital version: diversity → UDL; coexistence → online coexistence and digital wellbeing; equality → AI bias and the usage gap; climate and motivation → feedback and meaningful gamification; cooperation → co-authorship with real interdependence.",
+          "With before-and-after examples in Primary, Secondary and Baccalaureate, Official Language Schools and Conservatoires."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "La tecnología puede ayudar a que todos los alumnos aprendan juntos.",
+        "en": "Technology can help all students learn together."
+      }
+    },
+    {
+      "id": "b5",
+      "minutes": [32, 40],
+      "icon": "smart_toy",
+      "title": { "es": "IA generativa: muleta o tutor", "en": "Generative AI: crutch or tutor" },
+      "summary": {
+        "es": [
+          "**Descarga cognitiva**: un experimento con casi mil estudiantes de secundaria encontró que el acceso libre a GPT-4 mejoró sus notas en la práctica, pero, al retirarlo, rindieron un 17 % peor que quienes nunca lo tuvieron. Una versión con salvaguardas tipo tutor mitigó en gran parte ese efecto [@bastani]. En una encuesta a 666 personas, el uso frecuente de herramientas de IA se asoció con menor pensamiento crítico [@gerlich].",
+          "**Tutor socrático**: la IA que pregunta en lugar de responder. **Sesgos**: verificar siempre. **Evaluar el proceso**, no solo el producto.",
+          "**Marco legal**: RGPD y LOPDGDD (no introducir datos personales del alumnado) [@rgpd] [@lopdgdd]. El Reglamento europeo de IA obliga a proveedores y responsables del despliegue de sistemas de IA a procurar un nivel suficiente de alfabetización en IA de su personal (art. 4, aplicable desde el 2 de febrero de 2025) [@rgia]."
+        ],
+        "en": [
+          "**Cognitive offloading**: an experiment with nearly a thousand secondary students found that unrestricted GPT-4 access improved their practice grades, but once removed they performed 17% worse than students who never had it. A tutor-style version with safeguards largely mitigated this effect [@bastani]. In a survey of 666 people, frequent use of AI tools was associated with lower critical thinking [@gerlich].",
+          "**Socratic tutor**: AI that asks instead of answering. **Bias**: always verify. **Assess the process**, not just the product.",
+          "**Legal framework**: GDPR and the Spanish data protection law (never enter students' personal data) [@rgpd] [@lopdgdd]. The EU AI Act requires providers and deployers of AI systems to ensure, to their best extent, a sufficient level of AI literacy among their staff (Art. 4, applicable since 2 February 2025) [@rgia]."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "Si la máquina piensa por ti, aprendes menos. Mejor una máquina que te hace preguntas.",
+        "en": "If the machine thinks for you, you learn less. A machine that asks you questions is better."
+      }
+    },
+    {
+      "id": "b6",
+      "minutes": [40, 45],
+      "icon": "rocket_launch",
+      "title": { "es": "Cierre y reto", "en": "Closing and challenge" },
+      "summary": {
+        "es": [
+          "Una pregunta para llevarse: **¿qué tiene que pensar el alumno ahora que antes no pensaba?**",
+          "Reto: elegir una tarea de la próxima semana y pasarla por la plantilla socrática."
+        ],
+        "en": [
+          "One question to take away: **what do students have to think about now that they did not think about before?**",
+          "Challenge: pick a task for next week and run it through the Socratic template."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "Elige una tarea y piensa cómo hacer que tus alumnos piensen más.",
+        "en": "Choose a task and think how to make your students think more."
+      }
+    }
+  ]
+}

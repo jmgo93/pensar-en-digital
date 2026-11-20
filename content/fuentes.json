@@ -1,0 +1,279 @@
+{
+  "verified": "2026-11-20",
+  "topics": {
+    "cdd": {
+      "es": "Competencia digital",
+      "en": "Digital competence"
+    },
+    "aprendizaje": {
+      "es": "Aprendizaje",
+      "en": "Learning"
+    },
+    "dua": {
+      "es": "DUA e inclusión",
+      "en": "UDL and inclusion"
+    },
+    "ia": {
+      "es": "Inteligencia artificial",
+      "en": "Artificial intelligence"
+    },
+    "datos": {
+      "es": "Datos y privacidad",
+      "en": "Data and privacy"
+    },
+    "normativa": {
+      "es": "Normativa",
+      "en": "Legislation"
+    },
+    "andalucia": {
+      "es": "Andalucía",
+      "en": "Andalusia"
+    }
+  },
+  "items": [
+    {
+      "id": "mrcdd",
+      "topics": [
+        "cdd",
+        "normativa"
+      ],
+      "apa": "Resolución de 4 de mayo de 2022, de la Dirección General de Evaluación y Cooperación Territorial, por la que se publica el Acuerdo de la Conferencia Sectorial de Educación, sobre la actualización del marco de referencia de la competencia digital docente. *Boletín Oficial del Estado*, 116, de 16 de mayo de 2022, 67979–68026.",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2022-8042",
+      "cite": "MRCDD, 2022"
+    },
+    {
+      "id": "digcompedu",
+      "topics": [
+        "cdd"
+      ],
+      "apa": "Redecker, C. (2017). *European framework for the digital competence of educators: DigCompEdu* (Y. Punie, Ed.). Publications Office of the European Union.",
+      "url": "https://doi.org/10.2760/159770",
+      "cite": "Redecker, 2017"
+    },
+    {
+      "id": "digcomp3",
+      "topics": [
+        "cdd"
+      ],
+      "apa": "Cosgrove, J., & Cachia, R. (2025). *DigComp 3.0: European digital competence framework* (5.ª ed.). Publications Office of the European Union.",
+      "url": "https://publications.jrc.ec.europa.eu/repository/handle/JRC144121",
+      "cite": "Cosgrove y Cachia, 2025"
+    },
+    {
+      "id": "orden-marcos-2021",
+      "topics": [
+        "cdd",
+        "normativa",
+        "andalucia"
+      ],
+      "apa": "Orden de 29 de marzo de 2021, por la que se establecen los marcos de la Competencia Digital en el sistema educativo no universitario de la Comunidad Autónoma de Andalucía. *Boletín Oficial de la Junta de Andalucía*, 67, de 12 de abril de 2021, 150–162.",
+      "url": "https://www.juntadeandalucia.es/boja/2021/67/BOJA21-067-00013-5927-01_00189819.pdf",
+      "cite": "Orden de 29/03/2021"
+    },
+    {
+      "id": "orden-acreditacion-2025",
+      "topics": [
+        "cdd",
+        "normativa",
+        "andalucia"
+      ],
+      "apa": "Orden de 11 de mayo de 2025, por la que se regula el procedimiento para la acreditación de la competencia digital docente en el ámbito de la Comunidad Autónoma de Andalucía. *Boletín Oficial de la Junta de Andalucía*, 97, de 23 de mayo de 2025.",
+      "url": "https://juntadeandalucia.es/boja/2025/97/25",
+      "cite": "Orden de 11/05/2025"
+    },
+    {
+      "id": "boja-ce40",
+      "topics": [
+        "cdd",
+        "normativa",
+        "andalucia"
+      ],
+      "apa": "Resolución de 1 de agosto de 2025, de la Dirección General de Innovación y Formación del Profesorado, sobre medidas para el impulso de la Competencia Digital en los centros docentes sostenidos con fondos públicos en el Marco del Programa de Cooperación Territorial Código Escuela 4.0. *Boletín Oficial de la Junta de Andalucía*, 151, de 7 de agosto de 2025.",
+      "url": "https://www.juntadeandalucia.es/boja/2025/151/19",
+      "cite": "Resolución de 01/08/2025"
+    },
+    {
+      "id": "junta-cd",
+      "topics": [
+        "cdd",
+        "ia",
+        "andalucia"
+      ],
+      "apa": "Junta de Andalucía. (s. f.). *Digitalización e Inteligencia Artificial* [Portal eAprendizaje]. Consejería de Desarrollo Educativo y Formación Profesional.",
+      "url": "https://www.juntadeandalucia.es/educacion/eaprendizaje/impulsocd/",
+      "cite": "Junta de Andalucía, s. f."
+    },
+    {
+      "id": "cast-udl",
+      "topics": [
+        "dua"
+      ],
+      "apa": "CAST. (2024). *Universal Design for Learning Guidelines version 3.0*.",
+      "url": "https://udlguidelines.cast.org/",
+      "cite": "CAST, 2024"
+    },
+    {
+      "id": "icap",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Chi, M. T. H., & Wylie, R. (2014). The ICAP framework: Linking cognitive engagement to active learning outcomes. *Educational Psychologist, 49*(4), 219–243.",
+      "url": "https://doi.org/10.1080/00461520.2014.965823",
+      "cite": "Chi y Wylie, 2014"
+    },
+    {
+      "id": "tpack",
+      "topics": [
+        "cdd",
+        "aprendizaje"
+      ],
+      "apa": "Mishra, P., & Koehler, M. J. (2006). Technological pedagogical content knowledge: A framework for teacher knowledge. *Teachers College Record, 108*(6), 1017–1054.",
+      "url": "https://doi.org/10.1111/j.1467-9620.2006.00684.x",
+      "cite": "Mishra y Koehler, 2006"
+    },
+    {
+      "id": "samr-puentedura",
+      "topics": [
+        "cdd"
+      ],
+      "apa": "Puentedura, R. R. (s. f.). *Ruben R. Puentedura's weblog* [Blog]. Hippasus.",
+      "url": "https://hippasus.com/rrpweblog/",
+      "cite": "Puentedura, s. f."
+    },
+    {
+      "id": "samr-critica",
+      "topics": [
+        "cdd",
+        "aprendizaje"
+      ],
+      "apa": "Hamilton, E. R., Rosenberg, J. M., & Akcaoglu, M. (2016). The Substitution Augmentation Modification Redefinition (SAMR) model: A critical review and suggestions for its use. *TechTrends, 60*(5), 433–441.",
+      "url": "https://doi.org/10.1007/s11528-016-0091-y",
+      "cite": "Hamilton et al., 2016"
+    },
+    {
+      "id": "feedback",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Hattie, J., & Timperley, H. (2007). The power of feedback. *Review of Educational Research, 77*(1), 81–112.",
+      "url": "https://doi.org/10.3102/003465430298487",
+      "cite": "Hattie y Timperley, 2007"
+    },
+    {
+      "id": "cooperativo",
+      "topics": [
+        "aprendizaje",
+        "dua"
+      ],
+      "apa": "Johnson, D. W., & Johnson, R. T. (2009). An educational psychology success story: Social interdependence theory and cooperative learning. *Educational Researcher, 38*(5), 365–379.",
+      "url": "https://doi.org/10.3102/0013189X09339057",
+      "cite": "Johnson y Johnson, 2009"
+    },
+    {
+      "id": "gamificacion",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Deterding, S., Dixon, D., Khaled, R., & Nacke, L. (2011). From game design elements to gamefulness: Defining \"gamification\". En *Proceedings of the 15th International Academic MindTrek Conference* (pp. 9–15). ACM.",
+      "url": "https://doi.org/10.1145/2181037.2181040",
+      "cite": "Deterding et al., 2011"
+    },
+    {
+      "id": "bastani",
+      "topics": [
+        "ia",
+        "aprendizaje"
+      ],
+      "apa": "Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakcı, Ö., & Mariman, R. (2025). Generative AI without guardrails can harm learning: Evidence from high school mathematics. *Proceedings of the National Academy of Sciences, 122*(26), e2422633122.",
+      "url": "https://doi.org/10.1073/pnas.2422633122",
+      "cite": "Bastani et al., 2025"
+    },
+    {
+      "id": "gerlich",
+      "topics": [
+        "ia",
+        "aprendizaje"
+      ],
+      "apa": "Gerlich, M. (2025). AI tools in society: Impacts on cognitive offloading and the future of critical thinking. *Societies, 15*(1), 6.",
+      "url": "https://doi.org/10.3390/soc15010006",
+      "cite": "Gerlich, 2025"
+    },
+    {
+      "id": "unesco-ia",
+      "topics": [
+        "ia",
+        "cdd"
+      ],
+      "apa": "UNESCO. (2024). *AI competency framework for teachers*.",
+      "url": "https://doi.org/10.54675/ZJTE2084",
+      "cite": "UNESCO, 2024"
+    },
+    {
+      "id": "ce-etica-ia",
+      "topics": [
+        "ia",
+        "datos"
+      ],
+      "apa": "Comisión Europea. (2022). *Ethical guidelines on the use of artificial intelligence (AI) and data in teaching and learning for educators*. Publications Office of the European Union.",
+      "url": "https://doi.org/10.2766/153756",
+      "cite": "Comisión Europea, 2022"
+    },
+    {
+      "id": "intef-ia",
+      "topics": [
+        "ia"
+      ],
+      "apa": "Instituto Nacional de Tecnologías Educativas y de Formación del Profesorado. (2024). *Guía sobre el uso de la inteligencia artificial en el ámbito educativo*. Ministerio de Educación, Formación Profesional y Deportes.",
+      "url": "https://intef.es/Noticias/guia-sobre-el-uso-de-la-inteligencia-artificial-en-el-ambito-educativo/",
+      "cite": "INTEF, 2024"
+    },
+    {
+      "id": "rgia",
+      "topics": [
+        "ia",
+        "normativa"
+      ],
+      "apa": "Reglamento (UE) 2024/1689 del Parlamento Europeo y del Consejo, de 13 de junio de 2024, por el que se establecen normas armonizadas en materia de inteligencia artificial (Reglamento de Inteligencia Artificial). *Diario Oficial de la Unión Europea*, L, de 12 de julio de 2024.",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj",
+      "cite": "Reglamento (UE) 2024/1689"
+    },
+    {
+      "id": "rgpd",
+      "topics": [
+        "datos",
+        "normativa"
+      ],
+      "apa": "Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (Reglamento general de protección de datos). *Diario Oficial de la Unión Europea*, L 119, de 4 de mayo de 2016, 1–88.",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "cite": "RGPD"
+    },
+    {
+      "id": "lopdgdd",
+      "topics": [
+        "datos",
+        "normativa"
+      ],
+      "apa": "Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales. *Boletín Oficial del Estado*, 294, de 6 de diciembre de 2018.",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673",
+      "cite": "LOPDGDD"
+    },
+    {
+      "id": "aepd-centros",
+      "topics": [
+        "datos"
+      ],
+      "apa": "Agencia Española de Protección de Datos. (s. f.). *Guía para centros educativos*.",
+      "url": "https://www.aepd.es/guias/guia-centros-educativos.pdf",
+      "cite": "AEPD, s. f."
+    },
+    {
+      "id": "lomloe",
+      "topics": [
+        "normativa"
+      ],
+      "apa": "Ley Orgánica 3/2020, de 29 de diciembre, por la que se modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación. *Boletín Oficial del Estado*, 340, de 30 de diciembre de 2020.",
+      "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-17264",
+      "cite": "LOMLOE"
+    }
+  ]
+}

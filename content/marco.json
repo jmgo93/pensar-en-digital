@@ -1,0 +1,213 @@
+{
+  "intro": {
+    "es": [
+      "El **Marco de Referencia de la Competencia Digital Docente** (MRCDD) es el marco estatal vigente desde 2022 [@mrcdd]. Se organiza en seis áreas, como el marco europeo DigCompEdu en el que se inspira [@digcompedu].",
+      "Las áreas 1 (compromiso profesional) y 2 (contenidos digitales) hablan del docente. Las áreas **3 a 6** hablan de lo que pasa en el aula y de lo que consigue el alumnado. Por eso son las que más nos interesan aquí."
+    ],
+    "en": [
+      "The Spanish **Teacher Digital Competence Reference Framework** (MRCDD) has been the national framework since 2022 [@mrcdd]. It is organised in six areas, like the European DigCompEdu framework that inspired it [@digcompedu].",
+      "Areas 1 (professional engagement) and 2 (digital content) are about the teacher. Areas **3 to 6** are about what happens in the classroom and what students achieve. That is why they matter most here."
+    ]
+  },
+  "andalucia": {
+    "title": { "es": "En Andalucía", "en": "In Andalusia" },
+    "body": {
+      "es": [
+        "La Orden de 29 de marzo de 2021 adopta los marcos europeos del JRC: **DigCompOrg** para los centros, **DigCompEdu** para el profesorado y **DigComp** para el alumnado, y prevé adaptarse a sus nuevas versiones [@orden-marcos-2021]. La versión vigente de DigComp es la 3.0, publicada en 2025, que integra la IA en todo el marco [@digcomp3].",
+        "Cada centro planifica su transformación digital en el **Plan de Actuación Digital (PAD)**, que se elabora en Séneca y se organiza en tres ámbitos: organización y gestión, procesos de enseñanza-aprendizaje, e información y comunicación. La Resolución de 1 de agosto de 2025 (Código Escuela 4.0) lo regula para los cursos 2025-26 y 2026-27, junto con la Rúbrica TDE y la figura de la persona coordinadora TDE [@boja-ce40].",
+        "La acreditación de la competencia digital docente en Andalucía se regula en la Orden de 11 de mayo de 2025 [@orden-acreditacion-2025]."
+      ],
+      "en": [
+        "The Order of 29 March 2021 adopts the European JRC frameworks: **DigCompOrg** for schools, **DigCompEdu** for teachers and **DigComp** for students, and provides for adapting to their new versions [@orden-marcos-2021]. The current version of DigComp is 3.0, published in 2025, which integrates AI throughout the framework [@digcomp3].",
+        "Each school plans its digital transformation in its **Digital Action Plan (PAD)**, drawn up in Séneca and organised in three scopes: organisation and management, teaching and learning processes, and information and communication. The Resolution of 1 August 2025 (Código Escuela 4.0) regulates it for the 2025-26 and 2026-27 school years, together with the TDE Rubric and the TDE coordinator role [@boja-ce40].",
+        "Accreditation of teacher digital competence in Andalusia is regulated by the Order of 11 May 2025 [@orden-acreditacion-2025]."
+      ]
+    }
+  },
+  "areas": [
+    {
+      "id": "area-3",
+      "number": 3,
+      "icon": "co_present",
+      "title": { "es": "Enseñanza y aprendizaje", "en": "Teaching and learning" },
+      "competences": [
+        { "code": "3.1", "es": "Enseñanza", "en": "Teaching" },
+        { "code": "3.2", "es": "Orientación y apoyo en el aprendizaje", "en": "Guidance and support in learning" },
+        { "code": "3.3", "es": "Aprendizaje entre iguales", "en": "Peer learning" },
+        { "code": "3.4", "es": "Aprendizaje autorregulado", "en": "Self-regulated learning" }
+      ],
+      "plain": {
+        "es": "Diseñar y gestionar clases con tecnología que hagan pensar: acompañar al alumnado, que aprenda de sus compañeros y que aprenda a regular su propio aprendizaje.",
+        "en": "Designing and running lessons with technology that make students think: supporting them, helping them learn from peers and learn to regulate their own learning."
+      },
+      "lecturaFacil": {
+        "es": "El profesor usa la tecnología para que los alumnos aprendan juntos y solos.",
+        "en": "The teacher uses technology so students learn together and on their own."
+      },
+      "examples": {
+        "primaria": {
+          "es": "En lugar de ver un vídeo sobre el ciclo del agua, cada grupo graba un audio explicando un esquema que ha dibujado. Otra clase lo escucha y les envía dos preguntas. (3.3)",
+          "en": "Instead of watching a video about the water cycle, each group records an audio explaining a diagram they drew. Another class listens and sends them two questions. (3.3)"
+        },
+        "eso": {
+          "es": "Diario de aprendizaje en Moodle Centros: cada semana el alumnado anota qué no entendió, qué hizo para resolverlo y a quién pidió ayuda. (3.4)",
+          "en": "Learning journal in Moodle Centros: each week students note what they did not understand, what they did about it and whom they asked for help. (3.4)"
+        },
+        "eoi": {
+          "es": "Foro de mensajes de voz en el que cada estudiante responde a la grabación de un compañero usando una lista breve de criterios del nivel MCER. (3.3)",
+          "en": "Voice-message forum where each student replies to a peer's recording using a short checklist for their CEFR level. (3.3)"
+        },
+        "conservatorio": {
+          "es": "El alumnado graba su estudio cada semana y compara la grabación con la anterior usando una guía de autoescucha: afinación, pulso, fraseo. (3.4)",
+          "en": "Students record their practice every week and compare it with the previous recording using a self-listening guide: intonation, pulse, phrasing. (3.4)"
+        }
+      }
+    },
+    {
+      "id": "area-4",
+      "number": 4,
+      "icon": "check_circle",
+      "title": { "es": "Evaluación y retroalimentación", "en": "Assessment and feedback" },
+      "competences": [
+        { "code": "4.1", "es": "Estrategias de evaluación", "en": "Assessment strategies" },
+        { "code": "4.2", "es": "Analíticas y evidencias de aprendizaje", "en": "Learning analytics and evidence" },
+        { "code": "4.3", "es": "Retroalimentación y toma de decisiones", "en": "Feedback and decision-making" }
+      ],
+      "plain": {
+        "es": "Usar lo digital para ver el proceso, no solo el resultado: recoger evidencias, devolver retroalimentación útil y decidir qué hacer después, siempre respetando la protección de datos.",
+        "en": "Using digital tools to see the process, not just the result: collecting evidence, giving useful feedback and deciding what to do next, always respecting data protection."
+      },
+      "lecturaFacil": {
+        "es": "El profesor mira cómo aprende cada alumno y le ayuda a mejorar.",
+        "en": "The teacher looks at how each student learns and helps them improve."
+      },
+      "examples": {
+        "primaria": {
+          "es": "Portfolio con fotos de cada borrador, no solo del trabajo final, y un comentario de audio del docente: «qué has conseguido» y «tu siguiente paso». (4.3)",
+          "en": "Portfolio with photos of every draft, not just the final piece, and an audio comment from the teacher: “what you achieved” and “your next step”. (4.3)"
+        },
+        "eso": {
+          "es": "Cuestionario de diagnóstico al empezar la unidad. Los resultados, no la lista de clase, deciden qué grupos trabajan qué. (4.2)",
+          "en": "Diagnostic quiz at the start of the unit. The results, not the class list, decide which groups work on what. (4.2)"
+        },
+        "eoi": {
+          "es": "Retroalimentación oral grabada sobre una producción escrita: un aspecto que mantener y dos que mejorar, con un ejemplo de cada. (4.3)",
+          "en": "Recorded oral feedback on a written production: one aspect to keep and two to improve, with an example of each. (4.3)"
+        },
+        "conservatorio": {
+          "es": "Rúbrica compartida para la audición. Antes de la evaluación del docente, el alumnado se autoevalúa escuchando su grabación con esa misma rúbrica. (4.1)",
+          "en": "Shared rubric for the recital. Before the teacher's assessment, students self-assess by listening to their recording with that same rubric. (4.1)"
+        }
+      }
+    },
+    {
+      "id": "area-5",
+      "number": 5,
+      "icon": "accessibility_new",
+      "title": { "es": "Empoderamiento del alumnado", "en": "Empowering students" },
+      "competences": [
+        { "code": "5.1", "es": "Accesibilidad e inclusión", "en": "Accessibility and inclusion" },
+        { "code": "5.2", "es": "Atención a las diferencias personales en el aprendizaje", "en": "Attending to individual differences in learning" },
+        { "code": "5.3", "es": "Compromiso activo del alumnado con su propio aprendizaje", "en": "Students' active engagement in their own learning" }
+      ],
+      "plain": {
+        "es": "Quitar barreras para que todo el alumnado pueda acceder, participar y avanzar, y convertirlo en protagonista que piensa de forma crítica y creativa.",
+        "en": "Removing barriers so all students can access, take part and progress, and making them protagonists who think critically and creatively."
+      },
+      "lecturaFacil": {
+        "es": "Todos los alumnos pueden aprender. La tecnología quita obstáculos.",
+        "en": "All students can learn. Technology removes obstacles."
+      },
+      "examples": {
+        "primaria": {
+          "es": "El mismo cuento en texto, en audio y con pictogramas. Cada alumno elige cómo acceder, y todos trabajan después la misma pregunta. (5.1)",
+          "en": "The same story as text, audio and pictograms. Each student chooses how to access it, and then everyone works on the same question. (5.1)"
+        },
+        "eso": {
+          "es": "El producto final se puede entregar como vídeo, pódcast, infografía o texto, y se evalúa con la misma rúbrica centrada en el contenido. (5.2)",
+          "en": "The final product can be a video, podcast, infographic or text, assessed with the same content-focused rubric. (5.2)"
+        },
+        "eoi": {
+          "es": "Todos los audios de clase tienen transcripción y se pueden escuchar a menor velocidad. El objetivo es comprender, no superar una barrera técnica. (5.1)",
+          "en": "All class audio has a transcript and can be played more slowly. The goal is understanding, not overcoming a technical barrier. (5.1)"
+        },
+        "conservatorio": {
+          "es": "Partituras digitales ampliables y con alto contraste para alumnado con baja visión, y metrónomo visual para quien lo necesite. (5.1)",
+          "en": "Digital scores that can be enlarged and shown in high contrast for students with low vision, and a visual metronome for those who need it. (5.1)"
+        }
+      }
+    },
+    {
+      "id": "area-6",
+      "number": 6,
+      "icon": "lightbulb",
+      "title": { "es": "Desarrollo de la competencia digital del alumnado", "en": "Developing students' digital competence" },
+      "competences": [
+        { "code": "6.1", "es": "Alfabetización mediática y en el tratamiento de la información y de los datos", "en": "Media and information and data literacy" },
+        { "code": "6.2", "es": "Comunicación, colaboración y ciudadanía digital", "en": "Communication, collaboration and digital citizenship" },
+        { "code": "6.3", "es": "Creación de contenidos digitales", "en": "Digital content creation" },
+        { "code": "6.4", "es": "Uso responsable y bienestar digital", "en": "Responsible use and digital wellbeing" },
+        { "code": "6.5", "es": "Resolución de problemas", "en": "Problem solving" }
+      ],
+      "plain": {
+        "es": "Enseñar al alumnado a buscar y contrastar información, comunicarse y colaborar con respeto, crear respetando la autoría, cuidarse en la red y resolver problemas con tecnología.",
+        "en": "Teaching students to search for and check information, communicate and collaborate respectfully, create while respecting authorship, look after themselves online and solve problems with technology."
+      },
+      "lecturaFacil": {
+        "es": "Los alumnos aprenden a usar internet bien: buscar, crear y cuidarse.",
+        "en": "Students learn to use the internet well: search, create and stay safe."
+      },
+      "examples": {
+        "primaria": {
+          "es": "«Detectives de bulos»: la clase compara dos noticias sobre el mismo hecho y explica, con tres pistas, cuál es más fiable. (6.1)",
+          "en": "“Hoax detectives”: the class compares two news items about the same event and explains, with three clues, which is more reliable. (6.1)"
+        },
+        "eso": {
+          "es": "El alumnado analiza qué datos recoge una aplicación que usa a diario y redacta recomendaciones para su familia. (6.4)",
+          "en": "Students analyse what data an app they use daily collects and write recommendations for their families. (6.4)"
+        },
+        "eoi": {
+          "es": "Cada grupo crea en la lengua meta un recurso breve para otros estudiantes, con licencia Creative Commons y sus fuentes citadas. (6.3)",
+          "en": "Each group creates a short resource in the target language for other learners, with a Creative Commons licence and cited sources. (6.3)"
+        },
+        "conservatorio": {
+          "es": "Edición de audio de una pieza propia que incluye fragmentos de otras obras, y una reflexión escrita sobre los derechos de autor de esos fragmentos. (6.3)",
+          "en": "Audio editing of an original piece that includes excerpts from other works, plus a written reflection on the copyright of those excerpts. (6.3)"
+        }
+      }
+    }
+  ],
+  "levels": {
+    "title": { "es": "Los niveles A1–C2, en lenguaje claro", "en": "Levels A1–C2 in plain language" },
+    "note": {
+      "es": "El MRCDD describe tres etapas con dos niveles cada una. Esta es una síntesis general: la redacción exacta cambia en cada competencia [@mrcdd].",
+      "en": "The MRCDD describes three stages with two levels each. This is a general summary: the exact wording changes for each competence [@mrcdd]."
+    },
+    "stages": [
+      {
+        "id": "A",
+        "title": { "es": "Etapa A · Conocer y aplicar con guía", "en": "Stage A · Knowing and applying with guidance" },
+        "levels": [
+          { "code": "A1", "es": "Conozco las tecnologías que ofrece mi centro y para qué sirven.", "en": "I know the technologies my school provides and what they are for." },
+          { "code": "A2", "es": "Las uso en clase siguiendo pautas o con ayuda.", "en": "I use them in class following guidelines or with support." }
+        ]
+      },
+      {
+        "id": "B",
+        "title": { "es": "Etapa B · Usar con autonomía y adaptar", "en": "Stage B · Using autonomously and adapting" },
+        "levels": [
+          { "code": "B1", "es": "Las uso por mi cuenta, integradas en mi programación.", "en": "I use them on my own, built into my planning." },
+          { "code": "B2", "es": "Adapto mi práctica a situaciones y contextos nuevos.", "en": "I adapt my practice to new situations and contexts." }
+        ]
+      },
+      {
+        "id": "C",
+        "title": { "es": "Etapa C · Investigar y transformar", "en": "Stage C · Researching and transforming" },
+        "levels": [
+          { "code": "C1", "es": "Analizo y mejoro las prácticas digitales de mi centro.", "en": "I analyse and improve my school's digital practices." },
+          { "code": "C2", "es": "Investigo, innovo y comparto modelos que transforman la enseñanza.", "en": "I research, innovate and share models that transform teaching." }
+        ]
+      }
+    ]
+  }
+}

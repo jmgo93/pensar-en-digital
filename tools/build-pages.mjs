@@ -41,7 +41,10 @@ const icon = (name) => `<span class="icon" aria-hidden="true">${name}</span>`;
 const navItem = (r, current, rel) =>
   `<a class="nav-item" href="${rel}${r.path}"${r.id === current ? ' aria-current="page"' : ''}><span class="indicator">${icon(r.icon)}</span><span class="label" data-i18n="route.${r.id}.short">${tx(`route.${r.id}.short`)}</span></a>`;
 
-/** Contenido principal provisional (Fase 1). */
+/** Secciones cuyo contenido pinta js/sections.js o js/search.js. */
+const RENDERED = new Set(['ponencia', 'marco', 'inclusiva', 'lunes', 'bibliografia', 'buscar']);
+
+/** Contenido principal: cabecera estática + #view que rellena JS. */
 const mainContent = (/** @type {import('../js/types').Route} */ route, /** @type {string} */ rel) => {
   if (route.id === 'inicio') {
     const cards = routes
@@ -66,14 +69,15 @@ const mainContent = (/** @type {import('../js/types').Route} */ route, /** @type
         <h2 id="sections-title" class="title-large" data-i18n="home.sections">${tx('home.sections')}</h2>
         <div class="grid-cards">${cards}
         </div>
-      </section>`;
+      </section>
+      <div id="view" class="stack home-view" aria-busy="true"></div>`;
   }
   return `
       <header class="page-header">
         <h1 id="page-title" data-i18n="route.${route.id}">${tx(`route.${route.id}`)}</h1>
       </header>
-      <div id="view" class="stack">
-        <div class="card card-filled"><p data-i18n="app.placeholder">${tx('app.placeholder')}</p></div>
+      <div id="view" class="stack"${RENDERED.has(route.id) ? ' aria-busy="true"' : ''}>
+        ${RENDERED.has(route.id) ? `<p class="muted" data-i18n="app.loading">${tx('app.loading')}</p>` : `<div class="card card-filled"><p data-i18n="app.placeholder">${tx('app.placeholder')}</p></div>`}
       </div>`;
 };
 

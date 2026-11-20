@@ -14,6 +14,11 @@ export interface Prefs {
   lang: Lang;
   tts: boolean;
   picto: boolean;
+  /** Etapa del perfil (content/perfiles.json) o null si no se ha elegido. */
+  stage: string | null;
+  specialty: string | null;
+  /** Ya se mostró el selector de perfil del primer acceso. */
+  profileAsked: boolean;
 }
 
 export interface PrefsApi {
