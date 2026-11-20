@@ -1,0 +1,1257 @@
+{
+  "checked": "2026-11-20",
+  "guide": [
+    {
+      "icon": "edit",
+      "title": {
+        "es": "Un buen prompt tiene cinco partes",
+        "en": "A good prompt has five parts"
+      },
+      "body": {
+        "es": "**Rol** (quién es la IA), **contexto** (etapa, materia, grupo), **tarea** (qué tiene que hacer), **formato** (cómo lo quieres) y **restricciones** (qué no debe hacer). Las tarjetas ya las traen: tú solo rellenas los huecos entre corchetes.",
+        "en": "**Role** (who the AI is), **context** (stage, subject, group), **task** (what it must do), **format** (how you want it) and **constraints** (what it must not do). The cards already include them: you only fill in the gaps in brackets."
+      }
+    },
+    {
+      "icon": "check_circle",
+      "title": {
+        "es": "Verifica siempre",
+        "en": "Always verify"
+      },
+      "body": {
+        "es": "La IA se equivoca con seguridad: inventa datos, fechas, referencias y normativa. Revisa todo lo que vayas a usar en clase como revisarías el trabajo de un alumno en prácticas.",
+        "en": "AI is confidently wrong: it invents data, dates, references and regulations. Check everything you will use in class as you would check a trainee's work."
+      }
+    },
+    {
+      "icon": "balance",
+      "title": {
+        "es": "Busca los sesgos",
+        "en": "Look for bias"
+      },
+      "body": {
+        "es": "Las respuestas reflejan los datos con los que se entrenó el modelo: estereotipos de género, origen o capacidad, y una mirada muy anglosajona. Pregúntate a quién deja fuera la respuesta.",
+        "en": "Answers reflect the model's training data: stereotypes about gender, origin or ability, and a very Anglo-centric view. Ask yourself who the answer leaves out."
+      }
+    },
+    {
+      "icon": "warning",
+      "title": {
+        "es": "Ningún dato personal del alumnado",
+        "en": "No personal data about students"
+      },
+      "body": {
+        "es": "Ni nombres, ni notas, ni diagnósticos, ni fotos, ni nada que permita identificar a nadie. Lo exige el RGPD y la LOPDGDD [@rgpd] [@lopdgdd]. Describe situaciones en general («un alumno con dislexia de 3.º»), nunca personas.",
+        "en": "No names, grades, diagnoses, photos or anything that could identify anyone. GDPR and Spanish data protection law require it [@rgpd] [@lopdgdd]. Describe situations in general (“a Year 3 student with dyslexia”), never people."
+      }
+    },
+    {
+      "icon": "badge",
+      "title": {
+        "es": "Usa las cuentas del centro",
+        "en": "Use school accounts"
+      },
+      "body": {
+        "es": "Si tu centro o la Consejería ofrecen herramientas de IA con cuenta corporativa, úsalas antes que cuentas personales: suelen tener mejores garantías de privacidad. Consulta la información oficial de la Junta [@junta-cd] y la guía del INTEF [@intef-ia].",
+        "en": "If your school or the regional education authority provides AI tools with institutional accounts, use them rather than personal ones: they usually offer better privacy guarantees. See the regional government's information [@junta-cd] and the INTEF guide [@intef-ia]."
+      }
+    },
+    {
+      "icon": "psychology",
+      "title": {
+        "es": "Andamio, no sustituto",
+        "en": "Scaffold, not substitute"
+      },
+      "body": {
+        "es": "Usada sin límites, la IA puede hacer que el alumnado rinda peor cuando ya no la tiene; con salvaguardas tipo tutor, ese efecto se reduce [@bastani]. Que la IA te ayude a preparar, a preguntar y a revisar, no a pensar por tu alumnado.",
+        "en": "Used without limits, AI can make students perform worse once it is gone; with tutor-style safeguards, the effect is reduced [@bastani]. Let AI help you prepare, ask and review, not think for your students."
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "crear",
+      "icon": "edit",
+      "label": {
+        "es": "Crear contenido",
+        "en": "Create content"
+      }
+    },
+    {
+      "id": "auditar",
+      "icon": "search",
+      "label": {
+        "es": "Auditar contenido",
+        "en": "Audit content"
+      }
+    },
+    {
+      "id": "dua",
+      "icon": "accessibility_new",
+      "label": {
+        "es": "Barreras DUA",
+        "en": "UDL barriers"
+      }
+    },
+    {
+      "id": "planificar",
+      "icon": "event",
+      "label": {
+        "es": "Planificar",
+        "en": "Plan"
+      }
+    },
+    {
+      "id": "evaluar",
+      "icon": "check_circle",
+      "label": {
+        "es": "Evaluar",
+        "en": "Assess"
+      }
+    },
+    {
+      "id": "tutor",
+      "icon": "psychology",
+      "label": {
+        "es": "Tutor socrático",
+        "en": "Socratic tutor"
+      }
+    },
+    {
+      "id": "resistentes",
+      "icon": "lightbulb",
+      "label": {
+        "es": "Tareas resistentes a la IA",
+        "en": "AI-resistant tasks"
+      }
+    },
+    {
+      "id": "convivencia",
+      "icon": "groups",
+      "label": {
+        "es": "Convivencia y bienestar digital",
+        "en": "Coexistence and digital wellbeing"
+      }
+    },
+    {
+      "id": "igualdad",
+      "icon": "balance",
+      "label": {
+        "es": "Igualdad",
+        "en": "Equality"
+      }
+    },
+    {
+      "id": "diversidad",
+      "icon": "diversity_3",
+      "label": {
+        "es": "Atención a la diversidad",
+        "en": "Attention to diversity"
+      }
+    }
+  ],
+  "cards": [
+    {
+      "id": "crear-graduado",
+      "category": "crear",
+      "stages": [
+        "primaria",
+        "eso"
+      ],
+      "title": {
+        "es": "Material en tres niveles",
+        "en": "Material at three levels"
+      },
+      "goal": {
+        "es": "Obtener el mismo contenido en tres niveles de dificultad para que todo el grupo trabaje la misma idea.",
+        "en": "Get the same content at three difficulty levels so the whole group works on the same idea."
+      },
+      "prompt": {
+        "es": "Actúa como docente experto en [materia] de [curso]. Necesito un texto breve sobre [tema] en tres versiones: básica (frases cortas, vocabulario frecuente), intermedia y avanzada (con un término técnico explicado). Las tres deben transmitir la misma idea central. Después de cada versión, añade dos preguntas que obliguen a explicar con palabras propias, no a copiar. Formato: tres apartados con título. No inventes datos: si no estás seguro de algo, indícalo.",
+        "en": "Act as an expert [subject] teacher for [year group]. I need a short text about [topic] in three versions: basic (short sentences, common vocabulary), intermediate and advanced (with one technical term explained). All three must convey the same core idea. After each version, add two questions that require explaining in their own words, not copying. Format: three headed sections. Do not invent facts: if you are unsure about something, say so."
+      },
+      "vars": [
+        {
+          "es": "materia",
+          "en": "subject",
+          "sample": {
+            "es": "Ciencias de la Naturaleza",
+            "en": "Natural Science"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "5.º de Primaria",
+            "en": "Year 6"
+          }
+        },
+        {
+          "es": "tema",
+          "en": "topic",
+          "sample": {
+            "es": "la fotosíntesis",
+            "en": "photosynthesis"
+          }
+        }
+      ],
+      "example": {
+        "es": "Tres textos de unas 80, 120 y 160 palabras sobre la misma idea, cada uno con dos preguntas del tipo «explica por qué…».",
+        "en": "Three texts of about 80, 120 and 160 words on the same idea, each with two “explain why…” questions."
+      }
+    },
+    {
+      "id": "crear-mcer",
+      "category": "crear",
+      "stages": [
+        "eoi"
+      ],
+      "title": {
+        "es": "Texto graduado por nivel MCER",
+        "en": "Graded text by CEFR level"
+      },
+      "goal": {
+        "es": "Crear un texto de lectura ajustado a un nivel del MCER con actividades de comprensión que exijan inferir.",
+        "en": "Create a reading text matched to a CEFR level with comprehension tasks that require inference."
+      },
+      "prompt": {
+        "es": "Actúa como profesor de [idioma] en una Escuela Oficial de Idiomas. Escribe en [idioma] un texto de unas [palabras] palabras de nivel [nivel MCER] sobre [tema], con vocabulario y estructuras propios de ese nivel. Después añade: 1) tres preguntas de inferencia (la respuesta no aparece literal en el texto), 2) una tarea de producción breve relacionada con la vida real del alumnado adulto. Al final, en español, enumera las estructuras gramaticales que has usado y justifica por qué corresponden al nivel.",
+        "en": "Act as a [language] teacher at an Official Language School. Write in [language] a text of about [words] words at [CEFR level] level about [topic], with vocabulary and structures typical of that level. Then add: 1) three inference questions (the answer is not stated literally in the text), 2) a short production task related to adult learners' real lives. Finally, in English, list the grammatical structures you used and justify why they fit the level."
+      },
+      "vars": [
+        {
+          "es": "idioma",
+          "en": "language",
+          "sample": {
+            "es": "inglés",
+            "en": "French"
+          }
+        },
+        {
+          "es": "palabras",
+          "en": "words",
+          "sample": {
+            "es": "250",
+            "en": "250"
+          }
+        },
+        {
+          "es": "nivel MCER",
+          "en": "CEFR level",
+          "sample": {
+            "es": "B1",
+            "en": "B1"
+          }
+        },
+        {
+          "es": "tema",
+          "en": "topic",
+          "sample": {
+            "es": "buscar piso en otra ciudad",
+            "en": "looking for a flat in another city"
+          }
+        }
+      ],
+      "example": {
+        "es": "Un texto de nivel B1, tres preguntas que piden deducir intenciones o causas, una tarea tipo «escribe un correo al casero» y la lista de estructuras con su justificación.",
+        "en": "A B1 text, three questions asking to infer intentions or causes, a task like “write an email to the landlord” and the list of structures with their justification."
+      }
+    },
+    {
+      "id": "crear-musica",
+      "category": "crear",
+      "stages": [
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Lectura musical y análisis guiado",
+        "en": "Music reading and guided analysis"
+      },
+      "goal": {
+        "es": "Generar ejercicios de lectura o de análisis que hagan escuchar y decidir, no solo identificar.",
+        "en": "Generate reading or analysis exercises that make students listen and decide, not just identify."
+      },
+      "prompt": {
+        "es": "Actúa como profesor de [asignatura] de conservatorio, curso [curso]. Propón [número] ejercicios sobre [contenido] para trabajar en clase. Cada ejercicio debe pedir una decisión musical justificada (por ejemplo, elegir una digitación, una respiración o una dinámica y explicar por qué), no solo nombrar elementos. Si propones fragmentos de obras, cita obra y autor y no inventes compases: describe qué buscar y deja que yo elija el fragmento. Formato: lista numerada con objetivo, consigna y pregunta de reflexión.",
+        "en": "Act as a conservatoire [subject] teacher, [year] level. Propose [number] exercises on [content] for class. Each exercise must ask for a justified musical decision (for example, choosing a fingering, a breath or a dynamic and explaining why), not just naming elements. If you suggest excerpts, cite the work and composer and do not invent bars: describe what to look for and let me choose the excerpt. Format: numbered list with aim, instruction and reflection question."
+      },
+      "vars": [
+        {
+          "es": "asignatura",
+          "en": "subject",
+          "sample": {
+            "es": "Lenguaje Musical",
+            "en": "Music Theory"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year",
+          "sample": {
+            "es": "2.º de Enseñanzas Elementales",
+            "en": "elementary year 2"
+          }
+        },
+        {
+          "es": "número",
+          "en": "number",
+          "sample": {
+            "es": "4",
+            "en": "4"
+          }
+        },
+        {
+          "es": "contenido",
+          "en": "content",
+          "sample": {
+            "es": "el fraseo en compás de 3/4",
+            "en": "phrasing in 3/4 time"
+          }
+        }
+      ],
+      "example": {
+        "es": "Cuatro ejercicios del tipo «marca dónde respirarías en esta frase y explica qué cambia en el sentido musical», con una pregunta de reflexión cada uno.",
+        "en": "Four exercises like “mark where you would breathe in this phrase and explain what changes musically”, each with a reflection question."
+      }
+    },
+    {
+      "id": "auditar-errores",
+      "category": "auditar",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Revisión de errores y nivel",
+        "en": "Check for errors and level"
+      },
+      "goal": {
+        "es": "Detectar errores de contenido, ambigüedades y desajustes de nivel en un material propio.",
+        "en": "Spot content errors, ambiguities and level mismatches in your own material."
+      },
+      "prompt": {
+        "es": "Actúa como revisor experto en [materia] para [curso]. Revisa el material que pego al final. Señala: 1) posibles errores de contenido, indicando tu grado de seguridad; 2) frases ambiguas o que puedan entenderse mal; 3) palabras o conceptos por encima del nivel del grupo; 4) qué conocimientos previos da por supuestos. No reescribas el material: haz una tabla con «fragmento», «problema» y «sugerencia». Si algo no puedes comprobar, dilo.\n\nMaterial:\n[pega aquí el texto, sin datos personales]",
+        "en": "Act as an expert reviewer in [subject] for [year group]. Review the material pasted at the end. Point out: 1) possible content errors, stating how certain you are; 2) ambiguous or easily misunderstood sentences; 3) words or concepts above the group's level; 4) what prior knowledge it takes for granted. Do not rewrite it: make a table with “excerpt”, “problem” and “suggestion”. If you cannot verify something, say so.\n\nMaterial:\n[paste the text here, with no personal data]"
+      },
+      "vars": [
+        {
+          "es": "materia",
+          "en": "subject",
+          "sample": {
+            "es": "Geografía e Historia",
+            "en": "Geography and History"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "2.º de ESO",
+            "en": "Year 8"
+          }
+        },
+        {
+          "es": "pega aquí el texto, sin datos personales",
+          "en": "paste the text here, with no personal data",
+          "sample": {
+            "es": "",
+            "en": ""
+          }
+        }
+      ],
+      "example": {
+        "es": "Una tabla de 5 a 10 filas con fragmentos concretos, el problema detectado y una sugerencia, con avisos del tipo «no puedo verificar esta fecha».",
+        "en": "A table of 5–10 rows with specific excerpts, the problem found and a suggestion, with warnings like “I cannot verify this date”."
+      }
+    },
+    {
+      "id": "auditar-lectura-facil",
+      "category": "auditar",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Versión en lectura fácil",
+        "en": "Easy-to-read version"
+      },
+      "goal": {
+        "es": "Preparar una versión en lectura fácil de un texto sin perder la idea principal.",
+        "en": "Prepare an easy-to-read version of a text without losing the main idea."
+      },
+      "prompt": {
+        "es": "Actúa como especialista en accesibilidad cognitiva. Adapta el texto que pego a lectura fácil para [destinatarios]: frases cortas con una sola idea, orden sujeto-verbo-complemento, vocabulario frecuente, sin metáforas ni dobles negaciones, y una idea por párrafo. Mantén la información esencial. Después, indica qué información has dejado fuera para que yo decida si es necesaria. Recuerda que una adaptación de lectura fácil debe validarse con personas lectoras reales.\n\nTexto:\n[pega aquí el texto]",
+        "en": "Act as a cognitive accessibility specialist. Adapt the text below into easy-to-read language for [audience]: short sentences with one idea each, subject-verb-object order, common vocabulary, no metaphors or double negatives, and one idea per paragraph. Keep the essential information. Then list what you left out so I can decide whether it is needed. Remember that an easy-to-read adaptation should be validated with real readers.\n\nText:\n[paste the text here]"
+      },
+      "vars": [
+        {
+          "es": "destinatarios",
+          "en": "audience",
+          "sample": {
+            "es": "alumnado de 3.º de Primaria",
+            "en": "Year 4 students"
+          }
+        },
+        {
+          "es": "pega aquí el texto",
+          "en": "paste the text here",
+          "sample": {
+            "es": "",
+            "en": ""
+          }
+        }
+      ],
+      "example": {
+        "es": "El texto adaptado en párrafos cortos y una lista de «información que he quitado».",
+        "en": "The adapted text in short paragraphs and a list of “information I removed”."
+      }
+    },
+    {
+      "id": "auditar-accesibilidad",
+      "category": "auditar",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Comprobar la accesibilidad de un recurso",
+        "en": "Check a resource's accessibility"
+      },
+      "goal": {
+        "es": "Revisar un material digital con criterios de accesibilidad antes de compartirlo.",
+        "en": "Review a digital resource against accessibility criteria before sharing it."
+      },
+      "prompt": {
+        "es": "Actúa como consultor de accesibilidad digital. Voy a describirte un recurso que quiero usar en clase: [describe el recurso: tipo, imágenes, vídeos, colores, cómo se navega]. Revisa si cumple pautas básicas de accesibilidad (texto alternativo, subtítulos, contraste, tamaño de letra, navegación con teclado, estructura con títulos, lenguaje claro). Devuélveme una lista de comprobación con «cumple / no cumple / no se puede saber» y, para cada fallo, una mejora concreta que pueda hacer yo mismo en menos de 10 minutos.",
+        "en": "Act as a digital accessibility consultant. I will describe a resource I want to use in class: [describe the resource: type, images, videos, colours, navigation]. Check it against basic accessibility guidelines (alt text, captions, contrast, font size, keyboard navigation, heading structure, plain language). Return a checklist with “meets / does not meet / cannot tell” and, for each failure, a concrete fix I can make myself in under 10 minutes."
+      },
+      "vars": [
+        {
+          "es": "describe el recurso: tipo, imágenes, vídeos, colores, cómo se navega",
+          "en": "describe the resource: type, images, videos, colours, navigation",
+          "sample": {
+            "es": "presentación de 12 diapositivas con fotos, un vídeo de YouTube y texto blanco sobre fondo amarillo",
+            "en": "12-slide presentation with photos, a YouTube video and white text on a yellow background"
+          }
+        }
+      ],
+      "example": {
+        "es": "Una lista de comprobación de 8 a 10 puntos con arreglos rápidos: «añade texto alternativo a las fotos», «activa los subtítulos del vídeo», «cambia el texto a negro».",
+        "en": "An 8–10 item checklist with quick fixes: “add alt text to photos”, “turn on video captions”, “change the text to black”."
+      }
+    },
+    {
+      "id": "dua-barreras",
+      "category": "dua",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Detectar barreras DUA en una actividad",
+        "en": "Detect UDL barriers in an activity"
+      },
+      "goal": {
+        "es": "Analizar una actividad con las pautas DUA 3.0 y encontrar barreras antes de que aparezcan.",
+        "en": "Analyse an activity with the UDL 3.0 guidelines and find barriers before they appear."
+      },
+      "prompt": {
+        "es": "Actúa como experto en Diseño Universal para el Aprendizaje, según las pautas CAST UDL 3.0 (implicación, representación, acción y expresión). Analiza esta actividad para [curso]: [describe la actividad]. Para cada uno de los tres principios: 1) qué barreras podría encontrar el alumnado (sin referirte a alumnos concretos), 2) una alternativa que pueda ofrecer a todo el grupo desde el diseño. Termina con la única mejora que más barreras eliminaría. Formato: tabla.",
+        "en": "Act as an expert in Universal Design for Learning, following the CAST UDL Guidelines 3.0 (engagement, representation, action and expression). Analyse this activity for [year group]: [describe the activity]. For each of the three principles: 1) what barriers students might face (without referring to specific students), 2) an alternative I could offer the whole group by design. End with the single improvement that would remove the most barriers. Format: table."
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "1.º de Bachillerato",
+            "en": "Year 12"
+          }
+        },
+        {
+          "es": "describe la actividad",
+          "en": "describe the activity",
+          "sample": {
+            "es": "comentario de texto escrito individual de 45 minutos sobre un poema",
+            "en": "45-minute individual written commentary on a poem"
+          }
+        }
+      ],
+      "example": {
+        "es": "Una tabla de tres filas (implicación, representación, acción y expresión) con barreras y alternativas, y una mejora prioritaria.",
+        "en": "A three-row table (engagement, representation, action and expression) with barriers and alternatives, and one priority improvement."
+      }
+    },
+    {
+      "id": "dua-alternativas",
+      "category": "dua",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Tres formas de demostrar lo aprendido",
+        "en": "Three ways to show learning"
+      },
+      "goal": {
+        "es": "Diseñar opciones de expresión equivalentes que se evalúen con los mismos criterios.",
+        "en": "Design equivalent expression options assessed with the same criteria."
+      },
+      "prompt": {
+        "es": "Actúa como diseñador instruccional con enfoque DUA. Mi objetivo de aprendizaje es: [objetivo]. Propón tres formas distintas en que el alumnado de [curso] pueda demostrar que lo ha logrado (por ejemplo, oral, visual, escrita o práctica). Las tres deben exigir el mismo nivel de pensamiento. Después, redacta 4 criterios de evaluación comunes que sirvan para las tres opciones.",
+        "en": "Act as an instructional designer with a UDL approach. My learning goal is: [goal]. Propose three different ways [year group] students can show they have achieved it (for example oral, visual, written or practical). All three must require the same level of thinking. Then write 4 common assessment criteria that work for all three options."
+      },
+      "vars": [
+        {
+          "es": "objetivo",
+          "en": "goal",
+          "sample": {
+            "es": "explicar las causas de un conflicto y valorar sus consecuencias",
+            "en": "explain the causes of a conflict and assess its consequences"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "4.º de ESO",
+            "en": "Year 10"
+          }
+        }
+      ],
+      "example": {
+        "es": "Tres opciones (pódcast, mapa conceptual comentado, ensayo breve) y cuatro criterios comunes centrados en el contenido.",
+        "en": "Three options (podcast, annotated concept map, short essay) and four shared content-focused criteria."
+      }
+    },
+    {
+      "id": "planificar-sa",
+      "category": "planificar",
+      "stages": [
+        "primaria",
+        "eso"
+      ],
+      "title": {
+        "es": "Situación de aprendizaje",
+        "en": "Learning situation"
+      },
+      "goal": {
+        "es": "Esbozar una situación de aprendizaje LOMLOE con un reto real y uso de lo digital con sentido.",
+        "en": "Outline a LOMLOE learning situation with a real challenge and meaningful digital use."
+      },
+      "prompt": {
+        "es": "Actúa como docente experto en el currículo andaluz vigente (LOMLOE; Decreto 101/2023 en Primaria y Decretos 102/2023 y 103/2023 en ESO y Bachillerato). Esboza una situación de aprendizaje para [curso] de [materia] sobre [tema], con: un reto vinculado a un contexto real cercano al alumnado, un producto final, una secuencia de [sesiones] sesiones, momentos de trabajo cooperativo con roles, y un uso de la tecnología en el que el alumnado genere o co-construya conocimiento (no solo consuma). Indica qué competencias específicas y criterios trabajarías, pero avísame de que debo comprobar su redacción exacta en la normativa, porque puedes equivocarte.",
+        "en": "Act as a teacher expert in the current Andalusian curriculum (LOMLOE; Decree 101/2023 for Primary and Decrees 102/2023 and 103/2023 for Secondary and Baccalaureate). Outline a learning situation for [year group] in [subject] about [topic], with: a challenge linked to a real context close to students, a final product, a sequence of [sessions] sessions, cooperative work moments with roles, and a use of technology in which students generate or co-construct knowledge (not just consume). State which specific competences and criteria you would address, but warn me to check their exact wording in the regulations, because you may be wrong."
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "6.º de Primaria",
+            "en": "Year 7 (6.º de Primaria)"
+          }
+        },
+        {
+          "es": "materia",
+          "en": "subject",
+          "sample": {
+            "es": "Matemáticas",
+            "en": "Mathematics"
+          }
+        },
+        {
+          "es": "tema",
+          "en": "topic",
+          "sample": {
+            "es": "el consumo de agua en el colegio",
+            "en": "water consumption at school"
+          }
+        },
+        {
+          "es": "sesiones",
+          "en": "sessions",
+          "sample": {
+            "es": "6",
+            "en": "6"
+          }
+        }
+      ],
+      "example": {
+        "es": "Un esquema con reto, producto, 6 sesiones, roles, uso de lo digital y una lista de competencias y criterios marcada como «por verificar».",
+        "en": "An outline with challenge, product, 6 sessions, roles, digital use and a list of competences and criteria marked “to be checked”."
+      }
+    },
+    {
+      "id": "planificar-eoi-cons",
+      "category": "planificar",
+      "stages": [
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Secuencia de sesiones con tarea final",
+        "en": "Lesson sequence with a final task"
+      },
+      "goal": {
+        "es": "Planificar varias sesiones hacia una tarea final auténtica en enseñanzas de idiomas o artísticas.",
+        "en": "Plan several lessons towards an authentic final task in language or arts education."
+      },
+      "prompt": {
+        "es": "Actúa como docente de [enseñanza] con experiencia en diseño de tareas. Planifica [sesiones] sesiones para [grupo] que terminen en esta tarea final auténtica: [tarea final]. Para cada sesión: objetivo, actividad principal, qué tiene que pensar o decidir el alumnado, y cómo recojo evidencias del proceso. Incluye al menos un momento de retroalimentación entre iguales con una guía breve. No incluyas datos de alumnos concretos.",
+        "en": "Act as a [teaching field] teacher experienced in task design. Plan [sessions] lessons for [group] ending in this authentic final task: [final task]. For each lesson: aim, main activity, what students must think about or decide, and how I collect evidence of the process. Include at least one peer-feedback moment with a short guide. Do not include data about specific students."
+      },
+      "vars": [
+        {
+          "es": "enseñanza",
+          "en": "teaching field",
+          "sample": {
+            "es": "inglés en Escuela Oficial de Idiomas",
+            "en": "Spanish at an Official Language School"
+          }
+        },
+        {
+          "es": "sesiones",
+          "en": "sessions",
+          "sample": {
+            "es": "4",
+            "en": "4"
+          }
+        },
+        {
+          "es": "grupo",
+          "en": "group",
+          "sample": {
+            "es": "un grupo de nivel A2",
+            "en": "an A2 group"
+          }
+        },
+        {
+          "es": "tarea final",
+          "en": "final task",
+          "sample": {
+            "es": "grabar una guía en audio de su barrio para visitantes",
+            "en": "record an audio guide to their neighbourhood for visitors"
+          }
+        }
+      ],
+      "example": {
+        "es": "Cuatro sesiones con objetivo, actividad, decisiones del alumnado y evidencias, más una guía de retroalimentación entre iguales.",
+        "en": "Four lessons with aim, activity, student decisions and evidence, plus a peer-feedback guide."
+      }
+    },
+    {
+      "id": "evaluar-rubrica",
+      "category": "evaluar",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Rúbrica que evalúa el proceso",
+        "en": "Rubric that assesses the process"
+      },
+      "goal": {
+        "es": "Crear una rúbrica analítica que incluya criterios de proceso, no solo de producto.",
+        "en": "Create an analytic rubric that includes process criteria, not just product criteria."
+      },
+      "prompt": {
+        "es": "Actúa como experto en evaluación formativa. Crea una rúbrica analítica para evaluar [tarea] en [curso]. Incluye 4 o 5 criterios, de los cuales al menos dos evalúen el proceso (planificación, revisión de borradores, uso crítico de fuentes o de la IA, colaboración). Usa 4 niveles de logro descritos con conductas observables, sin adjetivos vagos como «bueno» o «adecuado». Añade una versión de la rúbrica redactada en primera persona para que el alumnado se autoevalúe.",
+        "en": "Act as a formative assessment expert. Create an analytic rubric to assess [task] in [year group]. Include 4 or 5 criteria, at least two of which assess the process (planning, revising drafts, critical use of sources or AI, collaboration). Use 4 achievement levels described with observable behaviours, without vague adjectives like “good” or “adequate”. Add a version written in the first person for student self-assessment."
+      },
+      "vars": [
+        {
+          "es": "tarea",
+          "en": "task",
+          "sample": {
+            "es": "un pódcast por grupos sobre un problema del barrio",
+            "en": "a group podcast about a local problem"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "3.º de ESO",
+            "en": "Year 9"
+          }
+        }
+      ],
+      "example": {
+        "es": "Una tabla de 5 criterios × 4 niveles con descriptores observables y su versión «yo…» para autoevaluación.",
+        "en": "A 5-criteria × 4-level table with observable descriptors and an “I…” version for self-assessment."
+      }
+    },
+    {
+      "id": "evaluar-cotejo",
+      "category": "evaluar",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Lista de cotejo rápida",
+        "en": "Quick checklist"
+      },
+      "goal": {
+        "es": "Tener una lista de cotejo breve para observar en clase sin perder tiempo.",
+        "en": "Have a short checklist to observe in class without losing time."
+      },
+      "prompt": {
+        "es": "Actúa como docente de [materia] en [curso]. Crea una lista de cotejo de 6 a 8 ítems, observables en clase y con respuesta sí/no, para comprobar si el alumnado [aprendizaje esperado]. Cada ítem debe describir algo que se ve o se oye, no una impresión. Añade al final dos preguntas breves que pueda hacer en voz alta para confirmar los ítems dudosos.",
+        "en": "Act as a [subject] teacher in [year group]. Create a checklist of 6–8 yes/no items, observable in class, to check whether students [expected learning]. Each item must describe something seen or heard, not an impression. At the end, add two short questions I can ask aloud to confirm doubtful items."
+      },
+      "vars": [
+        {
+          "es": "materia",
+          "en": "subject",
+          "sample": {
+            "es": "Danza Española",
+            "en": "Spanish Dance"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "3.º de Enseñanzas Profesionales",
+            "en": "professional level year 3"
+          }
+        },
+        {
+          "es": "aprendizaje esperado",
+          "en": "expected learning",
+          "sample": {
+            "es": "coordina braceo y zapateado en una sevillana",
+            "en": "coordinates arm movements and footwork in a sevillana"
+          }
+        }
+      ],
+      "example": {
+        "es": "Ocho ítems del tipo «mantiene el compás durante toda la copla» y dos preguntas de confirmación.",
+        "en": "Eight items like “keeps the rhythm throughout the verse” and two confirmation questions."
+      }
+    },
+    {
+      "id": "evaluar-feedback",
+      "category": "evaluar",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Retroalimentación formativa",
+        "en": "Formative feedback"
+      },
+      "goal": {
+        "es": "Redactar retroalimentación útil sobre una producción anónima: dónde está, qué le falta y su siguiente paso.",
+        "en": "Write useful feedback on an anonymous piece: where it stands, what is missing and the next step."
+      },
+      "prompt": {
+        "es": "Actúa como docente que da retroalimentación formativa. Te pego una producción anónima de un alumno de [curso] para la tarea «[tarea]» (he quitado cualquier dato personal). Con estos criterios: [criterios], escribe una retroalimentación de no más de 120 palabras que responda a tres preguntas: ¿adónde va?, ¿cómo va?, ¿qué hace a continuación? Señala un acierto concreto, un aspecto a mejorar con un ejemplo y una sola acción para el siguiente borrador. No pongas nota.\n\nProducción:\n[pega la producción anónima]",
+        "en": "Act as a teacher giving formative feedback. Below is an anonymous piece by a [year group] student for the task “[task]” (I have removed any personal data). Using these criteria: [criteria], write feedback of no more than 120 words answering three questions: where is it going?, how is it going?, what next? Point out one specific strength, one aspect to improve with an example, and a single action for the next draft. Do not give a grade.\n\nPiece:\n[paste the anonymous piece]"
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "B2 de inglés (EOI)",
+            "en": "B2 English (EOI)"
+          }
+        },
+        {
+          "es": "tarea",
+          "en": "task",
+          "sample": {
+            "es": "carta de reclamación",
+            "en": "letter of complaint"
+          }
+        },
+        {
+          "es": "criterios",
+          "en": "criteria",
+          "sample": {
+            "es": "adecuación, cohesión, riqueza léxica, corrección",
+            "en": "task fulfilment, cohesion, lexical range, accuracy"
+          }
+        },
+        {
+          "es": "pega la producción anónima",
+          "en": "paste the anonymous piece",
+          "sample": {
+            "es": "",
+            "en": ""
+          }
+        }
+      ],
+      "example": {
+        "es": "Un párrafo breve con un acierto, una mejora ejemplificada y «tu siguiente paso es…».",
+        "en": "A short paragraph with a strength, an exemplified improvement and “your next step is…”."
+      }
+    },
+    {
+      "id": "tutor-socratico",
+      "category": "tutor",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Tutor socrático que no da la respuesta",
+        "en": "Socratic tutor that does not give the answer"
+      },
+      "goal": {
+        "es": "Un prompt para que el alumnado converse con una IA que le hace pensar en lugar de resolverle la tarea.",
+        "en": "A prompt for students to talk with an AI that makes them think instead of solving the task for them."
+      },
+      "prompt": {
+        "es": "Vas a ser mi tutor socrático de [materia]. Estoy en [curso] y estoy trabajando en: [tarea o pregunta]. Normas que debes cumplir siempre: no me des la respuesta ni la resuelvas por mí, aunque te lo pida. Hazme una sola pregunta cada vez. Empieza preguntándome qué sé ya. Si me equivoco, no me corrijas directamente: hazme una pregunta que me ayude a ver el error. Si me atasco dos veces seguidas, dame una pista pequeña. Cuando crea que he terminado, pídeme que explique mi razonamiento con mis palabras. No me pidas datos personales.",
+        "en": "You will be my Socratic tutor for [subject]. I am in [year group] and I am working on: [task or question]. Rules you must always follow: do not give me the answer or solve it for me, even if I ask. Ask me one question at a time. Start by asking what I already know. If I make a mistake, do not correct me directly: ask a question that helps me see the error. If I get stuck twice in a row, give me a small hint. When I think I have finished, ask me to explain my reasoning in my own words. Do not ask me for personal data."
+      },
+      "vars": [
+        {
+          "es": "materia",
+          "en": "subject",
+          "sample": {
+            "es": "Física y Química",
+            "en": "Physics and Chemistry"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "4.º de ESO",
+            "en": "Year 10"
+          }
+        },
+        {
+          "es": "tarea o pregunta",
+          "en": "task or question",
+          "sample": {
+            "es": "por qué un barco de acero flota",
+            "en": "why a steel ship floats"
+          }
+        }
+      ],
+      "example": {
+        "es": "La IA responde con una pregunta («¿Qué sabes de la densidad?») y va guiando paso a paso sin resolver.",
+        "en": "The AI replies with a question (“What do you know about density?”) and guides step by step without solving."
+      }
+    },
+    {
+      "id": "tutor-idiomas",
+      "category": "tutor",
+      "stages": [
+        "eoi"
+      ],
+      "title": {
+        "es": "Compañero de conversación que no corrige por ti",
+        "en": "Conversation partner that does not correct for you"
+      },
+      "goal": {
+        "es": "Practicar la expresión con una IA que señala errores para que el alumnado los corrija solo.",
+        "en": "Practise speaking or writing with an AI that flags errors so learners fix them themselves."
+      },
+      "prompt": {
+        "es": "Quiero practicar [idioma] de nivel [nivel MCER] conversando contigo sobre [tema]. Normas: habla solo en [idioma] y ajústate a mi nivel. Hazme preguntas abiertas, de una en una. Cuando cometa un error, no me des la forma correcta: marca la palabra o frase con asteriscos y dime qué tipo de error es (tiempo verbal, preposición, orden…) para que yo lo corrija. Si lo corrijo bien, sigue la conversación. Al final, resume en tres puntos qué he hecho bien y qué debo practicar. No me pidas datos personales.",
+        "en": "I want to practise [language] at [CEFR level] level by talking with you about [topic]. Rules: speak only in [language] and adapt to my level. Ask me open questions, one at a time. When I make a mistake, do not give me the correct form: mark the word or phrase with asterisks and tell me what kind of error it is (verb tense, preposition, word order…) so I can correct it. If I fix it, continue the conversation. At the end, summarise in three points what I did well and what I should practise. Do not ask me for personal data."
+      },
+      "vars": [
+        {
+          "es": "idioma",
+          "en": "language",
+          "sample": {
+            "es": "francés",
+            "en": "German"
+          }
+        },
+        {
+          "es": "nivel MCER",
+          "en": "CEFR level",
+          "sample": {
+            "es": "A2",
+            "en": "A2"
+          }
+        },
+        {
+          "es": "tema",
+          "en": "topic",
+          "sample": {
+            "es": "planes para el fin de semana",
+            "en": "weekend plans"
+          }
+        }
+      ],
+      "example": {
+        "es": "Una conversación en la lengua meta en la que la IA marca *errores* con su tipo y espera la autocorrección.",
+        "en": "A conversation in the target language where the AI marks *errors* with their type and waits for self-correction."
+      }
+    },
+    {
+      "id": "resistentes-redisenar",
+      "category": "resistentes",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "De copiable a generadora de conocimiento",
+        "en": "From copyable to knowledge-generating"
+      },
+      "goal": {
+        "es": "Rediseñar una tarea para que exija pensamiento que una IA no puede sustituir.",
+        "en": "Redesign a task so it requires thinking an AI cannot replace."
+      },
+      "prompt": {
+        "es": "Actúa como experto en diseño de tareas y en el modelo ICAP (pasivo, activo, constructivo, interactivo). Esta es mi tarea para [curso]: [enunciado de la tarea]. 1) Explica en dos frases por qué una IA podría resolverla sola. 2) Propón dos rediseños que mantengan el objetivo de aprendizaje pero exijan al menos una de estas cosas: datos o experiencias propias del alumnado o del aula, una decisión que haya que justificar, interacción con otras personas o evidencias del proceso. 3) Para cada rediseño, indica qué tiene que pensar ahora el alumnado que antes no pensaba.",
+        "en": "Act as an expert in task design and the ICAP model (passive, active, constructive, interactive). This is my task for [year group]: [task instructions]. 1) Explain in two sentences why an AI could solve it alone. 2) Propose two redesigns that keep the learning goal but require at least one of: students' own data or experiences from the classroom, a decision that must be justified, interaction with other people, or evidence of the process. 3) For each redesign, state what students now have to think about that they did not before."
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "1.º de ESO",
+            "en": "Year 7"
+          }
+        },
+        {
+          "es": "enunciado de la tarea",
+          "en": "task instructions",
+          "sample": {
+            "es": "Haz un trabajo sobre los volcanes",
+            "en": "Do a project on volcanoes"
+          }
+        }
+      ],
+      "example": {
+        "es": "Un diagnóstico breve, dos rediseños (p. ej., comparar el riesgo volcánico de dos lugares con datos reales y defender una decisión) y la respuesta a «qué piensa ahora».",
+        "en": "A brief diagnosis, two redesigns (e.g., compare volcanic risk at two places with real data and defend a decision) and the answer to “what do they think about now”."
+      }
+    },
+    {
+      "id": "resistentes-test",
+      "category": "resistentes",
+      "stages": [
+        "eso",
+        "eoi"
+      ],
+      "title": {
+        "es": "Ponla a prueba: el alumno que quiere copiar",
+        "en": "Stress test: the student who wants to copy"
+      },
+      "goal": {
+        "es": "Comprobar cuánto de una tarea puede resolver la IA y dónde están sus puntos débiles.",
+        "en": "Check how much of a task AI can solve and where its weak points are."
+      },
+      "prompt": {
+        "es": "Haz de alumno de [curso] que quiere entregar esta tarea sin esforzarse usando solo una IA: [enunciado de la tarea]. 1) Resuélvela como lo haría ese alumno. 2) Después, cambia de papel: como docente, señala qué partes de tu propia respuesta delatan que no hay aprendizaje real (generalidades, falta de datos propios, ausencia de proceso). 3) Propón tres cambios en el enunciado o en la evaluación que hagan que copiar no sirva.",
+        "en": "Play a [year group] student who wants to hand in this task with no effort using only AI: [task instructions]. 1) Solve it as that student would. 2) Then switch roles: as the teacher, point out which parts of your own answer show there was no real learning (generalities, no own data, no process). 3) Propose three changes to the instructions or the assessment that make copying useless."
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "1.º de Bachillerato",
+            "en": "Year 12"
+          }
+        },
+        {
+          "es": "enunciado de la tarea",
+          "en": "task instructions",
+          "sample": {
+            "es": "Comenta la importancia de la Ilustración en 300 palabras",
+            "en": "Comment on the importance of the Enlightenment in 300 words"
+          }
+        }
+      ],
+      "example": {
+        "es": "Una respuesta «de copia», un análisis de sus señales de alarma y tres cambios concretos en la tarea.",
+        "en": "A “copied” answer, an analysis of its red flags and three concrete changes to the task."
+      }
+    },
+    {
+      "id": "convivencia-caso",
+      "category": "convivencia",
+      "stages": [
+        "primaria",
+        "eso"
+      ],
+      "title": {
+        "es": "Caso de ciberconvivencia para debatir",
+        "en": "Online coexistence case for discussion"
+      },
+      "goal": {
+        "es": "Preparar un caso ficticio y realista para trabajar la convivencia en línea en tutoría.",
+        "en": "Prepare a fictional, realistic case to work on online coexistence in tutorial time."
+      },
+      "prompt": {
+        "es": "Actúa como orientador educativo. Escribe un caso ficticio y realista, de unas 150 palabras, para trabajar en tutoría con [curso] sobre [situación]. Usa nombres inventados y evita cualquier parecido con personas reales. Incluye distintos puntos de vista (quien lo sufre, quien lo hace, quien mira). Después, propón 5 preguntas de debate de dificultad creciente que no tengan una única respuesta correcta, y una actividad final en la que el grupo acuerde una norma de convivencia digital.",
+        "en": "Act as a school counsellor. Write a fictional, realistic case of about 150 words to work on with [year group] in tutorial time about [situation]. Use invented names and avoid any resemblance to real people. Include different points of view (the person affected, the person doing it, the bystander). Then propose 5 discussion questions of increasing difficulty with no single right answer, and a final activity in which the group agrees on a digital coexistence rule."
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "6.º de Primaria",
+            "en": "Year 7"
+          }
+        },
+        {
+          "es": "situación",
+          "en": "situation",
+          "sample": {
+            "es": "la exclusión de un compañero de un grupo de mensajería de la clase",
+            "en": "excluding a classmate from the class messaging group"
+          }
+        }
+      ],
+      "example": {
+        "es": "Un caso breve con tres perspectivas, cinco preguntas abiertas y una dinámica para pactar una norma.",
+        "en": "A short case with three perspectives, five open questions and an activity to agree on a rule."
+      }
+    },
+    {
+      "id": "convivencia-bienestar",
+      "category": "convivencia",
+      "stages": [
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Dilema de bienestar digital",
+        "en": "Digital wellbeing dilemma"
+      },
+      "goal": {
+        "es": "Plantear un dilema sobre uso de pantallas, atención o privacidad que haga reflexionar sin moralizar.",
+        "en": "Pose a dilemma about screen use, attention or privacy that prompts reflection without moralising."
+      },
+      "prompt": {
+        "es": "Actúa como docente experto en bienestar digital. Plantea un dilema realista para [grupo] sobre [tema] en el que haya argumentos razonables a favor de ambas opciones. Preséntalo en 100 palabras. Después, ofrece dos argumentos sólidos para cada postura y una pregunta final que obligue al grupo a proponer una solución intermedia. No uses un tono alarmista ni moralizante.",
+        "en": "Act as a teacher expert in digital wellbeing. Pose a realistic dilemma for [group] about [topic] in which there are reasonable arguments for both options. Present it in 100 words. Then offer two strong arguments for each side and a final question that forces the group to propose a middle-ground solution. Avoid an alarmist or moralising tone."
+      },
+      "vars": [
+        {
+          "es": "grupo",
+          "en": "group",
+          "sample": {
+            "es": "alumnado de conservatorio de 15-17 años",
+            "en": "conservatoire students aged 15–17"
+          }
+        },
+        {
+          "es": "tema",
+          "en": "topic",
+          "sample": {
+            "es": "grabarse y publicar en redes sus interpretaciones",
+            "en": "recording and posting their performances on social media"
+          }
+        }
+      ],
+      "example": {
+        "es": "Un dilema breve, cuatro argumentos equilibrados y una pregunta de síntesis.",
+        "en": "A short dilemma, four balanced arguments and a synthesis question."
+      }
+    },
+    {
+      "id": "igualdad-materiales",
+      "category": "igualdad",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Detectar estereotipos en un material",
+        "en": "Detect stereotypes in a resource"
+      },
+      "goal": {
+        "es": "Revisar un material propio en busca de estereotipos de género, origen, capacidad o clase.",
+        "en": "Review your own resource for stereotypes about gender, origin, ability or class."
+      },
+      "prompt": {
+        "es": "Actúa como experto en coeducación y diversidad. Analiza el material que pego en busca de estereotipos y sesgos: de género, origen, capacidad, edad o clase social. Fíjate en quién aparece, quién falta, qué papeles tiene cada cual, el lenguaje y los ejemplos. Para cada hallazgo, cita el fragmento, explica el sesgo y propón una alternativa. Si no encuentras sesgos claros, dilo en lugar de forzarlos.\n\nMaterial:\n[pega aquí el texto o describe las imágenes]",
+        "en": "Act as an expert in co-education and diversity. Analyse the material below for stereotypes and bias: gender, origin, ability, age or social class. Look at who appears, who is missing, what roles each person has, the language and the examples. For each finding, quote the excerpt, explain the bias and suggest an alternative. If you find no clear bias, say so rather than forcing it.\n\nMaterial:\n[paste the text here or describe the images]"
+      },
+      "vars": [
+        {
+          "es": "pega aquí el texto o describe las imágenes",
+          "en": "paste the text here or describe the images",
+          "sample": {
+            "es": "",
+            "en": ""
+          }
+        }
+      ],
+      "example": {
+        "es": "Una lista de hallazgos con cita, explicación y alternativa, o la conclusión de que no hay sesgos claros.",
+        "en": "A list of findings with quote, explanation and alternative, or the conclusion that there is no clear bias."
+      }
+    },
+    {
+      "id": "igualdad-ia",
+      "category": "igualdad",
+      "stages": [
+        "eso",
+        "eoi"
+      ],
+      "title": {
+        "es": "¿Está sesgada la IA? Un experimento para el aula",
+        "en": "Is the AI biased? A classroom experiment"
+      },
+      "goal": {
+        "es": "Diseñar un experimento sencillo para que el alumnado descubra sesgos en las respuestas de la IA.",
+        "en": "Design a simple experiment for students to discover bias in AI answers."
+      },
+      "prompt": {
+        "es": "Actúa como docente de [materia] que quiere enseñar pensamiento crítico sobre la IA. Diseña un experimento de una sesión para [curso] en el que el alumnado, por parejas, haga a una IA la misma petición cambiando un solo detalle (por ejemplo, el género, el origen o la edad de un personaje) y compare las respuestas. Incluye: 4 pares de peticiones de ejemplo, una ficha para anotar diferencias y 3 preguntas de reflexión final. Recuerda que el alumnado no debe introducir datos personales.",
+        "en": "Act as a [subject] teacher who wants to teach critical thinking about AI. Design a one-lesson experiment for [year group] in which students, in pairs, give an AI the same request changing only one detail (for example a character's gender, origin or age) and compare the answers. Include: 4 example request pairs, a sheet to record differences and 3 final reflection questions. Remember students must not enter personal data."
+      },
+      "vars": [
+        {
+          "es": "materia",
+          "en": "subject",
+          "sample": {
+            "es": "Filosofía",
+            "en": "Philosophy"
+          }
+        },
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "1.º de Bachillerato",
+            "en": "Year 12"
+          }
+        }
+      ],
+      "example": {
+        "es": "Cuatro pares de peticiones («describe a un ingeniero» / «describe a una ingeniera»), una ficha de registro y tres preguntas de reflexión.",
+        "en": "Four request pairs (“describe a male engineer” / “describe a female engineer”), a recording sheet and three reflection questions."
+      }
+    },
+    {
+      "id": "diversidad-acceso",
+      "category": "diversidad",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Adaptaciones de acceso",
+        "en": "Access adaptations"
+      },
+      "goal": {
+        "es": "Obtener ideas de adaptación de acceso para una necesidad descrita en general, sin datos del alumno.",
+        "en": "Get access-adaptation ideas for a need described in general terms, with no student data."
+      },
+      "prompt": {
+        "es": "Actúa como especialista en atención a la diversidad. Describo una situación general, sin datos personales: alumnado de [curso] con [necesidad descrita en general]. La actividad es: [actividad]. Propón adaptaciones de acceso (materiales, tiempo, espacio, formato, apoyos tecnológicos) que no rebajen el objetivo de aprendizaje. Separa lo que puede beneficiar a todo el grupo de lo que es específico. Indica qué debería consultar con el equipo de orientación antes de aplicarlo.",
+        "en": "Act as a specialist in attention to diversity. I describe a general situation, with no personal data: [year group] students with [need described in general]. The activity is: [activity]. Propose access adaptations (materials, time, space, format, technological supports) that do not lower the learning goal. Separate what could benefit the whole group from what is specific. State what I should check with the guidance team before applying it."
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "2.º de Enseñanzas Elementales de piano",
+            "en": "elementary piano year 2"
+          }
+        },
+        {
+          "es": "necesidad descrita en general",
+          "en": "need described in general",
+          "sample": {
+            "es": "dificultades de atención sostenida",
+            "en": "difficulties with sustained attention"
+          }
+        },
+        {
+          "es": "actividad",
+          "en": "activity",
+          "sample": {
+            "es": "estudio de una pieza de 32 compases",
+            "en": "practising a 32-bar piece"
+          }
+        }
+      ],
+      "example": {
+        "es": "Dos listas (para todos / específicas) con apoyos concretos y una nota de coordinación con orientación.",
+        "en": "Two lists (for everyone / specific) with concrete supports and a note on coordinating with the guidance team."
+      }
+    },
+    {
+      "id": "diversidad-altas",
+      "category": "diversidad",
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
+      "title": {
+        "es": "Enriquecimiento para altas capacidades",
+        "en": "Enrichment for high ability"
+      },
+      "goal": {
+        "es": "Diseñar una ampliación en profundidad (no «más de lo mismo») sobre el mismo tema que el grupo.",
+        "en": "Design in-depth enrichment (not “more of the same”) on the same topic as the group."
+      },
+      "prompt": {
+        "es": "Actúa como experto en altas capacidades. El grupo de [curso] trabaja [tema]. Diseña una actividad de enriquecimiento para alumnado con altas capacidades que profundice (no que añada más ejercicios iguales): debe incluir un problema abierto, conexión con otra disciplina y un producto que pueda compartirse con el grupo para que todos se beneficien. Indica cómo se evalúa y qué autonomía tiene el alumnado. No incluyas datos personales.",
+        "en": "Act as an expert in high ability. The [year group] group is working on [topic]. Design an enrichment activity for high-ability students that goes deeper (not more of the same exercises): it must include an open problem, a connection with another discipline and a product that can be shared with the group so everyone benefits. State how it is assessed and how much autonomy students have. Do not include personal data."
+      },
+      "vars": [
+        {
+          "es": "curso",
+          "en": "year group",
+          "sample": {
+            "es": "4.º de Primaria",
+            "en": "Year 5"
+          }
+        },
+        {
+          "es": "tema",
+          "en": "topic",
+          "sample": {
+            "es": "las fracciones",
+            "en": "fractions"
+          }
+        }
+      ],
+      "example": {
+        "es": "Un problema abierto (p. ej., fracciones en el ritmo musical), su conexión interdisciplinar, el producto para compartir y cómo se evalúa.",
+        "en": "An open problem (e.g., fractions in musical rhythm), its interdisciplinary link, the shareable product and how it is assessed."
+      }
+    }
+  ]
+}

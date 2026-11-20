@@ -119,16 +119,16 @@ Depende de: Fase 1 aprobada; P1 y P4 para algunas piezas.
 
 Depende de: Fase 2 (contenido y perfil).
 
-- [ ] **3.1 Stepper socrático** sobre una actividad concreta. Dimensiones: ICAP, SAMR, exigencia cognitiva, DUA, resistencia a la IA, evaluación y datos.
+- [x] **3.1 Stepper socrático** sobre una actividad concreta. Dimensiones: ICAP, SAMR, exigencia cognitiva, DUA, resistencia a la IA, evaluación y datos.
   - Repreguntas según la respuesta.
-- [ ] **3.2 Resultado:** perfil visual (barras o radar M3 accesibles, con tabla alternativa) entre "Digitalización" e "Innovación que genera aprendizaje", más propuestas de mejora.
-- [ ] **3.3 Exportar:** impresión/PDF (CSS de impresión), copiar como texto y "Abrir en IA". Además, una versión PDF en blanco.
-- [ ] **3.4 Comprobar hoy los parámetros de URL** de ChatGPT (`?q=`), Claude (`/new?q=`) y Gemini (si no admite prompt precargado: copiar al portapapeles, abrir la web y mostrar un snackbar).
+- [x] **3.2 Resultado:** perfil visual (barras o radar M3 accesibles, con tabla alternativa) entre "Digitalización" e "Innovación que genera aprendizaje", más propuestas de mejora.
+- [x] **3.3 Exportar:** impresión/PDF (CSS de impresión), copiar como texto y "Abrir en IA". Además, una versión PDF en blanco.
+- [x] **3.4 Comprobar hoy los parámetros de URL** de ChatGPT (`?q=`), Claude (`/new?q=`) y Gemini (si no admite prompt precargado: copiar al portapapeles, abrir la web y mostrar un snackbar).
   - Criterio: lo comprobado y la alternativa quedan documentados.
-- [ ] **3.5 Guía breve de prompts** (rol, contexto, tarea, formato, restricciones; verificación, sesgos, RGPD, cuentas corporativas, andamiaje).
-- [ ] **3.6 Tarjetas:** 10 categorías × al menos 2–3 tarjetas, con variantes por etapa, `[variables]` rellenables, ejemplo de resultado y botones Copiar / Gemini / ChatGPT / Claude / Compartir.
+- [x] **3.5 Guía breve de prompts** (rol, contexto, tarea, formato, restricciones; verificación, sesgos, RGPD, cuentas corporativas, andamiaje).
+- [x] **3.6 Tarjetas:** 10 categorías × al menos 2–3 tarjetas, con variantes por etapa, `[variables]` rellenables, ejemplo de resultado y botones Copiar / Gemini / ChatGPT / Claude / Compartir.
   - Criterio: ningún prompt pide datos personales.
-- [ ] **3.7 Hoja de pruebas** `docs/pruebas-prompts.md`: prompt × servicio, resultado esperado y OK/KO, para que el usuario la rellene con la web publicada. Commit "Fase 3".
+- [x] **3.7 Hoja de pruebas** `docs/pruebas-prompts.md`: prompt × servicio, resultado esperado y OK/KO, para que el usuario la rellene con la web publicada. Commit "Fase 3".
 
 ## Fase 4 · TTS, ARASAAC y PWA offline
 

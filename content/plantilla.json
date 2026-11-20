@@ -1,0 +1,159 @@
+{
+  "intro": {
+    "es": "Piensa en **una actividad concreta** que vayas a hacer con tecnología. Este asistente no la juzga: te hace preguntas para que decidas si es digitalización (cambia el soporte) o innovación que genera aprendizaje (cambia lo que piensa tu alumnado). Lo que escribas se queda en tu dispositivo.",
+    "en": "Think of **one specific activity** you will do with technology. This assistant does not judge it: it asks you questions so you can decide whether it is digitisation (the medium changes) or innovation that generates learning (what your students think changes). What you write stays on your device."
+  },
+  "activity": {
+    "label": { "es": "Describe la actividad", "en": "Describe the activity" },
+    "hint": { "es": "Qué hace el alumnado, con qué herramienta y qué entrega. Sin datos personales.", "en": "What students do, with which tool and what they hand in. No personal data." },
+    "placeholder": { "es": "Ej.: El alumnado de 2.º de ESO hace una presentación en grupo sobre los ríos de Andalucía y la expone en clase.", "en": "E.g.: Year 8 students make a group presentation about Andalusian rivers and present it in class." }
+  },
+  "dimensions": [
+    {
+      "id": "icap",
+      "icon": "psychology",
+      "short": { "es": "ICAP", "en": "ICAP" },
+      "title": { "es": "Compromiso cognitivo (ICAP)", "en": "Cognitive engagement (ICAP)" },
+      "question": { "es": "Durante la actividad, ¿qué hace sobre todo tu alumnado con la información?", "en": "During the activity, what do your students mainly do with the information?" },
+      "options": [
+        { "score": 0, "label": { "es": "La recibe: mira, escucha o lee", "en": "Receives it: watches, listens or reads" },
+          "followUp": { "es": "¿En qué momento tendría que explicar algo con sus propias palabras? ¿Qué pasaría si lo hiciera?", "en": "At what point would they have to explain something in their own words? What would happen if they did?" } },
+        { "score": 1, "label": { "es": "La manipula: copia, subraya, completa, ordena", "en": "Manipulates it: copies, highlights, fills in, sorts" },
+          "followUp": { "es": "Si mañana le quitaras la plantilla, ¿qué sabría hacer sin ella?", "en": "If you took the template away tomorrow, what could they do without it?" } },
+        { "score": 2, "label": { "es": "Genera algo nuevo: explica, compara, crea", "en": "Generates something new: explains, compares, creates" },
+          "followUp": { "es": "¿Ese producto podría hacerlo igual sin haber entendido? ¿Cómo lo sabrías?", "en": "Could they make that product without having understood? How would you know?" } },
+        { "score": 3, "label": { "es": "Co-construye: debate y crea con otros, y necesita sus aportaciones", "en": "Co-constructs: debates and creates with others, and needs their input" },
+          "followUp": { "es": "¿Qué parte del resultado no existiría sin la aportación de otro compañero?", "en": "What part of the result would not exist without another classmate's contribution?" } }
+      ],
+      "proposal": { "es": "Añade un momento en el que el alumnado tenga que generar algo propio (explicar, comparar, decidir) y otro en el que lo contraste con un compañero que piensa distinto.", "en": "Add a moment where students must generate something of their own (explain, compare, decide) and another where they test it against a classmate who thinks differently." },
+      "source": "icap"
+    },
+    {
+      "id": "samr",
+      "icon": "swap_horiz",
+      "short": { "es": "Tecnología", "en": "Technology" },
+      "title": { "es": "Qué cambia la tecnología (SAMR, solo para describir)", "en": "What technology changes (SAMR, for description only)" },
+      "question": { "es": "Comparada con la misma actividad sin tecnología, ¿qué cambia?", "en": "Compared with the same activity without technology, what changes?" },
+      "options": [
+        { "score": 0, "label": { "es": "Nada: solo cambia el soporte (papel → pantalla)", "en": "Nothing: only the medium changes (paper → screen)" },
+          "followUp": { "es": "Si la tecnología fallara ese día, ¿la actividad funcionaría igual en papel? ¿Qué te dice eso?", "en": "If the technology failed that day, would the activity work just as well on paper? What does that tell you?" } },
+        { "score": 1, "label": { "es": "Mejora algo práctico: corrección automática, más rapidez", "en": "Improves something practical: automatic marking, speed" },
+          "followUp": { "es": "Ese tiempo que ganas, ¿en qué lo invierte el alumnado?", "en": "The time you save: what do students spend it on?" } },
+        { "score": 2, "label": { "es": "Rediseña una parte de la tarea", "en": "Redesigns part of the task" },
+          "followUp": { "es": "¿El rediseño exige más pensamiento o solo más clics?", "en": "Does the redesign require more thinking or just more clicks?" } },
+        { "score": 3, "label": { "es": "Permite algo que antes era imposible", "en": "Enables something previously impossible" },
+          "followUp": { "es": "Eso que antes era imposible, ¿hace pensar más al alumnado o solo es más espectacular?", "en": "Does that previously impossible thing make students think more, or is it just more spectacular?" } }
+      ],
+      "proposal": { "es": "No busques «subir de nivel» en SAMR: pregúntate qué aprendizaje permite la tecnología que sin ella no habría. Si la respuesta es «ninguno», quizá el papel baste.", "en": "Do not aim to “level up” in SAMR: ask what learning the technology enables that would not happen without it. If the answer is “none”, paper may be enough." },
+      "source": "samr-critica"
+    },
+    {
+      "id": "exigencia",
+      "icon": "lightbulb",
+      "short": { "es": "Exigencia", "en": "Demand" },
+      "title": { "es": "Exigencia cognitiva", "en": "Cognitive demand" },
+      "question": { "es": "¿Qué tiene que pensar ahora tu alumnado que antes no pensaba?", "en": "What do your students now have to think about that they did not before?" },
+      "options": [
+        { "score": 0, "label": { "es": "Nada nuevo", "en": "Nothing new" },
+          "followUp": { "es": "Si tuvieras que añadir una sola decisión que el alumnado deba tomar, ¿cuál sería?", "en": "If you had to add one single decision for students to make, what would it be?" } },
+        { "score": 1, "label": { "es": "Recordar o localizar información", "en": "Recall or locate information" },
+          "followUp": { "es": "¿Qué haría con esa información una vez localizada? ¿Podría hacerlo un buscador por él?", "en": "What would they do with that information once found? Could a search engine do it for them?" } },
+        { "score": 2, "label": { "es": "Comparar, decidir o justificar", "en": "Compare, decide or justify" },
+          "followUp": { "es": "¿Cómo recoges ese razonamiento, y no solo la decisión final?", "en": "How do you capture that reasoning, not just the final decision?" } },
+        { "score": 3, "label": { "es": "Crear, evaluar o aplicar a un caso nuevo", "en": "Create, evaluate or apply to a new case" },
+          "followUp": { "es": "¿Ese caso nuevo es realmente nuevo para tu alumnado o ya lo han visto resuelto?", "en": "Is that new case really new to your students, or have they already seen it solved?" } }
+      ],
+      "proposal": { "es": "Convierte una pregunta de «¿qué es…?» en una de «¿cuál elegirías y por qué?», con un caso que no hayan visto resuelto.", "en": "Turn a “what is…?” question into “which would you choose and why?”, with a case they have not seen solved." },
+      "source": "icap"
+    },
+    {
+      "id": "dua",
+      "icon": "accessibility_new",
+      "short": { "es": "DUA", "en": "UDL" },
+      "title": { "es": "Diseño Universal para el Aprendizaje", "en": "Universal Design for Learning" },
+      "question": { "es": "Pensando en implicación, representación y acción y expresión, ¿cuántas vías ofrece la actividad?", "en": "Thinking of engagement, representation, and action and expression, how many options does the activity offer?" },
+      "options": [
+        { "score": 0, "label": { "es": "Una sola vía en todo", "en": "A single option for everything" },
+          "followUp": { "es": "¿Quién de tu grupo encontraría una barrera en esa única vía? ¿Qué alternativa le ofrecerías a todos?", "en": "Who in your group would hit a barrier with that single option? What alternative would you offer everyone?" } },
+        { "score": 1, "label": { "es": "Alternativas en uno de los tres principios", "en": "Alternatives in one of the three principles" },
+          "followUp": { "es": "De los otros dos principios, ¿cuál añadirías primero y con qué recurso?", "en": "Of the other two principles, which would you add first and with what resource?" } },
+        { "score": 2, "label": { "es": "Alternativas en dos de los tres", "en": "Alternatives in two of the three" },
+          "followUp": { "es": "¿Las alternativas exigen el mismo nivel de pensamiento o alguna es «más fácil»?", "en": "Do the alternatives require the same level of thinking, or is one “easier”?" } },
+        { "score": 3, "label": { "es": "Alternativas en los tres, previstas desde el diseño", "en": "Alternatives in all three, planned from the start" },
+          "followUp": { "es": "¿Cómo ayudas al alumnado a elegir la vía que mejor le sirve, y no la más cómoda?", "en": "How do you help students choose the option that serves them best, not the most comfortable one?" } }
+      ],
+      "proposal": { "es": "Ofrece a todo el grupo al menos dos formas de acceder a la información (texto y audio, por ejemplo) y dos formas de demostrar lo aprendido, evaluadas con los mismos criterios.", "en": "Offer the whole group at least two ways to access information (text and audio, for example) and two ways to show learning, assessed with the same criteria." },
+      "source": "cast-udl"
+    },
+    {
+      "id": "ia",
+      "icon": "smart_toy",
+      "short": { "es": "Resistencia IA", "en": "AI resistance" },
+      "title": { "es": "Resistencia a la IA", "en": "AI resistance" },
+      "question": { "es": "Si alguien pega el enunciado en una IA, ¿qué pasa?", "en": "If someone pastes the instructions into an AI, what happens?" },
+      "options": [
+        { "score": 0, "label": { "es": "La resuelve entera en segundos", "en": "It solves it completely in seconds" },
+          "followUp": { "es": "¿Qué tiene tu aula que la IA no tenga? (datos propios, una experiencia, una conversación…)", "en": "What does your classroom have that the AI does not? (own data, an experience, a conversation…)" } },
+        { "score": 1, "label": { "es": "La resuelve casi entera", "en": "It solves almost all of it" },
+          "followUp": { "es": "¿Qué parte no puede hacer? ¿Podrías hacer que esa parte pese más en la evaluación?", "en": "Which part can it not do? Could you make that part count more in the assessment?" } },
+        { "score": 2, "label": { "es": "Ayuda, pero faltan datos propios o decisiones del alumnado", "en": "It helps, but students' own data or decisions are missing" },
+          "followUp": { "es": "Si el alumnado usa la IA en esa tarea, ¿cómo lo harías visible y útil en lugar de esconderlo?", "en": "If students use AI for that task, how would you make it visible and useful rather than hidden?" } },
+        { "score": 3, "label": { "es": "No puede: exige experiencia, datos propios o interacción en el aula", "en": "It cannot: it requires experience, own data or classroom interaction" },
+          "followUp": { "es": "¿Sigue siendo una tarea alcanzable para todo tu alumnado, o solo para quien ya tiene recursos en casa?", "en": "Is it still achievable for all your students, or only for those with resources at home?" } }
+      ],
+      "proposal": { "es": "Añade un ingrediente que la IA no tiene: datos recogidos por el alumnado, una decisión justificada sobre su contexto o una defensa oral ante otras personas.", "en": "Add an ingredient AI does not have: data collected by students, a justified decision about their context, or an oral defence in front of others." },
+      "source": "bastani"
+    },
+    {
+      "id": "evaluacion",
+      "icon": "check_circle",
+      "short": { "es": "Evaluación", "en": "Assessment" },
+      "title": { "es": "Evaluación", "en": "Assessment" },
+      "question": { "es": "¿Qué evalúas en esta actividad?", "en": "What do you assess in this activity?" },
+      "options": [
+        { "score": 0, "label": { "es": "Solo el producto final", "en": "Only the final product" },
+          "followUp": { "es": "Si dos productos iguales llegan por caminos distintos (uno copiado y otro trabajado), ¿cómo los distinguirías?", "en": "If two identical products came from different paths (one copied, one worked on), how would you tell them apart?" } },
+        { "score": 1, "label": { "es": "El producto, con una rúbrica conocida de antemano", "en": "The product, with a rubric known in advance" },
+          "followUp": { "es": "¿Hay algún criterio de la rúbrica que mire cómo se ha llegado al resultado?", "en": "Does any rubric criterion look at how the result was reached?" } },
+        { "score": 2, "label": { "es": "El producto y alguna evidencia del proceso", "en": "The product and some evidence of the process" },
+          "followUp": { "es": "¿El alumnado recibe retroalimentación a tiempo de mejorar, o cuando ya ha terminado?", "en": "Do students get feedback in time to improve, or only once they have finished?" } },
+        { "score": 3, "label": { "es": "El proceso, con retroalimentación durante la tarea", "en": "The process, with feedback during the task" },
+          "followUp": { "es": "¿Cómo participa el propio alumnado en esa evaluación (autoevaluación, entre iguales)?", "en": "How do students themselves take part in that assessment (self- or peer assessment)?" } }
+      ],
+      "proposal": { "es": "Pide un borrador intermedio y devuelve una retroalimentación breve con «tu siguiente paso». Incluye en la rúbrica un criterio de proceso.", "en": "Ask for an intermediate draft and return brief feedback with “your next step”. Include a process criterion in the rubric." },
+      "source": "feedback"
+    },
+    {
+      "id": "datos",
+      "icon": "badge",
+      "short": { "es": "Datos", "en": "Data" },
+      "title": { "es": "Datos y privacidad", "en": "Data and privacy" },
+      "question": { "es": "¿Qué datos del alumnado intervienen y dónde quedan?", "en": "What student data are involved and where do they end up?" },
+      "options": [
+        { "score": 0, "label": { "es": "Herramientas externas con datos personales, o no lo he revisado", "en": "External tools with personal data, or I have not checked" },
+          "followUp": { "es": "¿Sabes quién es responsable de esos datos y dónde se guardan? ¿Lo autoriza tu centro?", "en": "Do you know who is responsible for that data and where it is stored? Does your school authorise it?" } },
+        { "score": 1, "label": { "es": "Herramientas del centro, pero recojo más datos de los necesarios", "en": "School tools, but I collect more data than needed" },
+          "followUp": { "es": "¿Qué dato podrías dejar de pedir sin que la actividad pierda nada?", "en": "Which piece of data could you stop asking for without the activity losing anything?" } },
+        { "score": 2, "label": { "es": "Herramientas corporativas y solo los datos imprescindibles", "en": "Institutional tools and only essential data" },
+          "followUp": { "es": "¿Sabe tu alumnado qué datos genera y quién puede verlos?", "en": "Do your students know what data they generate and who can see it?" } },
+        { "score": 3, "label": { "es": "No intervienen datos personales, o están anonimizados", "en": "No personal data are involved, or they are anonymised" },
+          "followUp": { "es": "¿Podrías convertir esa decisión en un aprendizaje sobre privacidad para el alumnado?", "en": "Could you turn that decision into a privacy lesson for your students?" } }
+      ],
+      "proposal": { "es": "Usa las plataformas corporativas del centro, recoge solo los datos imprescindibles y nunca introduzcas datos del alumnado en herramientas de IA externas.", "en": "Use your school's institutional platforms, collect only essential data and never enter student data into external AI tools." },
+      "source": "rgpd"
+    }
+  ],
+  "spectrum": {
+    "low": { "es": "Digitalización", "en": "Digitisation" },
+    "mid": { "es": "En transición", "en": "In transition" },
+    "high": { "es": "Innovación que genera aprendizaje", "en": "Innovation that generates learning" },
+    "explain": {
+      "es": "La posición es orientativa: resume tus propias respuestas, no evalúa tu trabajo. Lo valioso son las preguntas que te has hecho.",
+      "en": "The position is indicative: it summarises your own answers, it does not grade your work. What matters are the questions you asked yourself."
+    }
+  },
+  "aiPrompt": {
+    "es": "Actúa como un colega docente que hace preguntas socráticas: no juzgas ni das soluciones cerradas, ayudas a pensar. Estoy revisando una actividad con una plantilla «¿Digitalización o innovación?» (dimensiones: ICAP, qué cambia la tecnología, exigencia cognitiva, DUA, resistencia a la IA, evaluación, y datos y privacidad).\n\nActividad: {activity}\n\nMis respuestas y reflexiones:\n{answers}\n\nContinúa el diálogo: hazme UNA pregunta cada vez, empezando por la dimensión con la puntuación más baja. Cuando yo lo pida, propón dos rediseños concretos. No incluyas ni me pidas datos personales del alumnado.",
+    "en": "Act as a fellow teacher who asks Socratic questions: you do not judge or give closed solutions, you help me think. I am reviewing an activity with a “Digitisation or innovation?” template (dimensions: ICAP, what technology changes, cognitive demand, UDL, AI resistance, assessment, and data and privacy).\n\nActivity: {activity}\n\nMy answers and reflections:\n{answers}\n\nContinue the dialogue: ask me ONE question at a time, starting with the lowest-scoring dimension. When I ask, propose two concrete redesigns. Do not include or ask me for students' personal data."
+  }
+}

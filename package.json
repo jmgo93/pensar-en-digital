@@ -8,6 +8,8 @@
     "pages": "node tools/build-pages.mjs",
     "icons": "node tools/build-icons.mjs",
     "search": "node tools/build-search-index.mjs",
+    "blank": "node tools/build-blank-template.mjs",
+    "prompt-tests": "node tools/build-prompt-tests.mjs",
     "typecheck": "tsc -p jsconfig.json",
     "check:ui": "node tools/check-ui.mjs http://127.0.0.1:8765/pensar-en-digital/",
     "serve": "python -m http.server 8000"

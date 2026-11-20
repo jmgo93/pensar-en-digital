@@ -42,7 +42,7 @@ const navItem = (r, current, rel) =>
   `<a class="nav-item" href="${rel}${r.path}"${r.id === current ? ' aria-current="page"' : ''}><span class="indicator">${icon(r.icon)}</span><span class="label" data-i18n="route.${r.id}.short">${tx(`route.${r.id}.short`)}</span></a>`;
 
 /** Secciones cuyo contenido pinta js/sections.js o js/search.js. */
-const RENDERED = new Set(['ponencia', 'marco', 'inclusiva', 'lunes', 'bibliografia', 'buscar']);
+const RENDERED = new Set(['ponencia', 'marco', 'plantilla', 'inclusiva', 'ia', 'lunes', 'bibliografia', 'buscar']);
 
 /** Contenido principal: cabecera estática + #view que rellena JS. */
 const mainContent = (/** @type {import('../js/types').Route} */ route, /** @type {string} */ rel) => {

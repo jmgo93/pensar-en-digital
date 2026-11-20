@@ -10,12 +10,18 @@ import { initRipple, openModal } from './ui.js';
 import { fromRoot, currentRouteId } from './router.js';
 import { renderSection } from './sections.js';
 import { renderSearch } from './search.js';
+import { renderPrompts } from './prompts.js';
+import { renderSocratic } from './socratic.js';
+import { loadSources } from './content.js';
 
 /** Pinta el contenido de la sección actual (si lo tiene). */
 const renderView = async () => {
   const id = currentRouteId();
   try {
+    await loadSources();
     if (id === 'buscar') await renderSearch();
+    else if (id === 'ia') await renderPrompts();
+    else if (id === 'plantilla') await renderSocratic();
     else await renderSection(id);
   } catch (err) {
     console.error('No se pudo pintar la sección', err);
