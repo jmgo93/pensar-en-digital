@@ -9,7 +9,7 @@ Cada fase termina con un commit. Push autorizado (20/11): cada push publica en P
 
 | # | Asunto | Bloquea | Estado |
 |---|---|---|---|
-| P7 | El usuario sigue `docs/votaciones.md` y envía las 4 URL de los formularios y la URL `/exec` del contador | 5.4, 5.5 | **Esperando al usuario** |
+| P7 | **En standby (pedido por el usuario el 20/11).** El usuario sigue `docs/votaciones.md` y envía las 4 URL de los formularios y la URL `/exec` del contador | 5.4, 5.5 | **Esperando al usuario** |
 
 ### Decisiones tomadas
 
@@ -204,7 +204,8 @@ Depende de: Fase 2 (contenido), P1, P3 y P4.
 > **Resultado (20/11):**
 > - Lighthouse móvil en la web publicada (antes de las optimizaciones de esta fase):
 >   - Accesibilidad, Buenas prácticas y SEO: **100**.
->   - Rendimiento: 99 en Inicio, 98 en Plantilla, 88 en Marco y 77 en IA, por CLS y por el pintado de tarjetas. Corregido (reserva de espacio, `modulepreload`, pintado por tandas); **pendiente de volver a medir tras el despliegue**.
+>   - Rendimiento al principio de la fase: 77–99 (por CLS y por el pintado de tarjetas).
+>   - Después de las optimizaciones (reserva de espacio, módulos bajo demanda, pintado tarjeta a tarjeta), **mediana de 3 pasadas (`npm run check:lighthouse`): rendimiento 97–100 en las 10 rutas y 100 en Accesibilidad, Buenas prácticas y SEO**.
 > - axe sin errores en todas las rutas, en 4 esquemas, inglés y letra al 200 %, también en la presentación, las notas y los resultados.
 > - HTML válido (`npm run check:html`).
 > - Enlaces externos: 30/30 correctos (`npm run check:links`; los DOI se comprueban con la API de doi.org).
@@ -214,11 +215,19 @@ Depende de: Fase 2 (contenido), P1, P3 y P4.
 
 Depende de: Fases 1–5.
 
-- [~] **6.1 Lighthouse móvil** ≥ 95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO, en todas las rutas.
+- [x] **6.1 Lighthouse móvil** ≥ 95 en Rendimiento, Accesibilidad, Buenas prácticas y SEO, en todas las rutas.
 - [x] **6.2 axe-core sin errores** y contraste comprobado en los 3 esquemas.
 - [x] **6.3 Job de comprobación en `pages.yml`** (validación HTML, enlaces rotos, axe, Lighthouse CI); el despliegue depende de él.
 - [x] **6.4 Checklist de pruebas en dispositivos** (`docs/pruebas-dispositivos.md`) para el usuario: instalación, offline, TTS, pictogramas, safe areas y letra al 200 %, en Android e iOS.
 - [x] **6.5 `LICENSE`** (CC BY-NC-SA 4.0 para contenido y código) y README final.
 - [x] **6.6 Footer en todas las rutas** y enlace del CEP (P2).
 - [x] **6.7a Pages activado** (Source: GitHub Actions) y primer despliegue OK el 20/11.
-- [ ] **6.7b Comprobación final** de la URL publicada. Commit "Fase 6".
+- [x] **6.7b Comprobación final** de la URL publicada (20/11): todas las rutas y recursos responden 200; el pie muestra la licencia nueva.
+
+---
+
+## Pendiente fuera de las fases (por el usuario)
+
+- [ ] **Votaciones (P7, en standby):** seguir `docs/votaciones.md` y enviar las 4 URL de los formularios y la URL `/exec`. Después: rellenar `formUrl` y `votingEndpoint`, ejecutar `npm run qr` y `npm run build:all`, y hacer push.
+- [ ] Probar los prompts publicados con `docs/pruebas-prompts.md`, sobre todo la precarga de Claude con sesión iniciada.
+- [ ] Probar en Android e iOS reales con `docs/pruebas-dispositivos.md`, y el mando real del auditorio.

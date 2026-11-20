@@ -2,7 +2,7 @@
 /**
  * Lighthouse móvil sobre todas las rutas, con la MEDIANA de varias pasadas (el rendimiento simulado
  * varía según la carga del equipo). Objetivo del proyecto: ≥ 95 en las cuatro categorías.
- * Uso: node tools/check-lighthouse.mjs [urlBase] [pasadas]
+ * Uso: node tools/check-lighthouse.mjs [urlBase] [pasadas] [ruta, p. ej. ia/]
  *   por defecto: https://jmgo93.github.io/pensar-en-digital/ y 3 pasadas. Necesita Chrome/Edge (CHROME_PATH).
  */
 import { execFileSync } from 'node:child_process';
@@ -10,7 +10,7 @@ import { readFileSync, mkdtempSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
-const [base = 'https://jmgo93.github.io/pensar-en-digital/', runsArg = '3'] = process.argv.slice(2);
+const [base = 'https://jmgo93.github.io/pensar-en-digital/', runsArg = '3', only = ''] = process.argv.slice(2);
 const runs = Number(runsArg);
 const chrome = [process.env.CHROME_PATH, 'C:/Program Files/Google/Chrome/Application/chrome.exe', 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', '/usr/bin/google-chrome'].find(
   (p) => p && existsSync(p),
@@ -19,7 +19,7 @@ if (!chrome) throw new Error('No se encontró Chrome/Edge. Define CHROME_PATH.')
 
 /** @type {{ path: string }[]} */
 const routes = JSON.parse(readFileSync(new URL('../content/routes.json', import.meta.url), 'utf8'));
-const paths = [...routes.map((r) => r.path), 'presentacion/'];
+const paths = [...routes.map((r) => r.path), 'presentacion/'].filter((p) => !only || p === only);
 const dir = mkdtempSync(join(tmpdir(), 'lh-'));
 const lhBin = new URL('../node_modules/lighthouse/cli/index.js', import.meta.url);
 
