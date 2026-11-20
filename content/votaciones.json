@@ -1,0 +1,81 @@
+[
+  {
+    "id": "v1",
+    "minute": "0–5",
+    "block": { "es": "Gancho: ¿qué tarea resuelve la IA sola?", "en": "Hook: which task can AI solve alone?" },
+    "context": {
+      "es": [
+        "Tarea A: «Escribe una redacción de 300 palabras sobre la importancia del agua».",
+        "Tarea B: «Mide durante una semana el agua que se gasta en tu casa, compara tus datos con los de un compañero y proponed al centro una medida basada en ellos. La IA puede ayudaros a analizarlos, pero los datos son vuestros»."
+      ],
+      "en": [
+        "Task A: “Write a 300-word essay on the importance of water.”",
+        "Task B: “Measure the water used at home for a week, compare your data with a classmate’s and propose a measure to the school based on them. AI may help you analyse them, but the data are yours.”"
+      ]
+    },
+    "question": {
+      "es": "¿Cuál de las dos tareas puede resolver una IA sola, en segundos?",
+      "en": "Which of the two tasks can an AI solve alone, in seconds?"
+    },
+    "options": [
+      { "es": "Solo la A", "en": "Only A" },
+      { "es": "Solo la B", "en": "Only B" },
+      { "es": "Las dos", "en": "Both" },
+      { "es": "Ninguna", "en": "Neither" }
+    ],
+    "formUrl": ""
+  },
+  {
+    "id": "v2",
+    "minute": "10–20",
+    "block": { "es": "ICAP: de consumir a construir", "en": "ICAP: from consuming to constructing" },
+    "context": { "es": [], "en": [] },
+    "question": {
+      "es": "La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo?",
+      "en": "The last time your students used technology in class, what were they mainly doing?"
+    },
+    "options": [
+      { "es": "Recibir: ver, escuchar, leer", "en": "Receiving: watching, listening, reading" },
+      { "es": "Manipular: copiar, completar, subrayar", "en": "Manipulating: copying, filling in, highlighting" },
+      { "es": "Generar: explicar, crear algo nuevo", "en": "Generating: explaining, creating something new" },
+      { "es": "Co-construir: debatir y crear con otros", "en": "Co-constructing: debating and creating with others" }
+    ],
+    "formUrl": ""
+  },
+  {
+    "id": "v3",
+    "minute": "32–40",
+    "block": { "es": "IA generativa en el aula", "en": "Generative AI in the classroom" },
+    "context": { "es": [], "en": [] },
+    "question": {
+      "es": "¿Qué te preocupa más de la IA generativa en tu aula?",
+      "en": "What worries you most about generative AI in your classroom?"
+    },
+    "options": [
+      { "es": "Que copien sin aprender", "en": "That they copy without learning" },
+      { "es": "Que dejen de pensar por sí mismos", "en": "That they stop thinking for themselves" },
+      { "es": "La privacidad de los datos", "en": "Data privacy" },
+      { "es": "Los sesgos y los errores", "en": "Bias and errors" },
+      { "es": "No me preocupa", "en": "It doesn’t worry me" }
+    ],
+    "formUrl": ""
+  },
+  {
+    "id": "v4",
+    "minute": "40–45",
+    "block": { "es": "Cierre: reto para el lunes", "en": "Closing: Monday challenge" },
+    "context": { "es": [], "en": [] },
+    "question": {
+      "es": "¿Qué vas a probar el lunes?",
+      "en": "What will you try on Monday?"
+    },
+    "options": [
+      { "es": "Rediseñar una tarea copiable", "en": "Redesign a copyable task" },
+      { "es": "Evaluar el proceso, no solo el producto", "en": "Assess the process, not just the product" },
+      { "es": "Usar la IA como tutor que pregunta", "en": "Use AI as a tutor that asks questions" },
+      { "es": "Revisar las barreras DUA de un material", "en": "Review a resource for UDL barriers" },
+      { "es": "Pasar una actividad por la plantilla socrática", "en": "Run an activity through the Socratic template" }
+    ],
+    "formUrl": ""
+  }
+]

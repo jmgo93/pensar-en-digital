@@ -58,7 +58,15 @@
     "footer.arasaacNote": "(distinta de la del resto del contenido).",
     "home.sections": "Secciones",
     "home.cta.plantilla": "Analiza tu actividad",
-    "home.cta.ia": "Banco de prompts"
+    "home.cta.ia": "Banco de prompts",
+    "votes.total": "{n} votos",
+    "votes.totalOne": "1 voto",
+    "votes.waiting": "Esperando votos…",
+    "votes.scan": "Escanea y vota",
+    "votes.offline": "Sin conexión: votamos a mano alzada",
+    "votes.notConfigured": "Votación sin conectar: votamos a mano alzada",
+    "votes.demo": "Ensayo con datos ficticios",
+    "votes.live": "En directo"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -119,6 +127,14 @@
     "footer.arasaacNote": "(different from the rest of the content).",
     "home.sections": "Sections",
     "home.cta.plantilla": "Analyse your activity",
-    "home.cta.ia": "Prompt bank"
+    "home.cta.ia": "Prompt bank",
+    "votes.total": "{n} votes",
+    "votes.totalOne": "1 vote",
+    "votes.waiting": "Waiting for votes…",
+    "votes.scan": "Scan and vote",
+    "votes.offline": "Offline: vote by show of hands",
+    "votes.notConfigured": "Voting not connected: vote by show of hands",
+    "votes.demo": "Rehearsal with fake data",
+    "votes.live": "Live"
   }
 }

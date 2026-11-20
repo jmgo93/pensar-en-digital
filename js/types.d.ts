@@ -45,8 +45,26 @@ export interface Site {
   licenseArasaacUrl: string;
   arasaacUrl: string;
   materialSymbolsUrl: string;
+  /** URL /exec de la aplicación web de Apps Script (votaciones). Vacía = sin conectar. */
+  votingEndpoint: string;
   languages: Lang[];
   defaultLanguage: Lang;
+}
+
+export interface Localized<T = string> {
+  es: T;
+  en: T;
+}
+
+export interface Vote {
+  id: string;
+  minute: string;
+  block: Localized;
+  context: Localized<string[]>;
+  question: Localized;
+  options: Localized[];
+  /** URL corta del formulario (para el QR). */
+  formUrl: string;
 }
 
 export type Strings = Record<string, string>;

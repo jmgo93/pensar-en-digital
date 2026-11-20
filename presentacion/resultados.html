@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resultados en directo · Pensar en Digital</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/tokens-color.css">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/a11y.css">
+  <style>
+    /* Pantalla para proyectar (1920×1080): tamaños en vh para leerse desde la última fila. */
+    body {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100dvh;
+      padding: 4vh 5vw 2vh;
+      gap: 3vh;
+    }
+    header { display: grid; gap: 1.5vh; }
+    #block {
+      font: var(--md-sys-typescale-title-large);
+      font-size: max(1.25rem, 2.6vh);
+      color: var(--md-sys-color-primary);
+    }
+    #question {
+      font-weight: 500;
+      font-size: max(1.75rem, 5.2vh);
+      line-height: 1.2;
+    }
+    #results { align-self: center; max-inline-size: none; margin: 0; padding: 0; inline-size: 100%; }
+    .vote-bars {
+      display: grid;
+      gap: 2.4vh;
+      padding: 0;
+      list-style: none;
+    }
+    .vote-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.5fr) 5.5ch;
+      align-items: center;
+      gap: 2vw;
+      font-size: max(1.125rem, 3.4vh);
+      line-height: 1.25;
+    }
+    .vote-track {
+      block-size: 5vh;
+      min-block-size: 1.5rem;
+      border-radius: var(--md-sys-shape-corner-full);
+      background: var(--md-sys-color-surface-container-highest);
+      overflow: hidden;
+    }
+    .vote-fill {
+      display: block;
+      block-size: 100%;
+      inline-size: 0;
+      border-radius: inherit;
+      background: var(--md-sys-color-secondary);
+      transition: inline-size var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized);
+    }
+    .vote-row.is-top .vote-fill { background: var(--md-sys-color-primary); }
+    .vote-row.is-top .vote-label { font-weight: 700; }
+    .vote-num { text-align: end; font-variant-numeric: tabular-nums; font-weight: 700; }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1vh 3vw;
+      font-size: max(1rem, 2.4vh);
+      color: var(--md-sys-color-on-surface-variant);
+    }
+    #total { font-weight: 700; color: var(--md-sys-color-on-surface); font-size: max(1.25rem, 3.2vh); }
+    #status[data-kind="warn"] { color: var(--md-sys-color-error); }
+    #form-url { font-weight: 700; color: var(--md-sys-color-on-surface); }
+    .legal { flex-basis: 100%; font-size: max(0.75rem, 1.4vh); }
+    @media (max-width: 700px) {
+      .vote-row { grid-template-columns: 1fr 5ch; }
+      .vote-track { grid-column: 1 / -1; grid-row: 2; }
+    }
+  </style>
+  <script src="../js/boot.js"></script>
+  <script type="module" src="../js/results-view.js"></script>
+</head>
+<body>
+  <header>
+    <p id="block"></p>
+    <h1 id="question"></h1>
+  </header>
+  <main id="results" aria-live="off"></main>
+  <footer>
+    <span id="total"></span>
+    <span id="scan" hidden><span data-i18n="votes.scan">Escanea y vota</span>: <span id="form-url"></span></span>
+    <span id="status" role="status"></span>
+    <span class="legal">© 2026 Juan María Gámez Ortiz · CC BY 4.0 · Elaborado con la ayuda de Claude (Anthropic)</span>
+  </footer>
+</body>
+</html>

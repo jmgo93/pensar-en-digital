@@ -8,6 +8,10 @@
   "licenseArasaacUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es",
   "arasaacUrl": "https://arasaac.org/",
   "materialSymbolsUrl": "https://fonts.google.com/icons",
-  "languages": ["es", "en"],
-  "defaultLanguage": "es"
+  "languages": [
+    "es",
+    "en"
+  ],
+  "defaultLanguage": "es",
+  "votingEndpoint": ""
 }

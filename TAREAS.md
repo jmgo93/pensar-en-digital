@@ -1,7 +1,7 @@
 # TAREAS · Pensar en Digital
 
 Leyenda: `[ ]` pendiente · `[x]` hecha · `[~]` en curso · `[!]` bloqueada (ver "Pendiente de decidir").
-Cada fase termina con un commit. Sin push hasta que se pida.
+Cada fase termina con un commit. Push autorizado (20/11): cada push publica en Pages.
 
 ---
 
@@ -9,7 +9,7 @@ Cada fase termina con un commit. Sin push hasta que se pida.
 
 | # | Asunto | Bloquea | Estado |
 |---|---|---|---|
-| P7 | Cuenta de Google para crear el formulario de votación (lo crea el usuario con las preguntas que redacto) | 5.4 | Abierta |
+| P7 | El usuario sigue `docs/votaciones.md` y envía las 4 URL de los formularios y la URL `/exec` del contador | 5.4, 5.5 | **Esperando al usuario** |
 
 ### Decisiones tomadas
 
@@ -141,7 +141,13 @@ Depende de: Fase 2 (contenido), P1, P3 y P4.
   - Teclado y mando: flechas, PageUp/PageDown, espacio, Inicio/Fin, `B`/`.` para pantalla negra y `F` para pantalla completa. También gamepad y gestos.
 - [ ] **5.2 Notas en otra ventana** (`?notas`), sincronizadas con BroadcastChannel; temporizador con las marcas del guion; impresión a PDF.
 - [ ] **5.3 Diapositivas por bloques (45 min):** máximo 20 palabras por diapositiva, cuerpo de 32 px o más y una idea por diapositiva.
-- [ ] **5.4 Votación:** Mentimeter o Wooclap (P3) con QR, y alternativa offline (P5).
+- [~] **5.4 Votación en directo.**
+  - [x] Preguntas en `content/votaciones.json` (v1 gancho, v2 ICAP, v3 IA, v4 cierre), 1 pregunta por formulario para cumplir los 3 toques.
+  - [x] Apps Script `tools/apps-script/votaciones.gs`: crea los formularios, publica un contador en JSON/JSONP y vacía las respuestas entre sesiones.
+  - [x] `js/votes.js` (consulta cada 4 s, JSONP de respaldo, modo demo) y `presentacion/resultados.html` (pantalla de proyección, ← / →).
+  - [x] Instrucciones en `docs/votaciones.md`.
+  - [ ] Conectar: `votingEndpoint` en `content/site.json` y `formUrl` en cada votación (P7). Prueba real de extremo a extremo.
+  - [ ] Integrar las barras en las diapositivas.
 - [ ] **5.5 QR en SVG** (`tools/` → `assets/qr/`) para cada sección. En las diapositivas ocupan ≥ 35 % del alto, con la URL legible debajo.
 - [ ] **5.6 `docs/guion.md`** con tiempos y notas del ponente.
   - Criterio: legible al simular 1920×1080 al 25 %. Commit "Fase 5".
@@ -156,4 +162,5 @@ Depende de: Fases 1–5.
 - [ ] **6.4 Checklist de pruebas en dispositivos** (`docs/pruebas-dispositivos.md`) para el usuario: instalación, offline, TTS, pictogramas, safe areas y letra al 200 %, en Android e iOS.
 - [ ] **6.5 `LICENSE`** (CC BY 4.0 para el contenido y MIT para el código) y README final.
 - [ ] **6.6 Footer en todas las rutas** y enlace del CEP (P2).
-- [ ] **6.7 Push** (con permiso del usuario), activar Pages (Source: GitHub Actions) y comprobar la URL publicada. Commit "Fase 6".
+- [x] **6.7a Pages activado** (Source: GitHub Actions) y primer despliegue OK el 20/11.
+- [ ] **6.7b Comprobación final** de la URL publicada. Commit "Fase 6".
