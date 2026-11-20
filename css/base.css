@@ -207,3 +207,9 @@ main > * {
 #view[aria-busy="true"] {
   min-block-size: 100dvh;
 }
+
+/* El buscador crece con los resultados: reservamos el alto para que el pie no salte (CLS). */
+body[data-route="buscar"] #view {
+  min-block-size: 100dvh;
+  align-content: start;
+}

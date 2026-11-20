@@ -43,7 +43,11 @@ const navItem = (r, current, rel) =>
 
 /** Módulos que importa app.js (modulepreload evita la cadena de peticiones). */
 const NL = '\n';
-const MODULES = ['i18n', 'router', 'ui', 'a11y', 'content', 'sections', 'profile', 'search', 'prompts', 'socratic', 'ai', 'tts', 'picto', 'picto-words', 'pwa'];
+const CORE = ['i18n', 'router', 'ui', 'a11y', 'content', 'pwa'];
+/** @type {Record<string, string[]>} */
+const ROUTE_MODULES = { buscar: ['search'], ia: ['prompts', 'profile', 'ai'], plantilla: ['socratic', 'ai'] };
+/** @param {string} id */
+const modulesFor = (id) => [...CORE, ...(ROUTE_MODULES[id] ?? ['sections', 'profile'])];
 
 /** Secciones cuyo contenido pinta js/sections.js o js/search.js. */
 const RENDERED = new Set(['ponencia', 'marco', 'plantilla', 'inclusiva', 'ia', 'lunes', 'bibliografia', 'buscar']);
@@ -118,7 +122,7 @@ const page = (route) => {
 ${css}
   <script src="${rel}js/boot.js"></script>
   <script type="module" src="${rel}js/app.js"></script>
-${MODULES.map((m) => `  <link rel="modulepreload" href="${rel}js/${m}.js">`).join(NL)}
+${modulesFor(route.id).map((m) => `  <link rel="modulepreload" href="${rel}js/${m}.js">`).join(NL)}
 </head>
 <body data-route="${route.id}">
   <a class="skip-link" href="#main" data-i18n="app.skip">${tx('app.skip')}</a>

@@ -48,7 +48,11 @@ const renderInicio = async (view) => {
     h('blockquote', { class: 'pull-quote', 'data-tts': '' }, icon('format_quote'), h('p', {}, loc(c.question))),
     await profileCard(),
   );
-  if (!window.pdPrefs.get().profileAsked) setTimeout(() => openProfilePicker(), 600);
+  // Primer acceso: se ofrece elegir perfil cuando la página ya está tranquila.
+  if (!window.pdPrefs.get().profileAsked) {
+    const idle = window.requestIdleCallback ?? ((/** @type {() => void} */ cb) => setTimeout(cb, 200));
+    setTimeout(() => idle(() => openProfilePicker()), 1500);
+  }
 };
 
 /* ---------------- La ponencia ---------------- */

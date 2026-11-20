@@ -8,19 +8,29 @@ import { loadStrings, applyI18n, getLang, t } from './i18n.js';
 import { initA11yPanel } from './a11y.js';
 import { initRipple, openModal } from './ui.js';
 import { fromRoot, currentRouteId } from './router.js';
-import { renderSection } from './sections.js';
-import { renderSearch } from './search.js';
-import { renderPrompts } from './prompts.js';
-import { renderSocratic } from './socratic.js';
 import { loadSources } from './content.js';
-import { applyTts } from './tts.js';
-import { applyPicto } from './picto.js';
 import { registerSW } from './pwa.js';
 
-/** Controles de voz y pictogramas según las preferencias. */
-const applyModes = () => {
+/**
+ * Controles de voz y pictogramas según las preferencias. Los módulos se cargan solo si hacen falta
+ * (o si ya estaban cargados, para quitar los controles al desactivarlos).
+ */
+let modesLoaded = false;
+const applyModes = async () => {
+  const { tts, picto } = window.pdPrefs.get();
+  if (!tts && !picto && !modesLoaded) return;
+  modesLoaded = true;
+  const [{ applyTts }, { applyPicto }] = await Promise.all([import('./tts.js'), import('./picto.js')]);
   applyTts();
   applyPicto();
+};
+
+/** Renderizador de cada sección, cargado bajo demanda (menos JavaScript por página). */
+/** @type {Record<string, () => Promise<unknown>>} */
+const RENDER = {
+  buscar: () => import('./search.js').then((m) => m.renderSearch()),
+  ia: () => import('./prompts.js').then((m) => m.renderPrompts()),
+  plantilla: () => import('./socratic.js').then((m) => m.renderSocratic()),
 };
 
 /** Pinta el contenido de la sección actual (si lo tiene). */
@@ -28,11 +38,10 @@ const renderView = async () => {
   const id = currentRouteId();
   try {
     await loadSources();
-    if (id === 'buscar') await renderSearch();
-    else if (id === 'ia') await renderPrompts();
-    else if (id === 'plantilla') await renderSocratic();
-    else await renderSection(id);
-    applyModes();
+    const render = RENDER[id];
+    if (render) await render();
+    else await import('./sections.js').then((m) => m.renderSection(id));
+    await applyModes();
   } catch (err) {
     console.error('No se pudo pintar la sección', err);
   }

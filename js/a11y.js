@@ -5,7 +5,8 @@
  */
 import { h, icon, openModal, snackbar } from './ui.js';
 import { t, setLang, applyI18n, loadStrings } from './i18n.js';
-import { supported as ttsSupported } from './tts.js';
+/** ¿Hay síntesis de voz? (sin cargar js/tts.js hasta que se active). */
+const ttsSupported = () => 'speechSynthesis' in window && typeof SpeechSynthesisUtterance === 'function';
 
 const MIN_SCALE = 100;
 const MAX_SCALE = 200;
