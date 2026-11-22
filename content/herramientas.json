@@ -1,0 +1,899 @@
+{
+  "checked": "2026-11-22",
+  "intro": {
+    "es": "Herramientas para todo el proceso de enseñanza y aprendizaje, ordenadas por para qué sirven. Primero, las corporativas de la Junta de Andalucía, que ofrecen más garantías de protección de datos; después, herramientas gratuitas o libres. Ninguna sustituye al diseño: elígelas por lo que harán pensar a tu alumnado.",
+    "en": "Tools for the whole teaching and learning process, ordered by what they are for. First, the Andalusian regional government's corporate tools, which offer stronger data protection guarantees; then free or open-source tools. None replaces design: choose them for what they will make your students think."
+  },
+  "note": {
+    "es": "Antes de usar con el alumnado una herramienta que pida cuenta o datos, consulta la política de protección de datos de tu centro y la edad mínima de la herramienta. Enlaces comprobados el {date}.",
+    "en": "Before using a tool that asks students for an account or data, check your school's data protection policy and the tool's minimum age. Links checked on {date}."
+  },
+  "flags": {
+    "junta": {
+      "es": "Corporativa de la Junta",
+      "en": "Regional government",
+      "icon": "badge"
+    },
+    "libre": {
+      "es": "Software libre",
+      "en": "Open source",
+      "icon": "lock_open"
+    },
+    "gratis": {
+      "es": "Gratuita",
+      "en": "Free",
+      "icon": "check_circle"
+    },
+    "plan": {
+      "es": "Plan gratuito con límites",
+      "en": "Limited free plan",
+      "icon": "tune"
+    },
+    "sinCuenta": {
+      "es": "El alumnado no necesita cuenta",
+      "en": "No student account needed",
+      "icon": "person"
+    }
+  },
+  "labels": {
+    "open": {
+      "es": "Abrir",
+      "en": "Open"
+    },
+    "use": {
+      "es": "En el aula",
+      "en": "In class"
+    },
+    "keys": {
+      "es": "Claves",
+      "en": "Keys"
+    },
+    "filterCat": {
+      "es": "Para qué:",
+      "en": "What for:"
+    },
+    "filterFlag": {
+      "es": "Solo:",
+      "en": "Only:"
+    },
+    "count": {
+      "es": "{n} herramientas",
+      "en": "{n} tools"
+    }
+  },
+  "categories": [
+    {
+      "id": "junta",
+      "icon": "badge",
+      "label": {
+        "es": "Plataformas de la Junta",
+        "en": "Regional platforms"
+      }
+    },
+    {
+      "id": "crear",
+      "icon": "edit",
+      "label": {
+        "es": "Crear materiales",
+        "en": "Create materials"
+      }
+    },
+    {
+      "id": "explorar",
+      "icon": "stairs",
+      "label": {
+        "es": "Explorar y manipular conceptos",
+        "en": "Explore and manipulate concepts"
+      }
+    },
+    {
+      "id": "colaborar",
+      "icon": "groups",
+      "label": {
+        "es": "Colaborar y construir",
+        "en": "Collaborate and build"
+      }
+    },
+    {
+      "id": "producir",
+      "icon": "music_note",
+      "label": {
+        "es": "Producir: audio, vídeo e imagen",
+        "en": "Produce: audio, video and image"
+      }
+    },
+    {
+      "id": "evaluar",
+      "icon": "rate_review",
+      "label": {
+        "es": "Evaluar y dar feedback",
+        "en": "Assess and give feedback"
+      }
+    },
+    {
+      "id": "inclusion",
+      "icon": "accessibility_new",
+      "label": {
+        "es": "Accesibilidad e inclusión",
+        "en": "Accessibility and inclusion"
+      }
+    },
+    {
+      "id": "ia",
+      "icon": "smart_toy",
+      "label": {
+        "es": "IA con criterio",
+        "en": "AI with judgement"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "id": "moodle-centros",
+      "cat": "junta",
+      "name": "Moodle Centros",
+      "url": "https://www.juntadeandalucia.es/educacion/eaprendizaje/moodle-centros/",
+      "flags": [
+        "junta",
+        "gratis"
+      ],
+      "desc": {
+        "es": "Aula virtual de la Consejería para los centros públicos andaluces: cursos, tareas, cuestionarios y foros. El profesorado entra con su usuario IdEA y el alumnado, con el de PASEN. Almería tiene su propia instancia.",
+        "en": "The regional education authority's virtual classroom for Andalusian public schools: courses, assignments, quizzes and forums. Teachers sign in with their IdEA user and students with their PASEN user. Almería has its own instance."
+      },
+      "use": {
+        "es": "Entregas por fases (borrador, revisión entre pares, versión final) para evaluar el proceso.",
+        "en": "Staged submissions (draft, peer review, final version) to assess the process."
+      },
+      "keys": [
+        "clave-4",
+        "clave-7"
+      ]
+    },
+    {
+      "id": "workspace-junta",
+      "cat": "junta",
+      "name": "Google Workspace (Junta)",
+      "url": "https://www.juntadeandalucia.es/educacion/eaprendizaje/workspace/",
+      "flags": [
+        "junta",
+        "gratis"
+      ],
+      "desc": {
+        "es": "Los centros públicos pueden solicitar Google Workspace para uso educativo, con cuentas corporativas @g.educaand.es.",
+        "en": "Public schools can request Google Workspace for educational use, with corporate @g.educaand.es accounts."
+      },
+      "use": {
+        "es": "Documentos compartidos con historial de versiones como evidencia de coautoría real.",
+        "en": "Shared documents with version history as evidence of real co-authorship."
+      },
+      "keys": [
+        "clave-4",
+        "clave-7"
+      ]
+    },
+    {
+      "id": "m365-junta",
+      "cat": "junta",
+      "name": "Microsoft 365 (Junta)",
+      "url": "https://www.juntadeandalucia.es/educacion/eaprendizaje/microsoft365/",
+      "flags": [
+        "junta",
+        "gratis"
+      ],
+      "desc": {
+        "es": "Los centros públicos pueden solicitar Microsoft 365 para uso educativo, con cuentas corporativas @m.educaand.es.",
+        "en": "Public schools can request Microsoft 365 for educational use, with corporate @m.educaand.es accounts."
+      },
+      "use": {
+        "es": "Trabajo cooperativo en documentos compartidos dentro del entorno corporativo del centro.",
+        "en": "Cooperative work on shared documents within the school's corporate environment."
+      },
+      "keys": [
+        "clave-7"
+      ]
+    },
+    {
+      "id": "sdaconia",
+      "cat": "junta",
+      "name": "SdAconIA",
+      "url": "https://www.juntadeandalucia.es/educacion/eaprendizaje/impulsocd/inteligencia-artificial-2/cursosda/",
+      "flags": [
+        "junta",
+        "gratis"
+      ],
+      "desc": {
+        "es": "Herramienta de la Consejería que, con un formulario guiado, prepara el prompt para diseñar una situación de aprendizaje con una IA generativa.",
+        "en": "A regional education authority tool that uses a guided form to prepare the prompt for designing a learning situation with a generative AI."
+      },
+      "use": {
+        "es": "Punto de partida para planificar; después, revisa el resultado con la «Radiografía de una tarea».",
+        "en": "A starting point for planning; then review the result with the «X-ray of a task» prompt."
+      },
+      "keys": [
+        "clave-1"
+      ]
+    },
+    {
+      "id": "rea-andalucia",
+      "cat": "junta",
+      "name": "Recursos Educativos Abiertos (Junta)",
+      "url": "https://www.juntadeandalucia.es/educacion/eaprendizaje/servicios-educativos-digitales-2/rea/",
+      "flags": [
+        "junta",
+        "gratis"
+      ],
+      "desc": {
+        "es": "Recursos educativos abiertos de la Consejería, reutilizables y adaptables.",
+        "en": "Open educational resources from the regional education authority, reusable and adaptable."
+      },
+      "use": {
+        "es": "Adaptar un recurso abierto en vez de empezar de cero, y añadir alternativas DUA.",
+        "en": "Adapt an open resource instead of starting from scratch, and add UDL alternatives."
+      },
+      "keys": [
+        "clave-5"
+      ]
+    },
+    {
+      "id": "blogs-averroes",
+      "cat": "junta",
+      "name": "Blogs Averroes",
+      "url": "https://www.juntadeandalucia.es/educacion/eaprendizaje/blogsaverroes/",
+      "flags": [
+        "junta",
+        "gratis"
+      ],
+      "desc": {
+        "es": "Servicio de blogs de la Consejería para los centros educativos.",
+        "en": "The regional education authority's blog service for schools."
+      },
+      "use": {
+        "es": "Publicar para un público real lo que el alumnado ha construido.",
+        "en": "Publish for a real audience what students have built."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "exelearning",
+      "cat": "crear",
+      "name": "eXeLearning",
+      "url": "https://cedec.intef.es/exelearning/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Editor libre para crear recursos educativos interactivos y exportarlos a la web o a Moodle. Lo enlaza la Junta entre sus servicios.",
+        "en": "Open-source editor to create interactive educational resources and export them to the web or Moodle. Listed by the regional government among its services."
+      },
+      "use": {
+        "es": "Una misma unidad con texto, audio e imagen para ofrecer varias vías desde el diseño.",
+        "en": "One unit with text, audio and images to offer several pathways by design."
+      },
+      "keys": [
+        "clave-5",
+        "clave-3"
+      ]
+    },
+    {
+      "id": "edia",
+      "cat": "crear",
+      "name": "Proyecto EDIA (CEDEC-INTEF)",
+      "url": "https://cedec.intef.es/proyecto-edia/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Recursos educativos abiertos del INTEF organizados como proyectos, listos para usar y adaptar.",
+        "en": "Open educational resources from INTEF organised as projects, ready to use and adapt."
+      },
+      "use": {
+        "es": "Tomar un proyecto ya diseñado y ajustarlo a tu grupo y a tu contexto.",
+        "en": "Take a ready-made project and adjust it to your group and context."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "procomun",
+      "cat": "crear",
+      "name": "Procomún (INTEF)",
+      "url": "https://procomun.intef.es/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Repositorio de recursos educativos abiertos del INTEF.",
+        "en": "INTEF's repository of open educational resources."
+      },
+      "use": {
+        "es": "Buscar recursos con licencia abierta antes de crear uno propio.",
+        "en": "Look for openly licensed resources before creating your own."
+      },
+      "keys": [
+        "clave-1"
+      ]
+    },
+    {
+      "id": "libreoffice",
+      "cat": "crear",
+      "name": "LibreOffice",
+      "url": "https://es.libreoffice.org/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Paquete ofimático libre: textos, hojas de cálculo y presentaciones, sin conexión.",
+        "en": "Open-source office suite: documents, spreadsheets and presentations, offline."
+      },
+      "use": {
+        "es": "Hoja de cálculo con los datos que recoge el propio alumnado (por ejemplo, el agua de casa).",
+        "en": "A spreadsheet with data the students collect themselves (e.g. water used at home)."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "canva",
+      "cat": "crear",
+      "name": "Canva para Educación",
+      "url": "https://www.canva.com/es_es/educacion/",
+      "flags": [
+        "gratis"
+      ],
+      "desc": {
+        "es": "Diseño gráfico con plantillas (carteles, infografías, presentaciones), con versión educativa gratuita.",
+        "en": "Graphic design with templates (posters, infographics, slides), with a free education version."
+      },
+      "use": {
+        "es": "Que la infografía la haga el alumnado a partir de sus fuentes, no el docente.",
+        "en": "Have students make the infographic from their sources, not the teacher."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "genially",
+      "cat": "crear",
+      "name": "Genially",
+      "url": "https://genial.ly/es/",
+      "flags": [
+        "plan"
+      ],
+      "desc": {
+        "es": "Presentaciones, imágenes interactivas y juegos educativos.",
+        "en": "Presentations, interactive images and educational games."
+      },
+      "use": {
+        "es": "Imagen interactiva que el alumnado anota con sus propias explicaciones.",
+        "en": "An interactive image students annotate with their own explanations."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "geogebra",
+      "cat": "explorar",
+      "name": "GeoGebra",
+      "url": "https://www.geogebra.org/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Matemáticas dinámicas: geometría, funciones, estadística y 3D. Se usa en el navegador sin registrarse.",
+        "en": "Dynamic mathematics: geometry, functions, statistics and 3D. Works in the browser without signing up."
+      },
+      "use": {
+        "es": "Parejas que mueven un parámetro, escriben una conjetura y la contrastan antes de la explicación.",
+        "en": "Pairs move a parameter, write a conjecture and test it before the explanation."
+      },
+      "keys": [
+        "clave-1",
+        "clave-2"
+      ]
+    },
+    {
+      "id": "phet",
+      "cat": "explorar",
+      "name": "PhET (Universidad de Colorado)",
+      "url": "https://phet.colorado.edu/es/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Simulaciones interactivas de Física, Química, Biología y Matemáticas, en español.",
+        "en": "Interactive simulations for physics, chemistry, biology and maths."
+      },
+      "use": {
+        "es": "Predecir, simular y explicar por qué la predicción falló.",
+        "en": "Predict, simulate and explain why the prediction failed."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "desmos",
+      "cat": "explorar",
+      "name": "Desmos",
+      "url": "https://www.desmos.com/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Calculadora gráfica en el navegador.",
+        "en": "Graphing calculator in the browser."
+      },
+      "use": {
+        "es": "Ajustar una función a datos reales tomados en clase.",
+        "en": "Fit a function to real data collected in class."
+      },
+      "keys": [
+        "clave-1"
+      ]
+    },
+    {
+      "id": "scratch",
+      "cat": "explorar",
+      "name": "Scratch (MIT)",
+      "url": "https://scratch.mit.edu/",
+      "flags": [
+        "gratis",
+        "libre"
+      ],
+      "desc": {
+        "es": "Programación por bloques para crear historias, juegos y animaciones. Sin cuenta se puede crear; la cuenta solo hace falta para guardar en línea.",
+        "en": "Block-based programming to create stories, games and animations. You can create without an account; one is only needed to save online."
+      },
+      "use": {
+        "es": "Modelizar un fenómeno (un ciclo, un sistema) en lugar de describirlo.",
+        "en": "Model a phenomenon (a cycle, a system) instead of describing it."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "openstreetmap",
+      "cat": "explorar",
+      "name": "OpenStreetMap",
+      "url": "https://www.openstreetmap.org/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Mapa libre y colaborativo del mundo.",
+        "en": "A free, collaborative map of the world."
+      },
+      "use": {
+        "es": "Analizar el barrio del centro con datos reales para un problema de Geografía o de Matemáticas.",
+        "en": "Analyse the school's neighbourhood with real data for a geography or maths problem."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "google-earth",
+      "cat": "explorar",
+      "name": "Google Earth",
+      "url": "https://earth.google.com/web/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Globo terráqueo en 3D con imágenes de satélite e históricas.",
+        "en": "3D globe with satellite and historical imagery."
+      },
+      "use": {
+        "es": "Comparar el mismo lugar en dos fechas y explicar el cambio.",
+        "en": "Compare the same place on two dates and explain the change."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "cryptpad",
+      "cat": "colaborar",
+      "name": "CryptPad",
+      "url": "https://cryptpad.org/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Documentos, hojas y pizarras colaborativas cifradas, sin necesidad de cuenta.",
+        "en": "Encrypted collaborative documents, sheets and whiteboards, no account needed."
+      },
+      "use": {
+        "es": "Escritura colaborativa con roles para que nadie termine sin los demás.",
+        "en": "Collaborative writing with roles so no one finishes without the others."
+      },
+      "keys": [
+        "clave-2",
+        "clave-7"
+      ]
+    },
+    {
+      "id": "padlet",
+      "cat": "colaborar",
+      "name": "Padlet",
+      "url": "https://padlet.com/",
+      "flags": [
+        "plan"
+      ],
+      "desc": {
+        "es": "Muros colaborativos para reunir ideas, enlaces, imágenes y audios.",
+        "en": "Collaborative walls to gather ideas, links, images and audio."
+      },
+      "use": {
+        "es": "Mejor que recorrer el muro del docente: que cada grupo construya el suyo y critique el de otro.",
+        "en": "Rather than browsing the teacher's wall: each group builds its own and critiques another's."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "audacity",
+      "cat": "producir",
+      "name": "Audacity",
+      "url": "https://www.audacityteam.org/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Grabación y edición de audio, libre y sin conexión.",
+        "en": "Open-source audio recording and editing, offline."
+      },
+      "use": {
+        "es": "Grabar la interpretación o la exposición en la semana 1 y en la 4 y comparar.",
+        "en": "Record the performance or presentation in week 1 and week 4 and compare."
+      },
+      "keys": [
+        "clave-4"
+      ]
+    },
+    {
+      "id": "vocaroo",
+      "cat": "producir",
+      "name": "Vocaroo",
+      "url": "https://vocaroo.com/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Grabadora de voz en el navegador: grabas y compartes un enlace.",
+        "en": "Browser voice recorder: record and share a link."
+      },
+      "use": {
+        "es": "Mensajes de voz entre estudiantes de idiomas y reformulación tras la respuesta.",
+        "en": "Voice messages between language learners and rephrasing after the reply."
+      },
+      "keys": [
+        "clave-2",
+        "clave-6"
+      ]
+    },
+    {
+      "id": "obs",
+      "cat": "producir",
+      "name": "OBS Studio",
+      "url": "https://obsproject.com/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Grabación de pantalla y cámara, libre.",
+        "en": "Open-source screen and camera recording."
+      },
+      "use": {
+        "es": "Microvídeos de pocos minutos con pausas para preguntas generativas.",
+        "en": "Short micro-videos with pauses for generative questions."
+      },
+      "keys": [
+        "clave-3"
+      ]
+    },
+    {
+      "id": "musescore",
+      "cat": "producir",
+      "name": "MuseScore",
+      "url": "https://musescore.org/es",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Editor de partituras libre, con reproducción.",
+        "en": "Open-source score editor with playback."
+      },
+      "use": {
+        "es": "Que el alumnado escriba y escuche su propio arreglo antes de tocarlo.",
+        "en": "Students write and hear their own arrangement before playing it."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "inkscape",
+      "cat": "producir",
+      "name": "Inkscape",
+      "url": "https://inkscape.org/es/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Diseño de gráficos vectoriales, libre: esquemas, mapas conceptuales, infografías.",
+        "en": "Open-source vector graphics: diagrams, concept maps, infographics."
+      },
+      "use": {
+        "es": "Mapas conceptuales construidos por el alumnado y mejorados en pareja.",
+        "en": "Concept maps built by students and improved in pairs."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "edpuzzle",
+      "cat": "evaluar",
+      "name": "Edpuzzle",
+      "url": "https://edpuzzle.com/",
+      "flags": [
+        "plan"
+      ],
+      "desc": {
+        "es": "Añade preguntas dentro de un vídeo para que el alumnado se detenga a pensar mientras lo ve.",
+        "en": "Adds questions inside a video so students stop and think while watching."
+      },
+      "use": {
+        "es": "Preguntas que piden explicar o predecir, no solo recordar; en clase, se parte de los errores.",
+        "en": "Questions that ask to explain or predict, not just recall; in class, start from the errors."
+      },
+      "keys": [
+        "clave-3",
+        "clave-4"
+      ]
+    },
+    {
+      "id": "plickers",
+      "cat": "evaluar",
+      "name": "Plickers",
+      "url": "https://get.plickers.com/",
+      "flags": [
+        "plan",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "El alumnado responde levantando tarjetas impresas y el docente las lee con el móvil: no necesita dispositivos.",
+        "en": "Students answer by holding up printed cards that the teacher scans with a phone: no student devices needed."
+      },
+      "use": {
+        "es": "Comprobar la comprensión en Primaria sin pantallas para el alumnado.",
+        "en": "Check understanding in primary school without student screens."
+      },
+      "keys": [
+        "clave-3",
+        "clave-4"
+      ]
+    },
+    {
+      "id": "kahoot",
+      "cat": "evaluar",
+      "name": "Kahoot!",
+      "url": "https://kahoot.com/",
+      "flags": [
+        "plan",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Cuestionarios en directo; el alumnado entra con un código, sin cuenta.",
+        "en": "Live quizzes; students join with a code, without an account."
+      },
+      "use": {
+        "es": "Úsalo para detectar errores y discutirlos, no solo para premiar la rapidez.",
+        "en": "Use it to spot mistakes and discuss them, not just to reward speed."
+      },
+      "keys": [
+        "clave-4"
+      ]
+    },
+    {
+      "id": "wordwall",
+      "cat": "evaluar",
+      "name": "Wordwall",
+      "url": "https://wordwall.net/es",
+      "flags": [
+        "plan",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Actividades interactivas (emparejar, ordenar, clasificar) a partir de una plantilla.",
+        "en": "Interactive activities (match, sort, group) from a template."
+      },
+      "use": {
+        "es": "Mejor si las crea el alumnado para sus compañeros: diseñar la pregunta exige entender.",
+        "en": "Better when students create them for classmates: designing the question requires understanding."
+      },
+      "keys": [
+        "clave-2"
+      ]
+    },
+    {
+      "id": "corubric",
+      "cat": "evaluar",
+      "name": "CoRubric",
+      "url": "https://corubric.com/",
+      "flags": [
+        "gratis"
+      ],
+      "desc": {
+        "es": "Creación de rúbricas y evaluación, también entre iguales.",
+        "en": "Rubric creation and assessment, including peer assessment."
+      },
+      "use": {
+        "es": "Rúbrica compartida con el alumnado desde el principio para autoevaluarse con los mismos criterios.",
+        "en": "A rubric shared with students from the start to self-assess with the same criteria."
+      },
+      "keys": [
+        "clave-4"
+      ]
+    },
+    {
+      "id": "arasaac",
+      "cat": "inclusion",
+      "name": "ARASAAC",
+      "url": "https://arasaac.org/",
+      "flags": [
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Pictogramas y recursos de comunicación aumentativa (Gobierno de Aragón), con licencia CC BY-NC-SA.",
+        "en": "Pictograms and augmentative communication resources (Government of Aragon), CC BY-NC-SA licensed."
+      },
+      "use": {
+        "es": "Consignas con pictogramas para todo el grupo, no solo para quien los necesita.",
+        "en": "Instructions with pictograms for the whole group, not only for those who need them."
+      },
+      "keys": [
+        "clave-5"
+      ]
+    },
+    {
+      "id": "pictotraductor",
+      "cat": "inclusion",
+      "name": "Pictotraductor",
+      "url": "https://www.pictotraductor.com/",
+      "flags": [
+        "gratis"
+      ],
+      "desc": {
+        "es": "Convierte texto en frases con pictogramas.",
+        "en": "Turns text into sentences with pictograms."
+      },
+      "use": {
+        "es": "Versión en pictogramas de la tarea junto al texto original.",
+        "en": "A pictogram version of the task next to the original text."
+      },
+      "keys": [
+        "clave-5"
+      ]
+    },
+    {
+      "id": "nvda",
+      "cat": "inclusion",
+      "name": "NVDA",
+      "url": "https://www.nvaccess.org/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Lector de pantalla libre para Windows.",
+        "en": "Free, open-source screen reader for Windows."
+      },
+      "use": {
+        "es": "Comprobar si tus materiales digitales se pueden usar sin ver la pantalla.",
+        "en": "Check whether your digital materials can be used without seeing the screen."
+      },
+      "keys": [
+        "clave-5"
+      ]
+    },
+    {
+      "id": "banco-prompts",
+      "cat": "ia",
+      "name": "Banco de prompts de Pensar en Digital",
+      "url": "ia/",
+      "flags": [
+        "libre",
+        "gratis",
+        "sinCuenta"
+      ],
+      "desc": {
+        "es": "Prompts con desplegables y enlazados para analizar y mejorar tareas, evaluación y planificación, en cualquier IA.",
+        "en": "Linked prompts with drop-downs to analyse and improve tasks, assessment and planning, in any AI."
+      },
+      "use": {
+        "es": "Empieza por «Radiografía de una tarea» y sigue el «Siguiente paso».",
+        "en": "Start with «X-ray of a task» and follow the «Next step»."
+      },
+      "keys": [
+        "clave-6"
+      ]
+    },
+    {
+      "id": "notebooklm",
+      "cat": "ia",
+      "name": "NotebookLM",
+      "url": "https://notebooklm.google/",
+      "flags": [
+        "gratis"
+      ],
+      "desc": {
+        "es": "IA de Google que responde a partir de las fuentes que le das (apuntes, normativa, artículos). La Junta la propone para la gestión educativa.",
+        "en": "Google AI that answers from the sources you give it (notes, regulations, papers). The regional government suggests it for school management."
+      },
+      "use": {
+        "es": "Para el docente: preguntar a tus propias fuentes y verificar siempre las citas.",
+        "en": "For teachers: query your own sources and always check the citations."
+      },
+      "keys": [
+        "clave-6",
+        "clave-7"
+      ]
+    },
+    {
+      "id": "gemini",
+      "cat": "ia",
+      "name": "Gemini",
+      "url": "https://gemini.google.com/",
+      "flags": [
+        "plan"
+      ],
+      "desc": {
+        "es": "Asistente de IA generativa de Google. La Junta lo menciona en sus recursos de IA para docentes.",
+        "en": "Google's generative AI assistant. The regional government mentions it in its AI resources for teachers."
+      },
+      "use": {
+        "es": "Con fricción: que pregunte en lugar de responder (prompt «Tutor socrático») y sin datos del alumnado.",
+        "en": "With friction: make it ask instead of answer (the «Socratic tutor» prompt) and with no student data."
+      },
+      "keys": [
+        "clave-6"
+      ]
+    }
+  ]
+}

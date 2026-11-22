@@ -16,8 +16,8 @@
   "votingEndpoint": "https://script.google.com/macros/s/AKfycbznCnCq0klcMdNObIkpUEYhjN_WUMj96I76SgRucnrkVZ-_waPFe5zSfLr5TMDJCbHCAg/exec",
   "licenseShort": "CC BY-NC-SA 4.0",
   "speaker": {
-    "salt": "",
+    "salt": "74d002a0a396eb16f6ffc5042c550f4c",
     "iterations": 210000,
-    "hash": ""
+    "hash": "48bdc98974f43c6bd7a8e0cac250839a371b3d136f858e3a1285771ca0431db0"
   }
 }

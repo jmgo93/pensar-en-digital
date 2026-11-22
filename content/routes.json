@@ -6,6 +6,7 @@
   { "id": "plantilla", "path": "plantilla/", "icon": "psychology", "bar": true, "rail": true },
   { "id": "inclusiva", "path": "inclusiva/", "icon": "diversity_3", "bar": false, "rail": false },
   { "id": "ia", "path": "ia/", "icon": "smart_toy", "bar": true, "rail": true },
+  { "id": "herramientas", "path": "herramientas/", "icon": "handyman", "bar": false, "rail": true },
   { "id": "lunes", "path": "lunes/", "icon": "rocket_launch", "bar": false, "rail": false },
   { "id": "recursos", "path": "recursos/", "icon": "download", "bar": false, "rail": true },
   { "id": "bibliografia", "path": "bibliografia/", "icon": "library_books", "bar": false, "rail": true },

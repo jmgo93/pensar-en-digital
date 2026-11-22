@@ -237,7 +237,10 @@
     "slides.prev": "Diapositiva anterior",
     "slides.nextBtn": "Diapositiva siguiente",
     "slides.fullscreen": "Pantalla completa",
-    "slides.exitFullscreen": "Salir de pantalla completa"
+    "slides.exitFullscreen": "Salir de pantalla completa",
+    "route.herramientas": "Herramientas",
+    "route.herramientas.short": "Herramientas",
+    "app.newTab": "se abre en una pestaña nueva"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -477,6 +480,9 @@
     "slides.prev": "Previous slide",
     "slides.nextBtn": "Next slide",
     "slides.fullscreen": "Full screen",
-    "slides.exitFullscreen": "Exit full screen"
+    "slides.exitFullscreen": "Exit full screen",
+    "route.herramientas": "Tools",
+    "route.herramientas.short": "Tools",
+    "app.newTab": "opens in a new tab"
   }
 }

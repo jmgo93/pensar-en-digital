@@ -324,6 +324,91 @@ const renderRecursos = async (view) => {
   );
 };
 
+/* ---------------- Herramientas ---------------- */
+
+/** @param {HTMLElement} view */
+const renderHerramientas = async (view) => {
+  /** @type {any} */
+  const c = await loadContent('herramientas');
+  /** @type {any} */
+  const claves = await loadContent('claves');
+  /** @type {Map<string, any>} */
+  const keyMap = new Map(claves.keys.map((/** @type {any} */ k) => [k.id, k]));
+  const L = c.labels;
+  /** @type {{ cat: string | null, flag: string | null }} */
+  const filter = { cat: null, flag: null };
+  const grid = h('div', { class: 'grid-cards tool-grid' });
+  const count = h('p', { class: 'muted', role: 'status' });
+  /** @param {string} url */
+  const href = (url) => (/^https?:/.test(url) ? url : fromRoot(url).href);
+
+  const draw = () => {
+    const tools = c.tools.filter((/** @type {any} */ x) => (!filter.cat || x.cat === filter.cat) && (!filter.flag || x.flags.includes(filter.flag)));
+    count.textContent = loc(L.count).replace('{n}', String(tools.length));
+    grid.replaceChildren(
+      ...tools.map((/** @type {any} */ x) => {
+        const cat = c.categories.find((/** @type {any} */ k) => k.id === x.cat);
+        const external = /^https?:/.test(x.url);
+        return h(
+          'article',
+          { class: 'card card-elevated tool-card', id: x.id, 'data-tts': '', 'aria-labelledby': `${x.id}-t` },
+          h('div', { class: 'card-header' }, h('span', { class: 'card-icon' }, icon(cat?.icon ?? 'handyman')), h('div', {}, h('p', { class: 'label-medium muted' }, cat ? loc(cat.label) : ''), h('h2', { id: `${x.id}-t`, class: 'title-medium' }, x.name))),
+          h('ul', { class: 'tool-flags' }, ...x.flags.map((/** @type {string} */ f) => h('li', { class: `tool-flag flag-${f}` }, icon(c.flags[f]?.icon ?? 'check'), loc(c.flags[f])))),
+          h('p', {}, loc(x.desc)),
+          h('p', { class: 'tool-use' }, h('strong', {}, `${loc(L.use)}: `), loc(x.use)),
+          x.keys?.length
+            ? h(
+                'p',
+                { class: 'link-row' },
+                h('span', { class: 'label-medium muted' }, icon('key'), loc(L.keys)),
+                ...x.keys.filter((/** @type {string} */ k) => keyMap.has(k)).map((/** @type {string} */ k) => h('a', { class: 'chip-link', href: `${fromRoot('claves/').href}#${k}` }, `${keyMap.get(k).n}. ${loc(keyMap.get(k).title)}`)),
+              )
+            : null,
+          h(
+            'div',
+            { class: 'btn-row' },
+            h('a', { class: 'btn btn-filled interactive', href: href(x.url), ...(external ? { target: '_blank', rel: 'noopener', 'aria-label': `${loc(L.open)} ${x.name} (${t('app.newTab')})` } : {}) }, icon(external ? 'open_in_new' : 'arrow_forward'), h('span', {}, loc(L.open))),
+          ),
+        );
+      }),
+    );
+  };
+
+  /**
+   * Grupo de chips de un solo valor.
+   * @param {string} label
+   * @param {{ id: string, label: string }[]} items
+   * @param {(id: string | null) => void} onPick
+   */
+  const chipGroup = (label, items, onPick) => {
+    /** @type {HTMLButtonElement[]} */
+    const btns = [];
+    /** @param {string | null} id @param {string} text */
+    const chip = (id, text) => {
+      const b = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'chip interactive', 'aria-pressed': String(id === null) }, icon('check'), h('span', {}, text)));
+      b.addEventListener('click', () => {
+        for (const o of btns) o.setAttribute('aria-pressed', String(o === b));
+        onPick(id);
+        draw();
+      });
+      btns.push(b);
+      return b;
+    };
+    return h('div', { class: 'filter-row' }, h('span', { class: 'label-large' }, label), h('div', { class: 'chip-set', role: 'group', 'aria-label': label }, chip(null, t('profile.all')), ...items.map((it) => chip(it.id, it.label))));
+  };
+
+  draw();
+  view.replaceChildren(
+    h('p', { class: 'lead' }, loc(c.intro)),
+    chipGroup(loc(L.filterCat), c.categories.map((/** @type {any} */ k) => ({ id: k.id, label: loc(k.label) })), (id) => (filter.cat = id)),
+    chipGroup(loc(L.filterFlag), ['junta', 'libre', 'sinCuenta'].map((f) => ({ id: f, label: loc(c.flags[f]) })), (id) => (filter.flag = id)),
+    count,
+    grid,
+    h('p', { class: 'body-small muted' }, loc(c.note).replace('{date}', new Date(c.checked).toLocaleDateString(document.documentElement.lang))),
+  );
+  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+};
+
 /* ---------------- Bibliografía ---------------- */
 
 /** @param {HTMLElement} view */
@@ -373,6 +458,7 @@ const RENDERERS = {
   marco: renderMarco,
   claves: renderClaves,
   recursos: renderRecursos,
+  herramientas: renderHerramientas,
   inclusiva: renderInclusiva,
   lunes: renderLunes,
   bibliografia: renderBibliografia,

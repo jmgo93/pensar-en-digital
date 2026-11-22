@@ -57,6 +57,9 @@ for (const k of claves.keys)
   add(`claves/#${k.id}`, 'claves', { es: `${k.n}. ${k.title.es}`, en: `${k.n}. ${k.title.en}` }, k.anchor, k.mechanism, k.antipattern, k.check, ...Object.values(k.examples));
 add('claves/#marcos', 'claves', claves.frameworks.title, claves.frameworks.body);
 
+const herramientas = read('herramientas');
+for (const x of herramientas.tools) add(`herramientas/#${x.id}`, 'herramientas', { es: x.name, en: x.name }, x.desc, x.use);
+
 const recursos = read('recursos');
 for (const f of recursos.files) add(`recursos/#${f.id}`, 'recursos', f.title, f.body);
 
