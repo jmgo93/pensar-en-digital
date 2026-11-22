@@ -13,6 +13,6 @@
     "en"
   ],
   "defaultLanguage": "es",
-  "votingEndpoint": "",
+  "votingEndpoint": "https://script.google.com/macros/s/AKfycbznCnCq0klcMdNObIkpUEYhjN_WUMj96I76SgRucnrkVZ-_waPFe5zSfLr5TMDJCbHCAg/exec",
   "licenseShort": "CC BY-NC-SA 4.0"
 }
