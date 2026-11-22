@@ -55,6 +55,7 @@ export const LEMMA = {
     respondes: 'responder',
     graba: 'grabar',
     escucha: 'escuchar',
+    escuchas: 'escuchar',
     necesita: 'necesitar',
     enseñan: 'enseñar',
     enseña: 'enseñar',

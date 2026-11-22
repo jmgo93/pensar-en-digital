@@ -20,18 +20,28 @@ Panel del ponente ──contraseña──▶ Apps Script: archiva en una hoja de
 - **Sin conexión:** la diapositiva muestra «votamos a mano alzada» y mantiene las opciones visibles.
 - **Barras:** la longitud de cada barra es el porcentaje de votos de esa opción; la más votada va en naranja.
 
-## Las 6 votaciones: activar lo que ya se sabe antes de explicarlo
+## Las votaciones: una pregunta de activación por bloque
 
-Cada votación va **justo antes** del contenido que la responde, para que el público se comprometa con una idea propia y la contraste.
+Cada votación abre su bloque y va **justo antes** del contenido que la responde: el público se compromete con una idea y después la contrasta.
 
-| Id | Diap. | Min | Para qué | Pregunta | Opciones |
+| Id | Diap. | Min | Bloque | Pregunta | Opciones |
 |---|---|---|---|---|---|
-| **v0** | 3 | 1 | Diagnóstico inicial (antes) | El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento? | Una aplicación más interactiva y atractiva · Puntos, insignias y clasificación · **Que lo expliquen con sus palabras y lo contrasten con un compañero** · Que usen una IA para resolverlo más rápido |
-| v1 | 5 | 2,5 | Demostración: dos tareas | ¿Cuál de las dos tareas puede resolver una IA sola, en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
-| v2 | 12 | 13 | Activar la propia práctica **antes** de ICAP | La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo? | Recibir · Manipular · Generar · Co-construir (= los 4 niveles ICAP de la diapositiva siguiente) |
-| v3 | 17 | 24 | **Predicción** antes del dato (−17 %) | Practican Matemáticas con ChatGPT sin límites y después hacen un examen sin IA. ¿Qué pasó? | Sacaron mejor nota que quien no usó IA · Sacaron la misma nota · Sacaron peor nota · Depende de cómo se usó la IA |
-| **v5** | 24 | 38 | La misma pregunta que v0 (después) | Igual que v0 | Igual que v0 |
-| v4 | 26 | 40,5 | Compromiso para el lunes | ¿Qué vas a probar el lunes? | Rediseñar una tarea copiable · Evaluar el proceso · Usar la IA como tutor que pregunta · Revisar las barreras DUA · Pasar una actividad por la plantilla socrática |
+| **v0** | 3 | 1 | Apertura · diagnóstico (antes) | El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento? | Una aplicación más interactiva y atractiva · Puntos, insignias y clasificación · **Que lo expliquen con sus palabras y lo contrasten con un compañero** · Que usen una IA para resolverlo más rápido |
+| v1 | 6 | 3,75 | 1 · Primaria | ¿Cuál de las dos tareas puede resolver una IA sola, en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
+| v2 | 13 | 11,25 | 2 · ESO | La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo? | Recibir · Manipular · Generar · Co-construir |
+| **v6** | 20 | 19,25 | 3 · Bachillerato | ¿Verdadero o falso? El alumnado actual aprende igual de bien estudiando con el móvil y varias pestañas abiertas. | Verdadero · Falso · Depende de la persona |
+| v3 | 27 | 27,25 | 4 · EOI | Practican Matemáticas con ChatGPT sin límites y después hacen un examen sin IA. ¿Qué pasó? | Mejor nota · Misma nota · Peor nota · Depende de cómo se usó la IA |
+| **v7** | 35 | 36,25 | 5 · Conservatorio | Cuando devuelves un trabajo corregido, ¿qué hace la mayoría de tu alumnado? | Mira la nota y lo guarda · Lee los comentarios · Lo corrige y lo vuelve a entregar · No lo sé |
+| **v5** | 41 | 42,75 | Cierre · después | Igual que v0 | Igual que v0 |
+
+La v4 («¿Qué vas a probar el lunes?») ya no está en la presentación: el compromiso se pide de palabra al mostrar el kit. Su formulario se conserva y se archiva con las demás.
+
+## Añadir las votaciones nuevas (v6 y v7)
+
+1. En el editor de Apps Script, ejecuta `crearFormularios`. Solo crea las que faltan (v6 y v7). El registro muestra sus enlaces `forms.gle`: **envíamelos** y conecto los QR.
+2. En cada formulario nuevo: si aparece **Publicar**, púlsalo; sin recoger correos y con «Limitar a 1 respuesta» desactivado.
+3. Ejecuta `actualizarFormularios` para poner al día los títulos de bloque de las demás. Si una pregunta no cambia, no borra sus respuestas.
+4. No hace falta publicar una nueva versión del script: el código no ha cambiado.
 
 ### Antes y después (v0 → v5)
 

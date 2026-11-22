@@ -80,7 +80,7 @@ const H = 1080;
 
 /**
  * @param {Slide} s
- * @param {{ votes: Record<string, import('./types').Vote>, site: import('./types').Site, sources: Map<string, import('./content.js').Source> }} ctx
+ * @param {{ votes: Record<string, import('./types').Vote>, site: import('./types').Site, sources: Map<string, import('./content.js').Source>, tools?: any }} ctx
  * @returns {HTMLElement}
  */
 const slideContent = (s, ctx) => {
@@ -135,7 +135,7 @@ const slideContent = (s, ctx) => {
       return h(
         'div',
         { class: 's-qrs' },
-        h('h2', {}, loc(s.title)),
+        h('h2', {}, ...rich(loc(s.title))),
         h('div', { class: 's-qr-row' }, ...s.targets.map((/** @type {any} */ tg) => h('figure', {}, qr(tg.qr), h('figcaption', {}, h('strong', {}, loc(tg.label)), h('span', {}, shortUrl(tg.qr === 'inicio' ? '' : `${tg.qr}/`)))))),
       );
     case 'vote': {
@@ -169,6 +169,54 @@ const slideContent = (s, ctx) => {
         h('div', { class: 's-cols' }, col(pre, t('inclusiva.before'), 'before'), col(post, t('inclusiva.after'), 'after')),
         h('p', { class: 's-delta', 'aria-live': 'polite' }),
         h('p', { class: 's-status' }),
+      );
+    }
+    case 'section':
+      return h('div', { class: 's-section' }, h('p', { class: 's-sec-n', 'aria-hidden': 'true' }, String(s.n)), h('h2', {}, ...rich(loc(s.title))), s.small ? h('p', { class: 's-small' }, loc(s.small)) : null);
+    case 'case':
+      return h(
+        'div',
+        { class: 's-case' },
+        h('p', { class: 's-badges' }, h('span', { class: 's-badge' }, loc(s.where)), h('span', { class: 's-badge s-badge-tag' }, icon('lightbulb'), t('slides.example'))),
+        h('h2', {}, ...rich(loc(s.title))),
+        h('p', { class: 's-text' }, ...rich(loc(s.text))),
+        s.ask ? h('p', { class: 's-ask' }, icon('groups'), h('span', {}, ...rich(loc(s.ask)))) : null,
+      );
+    case 'improve':
+      return h(
+        'div',
+        { class: 's-improve' },
+        h('p', { class: 's-kicker' }, icon('trending_up'), t('slides.improve')),
+        h('h2', {}, ...rich(loc(s.title))),
+        h('p', { class: 's-text' }, ...rich(loc(s.text))),
+        h('dl', { class: 's-analysis' }, ...s.analysis.map((/** @type {any} */ a, /** @type {number} */ i) => h('div', { style: `--i:${i}` }, h('dt', {}, a.k), h('dd', {}, typeof a.v === 'string' ? a.v : loc(a.v))))),
+        cite,
+      );
+    case 'tool': {
+      /** @type {any[]} */
+      const list = (s.tools ?? []).map((/** @type {string} */ id) => ctx.tools?.tools.find((/** @type {any} */ x) => x.id === id)).filter(Boolean);
+      return h(
+        'div',
+        { class: 's-tool' },
+        h('p', { class: 's-kicker' }, icon('handyman'), t('slides.tool')),
+        h('h2', {}, ...rich(loc(s.title))),
+        h(
+          'div',
+          { class: 's-tool-row' },
+          ...list.map((x) =>
+            h(
+              'figure',
+              { class: 's-tool-card' },
+              qr(`tool-${x.id}`),
+              h(
+                'figcaption',
+                {},
+                h('strong', {}, x.name),
+                h('ul', { class: 's-tool-flags' }, ...x.flags.filter((/** @type {string} */ f) => f !== 'gratis' || !x.flags.includes('libre')).map((/** @type {string} */ f) => h('li', {}, loc(ctx.tools.flags[f])))),
+              ),
+            ),
+          ),
+        ),
       );
     }
     case 'end':
@@ -259,13 +307,14 @@ const init = async () => {
   await requireSpeaker(gateHost);
   gateHost.remove();
   pageParts.forEach((el) => (/** @type {HTMLElement} */ (el).hidden = false));
-  const [deck, votesArr, site, sourcesData] = await Promise.all([
+  const [deck, votesArr, site, sourcesData, tools] = await Promise.all([
     /** @type {Promise<Deck>} */ (fetchJson('content/presentacion.json')),
     /** @type {Promise<import('./types').Vote[]>} */ (fetchJson('content/votaciones.json')),
     /** @type {Promise<import('./types').Site>} */ (fetchJson('content/site.json')),
     loadSources(),
+    /** @type {Promise<any>} */ (fetchJson('content/herramientas.json')),
   ]);
-  const ctx = { votes: Object.fromEntries(votesArr.map((v) => [v.id, v])), site, sources: new Map(sourcesData.items.map((s) => [s.id, s])) };
+  const ctx = { votes: Object.fromEntries(votesArr.map((v) => [v.id, v])), site, sources: new Map(sourcesData.items.map((s) => [s.id, s])), tools };
   const total = deck.slides.length;
   const notesMode = new URLSearchParams(location.search).has('notas');
   const channel = 'BroadcastChannel' in window ? new BroadcastChannel(CHANNEL) : null;

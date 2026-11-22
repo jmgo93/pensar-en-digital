@@ -37,6 +37,10 @@ const visible = (/** @type {any} */ s, /** @type {'es' | 'en'} */ l) => {
   for (const tg of s.targets ?? []) add(tg.label);
   if (s.type === 'vote') add(votes[s.vote].question);
   if (s.type === 'prepost') parts.push(l === 'es' ? 'Antes Después' : 'Before After');
+  add(s.where);
+  add(s.ask);
+  for (const a of s.analysis ?? []) parts.push(a.k, typeof a.v === 'string' ? a.v : a.v[l]);
+  for (const id of s.tools ?? []) parts.push(id);
   if (s.type === 'title') return []; // la portada lleva el título oficial completo
   return parts.filter(Boolean);
 };
@@ -84,8 +88,10 @@ for (const b of deck.blocks) {
     if (s.block !== b.id) continue;
     const words = count(visible(s, 'es'));
     const wordsEn = count(visible(s, 'en'));
-    if (words > 20) problems.push(`${s.id}: ${words} palabras (es)`);
-    if (wordsEn > 20) problems.push(`${s.id}: ${wordsEn} palabras (en)`);
+    // Casos y mejoras se comentan con la sala: admiten algo más de texto.
+    const limit = s.type === 'case' ? 30 : s.type === 'improve' ? 36 : 20;
+    if (words > limit) problems.push(`${s.id}: ${words} palabras (es)`);
+    if (wordsEn > limit) problems.push(`${s.id}: ${wordsEn} palabras (en)`);
     for (const k of REQUIRED) if (!s[k] && !(k === 'bridge' && i === deck.slides.length - 1)) problems.push(`${s.id}: falta «${k}» en las notas`);
     md += `\n#### ${i + 1}. [${mmss(s.at)}] ${head(s)}\n\n`;
     if (s.type !== 'title' && s.type !== 'vote') md += `> En pantalla: ${visible(s, 'es').join(' · ')}\n\n`;

@@ -240,7 +240,10 @@
     "slides.exitFullscreen": "Salir de pantalla completa",
     "route.herramientas": "Herramientas",
     "route.herramientas.short": "Herramientas",
-    "app.newTab": "se abre en una pestaña nueva"
+    "app.newTab": "se abre en una pestaña nueva",
+    "slides.example": "Ejemplo de aula",
+    "slides.improve": "Propuesta de mejora",
+    "slides.tool": "Herramientas"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -483,6 +486,9 @@
     "slides.exitFullscreen": "Exit full screen",
     "route.herramientas": "Tools",
     "route.herramientas.short": "Tools",
-    "app.newTab": "opens in a new tab"
+    "app.newTab": "opens in a new tab",
+    "slides.example": "Classroom example",
+    "slides.improve": "Improvement",
+    "slides.tool": "Tools"
   }
 }

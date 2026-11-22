@@ -1,7 +1,7 @@
 [
   {
     "id": "v0",
-    "minute": "0–7",
+    "minute": "0–3",
     "block": {
       "es": "Antes: pregunta diagnóstica",
       "en": "Before: diagnostic question"
@@ -42,10 +42,10 @@
   },
   {
     "id": "v1",
-    "minute": "0–7",
+    "minute": "3–11",
     "block": {
-      "es": "Acto I: ¿qué tarea resuelve la IA sola?",
-      "en": "Act I: which task can AI solve alone?"
+      "es": "Bloque 1: ¿qué tarea resuelve la IA sola?",
+      "en": "Block 1: which task can AI solve alone?"
     },
     "context": {
       "es": [
@@ -83,10 +83,10 @@
   },
   {
     "id": "v2",
-    "minute": "13–24",
+    "minute": "11–19",
     "block": {
-      "es": "Acto III: ¿qué hace hoy tu alumnado?",
-      "en": "Act III: what do your students do today?"
+      "es": "Bloque 2: ¿qué hace hoy tu alumnado?",
+      "en": "Block 2: what do your students do today?"
     },
     "context": {
       "es": [],
@@ -117,11 +117,46 @@
     "formUrl": "https://forms.gle/dXGMcgWiopf9KABF9"
   },
   {
-    "id": "v3",
-    "minute": "24–35",
+    "id": "v6",
+    "minute": "19–27",
     "block": {
-      "es": "Acto IV: predice el resultado",
-      "en": "Act IV: predict the result"
+      "es": "Bloque 3: ¿verdadero o falso?",
+      "en": "Block 3: true or false?"
+    },
+    "context": {
+      "es": [
+        "Activación antes de ver qué dice la investigación sobre la multitarea."
+      ],
+      "en": [
+        "Activation before seeing what research says about multitasking."
+      ]
+    },
+    "question": {
+      "es": "¿Verdadero o falso? El alumnado actual aprende igual de bien estudiando con el móvil y varias pestañas abiertas.",
+      "en": "True or false? Today's students learn just as well studying with their phone and several tabs open."
+    },
+    "options": [
+      {
+        "es": "Verdadero",
+        "en": "True"
+      },
+      {
+        "es": "Falso",
+        "en": "False"
+      },
+      {
+        "es": "Depende de la persona",
+        "en": "It depends on the person"
+      }
+    ],
+    "formUrl": ""
+  },
+  {
+    "id": "v3",
+    "minute": "27–36",
+    "block": {
+      "es": "Bloque 4: predice el resultado",
+      "en": "Block 4: predict the result"
     },
     "context": {
       "es": [
@@ -154,6 +189,86 @@
       }
     ],
     "formUrl": "https://forms.gle/ABP7CrJ1wbEUmhBX8"
+  },
+  {
+    "id": "v7",
+    "minute": "36–42",
+    "block": {
+      "es": "Bloque 5: ¿qué hacen con tu feedback?",
+      "en": "Block 5: what do they do with your feedback?"
+    },
+    "context": {
+      "es": [
+        "Activación antes de hablar de retroalimentación."
+      ],
+      "en": [
+        "Activation before talking about feedback."
+      ]
+    },
+    "question": {
+      "es": "Cuando devuelves un trabajo corregido, ¿qué hace la mayoría de tu alumnado?",
+      "en": "When you hand back marked work, what do most of your students do?"
+    },
+    "options": [
+      {
+        "es": "Mira la nota y lo guarda",
+        "en": "Look at the grade and put it away"
+      },
+      {
+        "es": "Lee los comentarios",
+        "en": "Read the comments"
+      },
+      {
+        "es": "Lo corrige y lo vuelve a entregar",
+        "en": "Correct it and hand it in again"
+      },
+      {
+        "es": "No lo sé",
+        "en": "I don't know"
+      }
+    ],
+    "formUrl": ""
+  },
+  {
+    "id": "v5",
+    "minute": "42–45",
+    "block": {
+      "es": "Después: la misma pregunta",
+      "en": "After: the same question"
+    },
+    "context": {
+      "es": [
+        "Pregunta diagnóstica: se hace al empezar y se repite igual al final para medir el cambio."
+      ],
+      "en": [
+        "Diagnostic question: asked at the start and repeated unchanged at the end to measure change."
+      ]
+    },
+    "question": {
+      "es": "El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?",
+      "en": "Students watch a video and take a quiz on a tablet. Which change would generate most knowledge?"
+    },
+    "options": [
+      {
+        "es": "Una aplicación más interactiva y atractiva",
+        "en": "A more interactive, attractive app"
+      },
+      {
+        "es": "Puntos, insignias y clasificación",
+        "en": "Points, badges and a leaderboard"
+      },
+      {
+        "es": "Que lo expliquen con sus palabras y lo contrasten con un compañero",
+        "en": "They explain it in their own words and compare with a classmate"
+      },
+      {
+        "es": "Que usen una IA para resolverlo más rápido",
+        "en": "They use AI to solve it faster"
+      }
+    ],
+    "target": 2,
+    "formUrl": "https://forms.gle/zno5dQgQD336spKf6",
+    "pair": "v0"
   },
   {
     "id": "v4",
@@ -193,46 +308,5 @@
       }
     ],
     "formUrl": "https://forms.gle/YZJFcqwLrcVAd6Qy5"
-  },
-  {
-    "id": "v5",
-    "minute": "35–45",
-    "block": {
-      "es": "Después: la misma pregunta",
-      "en": "After: the same question"
-    },
-    "context": {
-      "es": [
-        "Pregunta diagnóstica: se hace al empezar y se repite igual al final para medir el cambio."
-      ],
-      "en": [
-        "Diagnostic question: asked at the start and repeated unchanged at the end to measure change."
-      ]
-    },
-    "question": {
-      "es": "El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?",
-      "en": "Students watch a video and take a quiz on a tablet. Which change would generate most knowledge?"
-    },
-    "options": [
-      {
-        "es": "Una aplicación más interactiva y atractiva",
-        "en": "A more interactive, attractive app"
-      },
-      {
-        "es": "Puntos, insignias y clasificación",
-        "en": "Points, badges and a leaderboard"
-      },
-      {
-        "es": "Que lo expliquen con sus palabras y lo contrasten con un compañero",
-        "en": "They explain it in their own words and compare with a classmate"
-      },
-      {
-        "es": "Que usen una IA para resolverlo más rápido",
-        "en": "They use AI to solve it faster"
-      }
-    ],
-    "target": 2,
-    "formUrl": "https://forms.gle/zno5dQgQD336spKf6",
-    "pair": "v0"
   }
 ]

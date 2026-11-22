@@ -255,6 +255,10 @@ Depende de: Fases 1–5.
 - [x] 7.13 Perfil de ponente (contraseña, huella PBKDF2 en `site.json`) y **Archivar resultados y reiniciar** (Apps Script valida `PONENTE_CLAVE`, guarda en hoja de cálculo y pone a cero).
 - [ ] 7.14 Usuario: `npm run ponente`, código nuevo del script, `PONENTE_CLAVE`, `prepararArchivo`, `actualizarFormularios`, nueva versión (docs/votaciones.md).
 
+- [x] 7.15 Sección Herramientas (36, por finalidad; corporativas de la Junta verificadas en eAprendizaje).
+- [x] 7.16 Presentación por bloques (activación con QR → dato → caso de aula → mejora analizada → herramienta): 5 bloques, 44 diapositivas, casos de Primaria (con DUA), ESO, Bachillerato, EOI y Conservatorio marcados como «Ejemplo de aula»; v6 y v7 nuevas; v4 fuera de la presentación.
+- [ ] 7.17 Usuario: `crearFormularios` (v6, v7) y enviar sus enlaces; `actualizarFormularios`; ensayar con la escaleta nueva.
+
 ### Del informe, sin verificar (no se usa)
 
 - Cifras de ICILS 2023 (España 495, media UE 493, internacional 476; 43 % del alumnado de la UE por debajo del nivel básico; brecha de 69 puntos por ISEC): no se pudo acceder al informe del INEE ni al de la Comisión.

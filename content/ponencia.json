@@ -1,28 +1,28 @@
 {
   "intro": {
-    "es": "45 minutos en cinco actos, con una pregunta como hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba? Este resumen sigue el mismo orden que las diapositivas.",
-    "en": "45 minutes in five acts, with one guiding question: what do students have to think about now that they did not before? This summary follows the same order as the slides."
+    "es": "45 minutos en cinco bloques, cada uno con el mismo recorrido: una pregunta para la sala, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta concreta. Hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba?",
+    "en": "45 minutes in five blocks, each following the same path: a question for the audience, what research says, a classroom case and an improvement with a specific tool. Guiding question: what do students have to think about now that they did not before?"
   },
   "blocks": [
     {
       "id": "b1",
       "minutes": [
-        0,
-        7
+        3,
+        11
       ],
-      "icon": "co_present",
+      "icon": "school",
       "title": {
-        "es": "Acto I · La provocación",
-        "en": "Act I · The provocation"
+        "es": "1 · ¿Digitalizar o innovar? (Primaria · Matemáticas · DUA)",
+        "en": "1 · Digitise or innovate? (Primary · Maths · UDL)"
       },
       "summary": {
         "es": [
-          "Votación: dos versiones de una misma tarea. Una la resuelve una IA en segundos; la otra exige datos propios, contraste con un compañero y una propuesta defendida ante el centro. **Digitalizar no es innovar**: cambiar el soporte no cambia lo que el alumnado piensa.",
-          "No existen los «nativos digitales» ni la multitarea [@kirschner], y la distracción digital es un clima compartido: en PISA 2022 se asocia con peores resultados en Matemáticas, y las prohibiciones del móvil no cambian esa asociación (estudio observacional) [@sung-distraccion]."
+          "Dos tareas: una la resuelve una IA sola; la otra exige datos propios y una decisión. Cuarenta años de investigación dan un efecto medio de la tecnología modesto y variable [@tamim], y lo que marca la diferencia es la competencia didáctica del profesorado, no el equipamiento [@sailer].",
+          "**Caso (ejemplo de aula):** ficha interactiva en la que cada alumno arrastra la respuesta; un alumno con dislexia se pierde. **Mejora:** las parejas inventan un problema con datos del barrio, lo graban y otra pareja lo resuelve; la consigna llega en audio y con pictogramas para todo el grupo [@cast-udl]. Herramientas: Vocaroo y ARASAAC."
         ],
         "en": [
-          "Vote: two versions of the same task. An AI solves one in seconds; the other requires students' own data, comparison with a classmate and a proposal defended before the school. **Digitising is not innovating**: changing the medium does not change what students think.",
-          "There are no «digital natives» and no multitasking [@kirschner], and digital distraction is a shared climate: in PISA 2022 it is associated with lower maths results, and phone bans do not change that association (observational study) [@sung-distraccion]."
+          "Two tasks: AI solves one alone; the other requires students' own data and a decision. Forty years of research give a modest, variable average effect of technology [@tamim], and what makes the difference is teachers' teaching competence, not equipment [@sailer].",
+          "**Case (classroom example):** an interactive worksheet where each student drags the answer; a student with dyslexia gets lost. **Improvement:** pairs invent a problem with local data, record it and another pair solves it; instructions come with audio and pictograms for the whole group [@cast-udl]. Tools: Vocaroo and ARASAAC."
         ]
       },
       "lecturaFacil": {
@@ -33,48 +33,22 @@
     {
       "id": "b2",
       "minutes": [
-        7,
-        13
-      ],
-      "icon": "trending_up",
-      "title": {
-        "es": "Acto II · Lo que sí multiplica",
-        "en": "Act II · What really multiplies"
-      },
-      "summary": {
-        "es": [
-          "Cuarenta años de investigación dan un efecto medio de la tecnología modesto y muy variable [@tamim]: depende del diseño. Lo que marca la diferencia son las competencias didácticas digitales del profesorado, no el equipamiento [@sailer] [@wohlfart].",
-          "Por eso proponemos una lectura del MRCDD, cuyas áreas 3 a 6 miran al aula [@mrcdd]: la competencia docente se nota en **lo que consigue hacer el alumnado**, no en la lista de aplicaciones del profesorado."
-        ],
-        "en": [
-          "Forty years of research give a modest and highly variable average effect of technology [@tamim]: it depends on design. What makes the difference is teachers' teaching-related digital skills, not equipment [@sailer] [@wohlfart].",
-          "Hence our reading of the MRCDD, whose areas 3 to 6 look at the classroom [@mrcdd]: teacher competence shows in **what students manage to do**, not in the teacher's list of apps."
-        ]
-      },
-      "lecturaFacil": {
-        "es": "Las tabletas no enseñan solas. Un buen profesor sabe para qué usar las tabletas.",
-        "en": "Tablets do not teach by themselves. A good teacher knows what to use tablets for."
-      }
-    },
-    {
-      "id": "b3",
-      "minutes": [
-        13,
-        24
+        11,
+        19
       ],
       "icon": "stairs",
       "title": {
-        "es": "Acto III · Cruzar el umbral",
-        "en": "Act III · Crossing the threshold"
+        "es": "2 · ¿Qué hace tu alumnado con la información? (ESO · Historia)",
+        "en": "2 · What do your students do with information? (Secondary · History)"
       },
       "summary": {
         "es": [
-          "Tres lentes para mirar una tarea. **ICAP**: ¿el alumnado recibe, manipula, genera o co-construye? [@icap]. **PICRAT**: ¿cuál es su relación con la tecnología y qué le hace la tecnología a tu práctica? [@picrat]. **Modo diseño**: las ideas del alumnado como borradores que el grupo mejora [@knowledge-building].",
-          "Ejemplo: la misma herramienta puede servir para recorrer la línea temporal que hizo el docente o para construir la propia con fuentes y defenderla. Cambia quién piensa."
+          "Votamos qué hizo el alumnado en nuestra última clase con tecnología y le ponemos nombre con ICAP: recibir, manipular, generar, co-construir [@icap]. PICRAT añade qué le hace la tecnología a nuestra práctica [@picrat].",
+          "**Caso:** el alumnado recorre la línea temporal que hizo el docente en un muro digital. **Mejora:** cada equipo construye la suya con fuentes y una hipótesis y critica la de otro: del «modo creencia» al «modo diseño» [@knowledge-building]. Herramientas: Padlet y CryptPad."
         ],
         "en": [
-          "Three lenses on a task. **ICAP**: do students receive, manipulate, generate or co-construct? [@icap]. **PICRAT**: what is their relationship with the technology and what does it do to your practice? [@picrat]. **Design mode**: students' ideas as drafts the group improves [@knowledge-building].",
-          "Example: the same tool can be used to browse the timeline the teacher made or to build one's own from sources and defend it. What changes is who does the thinking."
+          "We vote on what students did in our last technology lesson and name it with ICAP: receive, manipulate, generate, co-construct [@icap]. PICRAT adds what technology does to our practice [@picrat].",
+          "**Case:** students browse the timeline the teacher made on a digital wall. **Improvement:** each team builds its own from sources with a hypothesis and critiques another's: from «belief mode» to «design mode» [@knowledge-building]. Tools: Padlet and CryptPad."
         ]
       },
       "lecturaFacil": {
@@ -83,24 +57,50 @@
       }
     },
     {
-      "id": "b4",
+      "id": "b3",
       "minutes": [
-        24,
-        35
+        19,
+        27
       ],
-      "icon": "smart_toy",
+      "icon": "center_focus_strong",
       "title": {
-        "es": "Acto IV · IA: ¿muleta o tutor?",
-        "en": "Act IV · AI: crutch or tutor?"
+        "es": "3 · Atención y «nativos digitales» (Bachillerato · Biología)",
+        "en": "3 · Attention and «digital natives» (Upper secondary · Biology)"
       },
       "summary": {
         "es": [
-          "Con GPT-4 sin límites, el alumnado mejora en la práctica y rinde peor cuando se le retira; con un tutor que da pistas, el daño se mitiga [@bastani]. La facilidad de la IA puede provocar **pereza metacognitiva**: mejor producto, igual aprendizaje [@fan-pereza].",
-          "Respuesta: **fricción productiva**. La IA pregunta en lugar de responder, hace de alumno que se equivoca [@mollick] y se evalúan borradores y decisiones. Y ningún dato personal del alumnado [@rgpd] [@rgia]."
+          "¿Verdadero o falso? No existen los nativos digitales ni la multitarea [@kirschner], y la distracción de los compañeros se asocia con peores resultados aunque se prohíba el móvil (estudio observacional) [@sung-distraccion].",
+          "**Caso:** vídeo de 25 minutos en casa y clase que repite la explicación con portátiles abiertos. **Mejora:** microvídeos con preguntas y una clase que parte de los errores, con pantallas arriba o abajo; el aula invertida funciona por el aprendizaje activo en clase [@strelan]. Herramientas: OBS y Edpuzzle."
         ],
         "en": [
-          "With unrestricted GPT-4, students improve during practice and perform worse once it is removed; with a hint-giving tutor, the harm is mitigated [@bastani]. AI's ease can trigger **metacognitive laziness**: better product, same learning [@fan-pereza].",
-          "The answer: **productive friction**. AI asks instead of answering, plays a student who makes mistakes [@mollick], and drafts and decisions are assessed. And no personal student data [@rgpd] [@rgia]."
+          "True or false? There are no digital natives and no multitasking [@kirschner], and peer distraction is associated with lower results even when phones are banned (observational study) [@sung-distraccion].",
+          "**Case:** a 25-minute video at home and a class that repeats the explanation with laptops open. **Improvement:** micro-videos with questions and a class that starts from the mistakes, with screens up or down; flipped classrooms work because of active learning in class [@strelan]. Tools: OBS and Edpuzzle."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "Una sola tarea cada vez. A veces, pantallas cerradas.",
+        "en": "One task at a time. Sometimes, screens closed."
+      }
+    },
+    {
+      "id": "b4",
+      "minutes": [
+        27,
+        36
+      ],
+      "icon": "smart_toy",
+      "title": {
+        "es": "4 · IA: ¿muleta o tutor? (EOI · Inglés)",
+        "en": "4 · AI: crutch or tutor? (Language school · English)"
+      },
+      "summary": {
+        "es": [
+          "Predicción y dato: con ChatGPT sin límites, el alumnado rindió peor al retirarlo; con un tutor que da pistas, el daño se mitigó [@bastani]. La facilidad de la IA puede provocar «pereza metacognitiva» [@fan-pereza].",
+          "**Caso:** redacciones impecables escritas en casa por quien en clase no hace esa frase. **Mejora:** mensajes de voz y reformulación; la IA solo pide aclaraciones y se evalúa el registro [@mollick]. Ningún dato personal del alumnado [@rgpd]. Herramientas: banco de prompts y Vocaroo."
+        ],
+        "en": [
+          "Prediction and data: with unrestricted ChatGPT, students performed worse once it was removed; with a hint-giving tutor, the harm was mitigated [@bastani]. AI's ease can trigger «metacognitive laziness» [@fan-pereza].",
+          "**Case:** flawless homework essays by learners who cannot say that in class. **Improvement:** voice messages and rephrasing; AI only asks for clarification and the log is assessed [@mollick]. No personal student data [@rgpd]. Tools: prompt bank and Vocaroo."
         ]
       },
       "lecturaFacil": {
@@ -111,22 +111,48 @@
     {
       "id": "b5",
       "minutes": [
-        35,
+        36,
+        42
+      ],
+      "icon": "rate_review",
+      "title": {
+        "es": "5 · Evaluar para aprender (Conservatorio)",
+        "en": "5 · Assessing for learning (Conservatoire)"
+      },
+      "summary": {
+        "es": [
+          "¿Qué hace el alumnado con nuestro feedback? Sirve si responde a «¿adónde voy?, ¿cómo voy?, ¿qué hago después?» [@feedback] y si el alumnado aprende a usarlo [@feedback-literacy].",
+          "**Caso:** imitar una grabación y recibir las correcciones al final, de palabra. **Mejora:** grabarse la semana 1 y la 4, compararse con una rúbrica, escuchar a un compañero y elegir una interpretación propia. Herramientas: Audacity y CoRubric."
+        ],
+        "en": [
+          "What do students do with our feedback? It works if it answers «where am I going?, how am I going?, where next?» [@feedback] and if students learn to use it [@feedback-literacy].",
+          "**Case:** imitating a recording and getting corrections at the end, orally. **Improvement:** recording in weeks 1 and 4, comparing with a rubric, listening to a peer and choosing one's own interpretation. Tools: Audacity and CoRubric."
+        ]
+      },
+      "lecturaFacil": {
+        "es": "Te grabas, te escuchas y mejoras con ayuda.",
+        "en": "You record yourself, listen and improve with help."
+      }
+    },
+    {
+      "id": "b6",
+      "minutes": [
+        42,
         45
       ],
       "icon": "key",
       "title": {
-        "es": "Acto V · Siete claves y un reto",
-        "en": "Act V · Seven keys and a challenge"
+        "es": "Cierre · Siete claves y un reto",
+        "en": "Closing · Seven keys and a challenge"
       },
       "summary": {
         "es": [
-          "Las [siete claves](../claves/): pedagogía primero, construir y no solo recibir, cuidar la atención, retroalimentación de proceso, DUA desde el diseño, IA con fricción y ética en comunidad.",
-          "Reto: elegir una tarea concreta para la semana que viene, analizarla con la guía, mejorarla con los prompts y compartirla con un compañero. Todo está en [Descargas](../recursos/)."
+          "Las [siete claves](../claves/) recogen lo visto en los cinco casos. Repetimos la pregunta del principio para ver si algo ha cambiado.",
+          "Reto: elige una tarea de la semana que viene, analízala con la guía y mejórala con los prompts y las herramientas. Todo está en [Descargas](../recursos/) y en [Herramientas](../herramientas/)."
         ],
         "en": [
-          "The [seven keys](../claves/): pedagogy first, build rather than just receive, protect attention, process feedback, UDL by design, AI with friction and ethics in community.",
-          "Challenge: choose one specific task for next week, analyse it with the guide, improve it with the prompts and share it with a colleague. Everything is in [Downloads](../recursos/)."
+          "The [seven keys](../claves/) gather what we saw in the five cases. We repeat the opening question to see whether anything has changed.",
+          "Challenge: choose a task for next week, analyse it with the guide and improve it with the prompts and tools. Everything is in [Downloads](../recursos/) and [Tools](../herramientas/)."
         ]
       },
       "lecturaFacil": {

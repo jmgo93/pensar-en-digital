@@ -23,6 +23,10 @@ const targets = [
   ...routes.map((r) => /** @type {[string, string]} */ ([r.id, `${site.url}${r.path}`])),
   ['presentacion', `${site.url}presentacion/`],
   ...votes.filter((v) => v.formUrl).map((v) => /** @type {[string, string]} */ ([v.id, v.formUrl])),
+  // Fichas de herramientas que aparecen en las diapositivas «tool».
+  ...[...new Set(read('presentacion').slides.flatMap((/** @type {any} */ s) => (s.type === 'tool' ? s.tools : [])))].map(
+    (id) => /** @type {[string, string]} */ ([`tool-${id}`, `${site.url}herramientas/#${id}`]),
+  ),
 ];
 
 for (const [name, url] of targets) {
