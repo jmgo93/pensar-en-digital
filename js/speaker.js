@@ -245,6 +245,7 @@ export const renderPonente = async () => {
           link(`${fromRoot('presentacion/').href}?notas`, 'co_present', 'speaker.openNotes', true),
           link(fromRoot('presentacion/resultados.html').href, 'how_to_vote', 'speaker.openResults', true),
           link(fromRoot('docs/escaleta.pdf').href, 'picture_as_pdf', 'speaker.escaleta', true),
+          link(fromRoot('docs/estudios-ponente.pdf').href, 'science', 'speaker.estudios', true),
         ),
       ),
       h('section', { class: 'card card-filled stack' }, h('h2', { class: 'title-large' }, icon('how_to_vote'), ' ', t('speaker.votes')), h('p', {}, t('speaker.archiveIntro')), h('div', { class: 'btn-row' }, archiveButton(site, 'btn btn-filled interactive'))),

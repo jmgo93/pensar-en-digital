@@ -84,7 +84,9 @@ const H = 1080;
  * @returns {HTMLElement}
  */
 const slideContent = (s, ctx) => {
-  const cite = s.cite && ctx.sources.get(s.cite) ? h('p', { class: 's-cite' }, `(${citeLabel(/** @type {any} */ (ctx.sources.get(s.cite)))})`) : null;
+  const citeText = s.cite && ctx.sources.get(s.cite) ? `(${citeLabel(/** @type {any} */ (ctx.sources.get(s.cite)))})` : '';
+  // Cita y procedencia del dato («25 metaanálisis · 1055 estudios») en la misma línea.
+  const cite = citeText || s.src ? h('p', { class: 's-cite' }, s.src ? h('span', { class: 's-src' }, icon('science'), ' ', loc(s.src)) : null, s.src && citeText ? ` · ${citeText}` : citeText) : null;
   /** @param {string} name */
   const qr = (name) => h('img', { class: 's-qr', src: fromRoot(`assets/qr/${name}.svg`).href, alt: '', width: 520, height: 520 });
   const shortUrl = (/** @type {string} */ path) => `${ctx.site.shortUrl}/${path}`.replace(/\/$/, '');
@@ -147,7 +149,15 @@ const slideContent = (s, ctx) => {
         'div',
         // Pregunta + opciones largas: letra algo menor para que todo quepa por encima del pie.
         { class: `s-vote${loc(vote.question).length + vote.options.reduce((n, o) => n + loc(o).length, 0) > 220 ? ' is-long' : ''}`, 'data-vote': vote.id },
-        h('div', { class: 's-vote-main' }, h('p', { class: 's-kicker' }, icon('how_to_vote'), t('slides.vote')), h('h2', {}, loc(vote.question)), results, h('p', { class: 's-status' })),
+        h(
+          'div',
+          { class: 's-vote-main' },
+          h('p', { class: 's-kicker' }, icon('how_to_vote'), t('slides.vote')),
+          s.show ? h('div', { class: 's-show' }, ...s.show.map((/** @type {any} */ x) => h('p', { class: 's-show-item' }, h('span', { class: 's-show-label' }, x.icon ? icon(x.icon) : null, x.label), h('span', {}, loc(x.text))))) : null,
+          h('h2', {}, loc(vote.question)),
+          results,
+          h('p', { class: 's-status' }),
+        ),
         vote.formUrl ? h('figure', { class: 's-vote-qr' }, qr(vote.id), h('figcaption', {}, vote.formUrl.replace(/^https?:\/\//, ''))) : null,
       );
     }
@@ -171,6 +181,20 @@ const slideContent = (s, ctx) => {
         h('p', { class: 's-status' }),
       );
     }
+    case 'columns':
+      return h(
+        'div',
+        { class: 's-columns' },
+        h('h2', {}, ...rich(loc(s.title))),
+        h(
+          'div',
+          { class: 's-cols' },
+          ...s.cols.map((/** @type {any} */ c, /** @type {number} */ i) =>
+            h('div', { class: 's-col', style: `--i:${i}` }, h('p', { class: 's-col-q' }, c.icon ? icon(c.icon) : null, h('span', {}, loc(c.q))), h('ul', {}, ...c.items.map((/** @type {L} */ it, /** @type {number} */ k) => h('li', { style: `--k:${k}` }, ...rich(loc(it)))))),
+          ),
+        ),
+        cite,
+      );
     case 'section':
       return h('div', { class: 's-section' }, h('p', { class: 's-sec-n', 'aria-hidden': 'true' }, String(s.n)), h('h2', {}, ...rich(loc(s.title))), s.small ? h('p', { class: 's-small' }, loc(s.small)) : null);
     case 'case':
@@ -179,6 +203,7 @@ const slideContent = (s, ctx) => {
         { class: 's-case' },
         h('p', { class: 's-badges' }, h('span', { class: 's-badge' }, loc(s.where)), h('span', { class: 's-badge s-badge-tag' }, icon('lightbulb'), t('slides.example'))),
         h('h2', {}, ...rich(loc(s.title))),
+        s.context ? h('p', { class: 's-context' }, icon('info'), ' ', loc(s.context)) : null,
         h('p', { class: 's-text' }, ...rich(loc(s.text))),
         s.ask ? h('p', { class: 's-ask' }, icon('groups'), h('span', {}, ...rich(loc(s.ask)))) : null,
       );
@@ -189,7 +214,8 @@ const slideContent = (s, ctx) => {
         h('p', { class: 's-kicker' }, icon('trending_up'), t('slides.improve')),
         h('h2', {}, ...rich(loc(s.title))),
         h('p', { class: 's-text' }, ...rich(loc(s.text))),
-        h('dl', { class: 's-analysis' }, ...s.analysis.map((/** @type {any} */ a, /** @type {number} */ i) => h('div', { style: `--i:${i}` }, h('dt', {}, a.k), h('dd', {}, typeof a.v === 'string' ? a.v : loc(a.v))))),
+        s.loop ? h('div', { class: 's-loop' }, ...s.loop.map((/** @type {any} */ x, /** @type {number} */ i) => h('p', { class: 's-loop-item', style: `--i:${i}` }, icon(x.icon), h('span', {}, loc(x.label))))) : null,
+        h('dl', { class: 's-analysis' }, ...s.analysis.map((/** @type {any} */ a, /** @type {number} */ i) => h('div', { style: `--i:${i}` }, h('dt', {}, a.icon ? icon(a.icon) : null, a.k), h('dd', {}, typeof a.v === 'string' ? a.v : loc(a.v))))),
         cite,
       );
     case 'tool': {
@@ -261,6 +287,7 @@ const notesPanel = (s) => {
     { class: 'n-notes' },
     s?.key ? h('p', { class: 'n-key' }, s.key) : null,
     h('p', {}, s?.notes ?? ''),
+    row('n-example', t('slides.example2'), s?.example),
     row('n-do', t('slides.do'), s?.do),
     row('n-data', t('slides.data'), s?.data),
     row('n-bridge', t('slides.bridge'), s?.bridge),

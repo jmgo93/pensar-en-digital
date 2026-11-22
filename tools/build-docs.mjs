@@ -20,6 +20,7 @@ const marco = read('marco');
 const bank = read('prompts');
 const deck = read('presentacion');
 const profiles = read('perfiles');
+const estudios = read('estudios');
 /** @type {any[]} */
 const votesArr = read('votaciones');
 const votes = Object.fromEntries(votesArr.map((v) => [v.id, v]));
@@ -327,6 +328,7 @@ const escaletaHtml = () => {
       (/** @type {any} */ s, /** @type {number} */ i) => `<section><h3 style="margin-top:0">${i + 1}. [${mmss(s.at)}] ${esc(slideHead(s))}</h3>
 ${s.key ? `<p class="tip"><strong>Idea fuerza.</strong> ${esc(s.key)}</p>` : ''}
 <p>${esc(s.notes)}</p>
+${s.example ? `<p class="meta"><strong>Ejemplo para defenderlo:</strong> ${esc(s.example)}</p>` : ''}
 ${s.do ? `<p class="meta"><strong>Haz:</strong> ${esc(s.do)}</p>` : ''}
 ${s.data ? `<p class="meta"><strong>Dato y fuente:</strong> ${esc(s.data)}</p>` : ''}
 ${s.bridge ? `<p class="meta"><strong>Transición:</strong> <em>${esc(s.bridge)}</em></p>` : ''}
@@ -344,13 +346,54 @@ ${s.cut ? `<p class="meta"><strong>Si vas tarde:</strong> ${esc(s.cut)}</p>` : '
   );
 };
 
+/* ---------------- Guía de estudios para el ponente (solo español) ---------------- */
+
+const EST_LABELS = [
+  ['what', 'Qué es'],
+  ['how', 'Quién y cómo'],
+  ['found', 'Qué encontró'],
+  ['tell', 'Cómo contarlo'],
+  ['why', 'Por qué está en la ponencia'],
+  ['careful', 'Cuidado'],
+];
+
+const estudiosMd = () => {
+  const out = [`# ${estudios.title}`, '', ...estudios.intro.flatMap((/** @type {string} */ p) => [p, '']), `## ${estudios.primer.title}`, ''];
+  for (const p of estudios.primer.body) out.push(p, '');
+  for (const it of estudios.items) {
+    out.push(`## ${it.name}`, '', `*${it.where}*`, '');
+    for (const [k, label] of EST_LABELS) out.push(`**${label}.** ${it[k]}`, '');
+    out.push(`**Referencia.** ${apaMd(it.cite)}`, '');
+  }
+  out.push('---', '', footerText('es', 'presentacion/'), '');
+  return out.join('\n');
+};
+
+const estudiosHtml = () =>
+  page(
+    'es',
+    estudios.title,
+    `<header><h1>${esc(estudios.title)}</h1><p class="sub">Guía para el ponente · ${esc(ui.es['app.name'])}</p></header>
+${estudios.intro.map((/** @type {string} */ p) => `<p>${esc(p)}</p>`).join('')}
+<section class="example"><h2>${esc(estudios.primer.title)}</h2>${estudios.primer.body.map((/** @type {string} */ p) => `<p>${esc(p)}</p>`).join('')}</section>
+${estudios.items
+  .map(
+    (/** @type {any} */ it) => `<section><h2>${esc(it.name)}</h2><p class="meta">${esc(it.where)}</p>
+${EST_LABELS.map(([k, label]) => `<p${k === 'tell' ? ' class="tip"' : ''}><strong>${esc(label)}.</strong> ${esc(it[k])}</p>`).join('')}
+<p class="meta">${apaHtml(it.cite)}</p></section>`,
+  )
+  .join('')}
+<footer>${esc(footerText('es', 'presentacion/'))}</footer>`,
+  );
+
 /* ---------------- Escritura ---------------- */
 
 for (const l of LANGS) {
   writeFileSync(new URL(`guia-analisis-tareas-${l}.md`, OUT), guiaMd(l));
   writeFileSync(new URL(`cuaderno-prompts-${l}.md`, OUT), cuadernoMd(l));
 }
-console.log('assets/descargas: guía y cuaderno de prompts en .md (es, en).');
+writeFileSync(new URL('../docs/estudios-ponente.md', import.meta.url), estudiosMd());
+console.log('assets/descargas: guía y cuaderno de prompts en .md (es, en); docs/estudios-ponente.md.');
 
 // Depuración: `node tools/build-docs.mjs --html <carpeta>` vuelca el HTML de cada PDF para revisarlo.
 const htmlDir = process.argv[process.argv.indexOf('--html') + 1];
@@ -362,6 +405,7 @@ if (process.argv.includes('--html') && htmlDir) {
     writeFileSync(`${htmlDir}/claves-${l}.html`, clavesHtml(l));
   }
   writeFileSync(`${htmlDir}/escaleta.html`, escaletaHtml());
+  writeFileSync(`${htmlDir}/estudios.html`, estudiosHtml());
   console.log(`HTML en ${htmlDir}`);
 }
 
@@ -387,6 +431,7 @@ if (process.argv.includes('--pdf')) {
       await pdf(clavesHtml(l), new URL(`siete-claves-${l}.pdf`, OUT));
     }
     await pdf(escaletaHtml(), new URL('../docs/escaleta.pdf', import.meta.url));
+    await pdf(estudiosHtml(), new URL('../docs/estudios-ponente.pdf', import.meta.url));
   } finally {
     await browser.close();
   }

@@ -15,25 +15,25 @@
       ]
     },
     "question": {
-      "es": "El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?",
-      "en": "Students watch a video and take a quiz on a tablet. Which change would generate most knowledge?"
+      "es": "Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más?",
+      "en": "If students watch a video and take a tablet quiz, which change will make them learn more?"
     },
     "options": [
       {
-        "es": "Una aplicación más interactiva y atractiva",
-        "en": "A more interactive, attractive app"
+        "es": "Usar una aplicación más interactiva y atractiva",
+        "en": "Using a more interactive, attractive app"
       },
       {
-        "es": "Puntos, insignias y clasificación",
-        "en": "Points, badges and a leaderboard"
+        "es": "Añadir puntos, insignias y clasificación",
+        "en": "Adding points, badges and a leaderboard"
       },
       {
         "es": "Que lo expliquen con sus palabras y lo contrasten con un compañero",
-        "en": "They explain it in their own words and compare with a classmate"
+        "en": "Having them explain it in their own words and compare with a classmate"
       },
       {
         "es": "Que usen una IA para resolverlo más rápido",
-        "en": "They use AI to solve it faster"
+        "en": "Having them use AI to solve it faster"
       }
     ],
     "target": 2,
@@ -58,8 +58,8 @@
       ]
     },
     "question": {
-      "es": "¿Cuál de las dos tareas puede resolver una IA sola, en segundos?",
-      "en": "Which of the two tasks can an AI solve alone, in seconds?"
+      "es": "Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos?",
+      "en": "If you paste these two tasks into an AI, which one do you think it will solve alone in seconds?"
     },
     "options": [
       {
@@ -93,25 +93,25 @@
       "en": []
     },
     "question": {
-      "es": "La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo?",
-      "en": "The last time your students used technology in class, what were they mainly doing?"
+      "es": "Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado?",
+      "en": "Think of your next lesson with technology: what will your students mainly do?"
     },
     "options": [
       {
         "es": "Recibir: ver, escuchar, leer",
-        "en": "Receiving: watching, listening, reading"
+        "en": "Receive: watch, listen, read"
       },
       {
         "es": "Manipular: copiar, completar, subrayar",
-        "en": "Manipulating: copying, filling in, highlighting"
+        "en": "Manipulate: copy, complete, underline"
       },
       {
         "es": "Generar: explicar, crear algo nuevo",
-        "en": "Generating: explaining, creating something new"
+        "en": "Generate: explain, create something new"
       },
       {
         "es": "Co-construir: debatir y crear con otros",
-        "en": "Co-constructing: debating and creating with others"
+        "en": "Co-construct: discuss and create with others"
       }
     ],
     "formUrl": "https://forms.gle/dXGMcgWiopf9KABF9"
@@ -132,21 +132,21 @@
       ]
     },
     "question": {
-      "es": "¿Verdadero o falso? El alumnado actual aprende igual de bien estudiando con el móvil y varias pestañas abiertas.",
-      "en": "True or false? Today's students learn just as well studying with their phone and several tabs open."
+      "es": "Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien?",
+      "en": "If a student studies with their phone and several tabs open, will they learn just as well?"
     },
     "options": [
       {
-        "es": "Verdadero",
-        "en": "True"
+        "es": "Sí, aprenderá igual de bien",
+        "en": "Yes, just as well"
       },
       {
-        "es": "Falso",
-        "en": "False"
+        "es": "No, aprenderá peor",
+        "en": "No, they will learn less"
       },
       {
-        "es": "Depende de la persona",
-        "en": "It depends on the person"
+        "es": "Dependerá de la persona",
+        "en": "It will depend on the person"
       }
     ],
     "formUrl": "https://forms.gle/h4jYPu3wwnhhjmxx9"
@@ -167,25 +167,25 @@
       ]
     },
     "question": {
-      "es": "Practican Matemáticas con ChatGPT sin límites y después hacen un examen sin IA. ¿Qué pasó?",
-      "en": "Students practise maths with unrestricted ChatGPT, then sit an exam without AI. What happened?"
+      "es": "Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá?",
+      "en": "If students practise maths with unrestricted ChatGPT and then sit an exam without AI, what do you think will happen?"
     },
     "options": [
       {
-        "es": "Sacaron mejor nota que quien no usó IA",
-        "en": "They scored higher than those without AI"
+        "es": "Sacarán mejor nota que quien no usó IA",
+        "en": "They will score higher than those without AI"
       },
       {
-        "es": "Sacaron la misma nota",
-        "en": "They scored the same"
+        "es": "Sacarán la misma nota",
+        "en": "They will score the same"
       },
       {
-        "es": "Sacaron peor nota",
-        "en": "They scored lower"
+        "es": "Sacarán peor nota",
+        "en": "They will score lower"
       },
       {
-        "es": "Depende de cómo se usó la IA",
-        "en": "It depends on how AI was used"
+        "es": "Dependerá de cómo usen la IA",
+        "en": "It will depend on how they use AI"
       }
     ],
     "formUrl": "https://forms.gle/ABP7CrJ1wbEUmhBX8"
@@ -206,20 +206,20 @@
       ]
     },
     "question": {
-      "es": "Cuando devuelves un trabajo corregido, ¿qué hace la mayoría de tu alumnado?",
-      "en": "When you hand back marked work, what do most of your students do?"
+      "es": "Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado?",
+      "en": "If you hand back marked work, what do you think most of your students will do?"
     },
     "options": [
       {
-        "es": "Mira la nota y lo guarda",
+        "es": "Mirará la nota y lo guardará",
         "en": "Look at the grade and put it away"
       },
       {
-        "es": "Lee los comentarios",
+        "es": "Leerá los comentarios",
         "en": "Read the comments"
       },
       {
-        "es": "Lo corrige y lo vuelve a entregar",
+        "es": "Lo corregirá y lo volverá a entregar",
         "en": "Correct it and hand it in again"
       },
       {
@@ -245,25 +245,25 @@
       ]
     },
     "question": {
-      "es": "El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?",
-      "en": "Students watch a video and take a quiz on a tablet. Which change would generate most knowledge?"
+      "es": "Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más?",
+      "en": "If students watch a video and take a tablet quiz, which change will make them learn more?"
     },
     "options": [
       {
-        "es": "Una aplicación más interactiva y atractiva",
-        "en": "A more interactive, attractive app"
+        "es": "Usar una aplicación más interactiva y atractiva",
+        "en": "Using a more interactive, attractive app"
       },
       {
-        "es": "Puntos, insignias y clasificación",
-        "en": "Points, badges and a leaderboard"
+        "es": "Añadir puntos, insignias y clasificación",
+        "en": "Adding points, badges and a leaderboard"
       },
       {
         "es": "Que lo expliquen con sus palabras y lo contrasten con un compañero",
-        "en": "They explain it in their own words and compare with a classmate"
+        "en": "Having them explain it in their own words and compare with a classmate"
       },
       {
         "es": "Que usen una IA para resolverlo más rápido",
-        "en": "They use AI to solve it faster"
+        "en": "Having them use AI to solve it faster"
       }
     ],
     "target": 2,

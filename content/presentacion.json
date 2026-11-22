@@ -141,53 +141,34 @@
       "cut": "Pásala sin comentar."
     },
     {
-      "id": "tareas",
+      "id": "voto1",
       "block": "b1",
       "at": 3.25,
-      "type": "compare",
-      "title": {
-        "es": "Dos tareas",
-        "en": "Two tasks"
-      },
-      "items": [
+      "type": "vote",
+      "vote": "v1",
+      "key": "La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.",
+      "notes": "Lee las dos tareas en voz alta y deja votar. Comenta el resultado: casi todo el mundo ve que la A la resuelve una IA sola en segundos. La B también puede usar IA para analizar datos, pero los datos son del alumnado, la comparación es con un compañero y la propuesta se defiende ante el centro. Pregunta retórica: «¿Cuántas de nuestras tareas son tipo A?». Digitalizar es pasar la A a un formulario; innovar es pasar de la A a la B.",
+      "do": "Un minuto para votar. Sin conexión: mano alzada (A, B, las dos, ninguna).",
+      "bridge": "«¿Y la tecnología, por sí sola, hace que se aprenda más? Cuarenta años de investigación».",
+      "cut": "Mano alzada en 30 segundos.",
+      "show": [
         {
-          "label": {
-            "es": "A",
-            "en": "A"
-          },
+          "label": "A",
+          "icon": "edit",
           "text": {
-            "es": "Redacción: la importancia del agua.",
-            "en": "Essay: the importance of water."
+            "es": "Redacción: «La importancia del agua».",
+            "en": "Essay: «The importance of water»."
           }
         },
         {
-          "label": {
-            "es": "B",
-            "en": "B"
-          },
+          "label": "B",
+          "icon": "water_drop",
           "text": {
-            "es": "**Mide** el agua de casa, **compáralo** y **propón** una medida.",
-            "en": "**Measure** water at home, **compare**, **propose** a measure."
+            "es": "Mide el agua de casa una semana, compárala con un compañero y propón una medida.",
+            "en": "Measure water at home for a week, compare with a classmate and propose a measure."
           }
         }
-      ],
-      "key": "La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.",
-      "notes": "Lee las dos en voz alta. La B también puede usar IA para analizar datos, pero los datos son del alumnado, la comparación es con un compañero y la propuesta se defiende ante el centro.",
-      "do": "Lee despacio. No des tu opinión todavía.",
-      "bridge": "«Votad: ¿cuál puede resolver una IA sola, en segundos?».",
-      "cut": "Lee solo los títulos de A y B."
-    },
-    {
-      "id": "voto1",
-      "block": "b1",
-      "at": 3.75,
-      "type": "vote",
-      "vote": "v1",
-      "key": "Muchas de nuestras tareas son tipo A: las resuelve una máquina sin que nadie aprenda.",
-      "notes": "Comenta el resultado: casi todo el mundo ve que la A la hace una IA sola. Pregunta retórica: «¿Cuántas de nuestras tareas son tipo A?». Conecta: digitalizar es pasar la A a un formulario; innovar es pasar de la A a la B.",
-      "do": "Da un minuto para votar. Sin conexión: mano alzada (A, B, las dos, ninguna).",
-      "bridge": "«¿Y la tecnología, por sí sola, mejora el aprendizaje? Cuarenta años de investigación».",
-      "cut": "Vota a mano alzada en 30 segundos."
+      ]
     },
     {
       "id": "tamim",
@@ -196,16 +177,21 @@
       "type": "big",
       "number": "0,35",
       "text": {
-        "es": "Efecto medio de la tecnología en 40 años de investigación. Modesto y muy variable: **depende del diseño**.",
-        "en": "Average effect of technology across 40 years of research. Modest and highly variable: **it depends on design**."
+        "es": "El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**.",
+        "en": "The average student with technology outperforms 64% of those without it (no effect: 50%). **It depends on design**."
       },
       "cite": "tamim",
       "key": "La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico.",
-      "notes": "Metaanálisis de segundo orden: 25 metaanálisis y 1055 estudios, efecto medio 0,35, positivo pero moderado y muy heterogéneo. Hay estudios donde funciona muy bien y otros donde no. Si queréis una cifra más reciente y concreta: en Matemáticas y Ciencias de secundaria, Hillmayr et al. (2020) obtienen g = 0,65 en 92 estudios. La pregunta interesante no es «¿funciona?», sino «¿cuándo funciona?».",
-      "data": "Tamim et al. (2011), Review of Educational Research, 81(1): 0,35 (efectos aleatorios); validación 0,33. Hillmayr et al. (2020), Computers & Education, 153: g = 0,65, k = 92.",
+      "notes": "Tamim y colaboradores (2011) reunieron 25 metaanálisis (1055 estudios, cuarenta años) que comparan clases con y sin ordenador. Efecto medio: 0,35. Qué significa: si ponemos en fila a 100 alumnos de una clase sin tecnología, el alumno medio de la clase con tecnología quedaría por delante de 64 de ellos, en lugar de 50. Es una mejora real, pero modesta. Y, sobre todo, muy variable: hay estudios donde funciona muy bien y otros donde nada. La pregunta interesante no es «¿funciona?», sino «¿cuándo funciona?».",
+      "data": "Tamim et al. (2011), Review of Educational Research, 81(1): 0,35 (validación: 0,33). Hillmayr et al. (2020), Computers & Education, 153: g = 0,65, k = 92.",
       "do": "No te enredes con estadística: «0,35 es un efecto modesto; la variación es lo importante».",
       "bridge": "«¿Y de qué depende? No del equipamiento».",
-      "cut": "Omite Hillmayr."
+      "cut": "Omite Hillmayr.",
+      "src": {
+        "es": "25 metaanálisis · 1055 estudios · 40 años",
+        "en": "25 meta-analyses · 1,055 studies · 40 years"
+      },
+      "example": "Para explicarlo sin estadística: «Imaginad 100 alumnos ordenados por nota. El del medio ocupa el puesto 50. Con tecnología, el alumno medio pasa al puesto 64: sube, pero no da un salto. Y en unos estudios sube mucho y en otros nada: eso es lo que nos dice que depende de cómo se use». Dato de apoyo más reciente: en Matemáticas y Ciencias de secundaria, Hillmayr et al. (2020) obtienen 0,65 con 92 estudios (el alumno medio pasaría del puesto 50 al 74). Referencia habitual para leer estos tamaños de efecto: 0,2 pequeño, 0,5 medio, 0,8 grande."
     },
     {
       "id": "docente",
@@ -221,12 +207,17 @@
         "en": "Teaching-related digital skills matter more than devices."
       },
       "cite": "sailer",
-      "key": "Más tabletas no cambian el aula; un docente que sabe para qué usarlas, sí.",
-      "notes": "Sailer, Murböck y Fischer (2021), muestra representativa de docentes de Baviera: lo que explica qué actividades se hacen con tecnología son las competencias digitales básicas y didácticas del profesorado, no los recursos. Una revisión paraguas (Wohlfart y Wagner, 2023) coloca también al docente en el centro. Por eso el marco TPACK insiste en integrar tecnología, pedagogía, materia y contexto: por separado no sirven.",
+      "key": "Más tablets no cambian el aula; un docente que sabe para qué usarlas, sí.",
+      "notes": "Sailer, Murböck y Fischer (2021) preguntaron a una muestra representativa de docentes de Baviera cuánto usan la tecnología y qué actividades hace el alumnado con ella, y lo cruzaron con el equipamiento del centro y con sus competencias. Resultado: lo que explica el tipo de actividades no son los recursos, sino las competencias digitales básicas y, sobre todo, las didácticas del profesorado. Hace falta un mínimo de equipamiento, pero a partir de ahí decide el docente. Una revisión paraguas (Wohlfart y Wagner, 2023) llega a lo mismo.",
       "data": "Sailer et al. (2021), Teaching and Teacher Education, 103, 103346. Wohlfart y Wagner (2023), ETR&D, 71(2). Mishra (2019): TPACK con conocimiento del contexto.",
       "do": "Señala a la sala: «Esto va de vosotros».",
       "bridge": "«Veamos un caso de Primaria».",
-      "cut": "Omite TPACK."
+      "cut": "Omite TPACK.",
+      "src": {
+        "es": "Encuesta representativa a 410 docentes de Baviera (Alemania)",
+        "en": "Representative survey of 410 teachers in Bavaria (Germany)"
+      },
+      "example": "«Dos aulas del mismo centro, con la misma pizarra digital y las mismas tablets. En una, la pizarra es un proyector de diapositivas y las tablets, fichas de rellenar. En la otra, el alumnado graba explicaciones, compara datos y se corrige entre parejas. Mismo equipamiento, aprendizajes muy distintos: lo que cambia es el docente». Si alguien objeta «sin recursos no se puede», respuesta: el estudio también dice que hace falta un umbral mínimo, pero que comprar más no cambia lo que se hace en clase."
     },
     {
       "id": "caso1",
@@ -238,22 +229,26 @@
         "en": "Primary · Maths · Year 6"
       },
       "title": {
-        "es": "Ficha interactiva",
-        "en": "Interactive worksheet"
+        "es": "Repaso con una app de «arrastra y suelta»",
+        "en": "Review with a «drag and drop» app"
       },
       "text": {
-        "es": "Cada alumno **arrastra la respuesta** en su tableta. Un alumno con dislexia se pierde en los enunciados.",
-        "en": "Each student **drags the answer** on a tablet. A student with dyslexia gets lost."
+        "es": "Arrastran números hasta que la app dice «¡Correcto!»: **aciertan por tanteo**. Un alumno con dislexia no lee bien el enunciado y se bloquea.",
+        "en": "They drag numbers until the app says «Correct!»: **they guess their way through**. A student with dyslexia cannot read the problem and gets stuck."
       },
       "ask": {
-        "es": "¿Qué piensan? ¿Quién se queda fuera?",
-        "en": "What do they think about? Who is left out?"
+        "es": "¿Cómo podemos sortear esta barrera desde el diseño?",
+        "en": "How can we get round this barrier by design?"
       },
       "key": "Parece digital y moderno, pero el pensamiento es el de una ficha de papel, y deja fuera a quien lee con dificultad.",
-      "notes": "Situación de aula típica (es un ejemplo, no un caso concreto). Deja 30 segundos para que la sala responda en voz alta. Respuestas esperadas: «Solo eligen la solución», «Nadie explica por qué», «El alumno con dislexia necesita que le lean el enunciado». En ICAP: activo (manipula). En PICRAT: interactivo-reemplaza (la tableta sustituye al papel).",
+      "notes": "Ejemplo de aula muy reconocible: la app es vistosa y el alumnado está entretenido, pero acierta probando números, sin entender el problema. Y quien tiene dificultades de lectura se queda fuera porque todo depende de leer un enunciado escrito. En ICAP: activo (manipula). En PICRAT: interactivo-reemplaza (la tablet sustituye a la ficha). Deja que la sala proponga soluciones de diseño (audio, pictogramas, parejas, inventar el problema) y recógelas: la diapositiva siguiente las ordena.",
       "do": "Pregunta a dos personas de Primaria. No corrijas: recoge.",
       "bridge": "«¿Cómo la subimos de escalón sin cambiar el objetivo?».",
-      "cut": "Haz tú la pregunta y respóndela en una frase."
+      "cut": "Haz tú la pregunta y respóndela en una frase.",
+      "context": {
+        "es": "5.º de Primaria · 24 alumnos · una tablet por alumno",
+        "en": "Year 6 · 24 students · one tablet each"
+      }
     },
     {
       "id": "mejora1",
@@ -261,8 +256,8 @@
       "at": 8.5,
       "type": "improve",
       "title": {
-        "es": "Problemas del barrio, **entre parejas**",
-        "en": "Neighbourhood problems, **between pairs**"
+        "es": "Problemas del barrio: **trabajo en parejas**",
+        "en": "Neighbourhood problems: **pair work**"
       },
       "text": {
         "es": "Inventan un problema con datos del barrio, lo graban y otra pareja lo resuelve.",
@@ -270,13 +265,15 @@
       },
       "analysis": [
         {
+          "icon": "stairs",
           "k": "ICAP",
           "v": {
-            "es": "Activo → Interactivo",
-            "en": "Active → Interactive"
+            "es": "Activo → Interactivo: crean y explican",
+            "en": "Active → Interactive: create and explain"
           }
         },
         {
+          "icon": "grid_view",
           "k": "PICRAT",
           "v": {
             "es": "Reemplaza → Transforma",
@@ -284,15 +281,20 @@
           }
         },
         {
+          "icon": "key",
           "k": "Claves",
           "v": {
-            "es": "1 · 2 · 5 (DUA)",
-            "en": "1 · 2 · 5 (UDL)"
+            "es": "1 Pedagogía primero · 2 Construir · 5 DUA",
+            "en": "1 Pedagogy first · 2 Build · 5 UDL"
           }
         },
         {
+          "icon": "school",
           "k": "MRCDD",
-          "v": "3.3 · 5.1 · 6.3"
+          "v": {
+            "es": "3.3 Aprendizaje entre iguales · 5.1 Inclusión",
+            "en": "3.3 Peer learning · 5.1 Inclusion"
+          }
         }
       ],
       "cite": "cast-udl",
@@ -300,7 +302,8 @@
       "notes": "Recorre el análisis de abajo arriba sin tecnicismos: «Antes elegían; ahora crean (constructivo) y explican a otra pareja (interactivo)». DUA (CAST, 2024): el enunciado llega en audio y con pictogramas para todo el grupo, no solo para el alumno con dislexia; y cada pareja puede responder grabando, escribiendo o dibujando. MRCDD 3.3 aprendizaje entre iguales, 5.1 accesibilidad e inclusión, 6.3 creación de contenidos.",
       "do": "Señala cada casilla del análisis mientras la nombras.",
       "bridge": "«¿Con qué herramientas?».",
-      "cut": "Lee solo la propuesta y la fila ICAP."
+      "cut": "Lee solo la propuesta y la fila ICAP.",
+      "example": "Concreta el DUA en tres gestos: el enunciado se escucha además de leerse (audio grabado por el docente o por otra pareja), lleva pictogramas en las palabras clave, y cada pareja puede responder grabando, escribiendo o dibujando. No es una adaptación para un alumno: es un diseño que sirve a todo el grupo (CAST, 2024)."
     },
     {
       "id": "tool1",
@@ -387,46 +390,78 @@
       "do": "Señala el escalón más votado por la sala y después el que se ilumina (Constructivo).",
       "bridge": "«ICAP mira al alumnado; PICRAT mira también a la tecnología».",
       "cut": "Solo el salto Activo → Constructivo.",
-      "highlight": 2
+      "highlight": 2,
+      "src": {
+        "es": "Síntesis de estudios de laboratorio y de aula",
+        "en": "Synthesis of lab and classroom studies"
+      },
+      "example": "«Mismo tema, la fotosíntesis, cuatro niveles: ver un vídeo (pasivo); subrayar el texto (activo); dibujar un esquema propio y explicarlo (constructivo); explicárselo a un compañero que te lleva la contraria y llegar a un esquema común (interactivo)». Conecta con la votación: «La mayoría habéis votado X; en la escalera está aquí»."
     },
     {
       "id": "picrat",
       "block": "b2",
       "at": 14,
-      "type": "compare",
+      "cite": "picrat",
+      "key": "Todas las casillas pueden ser legítimas; la matriz sirve para ver quién está pensando.",
+      "notes": "Kimmons, Graham y West (2020) diseñaron PICRAT para la formación inicial del profesorado, como alternativa más clara a SAMR (que solo mira la herramienta y tiene escasa base empírica: Hamilton et al., 2016). Son dos preguntas y cada actividad cae en una casilla de una matriz de 3 × 3. Todas las casillas pueden ser legítimas: la matriz sirve para ver quién está pensando.",
+      "data": "Kimmons et al. (2020), CITE Journal, 20(1), 176–198. Crítica a SAMR: Hamilton, Rosenberg y Akcaoglu (2016), TechTrends, 60(5).",
+      "do": "Señala primero la columna del alumnado y después la del docente.",
+      "bridge": "«Con estas dos lentes, miremos un caso de Historia».",
+      "cut": "No menciones SAMR.",
+      "type": "columns",
       "title": {
         "es": "PICRAT: dos preguntas",
         "en": "PICRAT: two questions"
       },
-      "items": [
+      "cols": [
         {
-          "label": {
-            "es": "Alumnado",
-            "en": "Students"
+          "icon": "person",
+          "q": {
+            "es": "¿Qué hace el alumnado con la tecnología?",
+            "en": "What do students do with technology?"
           },
-          "text": {
-            "es": "Pasivo, interactivo o creativo",
-            "en": "Passive, interactive or creative"
-          }
+          "items": [
+            {
+              "es": "Pasivo: la consume",
+              "en": "Passive: consumes"
+            },
+            {
+              "es": "Interactivo: la manipula",
+              "en": "Interactive: manipulates"
+            },
+            {
+              "es": "Creativo: produce algo nuevo",
+              "en": "Creative: produces something new"
+            }
+          ]
         },
         {
-          "label": {
-            "es": "Tecnología",
-            "en": "Technology"
+          "icon": "co_present",
+          "q": {
+            "es": "¿Qué cambia en tu práctica?",
+            "en": "What changes in your practice?"
           },
-          "text": {
-            "es": "Reemplaza, amplifica o transforma",
-            "en": "Replaces, amplifies or transforms"
-          }
+          "items": [
+            {
+              "es": "Reemplaza: lo mismo, otro soporte",
+              "en": "Replaces: same, new medium"
+            },
+            {
+              "es": "Amplifica: lo mismo, mejor",
+              "en": "Amplifies: same, better"
+            },
+            {
+              "es": "Transforma: algo antes imposible",
+              "en": "Transforms: something impossible before"
+            }
+          ]
         }
       ],
-      "cite": "picrat",
-      "key": "Todas las casillas pueden ser legítimas; la matriz sirve para ver quién está pensando.",
-      "notes": "Kimmons, Graham y West (2020). Dos preguntas: ¿qué relación tiene el alumnado con la tecnología? y ¿qué le hace la tecnología a tu práctica? Frente a SAMR, que solo mira la herramienta y tiene escasa base empírica (Hamilton et al., 2016), PICRAT obliga a mirar al alumnado. No se trata de llegar siempre a la esquina «Creativo-Transforma».",
-      "data": "Kimmons et al. (2020), CITE Journal, 20(1), 176–198. Crítica a SAMR: Hamilton, Rosenberg y Akcaoglu (2016), TechTrends, 60(5).",
-      "do": "Dibuja en el aire la matriz 3 × 3 con las manos.",
-      "bridge": "«Con estas dos lentes, miremos un caso de Historia».",
-      "cut": "No menciones SAMR."
+      "src": {
+        "es": "Modelo creado para la formación inicial del profesorado",
+        "en": "Model created for initial teacher education"
+      },
+      "example": "«Proyectar un PDF en la pizarra digital: Pasivo-Reemplaza (es el libro en grande). Un cuestionario en la tablet que se corrige solo: Interactivo-Amplifica (lo mismo que en papel, pero con corrección inmediata). Que el alumnado grabe un pódcast entrevistando a su abuela sobre cómo era el barrio: Creativo-Transforma (sin tecnología no podrían publicarlo ni compararlo con otros barrios)»."
     },
     {
       "id": "caso2",
@@ -438,22 +473,26 @@
         "en": "Lower secondary · History · Year 8"
       },
       "title": {
-        "es": "La línea temporal del docente",
-        "en": "The teacher's timeline"
+        "es": "La línea temporal ya hecha",
+        "en": "The ready-made timeline"
       },
       "text": {
-        "es": "El docente monta la línea temporal en un muro digital. El alumnado **la recorre** y responde preguntas.",
-        "en": "The teacher builds the timeline on a digital wall. Students **browse it** and answer closed questions."
+        "es": "El docente cuelga en el muro la línea temporal con fechas e imágenes. El alumnado **la recorre** y contesta un cuestionario.",
+        "en": "The teacher posts the timeline with dates and images. Students **browse it** and answer a quiz."
       },
       "ask": {
-        "es": "¿Quién ha hecho el pensamiento?",
-        "en": "Who did the thinking?"
+        "es": "¿Cómo devolvemos el pensamiento histórico al alumnado?",
+        "en": "How do we give historical thinking back to students?"
       },
       "key": "Quien seleccionó, ordenó y relacionó los hechos fue el docente: el alumnado solo los recorre.",
-      "notes": "Ejemplo de aula. Respuesta esperada: el docente. En ICAP: activo (recorre y responde). En PICRAT: interactivo-reemplaza (el muro sustituye al libro). Es la tarea típica que «parece» innovadora porque usa una herramienta vistosa.",
+      "notes": "Ejemplo de aula: es la tarea que «parece» innovadora porque usa una herramienta vistosa, pero quien seleccionó, ordenó y relacionó los hechos fue el docente. Vale para cualquier materia: el mapa conceptual que hace el profesor, el esquema de Biología ya rellenado, la línea del tiempo de los compositores. En ICAP: activo. En PICRAT: interactivo-reemplaza.",
       "do": "Espera la respuesta «el docente» de la sala.",
       "bridge": "«¿Cómo le devolvemos el pensamiento al alumnado?».",
-      "cut": "Pregunta y responde tú."
+      "cut": "Pregunta y responde tú.",
+      "context": {
+        "es": "2.º de ESO · Historia · Edad Media · muro digital",
+        "en": "Year 8 · History · Middle Ages · digital wall"
+      }
     },
     {
       "id": "mejora2",
@@ -470,13 +509,15 @@
       },
       "analysis": [
         {
+          "icon": "stairs",
           "k": "ICAP",
           "v": {
-            "es": "Activo → Interactivo",
-            "en": "Active → Interactive"
+            "es": "Activo → Interactivo: debaten",
+            "en": "Active → Interactive: they debate"
           }
         },
         {
+          "icon": "grid_view",
           "k": "PICRAT",
           "v": {
             "es": "Reemplaza → Transforma",
@@ -484,12 +525,20 @@
           }
         },
         {
+          "icon": "key",
           "k": "Claves",
-          "v": "2 · 7"
+          "v": {
+            "es": "2 Construir · 7 Ética y fuentes",
+            "en": "2 Build · 7 Ethics and sources"
+          }
         },
         {
+          "icon": "school",
           "k": "MRCDD",
-          "v": "6.1 · 3.3"
+          "v": {
+            "es": "6.1 Información y datos · 3.3 Entre iguales",
+            "en": "6.1 Information and data · 3.3 Peer learning"
+          }
         }
       ],
       "cite": "knowledge-building",
@@ -497,7 +546,8 @@
       "notes": "Misma herramienta, otro pensamiento. Scardamalia y Bereiter: del «modo creencia» (aceptar lo dado) al «modo diseño» (mejorar ideas en comunidad). Andamios de lenguaje: «Nuestra hipótesis es…», «Os falta…», «Antes pensábamos… y ahora pensamos…». MRCDD 6.1: el alumnado selecciona y evalúa fuentes, competencia digital de verdad.",
       "do": "Lee los tres andamios de lenguaje en voz alta: es lo que más se apunta.",
       "bridge": "«Herramientas para construir en equipo».",
-      "cut": "Lee la propuesta y la fila PICRAT."
+      "cut": "Lee la propuesta y la fila PICRAT.",
+      "example": "Ejemplo de hipótesis causal que pueden defender: «Las ciudades medievales crecieron por el comercio» frente a «crecieron por la seguridad de las murallas». Cada equipo busca dos fuentes que apoyen la suya y una que la complique. Andamios de lenguaje: «Nuestra hipótesis es…», «Os falta…», «Antes pensábamos… y ahora pensamos…»."
     },
     {
       "id": "tool2",
@@ -569,7 +619,12 @@
       "data": "Kirschner, P. A., y De Bruyckere, P. (2017). Teaching and Teacher Education, 67, 135–142.",
       "do": "Pregunta a la sala: «¿Quién ha visto a un alumno con veinte pestañas abiertas «estudiando»?».",
       "bridge": "«Y la distracción no es solo individual: se contagia».",
-      "cut": "Salta la pregunta a la sala."
+      "cut": "Salta la pregunta a la sala.",
+      "src": {
+        "es": "Revisión de la evidencia sobre «nativos digitales» y multitarea",
+        "en": "Review of the evidence on «digital natives» and multitasking"
+      },
+      "example": "«Haced la prueba: contad del 1 al 10 en voz alta y, a la vez, recitad el abecedario. Ahora, alternando: 1, A, 2, B, 3, C… Cuesta más y se tarda más. El cerebro no hace dos cosas a la vez: cambia de una a otra, y cada cambio cuesta». Y sobre los nativos digitales: «Que un alumno sepa usar TikTok no significa que sepa buscar una fuente fiable, igual que saber conducir no te hace mecánico»."
     },
     {
       "id": "distraccion",
@@ -578,16 +633,21 @@
       "type": "big",
       "number": "−11",
       "text": {
-        "es": "puntos en Matemáticas por cada desviación de distracción entre compañeros. **Prohibir el móvil no cambió** la asociación.",
-        "en": "maths points per standard deviation of peer distraction. **Phone bans did not change** the association."
+        "es": "puntos en Matemáticas en los centros donde los compañeros se distraen más con pantallas. **Con o sin prohibición del móvil**.",
+        "en": "maths points in schools where classmates are more distracted by screens. **With or without a phone ban**."
       },
       "cite": "sung-distraccion",
       "key": "La atención es un clima compartido: se gestiona con diseño didáctico, no solo con normas sobre el papel.",
-      "notes": "Estudio con datos de PISA 2022 en 80 sistemas educativos. Cada desviación típica de distracción digital entre compañeros del centro se asocia con 11,31 puntos menos en Matemáticas, y las prohibiciones del móvil no modificaron significativamente esa asociación. Insiste en el rigor: es observacional, asociación y no causa.",
+      "notes": "Sung y colaboradores (2026) usaron los datos de PISA 2022. Para cada centro midieron cuánto dicen los estudiantes que se distraen con los dispositivos de sus compañeros en clase. Cuanto más alto ese «clima de distracción», peores resultados: 11,31 puntos menos en Matemáticas por cada desviación típica de distracción dentro de cada país (y 1,19 puntos menos en pensamiento creativo). Lo llamativo: en los centros con prohibición del móvil la relación es la misma. Es un estudio observacional: muestra asociación, no causa.",
       "data": "Sung et al. (2026). Journal of Global Health, 16, 04351: −11,31 puntos en Matemáticas y −1,19 en pensamiento creativo por desviación típica intrapaís; interacción con prohibiciones no significativa.",
       "do": "Di explícitamente «asociación, no causa»: da credibilidad.",
       "bridge": "«Veamos un caso de Bachillerato».",
-      "cut": "Quédate solo con la frase clave."
+      "cut": "Quédate solo con la frase clave.",
+      "src": {
+        "es": "PISA 2022 · 613 744 estudiantes de 15 años · 80 sistemas educativos",
+        "en": "PISA 2022 · 613,744 15-year-olds · 80 education systems"
+      },
+      "example": "«Pensad en dos institutos parecidos. En el A, pocos alumnos dicen que se distraen con las pantallas de los demás; en el B, muchos. El B saca de media unos 11 puntos menos en Matemáticas por cada escalón de distracción. Y aquí viene lo interesante: da igual que el B tenga el móvil prohibido en el reglamento. Lo que importa no es la norma escrita, sino cómo se gestiona la atención en el aula: cuándo hay pantallas, para qué, y cuándo se cierran». Para dar escala: PISA se diseñó con media 500 y desviación 100."
     },
     {
       "id": "caso3",
@@ -599,22 +659,26 @@
         "en": "Upper secondary · Biology · Year 12"
       },
       "title": {
-        "es": "Aula invertida con vídeo largo",
+        "es": "Aula invertida con un vídeo largo",
         "en": "Flipped class with a long video"
       },
       "text": {
-        "es": "Vídeo de **25 minutos** en casa. En clase se repite la explicación con los portátiles abiertos.",
-        "en": "A **25-minute** video at home. In class the explanation is repeated with laptops open."
+        "es": "En casa, un vídeo de **25 minutos**. En clase, el docente vuelve a explicarlo y el alumnado toma apuntes con el portátil abierto.",
+        "en": "At home, a **25-minute** video. In class, the teacher explains it again while students take notes on open laptops."
       },
       "ask": {
-        "es": "¿Dónde se pierde la atención?",
-        "en": "Where is attention lost?"
+        "es": "¿Cómo diseñamos la clase para que la atención trabaje a favor?",
+        "en": "How do we design the lesson so attention works for us?"
       },
       "key": "Se ha invertido el formato, no el pensamiento: vídeo pasivo en casa y clase pasiva con pantallas que compiten.",
-      "notes": "Ejemplo de aula. Problemas: vídeo largo y pasivo (carga cognitiva, Mayer), clase que repite en lugar de trabajar, portátiles abiertos que distraen a todo el grupo (el estudio PISA de antes).",
+      "notes": "Ejemplo de aula: se ha invertido el formato, no el pensamiento. Tres problemas: el vídeo largo y pasivo satura la memoria de trabajo (Mayer); la clase repite en lugar de trabajar; y los portátiles abiertos compiten por la atención de todo el grupo (el estudio PISA de antes).",
       "do": "Pregunta a alguien de Bachillerato o Ciencias.",
       "bridge": "«La investigación sobre aula invertida da la pista».",
-      "cut": "Señala los tres problemas tú."
+      "cut": "Señala los tres problemas tú.",
+      "context": {
+        "es": "1.º de Bachillerato · Biología · la célula",
+        "en": "Year 12 · Biology · the cell"
+      }
     },
     {
       "id": "mejora3",
@@ -622,15 +686,16 @@
       "at": 24,
       "type": "improve",
       "title": {
-        "es": "Microvídeos y clase **a partir de los errores**",
-        "en": "Micro-videos and class **built on mistakes**"
+        "es": "Vídeos cortos y clase **a partir de los errores**",
+        "en": "Short videos and class **built on mistakes**"
       },
       "text": {
-        "es": "Microvídeos con dos preguntas. En clase se trabajan los errores en parejas: pantallas arriba o abajo.",
-        "en": "Micro-videos with two questions. In class, pairs start from mistakes: screens up to research, down to discuss."
+        "es": "Tres vídeos de 4 minutos con preguntas dentro. En clase, las parejas trabajan sus errores en dos tiempos:",
+        "en": "Three 4-minute videos with questions inside. In class, pairs work on their mistakes in two phases:"
       },
       "analysis": [
         {
+          "icon": "stairs",
           "k": "ICAP",
           "v": {
             "es": "Pasivo → Constructivo",
@@ -638,25 +703,50 @@
           }
         },
         {
-          "k": "Evidencia",
-          "v": "g = 0,50"
-        },
-        {
+          "icon": "key",
           "k": "Claves",
-          "v": "3 · 4"
+          "v": {
+            "es": "3 Atención · 4 Feedback",
+            "en": "3 Attention · 4 Feedback"
+          }
         },
         {
+          "icon": "school",
           "k": "MRCDD",
-          "v": "6.4 · 3.4"
+          "v": {
+            "es": "6.4 Bienestar digital · 3.4 Autorregulación",
+            "en": "6.4 Digital wellbeing · 3.4 Self-regulation"
+          }
         }
       ],
       "cite": "strelan",
       "key": "El aula invertida funciona por lo que se hace en clase: aprendizaje activo y estructurado, no por el vídeo.",
-      "notes": "Strelan, Osborn y Palmer (2020): 198 estudios, efecto moderado (g = 0,50); el factor principal es la oportunidad de aprendizaje activo y estructurado en clase. Mayer (2024): vídeos breves, sin texto redundante, con preguntas generativas. Rutina visible de pantallas: protege la atención compartida (MRCDD 6.4, bienestar digital).",
-      "data": "Strelan et al. (2020), Educational Research Review, 30, 100314. Mayer (2024), Educational Psychology Review, 36.",
+      "notes": "Strelan, Osborn y Palmer (2020): 198 estudios y 33 678 estudiantes; el aula invertida tiene un efecto moderado (g = 0,50) y lo que más lo explica es el tiempo de clase dedicado a aprendizaje activo y estructurado, no el vídeo. Mayer (2024): vídeos breves, sin texto redundante, con preguntas que obligan a explicar. La rutina de pantallas abiertas o cerradas hace visible cuándo se usa el portátil y cuándo no, y protege la atención de todo el grupo (MRCDD 6.4, bienestar digital).",
+      "data": "Strelan et al. (2020), Educational Research Review, 30, 100314: 198 estudios, 33 678 estudiantes, g = 0,50. Mayer (2024), Educational Psychology Review, 36.",
       "do": "Haz el gesto de «pantallas arriba / pantallas abajo».",
       "bridge": "«¿Con qué herramientas?».",
-      "cut": "Lee la propuesta y el dato g = 0,50."
+      "cut": "Lee la propuesta y el dato g = 0,50.",
+      "loop": [
+        {
+          "icon": "laptop_chromebook",
+          "label": {
+            "es": "Pantallas abiertas: investigar",
+            "en": "Screens open: research"
+          }
+        },
+        {
+          "icon": "forum",
+          "label": {
+            "es": "Pantallas cerradas: debatir",
+            "en": "Screens closed: discuss"
+          }
+        }
+      ],
+      "example": "«En Biología: primero, 10 minutos con el portátil abierto para buscar por qué la célula vegetal tiene pared y la animal no. Después, “tapas abajo”: cada pareja explica su respuesta a otra sin mirar la pantalla. El gesto de bajar la tapa es la señal visible de que toca pensar y hablar». El g = 0,50 significa que el alumno medio del aula invertida supera aproximadamente al 69 % del grupo con clase tradicional.",
+      "src": {
+        "es": "Aula invertida: 198 estudios · g = 0,50",
+        "en": "Flipped class: 198 studies · g = 0.50"
+      }
     },
     {
       "id": "tool3",
@@ -725,7 +815,12 @@
       "data": "Bastani, H., et al. (2025). PNAS, 122(26), e2422633122.",
       "do": "Deja que el número termine de contar y haz una pausa larga.",
       "bridge": "«¿Por qué pasa esto? Tiene nombre: pereza metacognitiva».",
-      "cut": "Quédate con número + frase clave."
+      "cut": "Quédate con número + frase clave.",
+      "src": {
+        "es": "Experimento con casi mil estudiantes de Matemáticas de secundaria",
+        "en": "Experiment with almost a thousand secondary maths students"
+      },
+      "example": "«Es como aprender a montar en bici siempre con ruedines: en el parque vas fenomenal, pero el día que te los quitan te caes más que quien practicó sin ellos. Y si los ruedines solo te ayudan cuando de verdad te vas a caer (el tutor que da pistas), aprendes a mantener el equilibrio». Contrasta con la predicción de la sala: quien votó «dependerá de cómo usen la IA» acertó."
     },
     {
       "id": "pereza",
@@ -746,7 +841,12 @@
       "data": "Fan, Y., et al. (2025). British Journal of Educational Technology, 56(2), 489–530. Sánchez Mendiola (2025), Investigación en Educación Médica, 14(56).",
       "do": "Pregunta: «¿Os suena un trabajo impecable de alguien que luego no sabe explicarlo?».",
       "bridge": "«Veamos un caso de la Escuela de Idiomas».",
-      "cut": "Sin la pregunta a la sala."
+      "cut": "Sin la pregunta a la sala.",
+      "src": {
+        "es": "Experimento aleatorizado con 117 universitarios",
+        "en": "Randomised experiment with 117 university students"
+      },
+      "example": "«Como el GPS: si siempre lo usas, llegas a todas partes pero no aprendes el camino. El texto mejora, pero lo que el estudiante sabe y es capaz de transferir no cambia». Fan et al. (2025): el grupo con ChatGPT mejoró más la nota del texto, pero no ganó más conocimiento ni transferencia."
     },
     {
       "id": "caso4",
@@ -762,18 +862,22 @@
         "en": "The homework essay"
       },
       "text": {
-        "es": "«Write 150 words about your holidays». Llegan textos **impecables** de quien en clase no hace esa frase.",
-        "en": "«Write 150 words about your holidays». **Flawless** texts from learners who cannot say that in class."
+        "es": "«Write 150 words about your holidays». Llegan textos **impecables** de quien en clase no consigue hacer esa frase (y en clase no son tan impecables).",
+        "en": "«Write 150 words about your holidays». **Flawless** texts arrive from learners who cannot produce that sentence in class (where they are far from flawless)."
       },
       "ask": {
-        "es": "¿Qué ha aprendido quien la entregó?",
+        "es": "¿Qué ha aprendido el estudiante?",
         "en": "What has the learner learned?"
       },
       "key": "Si la tarea se puede delegar en una IA, el producto ya no demuestra aprendizaje.",
       "notes": "Ejemplo de aula muy reconocible en idiomas. Es exactamente el «efecto muleta» de Bastani y la «pereza metacognitiva» de Fan: mejor producto, igual aprendizaje.",
       "do": "Pregunta si a alguien le ha pasado ya en prácticas.",
       "bridge": "«No se trata de prohibir, sino de diseñar fricción».",
-      "cut": "Pregunta y responde tú."
+      "cut": "Pregunta y responde tú.",
+      "context": {
+        "es": "Escuela Oficial de Idiomas · Inglés B1 · tarea escrita",
+        "en": "Official Language School · English B1 · writing task"
+      }
     },
     {
       "id": "mejora4",
@@ -790,6 +894,7 @@
       },
       "analysis": [
         {
+          "icon": "stairs",
           "k": "ICAP",
           "v": {
             "es": "Constructivo → Interactivo",
@@ -797,6 +902,7 @@
           }
         },
         {
+          "icon": "smart_toy",
           "k": "IA",
           "v": {
             "es": "Responde → Pregunta",
@@ -804,12 +910,20 @@
           }
         },
         {
+          "icon": "key",
           "k": "Claves",
-          "v": "6 · 4"
+          "v": {
+            "es": "6 IA con fricción · 4 Feedback",
+            "en": "6 AI with friction · 4 Feedback"
+          }
         },
         {
+          "icon": "school",
           "k": "MRCDD",
-          "v": "3.4 · 4.1"
+          "v": {
+            "es": "3.4 Autorregulación · 4.1 Evaluación",
+            "en": "3.4 Self-regulation · 4.1 Assessment"
+          }
         }
       ],
       "cite": "mollick",
@@ -817,7 +931,8 @@
       "notes": "Mollick y Mollick (2023): asignar a la IA un rol (tutor, interlocutor, alumno que se equivoca) mantiene al estudiante al mando. En el banco de prompts hay un «Tutor de idiomas» y «La IA como alumno que se equivoca». Evaluar evidencias de proceso: el registro de la conversación, los borradores y una defensa oral breve (Sánchez Mendiola, 2025).",
       "do": "Si hay wifi, abre el prompt «Tutor de idiomas» 20 segundos.",
       "bridge": "«Herramientas para hacerlo».",
-      "cut": "Lee la propuesta y la fila IA."
+      "cut": "Lee la propuesta y la fila IA.",
+      "example": "«En vez de 150 palabras escritas en casa: el estudiante manda un mensaje de voz de un minuto a un compañero contándole sus vacaciones; el compañero responde con dos preguntas; el primero responde reformulando. Se evalúa la conversación grabada. Una IA puede escribir una redacción, pero no puede mantener por ti una conversación con tu compañero de clase»."
     },
     {
       "id": "tool4",
@@ -867,7 +982,8 @@
       "data": "Reglamento (UE) 2024/1689, art. 4. RGPD y LOPDGDD (Ley Orgánica 3/2018).",
       "do": "Dilo en tono serio y breve.",
       "bridge": "«Último bloque: evaluar para aprender».",
-      "cut": "Solo la frase clave."
+      "cut": "Solo la frase clave.",
+      "example": "«Correcto: “un alumno de 3.º con dislexia que se pierde en los enunciados largos”. Incorrecto: el nombre, la nota, el informe psicopedagógico o una foto. Si no lo pondrías en un tablón del pasillo, no lo pongas en una IA»."
     },
     {
       "id": "sec5",
@@ -920,7 +1036,12 @@
       "data": "Hattie, J., y Timperley, H. (2007). Review of Educational Research, 77(1). Carless, D., y Boud, D. (2018). Assessment & Evaluation in Higher Education, 43(8).",
       "do": "Cuenta las tres preguntas con los dedos.",
       "bridge": "«Un caso de Conservatorio».",
-      "cut": "Solo la frase y las tres preguntas."
+      "cut": "Solo la frase y las tres preguntas.",
+      "src": {
+        "es": "Revisión de la investigación sobre retroalimentación",
+        "en": "Review of research on feedback"
+      },
+      "example": "«Un “7, bien” no responde a ninguna de las tres preguntas. “Tu argumento es claro (cómo voy); te falta un dato que lo apoye (adónde voy); busca uno y reescribe el segundo párrafo antes del viernes (qué hago después)” responde a las tres, y además da tiempo para usarlo»."
     },
     {
       "id": "caso5",
@@ -936,18 +1057,22 @@
         "en": "«Play it like the video»"
       },
       "text": {
-        "es": "El alumnado imita una grabación y recibe las correcciones **al final**, de palabra.",
-        "en": "Students imitate a recording and get corrections **at the end**, orally."
+        "es": "El alumnado imita una grabación de referencia. Las correcciones llegan **al final**, de palabra, y a la semana siguiente se han olvidado.",
+        "en": "Students imitate a reference recording. Corrections come **at the end**, orally, and are forgotten by the next week."
       },
       "ask": {
-        "es": "¿Qué decide el alumno?",
-        "en": "What does the student decide?"
+        "es": "¿Cómo convertimos la corrección en algo que el alumno use?",
+        "en": "How do we turn correction into something the student uses?"
       },
       "key": "Imitar sin decidir y recibir correcciones que se olvidan: poco juicio propio y poca autorregulación.",
-      "notes": "Ejemplo de aula. En ICAP: activo (imita). El feedback llega tarde, es oral y no queda registro para comparar.",
+      "notes": "Ejemplo de aula. Vale para cualquier materia con producción oral o práctica: exposiciones, lectura en voz alta, Educación Física. En ICAP: activo (imita). El feedback llega tarde, es oral y no queda registro para comparar.",
       "do": "Pregunta a alguien de Conservatorio o Música.",
       "bridge": "«La grabación como espejo».",
-      "cut": "Pregunta y responde tú."
+      "cut": "Pregunta y responde tú.",
+      "context": {
+        "es": "Conservatorio · enseñanzas profesionales · piano",
+        "en": "Conservatoire · professional level · piano"
+      }
     },
     {
       "id": "mejora5",
@@ -964,6 +1089,7 @@
       },
       "analysis": [
         {
+          "icon": "stairs",
           "k": "ICAP",
           "v": {
             "es": "Activo → Constructivo",
@@ -971,19 +1097,28 @@
           }
         },
         {
+          "icon": "rate_review",
           "k": "Feedback",
           "v": {
-            "es": "Tarea → Proceso",
-            "en": "Task → Process"
+            "es": "De la tarea al proceso",
+            "en": "From task to process"
           }
         },
         {
+          "icon": "key",
           "k": "Claves",
-          "v": "4 · 2"
+          "v": {
+            "es": "4 Feedback · 2 Construir",
+            "en": "4 Feedback · 2 Build"
+          }
         },
         {
+          "icon": "school",
           "k": "MRCDD",
-          "v": "4.3 · 3.4"
+          "v": {
+            "es": "4.3 Retroalimentación · 3.4 Autorregulación",
+            "en": "4.3 Feedback · 3.4 Self-regulation"
+          }
         }
       ],
       "cite": "feedback-literacy",
@@ -991,7 +1126,8 @@
       "notes": "La grabación es una herramienta de autorregulación magnífica (MRCDD 3.4). La rúbrica compartida desde el principio entrena el juicio evaluativo (Carless y Boud). Comparar tres grabaciones de referencia y defender una interpretación propia pasa de imitar a decidir. MRCDD 4.3: retroalimentación y toma de decisiones.",
       "do": "Pregunta: «¿Quién se ha grabado alguna vez y se ha sorprendido?».",
       "bridge": "«Herramientas para hacerlo».",
-      "cut": "Lee la propuesta y la fila Feedback."
+      "cut": "Lee la propuesta y la fila Feedback.",
+      "example": "«Semana 1: me grabo con el móvil. Semana 4: me vuelvo a grabar. Escucho las dos con la rúbrica en la mano y anoto tres cosas que han cambiado y una que no. Mi compañero escucha la semana 4 y me deja un comentario con la plantilla “funciona / una pregunta / un siguiente paso”». Funciona igual para una exposición oral, la lectura en voz alta en Primaria o la pronunciación en idiomas."
     },
     {
       "id": "tool5",

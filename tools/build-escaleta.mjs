@@ -38,6 +38,13 @@ const visible = (/** @type {any} */ s, /** @type {'es' | 'en'} */ l) => {
   if (s.type === 'vote') add(votes[s.vote].question);
   if (s.type === 'prepost') parts.push(l === 'es' ? 'Antes Después' : 'Before After');
   add(s.where);
+  add(s.context);
+  for (const c of s.cols ?? []) {
+    add(c.q);
+    for (const it of c.items) add(it);
+  }
+  for (const x of s.show ?? []) add(x.text);
+  for (const x of s.loop ?? []) add(x.label);
   add(s.ask);
   for (const a of s.analysis ?? []) parts.push(a.k, typeof a.v === 'string' ? a.v : a.v[l]);
   for (const id of s.tools ?? []) parts.push(id);
@@ -65,6 +72,7 @@ GENERADO por \`tools/build-escaleta.mjs\` desde \`content/presentacion.json\`. P
 - Teclas: → / Av Pág / espacio (siguiente) · ← / Re Pág (anterior) · Inicio/Fin · B o . (pantalla negra) · F (pantalla completa) · N (abrir notas) · T (reiniciar cronómetro) · número + Intro (ir a esa diapositiva).
 - Votaciones: v1–v4 (ver \`docs/votaciones.md\`). Sin conexión, la diapositiva propone votar a mano alzada.
 - Hilo conductor: *¿Qué tiene que pensar el alumno ahora que antes no pensaba?*
+- Estudios explicados para contarlos: \`docs/estudios-ponente.md\` (y PDF en el Panel del ponente). Cada diapositiva de teoría tiene en las notas un «Ejemplo para defenderlo».
 
 ## Escaleta en una página
 
@@ -89,7 +97,8 @@ for (const b of deck.blocks) {
     const words = count(visible(s, 'es'));
     const wordsEn = count(visible(s, 'en'));
     // Casos y mejoras se comentan con la sala: admiten algo más de texto.
-    const limit = s.type === 'case' ? 30 : s.type === 'improve' ? 36 : 20;
+    // Casos, mejoras y columnas se comentan con la sala; la votación con tareas lleva su contexto.
+    const limit = s.type === 'case' ? 52 : s.type === 'improve' ? 56 : s.type === 'columns' ? 44 : s.show ? 50 : 20;
     if (words > limit) problems.push(`${s.id}: ${words} palabras (es)`);
     if (wordsEn > limit) problems.push(`${s.id}: ${wordsEn} palabras (en)`);
     for (const k of REQUIRED) if (!s[k] && !(k === 'bridge' && i === deck.slides.length - 1)) problems.push(`${s.id}: falta «${k}» en las notas`);
@@ -97,6 +106,7 @@ for (const b of deck.blocks) {
     if (s.type !== 'title' && s.type !== 'vote') md += `> En pantalla: ${visible(s, 'es').join(' · ')}\n\n`;
     if (s.key) md += `**Idea fuerza:** ${s.key}\n\n`;
     md += `${s.notes}\n\n`;
+    if (s.example) md += `- **Ejemplo para defenderlo:** ${s.example}\n`;
     if (s.do) md += `- **Haz:** ${s.do}\n`;
     if (s.data) md += `- **Dato y fuente:** ${s.data}\n`;
     if (s.bridge) md += `- **Transición:** *${s.bridge}*\n`;

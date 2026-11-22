@@ -243,7 +243,9 @@
     "app.newTab": "se abre en una pestaña nueva",
     "slides.example": "Ejemplo de aula",
     "slides.improve": "Propuesta de mejora",
-    "slides.tool": "Herramientas"
+    "slides.tool": "Herramientas",
+    "slides.example2": "Ejemplo para defenderlo",
+    "speaker.estudios": "Guía de estudios (PDF)"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -489,6 +491,8 @@
     "app.newTab": "opens in a new tab",
     "slides.example": "Classroom example",
     "slides.improve": "Improvement",
-    "slides.tool": "Tools"
+    "slides.tool": "Tools",
+    "slides.example2": "Example to back it up",
+    "speaker.estudios": "Studies guide (PDF, Spanish)"
   }
 }
