@@ -31,6 +31,7 @@ const RENDER = {
   buscar: () => import('./search.js').then((m) => m.renderSearch()),
   ia: () => import('./prompts.js').then((m) => m.renderPrompts()),
   plantilla: () => import('./socratic.js').then((m) => m.renderSocratic()),
+  ponente: () => import('./speaker.js').then((m) => m.renderPonente()),
 };
 
 /** Pinta el contenido de la sección actual (si lo tiene). */

@@ -39,13 +39,13 @@ const icon = (name) => `<span class="icon" aria-hidden="true">${name}</span>`;
  * @param {string} rel
  */
 const navItem = (r, current, rel) =>
-  `<a class="nav-item" href="${rel}${r.path}"${r.id === current ? ' aria-current="page"' : ''}><span class="indicator">${icon(r.icon)}</span><span class="label" data-i18n="route.${r.id}.short">${tx(`route.${r.id}.short`)}</span></a>`;
+  `<a class="nav-item" href="${rel}${r.path}"${r.id === current ? ' aria-current="page"' : ''}${r.speaker ? ' data-speaker-only' : ''}><span class="indicator">${icon(r.icon)}</span><span class="label" data-i18n="route.${r.id}.short">${tx(`route.${r.id}.short`)}</span></a>`;
 
 /** Módulos que importa app.js (modulepreload evita la cadena de peticiones). */
 const NL = '\n';
 const CORE = ['i18n', 'router', 'ui', 'a11y', 'content', 'pwa'];
 /** @type {Record<string, string[]>} */
-const ROUTE_MODULES = { buscar: ['search'], ia: ['prompts', 'profile', 'ai'], plantilla: ['socratic', 'ai'] };
+const ROUTE_MODULES = { buscar: ['search'], ia: ['prompts', 'profile', 'ai'], plantilla: ['socratic', 'ai'], ponente: ['speaker'] };
 /** @param {string} id */
 const modulesFor = (id) => [...CORE, ...(ROUTE_MODULES[id] ?? ['sections', 'profile'])];
 
@@ -59,7 +59,7 @@ const mainContent = (/** @type {import('../js/types').Route} */ route, /** @type
       .filter((r) => r.id !== 'inicio')
       .map(
         (r) => `
-          <a class="card card-elevated interactive" href="${rel}${r.path}">
+          <a class="card card-elevated interactive" href="${rel}${r.path}"${r.speaker ? ' data-speaker-only' : ''}>
             <span class="card-header"><span class="card-icon">${icon(r.icon)}</span><span class="title-medium" data-i18n="route.${r.id}">${tx(`route.${r.id}`)}</span></span>
           </a>`,
       )
@@ -149,6 +149,7 @@ ${modulesFor(route.id).map((m) => `  <link rel="modulepreload" href="${rel}js/${
     <footer class="site-footer">
       <p>© ${site.year} ${esc(site.author)} · <span data-i18n="footer.licensePre">${tx('footer.licensePre')}</span> <a href="${site.licenseContentUrl}" rel="license" data-i18n="footer.license">${tx('footer.license')}</a> · <span data-i18n="footer.claude">${tx('footer.claude')}</span></p>
       <p><span data-i18n="footer.cep">${tx('footer.cep')}</span> <a href="${site.cepUrl}" data-i18n="footer.cepLink">${tx('footer.cepLink')}</a> <span data-i18n="footer.cepAfter">${tx('footer.cepAfter')}</span></p>
+      <p><a href="${rel}ponente/" data-i18n="speaker.footer">${tx('speaker.footer')}</a></p>
       <p><span data-i18n="footer.arasaacPre">${tx('footer.arasaacPre')}</span> <a href="${site.arasaacUrl}">ARASAAC</a>. <span data-i18n="footer.arasaacLic">${tx('footer.arasaacLic')}</span> <a href="${site.licenseArasaacUrl}">CC BY-NC-SA 4.0</a> <span data-i18n="footer.arasaacNote">${tx('footer.arasaacNote')}</span> <span data-i18n="footer.icons">${tx('footer.icons')}</span></p>
     </footer>
 
@@ -168,7 +169,7 @@ ${modulesFor(route.id).map((m) => `  <link rel="modulepreload" href="${rel}js/${
         ${routes
           .map(
             (r) =>
-              `<li><a class="drawer-item interactive" href="${rel}${r.path}"${r.id === route.id ? ' aria-current="page"' : ''}>${icon(r.icon)}<span data-i18n="route.${r.id}">${tx(`route.${r.id}`)}</span></a></li>`,
+              `<li${r.speaker ? ' data-speaker-only' : ''}><a class="drawer-item interactive" href="${rel}${r.path}"${r.id === route.id ? ' aria-current="page"' : ''}>${icon(r.icon)}<span data-i18n="route.${r.id}">${tx(`route.${r.id}`)}</span></a></li>`,
           )
           .join('\n        ')}
       </ul>

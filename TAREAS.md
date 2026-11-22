@@ -244,6 +244,17 @@ Depende de: Fases 1–5.
 - [x] 7.5 Prompts con desplegables, enlazados entre sí y con las claves y las fuentes.
 - [ ] 7.6 Revisión del usuario: ensayar con la escaleta y cronometrar (objetivo: 45 min).
 
+### Ampliación del 22/11 (tarde)
+
+- [x] 7.7 Votación antes/después (v0 → v5) y diapositiva «¿Ha cambiado algo?».
+- [x] 7.8 Votaciones conectadas (6 formularios, contador, QR). Arreglado el recuento con respuestas (`getResponseForItem`).
+- [x] 7.9 Pictogramas: lemas, partículas omitidas y frases de lectura fácil reescritas; 0 palabras sin pictograma (es/en).
+- [x] 7.10 Barras proporcionales al porcentaje; v2 antes de ICAP (activar práctica propia) y v3 como predicción antes del dato.
+- [x] 7.11 Animaciones de atención (énfasis subrayado, escalón ICAP clave, cifras que cuentan, entradas escalonadas); nada con `prefers-reduced-motion`.
+- [x] 7.12 Botones en pantalla (anterior, siguiente, pantalla completa) y red de seguridad anti-desborde. Auditoría: 28/28 diapositivas sin desborde en es/en; texto ≥ 40 px salvo la línea legal final.
+- [x] 7.13 Perfil de ponente (contraseña, huella PBKDF2 en `site.json`) y **Archivar resultados y reiniciar** (Apps Script valida `PONENTE_CLAVE`, guarda en hoja de cálculo y pone a cero).
+- [ ] 7.14 Usuario: `npm run ponente`, código nuevo del script, `PONENTE_CLAVE`, `prepararArchivo`, `actualizarFormularios`, nueva versión (docs/votaciones.md).
+
 ### Del informe, sin verificar (no se usa)
 
 - Cifras de ICILS 2023 (España 495, media UE 493, internacional 476; 43 % del alumnado de la UE por debajo del nivel básico; brecha de 69 puntos por ISEC): no se pudo acceder al informe del INEE ni al de la Comisión.

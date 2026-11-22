@@ -1,4 +1,4 @@
-# Votaciones en directo · Instrucciones
+# Votaciones en directo y perfil de ponente · Instrucciones
 
 ## Cómo funciona
 
@@ -10,73 +10,98 @@ Móvil del público ──QR──▶ Google Form (1 pregunta, sin registro)
                                 │   JSON cada 4 s
                                 ▼
    Diapositivas de votación y presentacion/resultados.html → barras en tiempo real
+
+Panel del ponente ──contraseña──▶ Apps Script: archiva en una hoja de cálculo de tu Drive y pone todo a cero
 ```
 
 - **El público** escanea el QR, toca una opción y pulsa *Enviar*: 3 toques, sin iniciar sesión.
-- **Los formularios** se crean solos a partir de `content/votaciones.json`, la misma fuente que usan las diapositivas.
+- **Los formularios** se crean a partir de `content/votaciones.json`, la misma fuente que usan las diapositivas.
 - **Privacidad:** los votos son anónimos (no se recogen correos) y se guardan solo en tu cuenta de Google.
 - **Sin conexión:** la diapositiva muestra «votamos a mano alzada» y mantiene las opciones visibles.
+- **Barras:** la longitud de cada barra es el porcentaje de votos de esa opción; la más votada va en naranja.
 
-## Las 6 votaciones
+## Las 6 votaciones: activar lo que ya se sabe antes de explicarlo
 
-| Id | Diapositiva | Min | Pregunta | Opciones |
-|---|---|---|---|---|
-| **v0** | 3 | 1 | **Antes:** El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento? | Una aplicación más interactiva y atractiva · Puntos, insignias y clasificación · **Que lo expliquen con sus palabras y lo contrasten con un compañero** · Que usen una IA para resolverlo más rápido |
-| v1 | 5 | 2,5 | ¿Cuál de las dos tareas puede resolver una IA sola, en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
-| v2 | 13 | 15 | La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo? | Recibir · Manipular · Generar · Co-construir |
-| v3 | 19 | 27,5 | ¿Qué te preocupa más de la IA generativa en tu aula? | Que copien sin aprender · Que dejen de pensar por sí mismos · La privacidad · Los sesgos y los errores · No me preocupa |
-| **v5** | 24 | 38 | **Después:** la misma pregunta que v0 | Las mismas que v0 |
-| v4 | 26 | 40,5 | ¿Qué vas a probar el lunes? | Rediseñar una tarea copiable · Evaluar el proceso · Usar la IA como tutor que pregunta · Revisar las barreras DUA · Pasar una actividad por la plantilla socrática |
+Cada votación va **justo antes** del contenido que la responde, para que el público se comprometa con una idea propia y la contraste.
 
-## Medir el progreso: antes y después (v0 → v5)
+| Id | Diap. | Min | Para qué | Pregunta | Opciones |
+|---|---|---|---|---|---|
+| **v0** | 3 | 1 | Diagnóstico inicial (antes) | El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento? | Una aplicación más interactiva y atractiva · Puntos, insignias y clasificación · **Que lo expliquen con sus palabras y lo contrasten con un compañero** · Que usen una IA para resolverlo más rápido |
+| v1 | 5 | 2,5 | Demostración: dos tareas | ¿Cuál de las dos tareas puede resolver una IA sola, en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
+| v2 | 12 | 13 | Activar la propia práctica **antes** de ICAP | La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo? | Recibir · Manipular · Generar · Co-construir (= los 4 niveles ICAP de la diapositiva siguiente) |
+| v3 | 17 | 24 | **Predicción** antes del dato (−17 %) | Practican Matemáticas con ChatGPT sin límites y después hacen un examen sin IA. ¿Qué pasó? | Sacaron mejor nota que quien no usó IA · Sacaron la misma nota · Sacaron peor nota · Depende de cómo se usó la IA |
+| **v5** | 24 | 38 | La misma pregunta que v0 (después) | Igual que v0 | Igual que v0 |
+| v4 | 26 | 40,5 | Compromiso para el lunes | ¿Qué vas a probar el lunes? | Rediseñar una tarea copiable · Evaluar el proceso · Usar la IA como tutor que pregunta · Revisar las barreras DUA · Pasar una actividad por la plantilla socrática |
 
-- **Idea:** la misma pregunta diagnóstica al empezar (v0, minuto 1) y al terminar (v5, minuto 38). Son dos formularios distintos con la misma pregunta, para que los votos no se mezclen.
-- **La respuesta buscada** es la tercera («que lo expliquen con sus palabras y lo contrasten con un compañero»). Es la que lleva la actividad de *Pasivo/Activo* a *Constructivo/Interactivo* (ICAP). Está marcada en `content/votaciones.json` con `"target": 2` (se cuenta desde 0).
-- **La diapositiva 25, «¿Ha cambiado algo?»,** muestra las barras de v0 y v5 una al lado de la otra y una línea grande con el cambio: *«Que lo expliquen…»: 23 % → 61 %*. Se actualiza en directo.
-- **No digas en v0 cuál es la buena.** Solo: «La volveremos a hacer al final».
-- **Lo que mide y lo que no:**
-  - Compara cómo se reparten los votos de la sala antes y después. No sigue a cada persona: los votos son anónimos y puede votar gente distinta al principio y al final.
-  - Es una medida orientativa de comprensión, no una evaluación. Dilo así en la sala.
-- **Después de la ponencia:** en cada formulario, *Respuestas → Vincular con Hojas de cálculo* te da una hoja con la hora de cada voto. Así puedes comparar la sesión del 25 con la del 26 (vacía las respuestas entre una y otra; ver más abajo) y guardar los porcentajes antes de borrar.
+### Antes y después (v0 → v5)
 
-## Puesta en marcha paso a paso (unos 15 minutos, una sola vez)
+- **La diapositiva 25, «¿Ha cambiado algo?»,** muestra las dos distribuciones una al lado de la otra (con etiquetas cortas) y una línea grande con el cambio en la opción buscada: *«Explicar y contrastar»: 23 % → 61 %*. La opción buscada está marcada en `content/votaciones.json` con `"target": 2`.
+- No digas en v0 cuál es la buena. Es una medida orientativa: votos anónimos, sin emparejar personas.
 
-Hazlo **con la web ya publicada**, porque el script lee las preguntas de la web.
+## Perfil de ponente
 
-1. **Crea el proyecto.**
-   - Entra en <https://script.google.com> con tu cuenta de Google.
-   - Pulsa **Nuevo proyecto** y llámalo «Pensar en Digital · Votaciones».
-2. **Pega el código.**
-   - Borra todo el contenido de `Código.gs`.
-   - Pega el de [`tools/apps-script/votaciones.gs`](https://github.com/jmgo93/pensar-en-digital/blob/main/tools/apps-script/votaciones.gs) (botón *Raw*, seleccionar todo, copiar).
-   - Guarda (icono del disquete).
-3. **Crea los 6 formularios.**
-   - En el desplegable de funciones (arriba) elige `crearFormularios` y pulsa **Ejecutar**.
-   - Google pedirá permisos: *Revisar permisos* → tu cuenta. Si aparece «Google no ha verificado esta aplicación», pulsa *Configuración avanzada → Ir a Pensar en Digital · Votaciones (no seguro)*. Es tu propio script.
-   - Abajo, en el **Registro de ejecución**, verás 6 líneas como `v0  https://forms.gle/…  (editar: …)`. **Cópialas y envíamelas.**
-4. **Revisa cada formulario** (abre el enlace «editar» de cada uno):
-   - Si arriba aparece el botón **Publicar**, púlsalo. En *Gestionar*, el acceso de quien responde debe ser **Cualquier persona con el enlace**.
-   - En *Configuración → Respuestas*: **no recopilar correos** y **«Limitar a 1 respuesta» desactivado** (si se activa, obliga a iniciar sesión).
-5. **Publica el contador.**
-   - Pulsa **Implementar → Nueva implementación → ⚙ (tipo) → Aplicación web**.
-   - *Ejecutar como*: **Yo**. *Quién tiene acceso*: **Cualquier usuario**.
-   - Pulsa **Implementar**, autoriza si lo pide y copia la URL que termina en `/exec`. **Envíamela.**
-6. **Prueba.**
-   - Abre en el navegador `TU_URL/exec?v=v0`: debe salir un JSON con `"total":0`.
-   - Responde el formulario v0 desde el móvil y recarga: `"total":1`.
-7. **Yo conecto la web:** pongo los 6 `formUrl` y el `votingEndpoint`, regenero los QR (`npm run qr` y `npm run build:all`) y publico. Las diapositivas de votación mostrarán entonces su QR y las barras en directo.
-8. **Ensayo completo:** abre la presentación, ve a la diapositiva 3 (v0), vota desde el móvil; luego a la 24 (v5), vota otra opción, y pasa a la 25: deben salir las dos barras y la línea «antes → después».
-9. **Deja los contadores a cero** ejecutando `vaciarRespuestas` en el editor (borra las respuestas de prueba de los 6 formularios).
+- **El público** ve toda la app salvo lo de la presentación: no ve el botón «Abrir la presentación» ni el panel, y si abre `presentacion/` o `resultados.html` le sale la pantalla de acceso.
+- **El ponente** entra con su contraseña (enlace «Acceso del ponente» al pie de cualquier página, o directamente en la presentación) y tiene: presentación, notas, pantalla de resultados, escaleta y **Archivar resultados y reiniciar**. El acceso se recuerda en ese navegador hasta pulsar «Cerrar sesión de ponente».
+- **Archivar resultados y reiniciar** (en el panel, en la última diapositiva y en la ventana de notas):
+  1. Guarda los recuentos y cada respuesta con su hora en una pestaña nueva de la hoja «Pensar en Digital · Resultados de las votaciones» de tu Drive.
+  2. Después pone a cero las 6 votaciones.
+  3. Te da el enlace a la hoja y una copia en CSV.
+- **Seguridad, con honestidad:**
+  - La contraseña real solo la conocen tú y tu script de Google. El servidor la comprueba antes de archivar o borrar nada, y bloquea durante 10 minutos tras 5 intentos fallidos.
+  - En la web solo hay una huella cifrada (PBKDF2) para separar perfiles, también sin conexión.
+  - El repositorio es público: quien sepa buscar puede leer el texto de las diapositivas. Lo que no puede es borrar ni archivar votos.
+
+## Puesta en marcha de esta versión (unos 10 minutos)
+
+Ya tienes los 6 formularios y el contador funcionando. Esta versión añade el archivo y el perfil de ponente, y cambia la pregunta de v3.
+
+1. **Elige la contraseña del ponente** y fíjala en la web. En la terminal de VS Code, dentro de la carpeta del proyecto:
+   ```
+   npm run ponente
+   ```
+   - Te la pide dos veces, sin mostrarla, y guarda solo su huella en `content/site.json`.
+   - Usa al menos 10 caracteres; mejor una frase.
+   - Avísame cuando lo hayas hecho y la publico (o haz `npm run build:all`, commit y push).
+2. **Actualiza el código del script:**
+   - En <https://script.google.com>, abre tu proyecto y sustituye todo `Código.gs` por [`tools/apps-script/votaciones.gs`](https://github.com/jmgo93/pensar-en-digital/blob/main/tools/apps-script/votaciones.gs) (botón *Raw*).
+   - Guarda.
+3. **Pon la misma contraseña en el script:**
+   - Entra en *⚙ Configuración del proyecto → Propiedades del script → Añadir propiedad del script*.
+   - Nombre: `PONENTE_CLAVE`. Valor: tu contraseña. Guarda.
+   - No borres las propiedades `v0`…`v5`: son tus formularios.
+4. **Crea la hoja de resultados:**
+   - Elige `prepararArchivo` en el desplegable y pulsa **Ejecutar**.
+   - Acepta el permiso nuevo de Hojas de cálculo.
+   - El registro muestra el enlace a la hoja.
+5. **Actualiza las preguntas de los formularios** (la v3 ha cambiado):
+   - Ejecuta `actualizarFormularios`.
+   - El registro dirá «v3: pregunta actualizada (respuestas borradas)» y «sin cambios» en las demás.
+   - Los enlaces y los QR no cambian.
+6. **Publica la nueva versión del script:** *Implementar → Gestionar implementaciones → ✏️ Editar → Versión: Nueva versión → Implementar*. Así la URL `/exec` no cambia.
+7. **Prueba:**
+   - Entra en *Panel del ponente* (pie de página → «Acceso del ponente»).
+   - Vota algo de prueba y pulsa **Archivar resultados y reiniciar**.
+   - Debe aparecer el enlace a la hoja con una pestaña nueva, y los contadores deben volver a 0.
+
+## Primera puesta en marcha (ya hecha el 22/11, por si hay que repetirla)
+
+1. En <https://script.google.com>, crea un proyecto nuevo y pega `tools/apps-script/votaciones.gs`.
+2. Ejecuta `crearFormularios` y acepta los permisos. El registro da los 6 enlaces `forms.gle`.
+3. En cada formulario:
+   - Si aparece **Publicar**, púlsalo, con acceso para cualquier persona con el enlace.
+   - Sin recoger correos y con «Limitar a 1 respuesta» desactivado.
+4. Pulsa *Implementar → Nueva implementación → Aplicación web*, con *Ejecutar como*: **Yo** y *Acceso*: **Cualquier usuario**. Copia la URL `/exec`.
+5. En la web, pon los `formUrl` en `content/votaciones.json` y el `votingEndpoint` en `content/site.json`. Después, `npm run qr`, `npm run build:all` y publica.
 
 ## El día de la ponencia
 
-- Las barras salen en las propias diapositivas. Pantalla aparte, si la quieres: `https://jmgo93.github.io/pensar-en-digital/presentacion/resultados.html?v=v0` (← / → cambian de votación; `&demo` para ensayar con datos ficticios).
-- **Entre la sesión del 25 y la del 26:** guarda los resultados (hoja de cálculo o captura de la diapositiva 25) y ejecuta `vaciarRespuestas`.
-- Si cambias el código del script, usa *Implementar → Gestionar implementaciones → Editar → Nueva versión*. Así la URL `/exec` no cambia.
-- Si cambias una pregunta en `content/votaciones.json` después de crear los formularios, el formulario **no** se actualiza solo: edítalo a mano con el mismo texto y las mismas opciones, en el mismo orden (el recuento compara el texto de las opciones).
+- Abre la presentación en el portátil de la sala (con tu acceso) y las notas con la tecla **N**.
+- **Si las teclas o el mando fallan:** arriba a la derecha hay botones de anterior, pantalla completa y siguiente. Se ocultan a los 3 segundos y vuelven al mover el ratón o tocar la pantalla.
+- **Al terminar cada sesión:** pulsa **Archivar resultados y reiniciar** en la última diapositiva o en las notas. Ponle un nombre (por ejemplo, «25/11 tarde»).
+- Si cambias el código del script, publica siempre como *Nueva versión* de la misma implementación.
 
 ## Límites conocidos
 
 - La pantalla consulta cada 4 s y el script guarda el recuento 3 s, así que un voto tarda en aparecer entre 1 y 7 s.
 - Apps Script está pensado para este volumen: unos cientos de respuestas y una sola pantalla consultando.
-- No he podido ejecutar el script desde aquí porque necesita tu cuenta de Google. Los pasos 6 y 8 son la prueba real.
+- Archivar tarda unos segundos (lee los 6 formularios y escribe la hoja).

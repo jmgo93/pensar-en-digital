@@ -311,7 +311,7 @@ ${claves.keys.map((/** @type {any} */ k) => `<tr><td><span class="num">${k.n}</s
 
 const mmss = (/** @type {number} */ m) => `${String(Math.floor(m)).padStart(2, '0')}:${String(Math.round((m % 1) * 60)).padStart(2, '0')}`;
 /** @param {any} s */
-const slideHead = (s) => (s.type === 'vote' ? `Votación ${s.vote}: ${votes[s.vote].question.es}` : s.type === 'big' ? `${s.number} · ${s.text.es}` : (s.title ?? s.text)?.es ?? '');
+const slideHead = (s) => (s.type === 'vote' ? `Votación ${s.vote}: ${votes[s.vote].question.es}` : s.type === 'big' ? `${s.number} · ${s.text.es}` : (s.title ?? s.text)?.es ?? '').replace(/\*\*/g, '');
 
 const escaletaHtml = () => {
   const rows = deck.blocks

@@ -73,7 +73,7 @@
 .s-cite {
   margin-block-start: 32px;
   color: var(--md-sys-color-on-surface-variant);
-  font-size: 34px;
+  font-size: 40px;
 }
 
 .s-small {
@@ -219,7 +219,7 @@
 .s-qrs figcaption,
 .s-vote-qr figcaption { display: grid; gap: 4px; font-size: 40px; }
 .s-qrs figcaption span,
-.s-vote-qr figcaption { font-weight: 700; font-size: 36px; }
+.s-vote-qr figcaption { font-weight: 700; font-size: 40px; }
 
 /* Votación */
 .s-vote {
@@ -237,8 +237,8 @@
 .s-vote.is-long .s-results .vote-row { font-size: 40px; }
 .s-vote.is-long .s-results .vote-bars { gap: 14px; }
 .s-vote.is-long .s-qr { inline-size: 440px; block-size: 440px; }
-.s-kicker { display: flex; align-items: center; gap: 16px; font-size: 36px; font-weight: 700; color: var(--md-sys-color-primary); }
-.s-status { font-size: 36px; font-weight: 700; color: var(--md-sys-color-on-surface-variant); }
+.s-kicker { display: flex; align-items: center; gap: 16px; font-size: 40px; font-weight: 700; color: var(--md-sys-color-primary); }
+.s-status { font-size: 40px; font-weight: 700; color: var(--md-sys-color-on-surface-variant); }
 
 .s-results .vote-bars { display: grid; gap: 18px; padding: 0; list-style: none; }
 .s-results .vote-row {
@@ -262,6 +262,41 @@
 .s-prepost .s-results .vote-row { font-size: 40px; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) 4ch; gap: 20px; }
 .s-prepost .s-results .vote-track { block-size: 36px; }
 .s-delta { font-size: 52px; font-weight: 700; color: var(--md-sys-color-primary); min-block-size: 1.2em; }
+
+/* Énfasis: subrayado de rotulador (estado final por defecto) */
+.s-hl {
+  background: linear-gradient(var(--md-sys-color-primary-container), var(--md-sys-color-primary-container)) no-repeat 0 96% / 100% 0.28em;
+  color: inherit;
+  padding-inline: 0.04em;
+}
+.s-ladder li.is-key { box-shadow: 0 0 0 6px var(--md-sys-color-primary); }
+.s-delta.is-flash { animation: delta-flash 400ms var(--md-sys-motion-easing-emphasized); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .deck .slide.is-current :is(.s-statement, .s-list, .s-ladder, .s-keys, .s-compare, .s-bridge, .s-ba, .s-prepost, .s-big, .s-qrs) > h2 {
+    animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) both;
+  }
+  .deck .slide.is-current .s-hl { animation: hl-sweep 400ms var(--md-sys-motion-easing-emphasized) 500ms both; }
+  .deck .slide.is-current .s-small,
+  .deck .slide.is-current .s-big .s-text { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) 250ms both; }
+  .deck .slide.is-current :is(.s-list li, .s-keys li) { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 110ms) both; }
+  .deck .slide.is-current .s-keys .s-key-n { animation: pop-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(260ms + var(--i, 0) * 110ms) both; }
+  .deck .slide.is-current .s-ladder li { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(150ms + var(--i, 0) * 150ms) both; }
+  .deck .slide.is-current .s-ladder li.is-key { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(150ms + var(--i, 0) * 150ms) both, key-ring 400ms var(--md-sys-motion-easing-emphasized) 900ms both; }
+  .deck .slide.is-current .s-cols > :first-child { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) 150ms both; }
+  .deck .slide.is-current .s-cols > :nth-child(2) { animation: slide-in 400ms var(--md-sys-motion-easing-emphasized-decelerate) 550ms both; }
+  .deck .slide.is-current .s-cite { animation: fade-in-slide 300ms ease 700ms both; }
+}
+@keyframes rise-in { from { opacity: 0; translate: 0 24px; } }
+@keyframes slide-in { from { opacity: 0; translate: 40px 0; } }
+@keyframes pop-in { from { scale: 0.4; opacity: 0; } }
+@keyframes hl-sweep { from { background-size: 0% 0.28em; } }
+@keyframes key-ring { from { box-shadow: 0 0 0 0 var(--md-sys-color-primary); scale: 1; } 60% { scale: 1.04; } }
+@keyframes delta-flash { 50% { scale: 1.06; } }
+
+/* Archivo (solo ponente: la presentación ya está tras su acceso) */
+.s-archive { margin-block-start: 24px; }
+.s-archive .btn { font-size: 28px; min-block-size: 64px; padding-inline: 32px; }
 
 /* Final */
 .s-end { display: grid; align-content: center; gap: 24px; }
@@ -365,3 +400,23 @@
   .slide:last-child { break-after: auto; }
   .blackout, .slides-help { display: none !important; }
 }
+
+/* -------- Botones en pantalla -------- */
+.slide-controls {
+  position: fixed;
+  inset-block-start: max(16px, env(safe-area-inset-top));
+  inset-inline-end: max(16px, env(safe-area-inset-right));
+  z-index: 20;
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: var(--md-sys-shape-corner-full);
+  background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 92%, transparent);
+  box-shadow: var(--md-sys-elevation-2, 0 2px 6px rgb(0 0 0 / 0.25));
+  transition: opacity 300ms var(--md-sys-motion-easing-emphasized);
+}
+.slide-controls.is-idle { opacity: 0; }
+.slide-controls.is-idle:focus-within { opacity: 1; }
+.slide-controls button:disabled { opacity: 0.38; cursor: default; }
+.gate-host { min-block-size: 100dvh; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface); }
+@media print { .slide-controls, .s-archive { display: none !important; } }

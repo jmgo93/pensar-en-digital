@@ -8,10 +8,20 @@ import { fetchJson } from './router.js';
 import { loadStrings, t, getLang, applyI18n } from './i18n.js';
 import { fetchResults, demoSource, poll } from './votes.js';
 import { renderResults } from './vote-bars.js';
+import { requireSpeaker } from './speaker.js';
+import { h } from './ui.js';
 
 const init = async () => {
   await loadStrings();
   applyI18n();
+  // Solo para el ponente.
+  const pageParts = [...document.body.children].filter((el) => el instanceof HTMLElement);
+  pageParts.forEach((el) => (/** @type {HTMLElement} */ (el).hidden = true));
+  const gateHost = h('div', { class: 'gate-host' });
+  document.body.append(gateHost);
+  await requireSpeaker(gateHost);
+  gateHost.remove();
+  pageParts.forEach((el) => (/** @type {HTMLElement} */ (el).hidden = false));
   const params = new URLSearchParams(location.search);
   const demo = params.has('demo');
   /** @type {import('./types').Vote[]} */

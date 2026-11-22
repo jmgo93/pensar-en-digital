@@ -13,6 +13,7 @@ import { loadSources, loc, citeLabel } from './content.js';
 import { h, icon } from './ui.js';
 import { renderResults } from './vote-bars.js';
 import { fetchResults, poll } from './votes.js';
+import { requireSpeaker, archiveButton } from './speaker.js';
 
 /** @typedef {import('./types').Localized} L */
 /**
@@ -23,6 +24,57 @@ import { fetchResults, poll } from './votes.js';
 /** @typedef {{ blocks: { id: string, from: number, to: number, title: L }[], slides: Slide[] }} Deck */
 
 const CHANNEL = 'pd-presentacion';
+
+/**
+ * Texto con énfasis: **palabras** → <mark class="s-hl"> (subrayado que se dibuja al entrar la diapositiva).
+ * @param {string} text
+ * @returns {(string | HTMLElement)[]}
+ */
+const rich = (text) =>
+  text
+    .split(/(\*\*[^*]+\*\*)/g)
+    .filter(Boolean)
+    .map((p) => (p.startsWith('**') ? h('mark', { class: 's-hl' }, p.slice(2, -2)) : p));
+
+/**
+ * Copia de una votación con etiquetas de opción más cortas (mismo orden).
+ * @param {import('./types').Vote | undefined} vote
+ * @param {L[] | undefined} labels
+ * @returns {import('./types').Vote | undefined}
+ */
+const shortLabels = (vote, labels) => (vote && labels?.length === vote.options.length ? { ...vote, options: labels } : vote);
+
+const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/**
+ * Cuenta desde 0 hasta la cifra de una diapositiva «big» (−17 %, 0,35…). Solo decora: el lector
+ * de pantalla lee la cifra final, que está en un span aparte.
+ * @param {HTMLElement} slide
+ */
+const countUp = (slide) => {
+  const el = /** @type {HTMLElement | null} */ (slide.querySelector('.s-count'));
+  if (!el) return;
+  const final = el.dataset.final ?? el.textContent ?? '';
+  el.dataset.final = final;
+  const m = /(\d+)(?:,(\d+))?/.exec(final);
+  if (!m || reducedMotion()) {
+    el.textContent = final;
+    return;
+  }
+  const decimals = m[2]?.length ?? 0;
+  const value = Number(`${m[1]}.${m[2] ?? '0'}`);
+  const start = performance.now();
+  const DURATION = 700;
+  /** @param {number} now */
+  const step = (now) => {
+    const p = Math.min(1, (now - start) / DURATION);
+    const eased = 1 - (1 - p) ** 3;
+    el.textContent = final.replace(m[0], (value * eased).toFixed(decimals).replace('.', ','));
+    if (p < 1 && slide.classList.contains('is-current')) requestAnimationFrame(step);
+    else el.textContent = final;
+  };
+  requestAnimationFrame(step);
+};
 const W = 1920;
 const H = 1080;
 
@@ -41,21 +93,21 @@ const slideContent = (s, ctx) => {
     case 'title':
       return h('div', { class: 's-title' }, h('p', { class: 's-brand' }, icon('lightbulb'), ' Pensar en Digital'), h('h1', {}, loc(s.title)), h('p', { class: 's-author' }, loc(s.subtitle)));
     case 'statement':
-      return h('div', { class: 's-statement' }, h('h2', {}, loc(s.text)), s.small ? h('p', { class: 's-small' }, loc(s.small)) : null, cite);
+      return h('div', { class: 's-statement' }, h('h2', {}, ...rich(loc(s.text))), s.small ? h('p', { class: 's-small' }, ...rich(loc(s.small))) : null, cite);
     case 'compare':
       return h(
         'div',
         { class: 's-compare' },
         h('h2', {}, loc(s.title)),
-        h('div', { class: 's-cols' }, ...s.items.map((/** @type {any} */ it) => h('div', { class: 's-col' }, h('p', { class: 's-label' }, loc(it.label)), h('p', { class: 's-text' }, loc(it.text))))),
+        h('div', { class: 's-cols' }, ...s.items.map((/** @type {any} */ it) => h('div', { class: 's-col' }, h('p', { class: 's-label' }, loc(it.label)), h('p', { class: 's-text' }, ...rich(loc(it.text)))))),
         cite,
       );
     case 'keys':
-      return h('div', { class: 's-keys' }, h('h2', {}, loc(s.title)), h('ol', {}, ...s.items.map((/** @type {L} */ it, /** @type {number} */ i) => h('li', {}, h('span', { class: 's-key-n', 'aria-hidden': 'true' }, String(i + 1)), h('span', {}, loc(it))))), cite);
+      return h('div', { class: 's-keys' }, h('h2', {}, loc(s.title)), h('ol', {}, ...s.items.map((/** @type {L} */ it, /** @type {number} */ i) => h('li', { style: `--i:${i}` }, h('span', { class: 's-key-n', 'aria-hidden': 'true' }, String(i + 1)), h('span', {}, loc(it))))), cite);
     case 'list':
-      return h('div', { class: 's-list' }, h('h2', {}, loc(s.title)), h('ul', {}, ...s.items.map((/** @type {L} */ it) => h('li', {}, loc(it)))), cite);
+      return h('div', { class: 's-list' }, h('h2', {}, loc(s.title)), h('ul', {}, ...s.items.map((/** @type {L} */ it, /** @type {number} */ i) => h('li', { style: `--i:${i}` }, ...rich(loc(it))))), cite);
     case 'ladder':
-      return h('div', { class: 's-ladder' }, h('h2', {}, loc(s.title)), h('ol', {}, ...s.steps.map((/** @type {L} */ st, /** @type {number} */ i) => h('li', { style: `--i:${i}` }, loc(st)))), cite);
+      return h('div', { class: 's-ladder' }, h('h2', {}, loc(s.title)), h('ol', {}, ...s.steps.map((/** @type {L} */ st, /** @type {number} */ i) => h('li', { style: `--i:${i}`, class: i === s.highlight ? 'is-key' : undefined }, loc(st)))), cite);
     case 'bridge':
       return h(
         'div',
@@ -72,7 +124,13 @@ const slideContent = (s, ctx) => {
         h('div', { class: 's-cols' }, h('div', { class: 's-col before' }, h('p', { class: 's-label' }, t('inclusiva.before')), h('p', { class: 's-text' }, loc(s.before))), h('div', { class: 's-col after' }, h('p', { class: 's-label' }, t('inclusiva.after')), h('p', { class: 's-text' }, loc(s.after)))),
       );
     case 'big':
-      return h('div', { class: 's-big' }, h('p', { class: 's-number' }, s.number), h('p', { class: 's-text' }, loc(s.text)), cite);
+      return h(
+        'div',
+        { class: 's-big' },
+        h('p', { class: 's-number' }, h('span', { class: 's-count', 'aria-hidden': 'true' }, s.number), h('span', { class: 'visually-hidden' }, s.number)),
+        h('p', { class: 's-text' }, ...rich(loc(s.text))),
+        cite,
+      );
     case 'qr':
       return h(
         'div',
@@ -94,8 +152,9 @@ const slideContent = (s, ctx) => {
       );
     }
     case 'prepost': {
-      const pre = ctx.votes[s.pre];
-      const post = ctx.votes[s.post];
+      // Etiquetas cortas (s.labels) para que las dos columnas quepan; el recuento va por posición.
+      const pre = shortLabels(ctx.votes[s.pre], s.labels);
+      const post = shortLabels(ctx.votes[s.post], s.labels);
       if (!pre || !post) return h('div');
       /** @param {import('./types').Vote} v @param {string} label @param {string} cls */
       const col = (v, label, cls) => {
@@ -121,6 +180,7 @@ const slideContent = (s, ctx) => {
         h('p', { class: 's-legal' }, `© ${ctx.site.year} ${ctx.site.author} · ${t('footer.licensePre')} ${t('footer.license')} · ${t('footer.claude')}`),
         h('p', { class: 's-legal' }, `${t('footer.cep')} ${t('footer.cepLink')} ${t('footer.cepAfter')}`),
         h('p', { class: 's-legal' }, t('footer.icons')),
+        h('div', { class: 's-archive' }, archiveButton(ctx.site)),
       );
     default:
       return h('div');
@@ -160,6 +220,25 @@ const notesPanel = (s) => {
   );
 };
 
+/**
+ * Red de seguridad contra desbordes: si el contenido de la diapositiva no cabe encima del pie,
+ * lo reduce (CSS zoom) lo justo para que quepa. El contenido está pensado para no necesitarlo
+ * (lo comprueba la auditoría de diapositivas); data-fit guarda el factor aplicado.
+ * @param {HTMLElement} slide
+ */
+const shrinkToFit = (slide) => {
+  const body = /** @type {HTMLElement | null} */ (slide.firstElementChild);
+  if (!body || !body.isConnected || getComputedStyle(slide).display === 'none') return;
+  body.style.removeProperty('zoom');
+  delete body.dataset.fit;
+  let z = 1;
+  while ((body.scrollHeight > body.clientHeight + 2 || body.scrollWidth > body.clientWidth + 2) && z > 0.62) {
+    z = Math.round((z - 0.04) * 100) / 100;
+    body.style.setProperty('zoom', String(z));
+  }
+  if (z < 1) body.dataset.fit = String(z);
+};
+
 /** Escala el lienzo 1920×1080 a la ventana. */
 const fit = (/** @type {HTMLElement} */ stage, /** @type {HTMLElement} */ box = document.documentElement) => {
   const r = box.getBoundingClientRect();
@@ -172,6 +251,14 @@ const mmss = (/** @type {number} */ secs) => `${secs < 0 ? '−' : ''}${String(M
 
 const init = async () => {
   await loadStrings();
+  // Solo el ponente ve la presentación, las notas y los resultados.
+  const pageParts = [...document.body.children].filter((el) => el instanceof HTMLElement);
+  pageParts.forEach((el) => (/** @type {HTMLElement} */ (el).hidden = true));
+  const gateHost = h('div', { class: 'gate-host' });
+  document.body.append(gateHost);
+  await requireSpeaker(gateHost);
+  gateHost.remove();
+  pageParts.forEach((el) => (/** @type {HTMLElement} */ (el).hidden = false));
   const [deck, votesArr, site, sourcesData] = await Promise.all([
     /** @type {Promise<Deck>} */ (fetchJson('content/presentacion.json')),
     /** @type {Promise<import('./types').Vote[]>} */ (fetchJson('content/votaciones.json')),
@@ -209,8 +296,8 @@ const init = async () => {
    * @param {HTMLElement} el
    */
   const startPrePost = (s, el) => {
-    const pre = ctx.votes[s.pre];
-    const post = ctx.votes[s.post];
+    const pre = shortLabels(ctx.votes[s.pre], s.labels);
+    const post = shortLabels(ctx.votes[s.post], s.labels);
     const status = /** @type {HTMLElement} */ (el.querySelector('.s-status'));
     const delta = /** @type {HTMLElement} */ (el.querySelector('.s-delta'));
     if (!pre || !post) return;
@@ -226,7 +313,14 @@ const init = async () => {
     const update = () => {
       const a = last[pre.id];
       const b = last[post.id];
-      if (a && b) delta.textContent = t('slides.delta', { option: loc(pre.options[target]), pre: String(pct(a)), post: String(pct(b)) });
+      if (!a || !b) return;
+      const text = t('slides.delta', { option: loc(pre.options[target]), pre: String(pct(a)), post: String(pct(b)) });
+      if (text === delta.textContent) return;
+      delta.textContent = text;
+      // Destello breve para llevar la vista al cambio.
+      delta.classList.remove('is-flash');
+      void delta.offsetWidth;
+      delta.classList.add('is-flash');
     };
     const stops = [pre, post].map((v) =>
       poll(
@@ -287,10 +381,15 @@ const init = async () => {
         { class: 'n-controls' },
         h('button', { type: 'button', class: 'btn btn-tonal interactive', onclick: () => go(index - 1) }, icon('arrow_back'), t('plantilla.back')),
         h('button', { type: 'button', class: 'btn btn-text interactive', onclick: resetTimer }, icon('timer'), t('slides.resetTimer')),
+        archiveButton(site, 'btn btn-text interactive'),
         h('button', { type: 'button', class: 'btn btn-filled interactive', onclick: () => go(index + 1) }, t('plantilla.next'), icon('arrow_forward')),
       ),
     );
-    for (const p of notesRoot.querySelectorAll('.preview')) fit(/** @type {HTMLElement} */ (p.querySelector('.stage') ?? p), /** @type {HTMLElement} */ (p));
+    for (const p of notesRoot.querySelectorAll('.preview')) {
+      fit(/** @type {HTMLElement} */ (p.querySelector('.stage') ?? p), /** @type {HTMLElement} */ (p));
+      const sl = /** @type {HTMLElement | null} */ (p.querySelector('.slide'));
+      if (sl) shrinkToFit(sl);
+    }
     tick();
   };
 
@@ -336,6 +435,10 @@ const init = async () => {
       });
     });
     live.textContent = `${t('slides.slide')} ${index + 1} / ${total}`;
+    const current = slideEls[index];
+    if (current) shrinkToFit(current);
+    updateControls();
+    if (current && deck.slides[index]?.type === 'big') countUp(current);
     startVote();
   };
 
@@ -353,6 +456,7 @@ const init = async () => {
   let typed = '';
   document.addEventListener('keydown', (e) => {
     if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (e.target instanceof Element && e.target.closest('button, a, input, textarea, select, dialog')) return;
     const k = e.key;
     if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(k) && !(k === 'Enter' && typed)) {
       if (k === ' ' && e.shiftKey) go(index - 1);
@@ -398,6 +502,38 @@ const init = async () => {
   };
   addEventListener('gamepadconnected', () => requestAnimationFrame(padLoop));
 
+  /* -------- Botones en pantalla: anterior, siguiente y pantalla completa -------- */
+  const fsIcon = h('span', { class: 'icon', 'aria-hidden': 'true' }, 'fullscreen');
+  const fsBtn = /** @type {HTMLButtonElement} */ (
+    h('button', { type: 'button', class: 'icon-btn icon-btn-tonal interactive', onclick: () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.().catch(() => undefined)) }, fsIcon)
+  );
+  const prevBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-tonal interactive', 'aria-label': t('slides.prev'), title: t('slides.prev'), onclick: () => go(index - 1) }, icon('chevron_left')));
+  const nextBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-filled interactive', 'aria-label': t('slides.nextBtn'), title: t('slides.nextBtn'), onclick: () => go(index + 1) }, icon('chevron_right')));
+  const controls = h('nav', { class: 'slide-controls', 'aria-label': t('slides.deck') }, prevBtn, fsBtn, nextBtn);
+  function updateControls() {
+    const full = Boolean(document.fullscreenElement);
+    fsIcon.textContent = full ? 'fullscreen_exit' : 'fullscreen';
+    const label = full ? t('slides.exitFullscreen') : t('slides.fullscreen');
+    fsBtn.setAttribute('aria-label', label);
+    fsBtn.title = label;
+    prevBtn.disabled = index === 0;
+    nextBtn.disabled = index === total - 1;
+  }
+  document.addEventListener('fullscreenchange', updateControls);
+  // Se ocultan solos para no distraer: reaparecen al mover el ratón, tocar la pantalla o tabular.
+  /** @type {ReturnType<typeof setTimeout> | undefined} */
+  let hideTimer;
+  const showControls = () => {
+    controls.classList.remove('is-idle');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(() => {
+      if (!controls.contains(document.activeElement)) controls.classList.add('is-idle');
+    }, 3000);
+  };
+  addEventListener('pointermove', showControls, { passive: true });
+  addEventListener('pointerdown', showControls, { passive: true });
+  controls.addEventListener('focusin', showControls);
+
   /* -------- Montaje -------- */
   if (notesMode) {
     document.title = `${t('slides.notes')} · ${document.title}`;
@@ -408,6 +544,9 @@ const init = async () => {
   } else {
     notesRoot?.remove();
     stage.append(deckEl, blackout);
+    document.body.append(controls);
+    updateControls();
+    showControls();
     addEventListener('resize', () => fit(stage));
     fit(stage);
     slideEls.forEach((el, k) => {
@@ -415,6 +554,13 @@ const init = async () => {
       el.toggleAttribute('inert', k !== index);
       el.setAttribute('aria-hidden', String(k !== index));
     });
+    const first = slideEls[index];
+    if (first) {
+      shrinkToFit(first);
+      if (deck.slides[index]?.type === 'big') countUp(first);
+    }
+    // Por si las fuentes terminan de cargar después.
+    document.fonts?.ready.then(() => slideEls[index] && shrinkToFit(/** @type {HTMLElement} */ (slideEls[index])));
     startVote();
     /** @type {HTMLElement | null} */ (document.getElementById('help'))?.removeAttribute('hidden');
     setTimeout(() => document.getElementById('help')?.setAttribute('hidden', ''), 6000);

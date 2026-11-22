@@ -16,7 +16,8 @@ Web de apoyo a la ponencia *"Competencia Digital Docente como medio para generar
 | Banco de prompts de IA (con desplegables, enlazados entre sí y con las claves) | `/ia/` |
 | Descargables: guía para analizar tareas, cuaderno de prompts y las siete claves (PDF y .md, es/en) | [`assets/descargas/`](assets/descargas/) |
 | Presentación 16:9 con votaciones en directo | `/presentacion/` |
-| Pantalla de resultados de votación | `/presentacion/resultados.html?v=v1` |
+| Pantalla de resultados de votación (solo ponente) | `/presentacion/resultados.html?v=v0` |
+| Panel del ponente: presentación, notas, escaleta y «Archivar resultados y reiniciar» (contraseña: `npm run ponente`) | `/ponente/` |
 | Escaleta del ponente con tiempos, idea fuerza, transiciones y notas | [`docs/escaleta.md`](docs/escaleta.md) · [`docs/escaleta.pdf`](docs/escaleta.pdf) |
 | QR en SVG | [`assets/qr/`](assets/qr/) |
 

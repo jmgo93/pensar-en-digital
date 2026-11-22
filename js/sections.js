@@ -63,7 +63,7 @@ const renderPonencia = async (view) => {
   const c = await loadContent('ponencia');
   view.replaceChildren(
     h('p', { class: 'lead' }, loc(c.intro)),
-    h('div', { class: 'btn-row' }, h('a', { class: 'btn btn-tonal interactive', href: fromRoot('presentacion/').href }, icon('slideshow'), h('span', {}, t('ponencia.open')))),
+    h('div', { class: 'btn-row', 'data-speaker-only': '' }, h('a', { class: 'btn btn-tonal interactive', href: fromRoot('presentacion/').href }, icon('slideshow'), h('span', {}, t('ponencia.open')))),
     h(
       'ol',
       { class: 'timeline' },

@@ -9,5 +9,6 @@
   { "id": "lunes", "path": "lunes/", "icon": "rocket_launch", "bar": false, "rail": false },
   { "id": "recursos", "path": "recursos/", "icon": "download", "bar": false, "rail": true },
   { "id": "bibliografia", "path": "bibliografia/", "icon": "library_books", "bar": false, "rail": true },
+  { "id": "ponente", "path": "ponente/", "icon": "lock", "bar": false, "rail": false, "speaker": true },
   { "id": "buscar", "path": "buscar/", "icon": "search", "bar": false, "rail": false }
 ]

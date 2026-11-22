@@ -85,8 +85,8 @@
     "id": "v2",
     "minute": "13–24",
     "block": {
-      "es": "Acto III: ICAP, de recibir a construir",
-      "en": "Act III: ICAP, from receiving to building"
+      "es": "Acto III: ¿qué hace hoy tu alumnado?",
+      "en": "Act III: what do your students do today?"
     },
     "context": {
       "es": [],
@@ -120,37 +120,37 @@
     "id": "v3",
     "minute": "24–35",
     "block": {
-      "es": "Acto IV: IA generativa en el aula",
-      "en": "Act IV: generative AI in the classroom"
+      "es": "Acto IV: predice el resultado",
+      "en": "Act IV: predict the result"
     },
     "context": {
-      "es": [],
-      "en": []
+      "es": [
+        "Experimento real con casi mil estudiantes de Matemáticas de secundaria (Bastani et al., 2025). Primero se predice; después se ve el dato."
+      ],
+      "en": [
+        "Real experiment with almost a thousand secondary maths students (Bastani et al., 2025). Predict first; then see the data."
+      ]
     },
     "question": {
-      "es": "¿Qué te preocupa más de la IA generativa en tu aula?",
-      "en": "What worries you most about generative AI in your classroom?"
+      "es": "Practican Matemáticas con ChatGPT sin límites y después hacen un examen sin IA. ¿Qué pasó?",
+      "en": "Students practise maths with unrestricted ChatGPT, then sit an exam without AI. What happened?"
     },
     "options": [
       {
-        "es": "Que copien sin aprender",
-        "en": "That they copy without learning"
+        "es": "Sacaron mejor nota que quien no usó IA",
+        "en": "They scored higher than those without AI"
       },
       {
-        "es": "Que dejen de pensar por sí mismos",
-        "en": "That they stop thinking for themselves"
+        "es": "Sacaron la misma nota",
+        "en": "They scored the same"
       },
       {
-        "es": "La privacidad de los datos",
-        "en": "Data privacy"
+        "es": "Sacaron peor nota",
+        "en": "They scored lower"
       },
       {
-        "es": "Los sesgos y los errores",
-        "en": "Bias and errors"
-      },
-      {
-        "es": "No me preocupa",
-        "en": "It doesn’t worry me"
+        "es": "Depende de cómo se usó la IA",
+        "en": "It depends on how AI was used"
       }
     ],
     "formUrl": "https://forms.gle/ABP7CrJ1wbEUmhBX8"

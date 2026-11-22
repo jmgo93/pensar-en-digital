@@ -38,6 +38,8 @@ export interface Route {
   icon: string;
   bar: boolean;
   rail: boolean;
+  /** Solo visible para el ponente (js/speaker.js). */
+  speaker?: boolean;
 }
 
 export interface Site {

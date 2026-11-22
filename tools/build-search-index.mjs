@@ -41,7 +41,7 @@ const ui = read('ui');
 const routes = read('routes');
 /** @param {string} id */
 const routeTitle = (id) => ({ es: ui.es[`route.${id}`], en: ui.en[`route.${id}`] });
-for (const r of routes) if (r.id !== 'buscar') add(r.path, r.id, routeTitle(r.id), {});
+for (const r of routes) if (r.id !== 'buscar' && !(/** @type {any} */ (r).speaker)) add(r.path, r.id, routeTitle(r.id), {});
 
 const inicio = read('inicio');
 add('#tesis', 'inicio', inicio.thesis.title, inicio.thesis.body);

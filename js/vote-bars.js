@@ -14,7 +14,7 @@ export const renderResults = (root, vote, result) => {
   const labels = vote.options.map((o) => o[lang]);
   const counts = result?.counts ?? labels.map(() => 0);
   const total = result?.total ?? 0;
-  const max = Math.max(1, ...counts);
+  const max = Math.max(...counts);
 
   let list = root.querySelector('.vote-bars');
   if (!list || list.childElementCount !== labels.length) {
@@ -39,7 +39,7 @@ export const renderResults = (root, vote, result) => {
     const n = counts[i] ?? 0;
     const pct = total ? Math.round((n / total) * 100) : 0;
     const fill = /** @type {HTMLElement} */ (row.querySelector('.vote-fill'));
-    fill.style.inlineSize = `${(n / max) * 100}%`;
+    fill.style.inlineSize = `${pct}%`;
     row.classList.toggle('is-top', total > 0 && n === max);
     /** @type {HTMLElement} */ (row.querySelector('.vote-num')).textContent = total ? `${pct} %` : '';
     /** @type {HTMLElement} */ (row.querySelector('.vote-label')).textContent = labels[i] ?? '';

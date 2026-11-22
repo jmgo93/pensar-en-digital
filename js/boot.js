@@ -84,6 +84,12 @@
 
   let current = read();
   apply(current);
+  // Perfil de ponente (js/speaker.js): oculta o muestra lo relativo a la presentación sin parpadeo.
+  try {
+    if (localStorage.getItem('pd-ponente') === '1') document.documentElement.dataset.role = 'ponente';
+  } catch {
+    /* sin almacenamiento */
+  }
 
   const reapply = () => apply(current);
   mqDark.addEventListener('change', reapply);
