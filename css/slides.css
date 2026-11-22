@@ -231,6 +231,12 @@
 
 .s-vote-main { display: grid; gap: 32px; }
 .s-vote h2 { font-size: 72px; }
+.s-vote.is-long { gap: 56px; }
+.s-vote.is-long .s-vote-main { gap: 24px; }
+.s-vote.is-long h2 { font-size: 56px; }
+.s-vote.is-long .s-results .vote-row { font-size: 40px; }
+.s-vote.is-long .s-results .vote-bars { gap: 14px; }
+.s-vote.is-long .s-qr { inline-size: 440px; block-size: 440px; }
 .s-kicker { display: flex; align-items: center; gap: 16px; font-size: 36px; font-weight: 700; color: var(--md-sys-color-primary); }
 .s-status { font-size: 36px; font-weight: 700; color: var(--md-sys-color-on-surface-variant); }
 

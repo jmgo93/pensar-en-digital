@@ -1,17 +1,126 @@
 // @ts-check
 /**
- * Tokenización y palabras vacías para el modo pictográfico.
+ * Tokenización, palabras que se omiten y lemas para el modo pictográfico.
  * Compartido entre el navegador (js/picto.js) y el precálculo (tools/build-picto-map.mjs).
+ *
+ * - SKIP: artículos, preposiciones y partículas sin significado propio. No se dibujan en la tira
+ *   (la frase completa sigue escrita encima). Las palabras que cambian el sentido («no», «sin», «con»,
+ *   «más», «todos», «nunca»…) NO se omiten: llevan su pictograma.
+ * - LEMMA: forma de búsqueda en ARASAAC para las formas conjugadas o derivadas (ARASAAC indexa
+ *   sobre todo infinitivos y singulares). La palabra original se sigue mostrando bajo el pictograma.
  */
 
 /** @type {Record<'es' | 'en', Set<string>>} */
-export const STOPWORDS = {
+export const SKIP = {
   es: new Set(
-    'a al algo algunos ante antes aquí así aun aunque bien cada como con contra cual cuando de del desde donde dos e el ella ellas ello ellos en entre era es esa ese eso esta este esto estos fue ha han hasta hay la las le les lo los más me mi mis muy nada ni no nos o os otra otro para pero poco por porque que qué se sea ser si sí sin sino sobre son su sus también tan te tiene tienen todo todos tu tus un una uno unos y ya yo'.split(' '),
+    'a al de del el la las lo los un una unos unas que se le les me te os nos su sus mi mis tu tus e o u y ni en por es son era fue ha han hay ser sea esa ese eso esta este esto estas estos esas esos'.split(' '),
   ),
-  en: new Set(
-    'a about after all also an and any are as at be because been but by can could do does for from had has have he her his how i if in into is it its just me more most my no not of on one or other our out she so some than that the their them then there these they this those to too up us very was we were what when which who will with you your'.split(' '),
-  ),
+  en: new Set('a an the of to in on at by as and or is are was were be been am it its that this these those which who do does did so than there their about for'.split(' ')),
+};
+
+/** Compatibilidad: nombre anterior. */
+export const STOPWORDS = SKIP;
+
+/** @type {Record<'es' | 'en', Record<string, string>>} */
+export const LEMMA = {
+  es: {
+    piensa: 'pensar',
+    piensas: 'pensar',
+    piensen: 'pensar',
+    deben: 'deber',
+    crean: 'crear',
+    miran: 'mirar',
+    mira: 'mirar',
+    copian: 'copiar',
+    sabes: 'saber',
+    sabe: 'saber',
+    comparte: 'compartir',
+    mejora: 'mejorar',
+    mejoras: 'mejorar',
+    tratamos: 'tratar',
+    puede: 'poder',
+    pueda: 'poder',
+    pueden: 'poder',
+    revisamos: 'revisar',
+    trabajamos: 'trabajar',
+    aprendan: 'aprender',
+    aprende: 'aprender',
+    hablamos: 'hablar',
+    habla: 'hablar',
+    hablas: 'hablar',
+    cambia: 'cambiar',
+    dicen: 'decir',
+    dice: 'decir',
+    contesta: 'contestar',
+    respondes: 'responder',
+    graba: 'grabar',
+    escucha: 'escuchar',
+    necesita: 'necesitar',
+    enseñan: 'enseñar',
+    enseña: 'enseñar',
+    usa: 'usar',
+    usas: 'usar',
+    elige: 'elegir',
+    hace: 'hacer',
+    haz: 'hacer',
+    ayuda: 'ayudar',
+    quita: 'quitar',
+    alumnos: 'alumno',
+    profesores: 'profesor',
+    poca: 'poco',
+    puedes: 'poder',
+    da: 'dar',
+    hacen: 'hacer',
+    seguros: 'proteger',
+    próximo: 'siguiente',
+    respuestas: 'responder',
+    demás: 'otros',
+    material: 'material escolar',
+    cosas: 'objeto',
+    tabletas: 'tablet',
+    pongas: 'escribir',
+    parte: 'trozo',
+    incorrectas: 'incorrecto',
+    aprenden: 'aprender',
+  },
+  en: {
+    talked: 'talk',
+    not: 'no',
+    can: 'be able to',
+    safe: 'security',
+    cannot: 'no',
+    using: 'use',
+    harm: 'damage',
+    resource: 'material',
+    record: 'video',
+    own: 'alone',
+    stay: 'be',
+    task: 'homework',
+    treat: 'respect',
+    check: 'revise',
+    part: 'piece',
+    gives: 'give',
+    most: 'more',
+    also: 'too',
+    easier: 'easy',
+    improved: 'improve',
+    creating: 'create',
+    teaches: 'teach',
+    tells: 'tell',
+    asks: 'ask',
+    helps: 'help',
+    learns: 'learn',
+    uses: 'use',
+    removes: 'remove',
+    students: 'student',
+    teachers: 'teacher',
+    tablets: 'tablet',
+    videos: 'video',
+    knows: 'know',
+    needs: 'need',
+    answers: 'answer',
+    questions: 'question',
+  },
 };
 
 /**
@@ -21,4 +130,4 @@ export const STOPWORDS = {
  * @returns {string[]}
  */
 export const words = (text, lang) =>
-  (text.toLocaleLowerCase(lang).match(/[\p{L}]+/gu) ?? []).filter((w) => w.length > 1 || w === 'y');
+  (text.toLocaleLowerCase(lang).match(/[\p{L}]+/gu) ?? []).filter((w) => w.length > 1 || w === 'y' || w === 'o' || w === 'i');

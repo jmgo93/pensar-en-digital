@@ -10,7 +10,10 @@
     ]
   },
   "andalucia": {
-    "title": { "es": "En Andalucía", "en": "In Andalusia" },
+    "title": {
+      "es": "En Andalucía",
+      "en": "In Andalusia"
+    },
     "body": {
       "es": [
         "La Orden de 29 de marzo de 2021 adopta los marcos europeos del JRC: **DigCompOrg** para los centros, **DigCompEdu** para el profesorado y **DigComp** para el alumnado, y prevé adaptarse a sus nuevas versiones [@orden-marcos-2021]. La versión vigente de DigComp es la 3.0, publicada en 2025, que integra la IA en todo el marco [@digcomp3].",
@@ -29,12 +32,31 @@
       "id": "area-3",
       "number": 3,
       "icon": "co_present",
-      "title": { "es": "Enseñanza y aprendizaje", "en": "Teaching and learning" },
+      "title": {
+        "es": "Enseñanza y aprendizaje",
+        "en": "Teaching and learning"
+      },
       "competences": [
-        { "code": "3.1", "es": "Enseñanza", "en": "Teaching" },
-        { "code": "3.2", "es": "Orientación y apoyo en el aprendizaje", "en": "Guidance and support in learning" },
-        { "code": "3.3", "es": "Aprendizaje entre iguales", "en": "Peer learning" },
-        { "code": "3.4", "es": "Aprendizaje autorregulado", "en": "Self-regulated learning" }
+        {
+          "code": "3.1",
+          "es": "Enseñanza",
+          "en": "Teaching"
+        },
+        {
+          "code": "3.2",
+          "es": "Orientación y apoyo en el aprendizaje",
+          "en": "Guidance and support in learning"
+        },
+        {
+          "code": "3.3",
+          "es": "Aprendizaje entre iguales",
+          "en": "Peer learning"
+        },
+        {
+          "code": "3.4",
+          "es": "Aprendizaje autorregulado",
+          "en": "Self-regulated learning"
+        }
       ],
       "plain": {
         "es": "Diseñar y gestionar clases con tecnología que hagan pensar: acompañar al alumnado, que aprenda de sus compañeros y que aprenda a regular su propio aprendizaje.",
@@ -67,19 +89,34 @@
       "id": "area-4",
       "number": 4,
       "icon": "check_circle",
-      "title": { "es": "Evaluación y retroalimentación", "en": "Assessment and feedback" },
+      "title": {
+        "es": "Evaluación y retroalimentación",
+        "en": "Assessment and feedback"
+      },
       "competences": [
-        { "code": "4.1", "es": "Estrategias de evaluación", "en": "Assessment strategies" },
-        { "code": "4.2", "es": "Analíticas y evidencias de aprendizaje", "en": "Learning analytics and evidence" },
-        { "code": "4.3", "es": "Retroalimentación y toma de decisiones", "en": "Feedback and decision-making" }
+        {
+          "code": "4.1",
+          "es": "Estrategias de evaluación",
+          "en": "Assessment strategies"
+        },
+        {
+          "code": "4.2",
+          "es": "Analíticas y evidencias de aprendizaje",
+          "en": "Learning analytics and evidence"
+        },
+        {
+          "code": "4.3",
+          "es": "Retroalimentación y toma de decisiones",
+          "en": "Feedback and decision-making"
+        }
       ],
       "plain": {
         "es": "Usar lo digital para ver el proceso, no solo el resultado: recoger evidencias, devolver retroalimentación útil y decidir qué hacer después, siempre respetando la protección de datos.",
         "en": "Using digital tools to see the process, not just the result: collecting evidence, giving useful feedback and deciding what to do next, always respecting data protection."
       },
       "lecturaFacil": {
-        "es": "El profesor mira cómo aprende cada alumno y le ayuda a mejorar.",
-        "en": "The teacher looks at how each student learns and helps them improve."
+        "es": "El profesor mira cómo aprenden los alumnos y les ayuda a mejorar.",
+        "en": "The teacher looks at how students learn and helps them improve."
       },
       "examples": {
         "primaria": {
@@ -104,19 +141,34 @@
       "id": "area-5",
       "number": 5,
       "icon": "accessibility_new",
-      "title": { "es": "Empoderamiento del alumnado", "en": "Empowering students" },
+      "title": {
+        "es": "Empoderamiento del alumnado",
+        "en": "Empowering students"
+      },
       "competences": [
-        { "code": "5.1", "es": "Accesibilidad e inclusión", "en": "Accessibility and inclusion" },
-        { "code": "5.2", "es": "Atención a las diferencias personales en el aprendizaje", "en": "Attending to individual differences in learning" },
-        { "code": "5.3", "es": "Compromiso activo del alumnado con su propio aprendizaje", "en": "Students' active engagement in their own learning" }
+        {
+          "code": "5.1",
+          "es": "Accesibilidad e inclusión",
+          "en": "Accessibility and inclusion"
+        },
+        {
+          "code": "5.2",
+          "es": "Atención a las diferencias personales en el aprendizaje",
+          "en": "Attending to individual differences in learning"
+        },
+        {
+          "code": "5.3",
+          "es": "Compromiso activo del alumnado con su propio aprendizaje",
+          "en": "Students' active engagement in their own learning"
+        }
       ],
       "plain": {
         "es": "Quitar barreras para que todo el alumnado pueda acceder, participar y avanzar, y convertirlo en protagonista que piensa de forma crítica y creativa.",
         "en": "Removing barriers so all students can access, take part and progress, and making them protagonists who think critically and creatively."
       },
       "lecturaFacil": {
-        "es": "Todos los alumnos pueden aprender. La tecnología quita obstáculos.",
-        "en": "All students can learn. Technology removes obstacles."
+        "es": "Todos los alumnos pueden aprender. La tecnología ayuda a todos.",
+        "en": "All students can learn. Technology helps everyone."
       },
       "examples": {
         "primaria": {
@@ -141,20 +193,43 @@
       "id": "area-6",
       "number": 6,
       "icon": "lightbulb",
-      "title": { "es": "Desarrollo de la competencia digital del alumnado", "en": "Developing students' digital competence" },
+      "title": {
+        "es": "Desarrollo de la competencia digital del alumnado",
+        "en": "Developing students' digital competence"
+      },
       "competences": [
-        { "code": "6.1", "es": "Alfabetización mediática y en el tratamiento de la información y de los datos", "en": "Media and information and data literacy" },
-        { "code": "6.2", "es": "Comunicación, colaboración y ciudadanía digital", "en": "Communication, collaboration and digital citizenship" },
-        { "code": "6.3", "es": "Creación de contenidos digitales", "en": "Digital content creation" },
-        { "code": "6.4", "es": "Uso responsable y bienestar digital", "en": "Responsible use and digital wellbeing" },
-        { "code": "6.5", "es": "Resolución de problemas", "en": "Problem solving" }
+        {
+          "code": "6.1",
+          "es": "Alfabetización mediática y en el tratamiento de la información y de los datos",
+          "en": "Media and information and data literacy"
+        },
+        {
+          "code": "6.2",
+          "es": "Comunicación, colaboración y ciudadanía digital",
+          "en": "Communication, collaboration and digital citizenship"
+        },
+        {
+          "code": "6.3",
+          "es": "Creación de contenidos digitales",
+          "en": "Digital content creation"
+        },
+        {
+          "code": "6.4",
+          "es": "Uso responsable y bienestar digital",
+          "en": "Responsible use and digital wellbeing"
+        },
+        {
+          "code": "6.5",
+          "es": "Resolución de problemas",
+          "en": "Problem solving"
+        }
       ],
       "plain": {
         "es": "Enseñar al alumnado a buscar y contrastar información, comunicarse y colaborar con respeto, crear respetando la autoría, cuidarse en la red y resolver problemas con tecnología.",
         "en": "Teaching students to search for and check information, communicate and collaborate respectfully, create while respecting authorship, look after themselves online and solve problems with technology."
       },
       "lecturaFacil": {
-        "es": "Los alumnos aprenden a usar internet bien: buscar, crear y cuidarse.",
+        "es": "Los alumnos aprenden a usar internet bien: buscar, crear y estar seguros.",
         "en": "Students learn to use the internet well: search, create and stay safe."
       },
       "examples": {
@@ -178,7 +253,10 @@
     }
   ],
   "levels": {
-    "title": { "es": "Los niveles A1–C2, en lenguaje claro", "en": "Levels A1–C2 in plain language" },
+    "title": {
+      "es": "Los niveles A1–C2, en lenguaje claro",
+      "en": "Levels A1–C2 in plain language"
+    },
     "note": {
       "es": "El MRCDD describe tres etapas con dos niveles cada una. Esta es una síntesis general: la redacción exacta cambia en cada competencia [@mrcdd].",
       "en": "The MRCDD describes three stages with two levels each. This is a general summary: the exact wording changes for each competence [@mrcdd]."
@@ -186,26 +264,59 @@
     "stages": [
       {
         "id": "A",
-        "title": { "es": "Etapa A · Conocer y aplicar con guía", "en": "Stage A · Knowing and applying with guidance" },
+        "title": {
+          "es": "Etapa A · Conocer y aplicar con guía",
+          "en": "Stage A · Knowing and applying with guidance"
+        },
         "levels": [
-          { "code": "A1", "es": "Conozco las tecnologías que ofrece mi centro y para qué sirven.", "en": "I know the technologies my school provides and what they are for." },
-          { "code": "A2", "es": "Las uso en clase siguiendo pautas o con ayuda.", "en": "I use them in class following guidelines or with support." }
+          {
+            "code": "A1",
+            "es": "Conozco las tecnologías que ofrece mi centro y para qué sirven.",
+            "en": "I know the technologies my school provides and what they are for."
+          },
+          {
+            "code": "A2",
+            "es": "Las uso en clase siguiendo pautas o con ayuda.",
+            "en": "I use them in class following guidelines or with support."
+          }
         ]
       },
       {
         "id": "B",
-        "title": { "es": "Etapa B · Usar con autonomía y adaptar", "en": "Stage B · Using autonomously and adapting" },
+        "title": {
+          "es": "Etapa B · Usar con autonomía y adaptar",
+          "en": "Stage B · Using autonomously and adapting"
+        },
         "levels": [
-          { "code": "B1", "es": "Las uso por mi cuenta, integradas en mi programación.", "en": "I use them on my own, built into my planning." },
-          { "code": "B2", "es": "Adapto mi práctica a situaciones y contextos nuevos.", "en": "I adapt my practice to new situations and contexts." }
+          {
+            "code": "B1",
+            "es": "Las uso por mi cuenta, integradas en mi programación.",
+            "en": "I use them on my own, built into my planning."
+          },
+          {
+            "code": "B2",
+            "es": "Adapto mi práctica a situaciones y contextos nuevos.",
+            "en": "I adapt my practice to new situations and contexts."
+          }
         ]
       },
       {
         "id": "C",
-        "title": { "es": "Etapa C · Investigar y transformar", "en": "Stage C · Researching and transforming" },
+        "title": {
+          "es": "Etapa C · Investigar y transformar",
+          "en": "Stage C · Researching and transforming"
+        },
         "levels": [
-          { "code": "C1", "es": "Analizo y mejoro las prácticas digitales de mi centro.", "en": "I analyse and improve my school's digital practices." },
-          { "code": "C2", "es": "Investigo, innovo y comparto modelos que transforman la enseñanza.", "en": "I research, innovate and share models that transform teaching." }
+          {
+            "code": "C1",
+            "es": "Analizo y mejoro las prácticas digitales de mi centro.",
+            "en": "I analyse and improve my school's digital practices."
+          },
+          {
+            "code": "C2",
+            "es": "Investigo, innovo y comparto modelos que transforman la enseñanza.",
+            "en": "I research, innovate and share models that transform teaching."
+          }
         ]
       }
     ]

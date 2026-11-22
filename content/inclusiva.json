@@ -7,8 +7,14 @@
     {
       "id": "diversidad",
       "icon": "diversity_3",
-      "from": { "es": "Atención a la diversidad", "en": "Attention to diversity" },
-      "to": { "es": "Diseño Universal para el Aprendizaje (DUA)", "en": "Universal Design for Learning (UDL)" },
+      "from": {
+        "es": "Atención a la diversidad",
+        "en": "Attention to diversity"
+      },
+      "to": {
+        "es": "Diseño Universal para el Aprendizaje (DUA)",
+        "en": "Universal Design for Learning (UDL)"
+      },
       "multiplies": {
         "es": "Ofrecer desde el diseño varias formas de implicarse, de acceder a la información y de expresar lo aprendido [@cast-udl].",
         "en": "Offering, by design, multiple ways to engage, to access information and to express what has been learnt [@cast-udl]."
@@ -17,13 +23,22 @@
         "es": "Un vídeo sin subtítulos o un PDF escaneado como única vía: la barrera se digitaliza.",
         "en": "A video without subtitles or a scanned PDF as the only option: the barrier gets digitised."
       },
-      "lecturaFacil": { "es": "Dar a cada alumno varias formas de aprender.", "en": "Give each student several ways to learn." }
+      "lecturaFacil": {
+        "es": "Dar a todos los alumnos textos, dibujos y vídeos para aprender.",
+        "en": "Give all students texts, pictures and videos to learn."
+      }
     },
     {
       "id": "convivencia",
       "icon": "groups",
-      "from": { "es": "Convivencia", "en": "Coexistence" },
-      "to": { "es": "Ciberconvivencia y bienestar digital", "en": "Online coexistence and digital wellbeing" },
+      "from": {
+        "es": "Convivencia",
+        "en": "Coexistence"
+      },
+      "to": {
+        "es": "Ciberconvivencia y bienestar digital",
+        "en": "Online coexistence and digital wellbeing"
+      },
       "multiplies": {
         "es": "Trabajar en el aula casos reales de comunicación en línea, normas acordadas en grupo y uso saludable de las pantallas (MRCDD 6.2 y 6.4) [@mrcdd].",
         "en": "Working in class with real cases of online communication, rules agreed by the group and healthy screen use (MRCDD 6.2 and 6.4) [@mrcdd]."
@@ -32,13 +47,22 @@
         "es": "Grupos de mensajería de clase sin normas ni adulto de referencia: el conflicto sigue después del timbre.",
         "en": "Class messaging groups with no rules and no adult in charge: conflict continues after the bell."
       },
-      "lecturaFacil": { "es": "En internet también tratamos bien a los demás.", "en": "Online, we also treat others well." }
+      "lecturaFacil": {
+        "es": "En internet también tratamos bien a los demás.",
+        "en": "Online, we also treat others well."
+      }
     },
     {
       "id": "igualdad",
       "icon": "balance",
-      "from": { "es": "Igualdad", "en": "Equality" },
-      "to": { "es": "Sesgos de la IA y brecha de uso", "en": "AI bias and the usage gap" },
+      "from": {
+        "es": "Igualdad",
+        "en": "Equality"
+      },
+      "to": {
+        "es": "Sesgos de la IA y brecha de uso",
+        "en": "AI bias and the usage gap"
+      },
       "multiplies": {
         "es": "Analizar con el alumnado los estereotipos que reproducen la IA y los materiales; garantizar que todos aprenden a usar la tecnología para crear, no solo para consumir.",
         "en": "Analysing with students the stereotypes reproduced by AI and by materials; making sure everyone learns to use technology to create, not just to consume."
@@ -47,13 +71,22 @@
         "es": "Dar por neutras las respuestas de la IA, o mandar tareas digitales que dependen del dispositivo y la conexión de cada casa.",
         "en": "Treating AI answers as neutral, or setting digital homework that depends on each family's device and connection."
       },
-      "lecturaFacil": { "es": "La máquina también puede ser injusta. Lo revisamos.", "en": "The machine can be unfair too. We check it." }
+      "lecturaFacil": {
+        "es": "La máquina también da respuestas incorrectas. Lo revisamos.",
+        "en": "The machine also gives wrong answers. We check it."
+      }
     },
     {
       "id": "clima",
       "icon": "lightbulb",
-      "from": { "es": "Clima de aula y motivación", "en": "Classroom climate and motivation" },
-      "to": { "es": "Retroalimentación y gamificación con sentido", "en": "Feedback and meaningful gamification" },
+      "from": {
+        "es": "Clima de aula y motivación",
+        "en": "Classroom climate and motivation"
+      },
+      "to": {
+        "es": "Retroalimentación y gamificación con sentido",
+        "en": "Feedback and meaningful gamification"
+      },
       "multiplies": {
         "es": "Retroalimentación frecuente que responde a tres preguntas: ¿adónde voy?, ¿cómo voy?, ¿qué hago después? [@feedback]. Elementos de juego al servicio del aprendizaje, no al revés [@gamificacion].",
         "en": "Frequent feedback that answers three questions: where am I going?, how am I going?, where to next? [@feedback]. Game elements at the service of learning, not the other way round [@gamificacion]."
@@ -62,13 +95,22 @@
         "es": "Puntos e insignias que premian la rapidez y el acierto, y nunca el error del que se aprende.",
         "en": "Points and badges that reward speed and right answers, and never the mistake you learn from."
       },
-      "lecturaFacil": { "es": "El profesor te dice qué hacer para mejorar.", "en": "The teacher tells you how to improve." }
+      "lecturaFacil": {
+        "es": "El profesor te dice qué hacer para mejorar.",
+        "en": "The teacher tells you how to improve."
+      }
     },
     {
       "id": "cooperativo",
       "icon": "group_work",
-      "from": { "es": "Aprendizaje cooperativo", "en": "Cooperative learning" },
-      "to": { "es": "Coautoría con interdependencia real", "en": "Co-authorship with real interdependence" },
+      "from": {
+        "es": "Aprendizaje cooperativo",
+        "en": "Cooperative learning"
+      },
+      "to": {
+        "es": "Coautoría con interdependencia real",
+        "en": "Co-authorship with real interdependence"
+      },
       "multiplies": {
         "es": "Documentos compartidos en los que cada persona tiene un rol y nadie puede terminar sin las aportaciones de los demás: interdependencia positiva y responsabilidad individual [@cooperativo].",
         "en": "Shared documents where everyone has a role and no one can finish without the others' contributions: positive interdependence and individual accountability [@cooperativo]."
@@ -77,7 +119,10 @@
         "es": "«Trabajo en grupo» en un documento compartido que, en realidad, escribe una sola persona.",
         "en": "“Group work” in a shared document that, in reality, one person writes."
       },
-      "lecturaFacil": { "es": "Trabajamos juntos. Cada uno hace una parte necesaria.", "en": "We work together. Each person does a necessary part." }
+      "lecturaFacil": {
+        "es": "Trabajamos juntos. Todos hacen una parte importante.",
+        "en": "We work together. Everyone does an important part."
+      }
     }
   ],
   "beforeAfter": [
@@ -91,7 +136,10 @@
         "es": "Por parejas, inventan un problema de sumas sobre su barrio, lo graban en audio con su explicación y otra pareja lo resuelve y les dice si se entiende.",
         "en": "In pairs, they invent an addition problem about their neighbourhood, record it with their explanation, and another pair solves it and tells them whether it is clear."
       },
-      "icap": { "es": "Activo → Interactivo", "en": "Active → Interactive" }
+      "icap": {
+        "es": "Activo → Interactivo",
+        "en": "Active → Interactive"
+      }
     },
     {
       "stage": "eso",
@@ -103,7 +151,10 @@
         "es": "Cada grupo recibe dos fuentes contradictorias sobre el trabajo infantil en 1840, decide cuál es más fiable y defiende su conclusión ante otro grupo que tiene las fuentes opuestas.",
         "en": "Each group receives two contradictory sources on child labour in 1840, decides which is more reliable and defends its conclusion before another group with the opposite sources."
       },
-      "icap": { "es": "Activo → Interactivo", "en": "Active → Interactive" }
+      "icap": {
+        "es": "Activo → Interactivo",
+        "en": "Active → Interactive"
+      }
     },
     {
       "stage": "eoi",
@@ -115,7 +166,10 @@
         "es": "El alumnado graba un mensaje de voz para un estudiante de otra escuela con una pregunta real; escucha la respuesta y reformula su siguiente mensaje a partir de ella.",
         "en": "Students record a voice message for a learner at another school with a real question, listen to the reply and reformulate their next message based on it."
       },
-      "icap": { "es": "Constructivo → Interactivo", "en": "Constructive → Interactive" }
+      "icap": {
+        "es": "Constructivo → Interactivo",
+        "en": "Constructive → Interactive"
+      }
     },
     {
       "stage": "conservatorio",
@@ -127,7 +181,10 @@
         "es": "El alumnado compara tres grabaciones de la misma obra, anota diferencias de tempo y dinámica, elige una interpretación propia y la justifica ante el grupo con su grabación.",
         "en": "Students compare three recordings of the same piece, note differences in tempo and dynamics, choose their own interpretation and justify it to the group with their recording."
       },
-      "icap": { "es": "Pasivo → Constructivo", "en": "Passive → Constructive" }
+      "icap": {
+        "es": "Pasivo → Constructivo",
+        "en": "Passive → Constructive"
+      }
     }
   ]
 }

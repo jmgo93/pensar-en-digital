@@ -6,91 +6,165 @@
   "challenges": [
     {
       "id": "copiable",
-      "stages": ["primaria", "eso", "eoi", "conservatorio"],
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
       "icon": "edit",
-      "title": { "es": "Desmonta una tarea copiable", "en": "Take apart a copyable task" },
+      "title": {
+        "es": "Desmonta una tarea copiable",
+        "en": "Take apart a copyable task"
+      },
       "body": {
         "es": "Pega el enunciado de una tarea tuya en una IA. Si la resuelve sola, añade algo que la IA no tenga: datos de tu aula, una decisión que haya que justificar o una conversación con un compañero.",
         "en": "Paste one of your tasks into an AI. If it solves it alone, add something the AI does not have: data from your classroom, a decision that must be justified or a conversation with a classmate."
       },
-      "lecturaFacil": { "es": "Cambia una tarea para que la máquina no la pueda hacer sola.", "en": "Change a task so the machine cannot do it alone." }
+      "lecturaFacil": {
+        "es": "Cambia una tarea para que la máquina no la pueda hacer sola.",
+        "en": "Change a task so the machine cannot do it alone."
+      }
     },
     {
       "id": "proceso",
-      "stages": ["primaria", "eso", "eoi", "conservatorio"],
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
       "icon": "timer",
-      "title": { "es": "Evalúa un borrador, no solo el final", "en": "Assess a draft, not just the final piece" },
+      "title": {
+        "es": "Evalúa un borrador, no solo el final",
+        "en": "Assess a draft, not just the final piece"
+      },
       "body": {
         "es": "Pide una versión intermedia y devuelve un solo comentario: «tu siguiente paso es…». Compara después el borrador con la versión final.",
         "en": "Ask for an intermediate version and return one comment only: “your next step is…”. Then compare the draft with the final version."
       },
-      "lecturaFacil": { "es": "Mira el trabajo antes de terminar y ayuda a mejorarlo.", "en": "Look at the work before it is finished and help improve it." }
+      "lecturaFacil": {
+        "es": "Mira el trabajo antes del final y ayuda a mejorar.",
+        "en": "Look at the work before the end and help improve it."
+      }
     },
     {
       "id": "tutor",
-      "stages": ["eso", "eoi"],
+      "stages": [
+        "eso",
+        "eoi"
+      ],
       "icon": "smart_toy",
-      "title": { "es": "Una IA que pregunta", "en": "An AI that asks" },
+      "title": {
+        "es": "Una IA que pregunta",
+        "en": "An AI that asks"
+      },
       "body": {
         "es": "Usa el prompt de «tutor socrático» del banco de prompts en una cuenta corporativa del centro, si existe, y sin datos personales. Pide al alumnado que entregue la conversación, no la respuesta.",
         "en": "Use the “Socratic tutor” prompt from the prompt bank with a school account, if available, and no personal data. Ask students to hand in the conversation, not the answer."
       },
-      "lecturaFacil": { "es": "La máquina hace preguntas. El alumno piensa las respuestas.", "en": "The machine asks questions. The student thinks of the answers." }
+      "lecturaFacil": {
+        "es": "La máquina hace preguntas. El alumno piensa las respuestas.",
+        "en": "The machine asks questions. The student thinks of the answers."
+      }
     },
     {
       "id": "dua",
-      "stages": ["primaria", "eso", "eoi", "conservatorio"],
+      "stages": [
+        "primaria",
+        "eso",
+        "eoi",
+        "conservatorio"
+      ],
       "icon": "accessibility_new",
-      "title": { "es": "Una barrera menos", "en": "One barrier fewer" },
+      "title": {
+        "es": "Una barrera menos",
+        "en": "One barrier fewer"
+      },
       "body": {
         "es": "Elige un material que uses mucho y añade una segunda vía de acceso: audio, subtítulos, imagen, texto ampliable o una versión en lectura fácil.",
         "en": "Choose a resource you use a lot and add a second way to access it: audio, subtitles, an image, enlargeable text or an easy-to-read version."
       },
-      "lecturaFacil": { "es": "Haz un material más fácil de usar para todos.", "en": "Make a resource easier for everyone to use." }
+      "lecturaFacil": {
+        "es": "Haz un material más fácil de usar para todos.",
+        "en": "Make a resource easier for everyone to use."
+      }
     },
     {
       "id": "pictos",
-      "stages": ["primaria"],
+      "stages": [
+        "primaria"
+      ],
       "icon": "image",
-      "title": { "es": "Instrucciones con pictogramas", "en": "Instructions with pictograms" },
+      "title": {
+        "es": "Instrucciones con pictogramas",
+        "en": "Instructions with pictograms"
+      },
       "body": {
         "es": "Prepara las instrucciones de una actividad con pictogramas de ARASAAC y pide a un alumno que se las explique a otro.",
         "en": "Prepare the instructions for an activity with ARASAAC pictograms and ask one student to explain them to another."
       },
-      "lecturaFacil": { "es": "Usa dibujos para explicar la tarea.", "en": "Use pictures to explain the task." }
+      "lecturaFacil": {
+        "es": "Usa dibujos para explicar la tarea.",
+        "en": "Use pictures to explain the task."
+      }
     },
     {
       "id": "fuentes",
-      "stages": ["eso"],
+      "stages": [
+        "eso"
+      ],
       "icon": "search",
-      "title": { "es": "Dos fuentes que no coinciden", "en": "Two sources that disagree" },
+      "title": {
+        "es": "Dos fuentes que no coinciden",
+        "en": "Two sources that disagree"
+      },
       "body": {
         "es": "Da a la clase dos fuentes que se contradicen sobre un tema de tu materia. La tarea no es resumirlas: es decidir cuál es más fiable y explicar por qué.",
         "en": "Give the class two contradictory sources on a topic in your subject. The task is not to summarise them: it is to decide which is more reliable and explain why."
       },
-      "lecturaFacil": { "es": "Dos textos dicen cosas distintas. ¿Cuál es verdad?", "en": "Two texts say different things. Which is true?" }
+      "lecturaFacil": {
+        "es": "Dos textos dicen cosas distintas. ¿Cuál es verdad?",
+        "en": "Two texts say different things. Which is true?"
+      }
     },
     {
       "id": "audio-eoi",
-      "stages": ["eoi"],
+      "stages": [
+        "eoi"
+      ],
       "icon": "volume_up",
-      "title": { "es": "Mensaje de voz con respuesta", "en": "Voice message with a reply" },
+      "title": {
+        "es": "Mensaje de voz con respuesta",
+        "en": "Voice message with a reply"
+      },
       "body": {
         "es": "Cada estudiante deja un mensaje de voz con una pregunta real para un compañero. La siguiente clase, responde al que ha recibido incorporando una estructura nueva del tema.",
         "en": "Each student leaves a voice message with a real question for a classmate. Next lesson, they reply to the one they received using a new structure from the unit."
       },
-      "lecturaFacil": { "es": "Hablas, otro te contesta y tú respondes otra vez.", "en": "You speak, someone answers and you reply again." }
+      "lecturaFacil": {
+        "es": "Hablas, otro te contesta y tú respondes otra vez.",
+        "en": "You speak, someone answers and you reply again."
+      }
     },
     {
       "id": "grabacion",
-      "stages": ["conservatorio"],
+      "stages": [
+        "conservatorio"
+      ],
       "icon": "play_arrow",
-      "title": { "es": "Escúchate con una guía", "en": "Listen to yourself with a guide" },
+      "title": {
+        "es": "Escúchate con una guía",
+        "en": "Listen to yourself with a guide"
+      },
       "body": {
         "es": "Pide al alumnado que grabe un fragmento al principio y al final de la semana y que escriba tres diferencias usando una guía de escucha que hayáis acordado.",
         "en": "Ask students to record a passage at the start and end of the week and write down three differences using a listening guide you agreed on together."
       },
-      "lecturaFacil": { "es": "Grábate, escúchate y mira qué has mejorado.", "en": "Record yourself, listen and see what improved." }
+      "lecturaFacil": {
+        "es": "Graba tu voz, escucha y mira cómo mejoras.",
+        "en": "Record your voice, listen and see how you improve."
+      }
     }
   ]
 }

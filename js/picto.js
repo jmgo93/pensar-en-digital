@@ -9,7 +9,7 @@
 import { fetchJson } from './router.js';
 import { getLang, t } from './i18n.js';
 import { h } from './ui.js';
-import { STOPWORDS, words } from './picto-words.js';
+import { SKIP, words } from './picto-words.js';
 
 const API = 'https://api.arasaac.org/v1/pictograms';
 const IMG = (/** @type {number} */ id) => `https://static.arasaac.org/pictograms/${id}/${id}_300.png`;
@@ -71,8 +71,9 @@ const renderStrip = async (box) => {
   const text = box.querySelector('p')?.textContent ?? '';
   const strip = h('ul', { class: 'picto-strip', 'aria-hidden': 'true' });
   box.append(strip);
-  for (const w of words(text, lang)) {
-    const id = STOPWORDS[lang].has(w) ? 0 : await pictoFor(lang, w);
+  // Las partículas sin significado propio no se dibujan: la frase completa ya está escrita encima.
+  for (const w of words(text, lang).filter((x) => !SKIP[lang].has(x))) {
+    const id = await pictoFor(lang, w);
     strip.append(
       h(
         'li',

@@ -7,7 +7,7 @@
  * Ejecutar a mano: `npm run picto`.
  */
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
-import { STOPWORDS, words } from '../js/picto-words.js';
+import { SKIP, LEMMA, words } from '../js/picto-words.js';
 
 const API = 'https://api.arasaac.org/v1/pictograms';
 
@@ -47,7 +47,8 @@ const lookup = async (lang, word) => {
 
 /** Variantes sencillas para plurales y formas comunes. */
 const variants = (/** @type {'es' | 'en'} */ lang, /** @type {string} */ w) => {
-  const v = [w];
+  const lemma = LEMMA[lang][w];
+  const v = lemma ? [lemma, w] : [w];
   if (lang === 'es') {
     if (w.endsWith('es')) v.push(w.slice(0, -2));
     if (w.endsWith('s')) v.push(w.slice(0, -1));
@@ -62,7 +63,7 @@ const variants = (/** @type {'es' | 'en'} */ lang, /** @type {string} */ w) => {
 const map = { es: {}, en: {} };
 let missing = 0;
 for (const lang of /** @type {const} */ (['es', 'en'])) {
-  const unique = [...new Set(texts.flatMap((tx) => words(tx[lang] ?? '', lang)))].filter((w) => !STOPWORDS[lang].has(w));
+  const unique = [...new Set(texts.flatMap((tx) => words(tx[lang] ?? '', lang)))].filter((w) => !SKIP[lang].has(w));
   for (const w of unique) {
     let id = null;
     for (const cand of variants(lang, w)) {

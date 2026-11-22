@@ -87,7 +87,8 @@ const slideContent = (s, ctx) => {
       renderResults(results, vote, null);
       return h(
         'div',
-        { class: 's-vote', 'data-vote': vote.id },
+        // Pregunta + opciones largas: letra algo menor para que todo quepa por encima del pie.
+        { class: `s-vote${loc(vote.question).length + vote.options.reduce((n, o) => n + loc(o).length, 0) > 220 ? ' is-long' : ''}`, 'data-vote': vote.id },
         h('div', { class: 's-vote-main' }, h('p', { class: 's-kicker' }, icon('how_to_vote'), t('slides.vote')), h('h2', {}, loc(vote.question)), results, h('p', { class: 's-status' })),
         vote.formUrl ? h('figure', { class: 's-vote-qr' }, qr(vote.id), h('figcaption', {}, vote.formUrl.replace(/^https?:\/\//, ''))) : null,
       );

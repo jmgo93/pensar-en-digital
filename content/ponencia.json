@@ -6,9 +6,15 @@
   "blocks": [
     {
       "id": "b1",
-      "minutes": [0, 7],
+      "minutes": [
+        0,
+        7
+      ],
       "icon": "co_present",
-      "title": { "es": "Acto I · La provocación", "en": "Act I · The provocation" },
+      "title": {
+        "es": "Acto I · La provocación",
+        "en": "Act I · The provocation"
+      },
       "summary": {
         "es": [
           "Votación: dos versiones de una misma tarea. Una la resuelve una IA en segundos; la otra exige datos propios, contraste con un compañero y una propuesta defendida ante el centro. **Digitalizar no es innovar**: cambiar el soporte no cambia lo que el alumnado piensa.",
@@ -26,9 +32,15 @@
     },
     {
       "id": "b2",
-      "minutes": [7, 13],
+      "minutes": [
+        7,
+        13
+      ],
       "icon": "trending_up",
-      "title": { "es": "Acto II · Lo que sí multiplica", "en": "Act II · What really multiplies" },
+      "title": {
+        "es": "Acto II · Lo que sí multiplica",
+        "en": "Act II · What really multiplies"
+      },
       "summary": {
         "es": [
           "Cuarenta años de investigación dan un efecto medio de la tecnología modesto y muy variable [@tamim]: depende del diseño. Lo que marca la diferencia son las competencias didácticas digitales del profesorado, no el equipamiento [@sailer] [@wohlfart].",
@@ -40,15 +52,21 @@
         ]
       },
       "lecturaFacil": {
-        "es": "Las tabletas no enseñan solas. Un buen profesor sabe para qué usarlas.",
-        "en": "Tablets do not teach by themselves. A good teacher knows what to use them for."
+        "es": "Las tabletas no enseñan solas. Un buen profesor sabe para qué usar las tabletas.",
+        "en": "Tablets do not teach by themselves. A good teacher knows what to use tablets for."
       }
     },
     {
       "id": "b3",
-      "minutes": [13, 24],
+      "minutes": [
+        13,
+        24
+      ],
       "icon": "stairs",
-      "title": { "es": "Acto III · Cruzar el umbral", "en": "Act III · Crossing the threshold" },
+      "title": {
+        "es": "Acto III · Cruzar el umbral",
+        "en": "Act III · Crossing the threshold"
+      },
       "summary": {
         "es": [
           "Tres lentes para mirar una tarea. **ICAP**: ¿el alumnado recibe, manipula, genera o co-construye? [@icap]. **PICRAT**: ¿cuál es su relación con la tecnología y qué le hace la tecnología a tu práctica? [@picrat]. **Modo diseño**: las ideas del alumnado como borradores que el grupo mejora [@knowledge-building].",
@@ -66,9 +84,15 @@
     },
     {
       "id": "b4",
-      "minutes": [24, 35],
+      "minutes": [
+        24,
+        35
+      ],
       "icon": "smart_toy",
-      "title": { "es": "Acto IV · IA: ¿muleta o tutor?", "en": "Act IV · AI: crutch or tutor?" },
+      "title": {
+        "es": "Acto IV · IA: ¿muleta o tutor?",
+        "en": "Act IV · AI: crutch or tutor?"
+      },
       "summary": {
         "es": [
           "Con GPT-4 sin límites, el alumnado mejora en la práctica y rinde peor cuando se le retira; con un tutor que da pistas, el daño se mitiga [@bastani]. La facilidad de la IA puede provocar **pereza metacognitiva**: mejor producto, igual aprendizaje [@fan-pereza].",
@@ -86,9 +110,15 @@
     },
     {
       "id": "b5",
-      "minutes": [35, 45],
+      "minutes": [
+        35,
+        45
+      ],
       "icon": "key",
-      "title": { "es": "Acto V · Siete claves y un reto", "en": "Act V · Seven keys and a challenge" },
+      "title": {
+        "es": "Acto V · Siete claves y un reto",
+        "en": "Act V · Seven keys and a challenge"
+      },
       "summary": {
         "es": [
           "Las [siete claves](../claves/): pedagogía primero, construir y no solo recibir, cuidar la atención, retroalimentación de proceso, DUA desde el diseño, IA con fricción y ética en comunidad.",
@@ -100,8 +130,8 @@
         ]
       },
       "lecturaFacil": {
-        "es": "Elige una tarea. Cámbiala un poco. Cuéntaselo a un compañero.",
-        "en": "Choose a task. Change it a little. Tell a colleague."
+        "es": "Elige una tarea. Cambia un poco la tarea. Habla con otro profesor.",
+        "en": "Choose a task. Change the task a little. Talk with another teacher."
       }
     }
   ]
