@@ -2,7 +2,7 @@
 
 GENERADO por `tools/build-escaleta.mjs` desde `content/presentacion.json`. Para cambiar textos o notas, edita el JSON y regenera. Versión para imprimir: `docs/escaleta.pdf` (`npm run docs:pdf`).
 
-- Duración: 45 minutos · 25 diapositivas · 5 actos.
+- Duración: 45 minutos · 28 diapositivas · 5 actos.
 - Presentación: https://jmgo93.github.io/pensar-en-digital/presentacion/ · Notas del ponente en directo: https://jmgo93.github.io/pensar-en-digital/presentacion/?notas (o tecla N).
 - Teclas: → / Av Pág / espacio (siguiente) · ← / Re Pág (anterior) · Inicio/Fin · B o . (pantalla negra) · F (pantalla completa) · N (abrir notas) · T (reiniciar cronómetro) · número + Intro (ir a esa diapositiva).
 - Votaciones: v1–v4 (ver `docs/votaciones.md`). Sin conexión, la diapositiva propone votar a mano alzada.
@@ -14,34 +14,37 @@ GENERADO por `tools/build-escaleta.mjs` desde `content/presentacion.json`. Para 
 |---|---|---|---|---|
 | **0–7** | | **Acto I · La provocación** | | |
 | 00:00 | 1 | Competencia Digital Docente como medio para generar conocimiento en el alumnado | Hoy no vamos a hablar de aplicaciones, sino de qué tiene que pensar vuestro alumnado. | «Antes de nada, sacad el móvil: todo lo de hoy está en una app». |
-| 00:30 | 2 | Llévatelo: instala la app | No hace falta apuntar nada: diapositivas, prompts, guía y bibliografía están en la app. | «Empecemos con un experimento. Os enseño dos tareas». |
-| 01:00 | 3 | Dos tareas | La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión. | «Votad: ¿cuál puede resolver una IA sola, en segundos?». |
-| 02:00 | 4 | Votación v1: ¿Cuál de las dos tareas puede resolver una IA sola, en segundos? | Muchas de nuestras tareas son tipo A: las resuelve una máquina sin que nadie aprenda. | «Y si pasamos la tarea A a un formato digital, ¿mejora?». |
-| 03:30 | 5 | Digitalizar ≠ innovar | Ficha a PDF, examen a formulario, apuntes a presentación: mismo pensamiento, otro soporte. | «Pero —diréis— ellos ya son digitales, nacieron con una pantalla en la mano…». |
-| 04:30 | 6 | No hay nativos digitales. | Nacer entre pantallas no te hace competente: alguien te lo tiene que enseñar. Ese alguien sois vosotros. | «Y no es solo cosa de cada alumno: la distracción se contagia». |
-| 05:30 | 7 | −11 · puntos en Matemáticas por cada desviación de distracción entre compañeros. Prohibir el móvil no cambió la asociación. | La atención es un clima compartido: se gestiona con diseño didáctico, no solo con normas sobre el papel. | «Entonces, ¿la tecnología funciona o no funciona? Vamos a lo que dice la investigación de 40 años». |
+| 00:30 | 2 | Llévatelo: instala la app | No hace falta apuntar nada: diapositivas, prompts, guía y bibliografía están en la app. | «Antes de empezar, una pregunta. La repetiremos al final para ver si algo ha cambiado». |
+| 01:00 | 3 | Votación v0: El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento? | Es una foto de partida, no un examen: nadie ve quién vota qué. | «Guardamos el resultado. Ahora, dos tareas». |
+| 02:00 | 4 | Dos tareas | La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión. | «Votad: ¿cuál puede resolver una IA sola, en segundos?». |
+| 02:30 | 5 | Votación v1: ¿Cuál de las dos tareas puede resolver una IA sola, en segundos? | Muchas de nuestras tareas son tipo A: las resuelve una máquina sin que nadie aprenda. | «Y si pasamos la tarea A a un formato digital, ¿mejora?». |
+| 04:00 | 6 | Digitalizar ≠ innovar | Ficha a PDF, examen a formulario, apuntes a presentación: mismo pensamiento, otro soporte. | «Pero —diréis— ellos ya son digitales, nacieron con una pantalla en la mano…». |
+| 05:00 | 7 | No hay nativos digitales. | Nacer entre pantallas no te hace competente: alguien te lo tiene que enseñar. Ese alguien sois vosotros. | «Y no es solo cosa de cada alumno: la distracción se contagia». |
+| 06:00 | 8 | −11 · puntos en Matemáticas por cada desviación de distracción entre compañeros. Prohibir el móvil no cambió la asociación. | La atención es un clima compartido: se gestiona con diseño didáctico, no solo con normas sobre el papel. | «Entonces, ¿la tecnología funciona o no funciona? Vamos a lo que dice la investigación de 40 años». |
 | **7–13** | | **Acto II · Lo que sí multiplica** | | |
-| 07:00 | 8 | 0,35 · Efecto medio de la tecnología en 40 años de investigación. Modesto y muy variable: depende del diseño. | La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico. | «¿Y de qué depende? No del equipamiento». |
-| 08:30 | 9 | No decide el equipamiento: decide el docente. | Más tabletas no cambian el aula; un docente que sabe para qué usarlas, sí. | «Y el marco oficial dice lo mismo, aunque lo leamos poco así». |
-| 10:30 | 10 | La competencia docente se nota en lo que logra el alumnado. | Un docente con cien aplicaciones y un alumnado que solo copia no es digitalmente competente. | «Si se nota en el alumnado, necesitamos una forma de mirar qué hace el alumnado. Os doy tres lentes». |
+| 07:00 | 9 | 0,35 · Efecto medio de la tecnología en 40 años de investigación. Modesto y muy variable: depende del diseño. | La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico. | «¿Y de qué depende? No del equipamiento». |
+| 08:30 | 10 | No decide el equipamiento: decide el docente. | Más tabletas no cambian el aula; un docente que sabe para qué usarlas, sí. | «Y el marco oficial dice lo mismo, aunque lo leamos poco así». |
+| 10:30 | 11 | La competencia docente se nota en lo que logra el alumnado. | Un docente con cien aplicaciones y un alumnado que solo copia no es digitalmente competente. | «Si se nota en el alumnado, necesitamos una forma de mirar qué hace el alumnado. Os doy tres lentes». |
 | **13–24** | | **Acto III · Cruzar el umbral** | | |
-| 13:00 | 11 | ICAP: ¿qué hace el alumno con la información? | El salto grande está entre manipular y generar: que produzcan algo que no estaba en el material. | «Pensad en la última vez que vuestro alumnado usó tecnología. Votad». |
-| 15:00 | 12 | Votación v2: La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo? | Lo normal es que salga mucho «recibir» y «manipular»: es el punto de partida, no una crítica. | «Segunda lente: PICRAT, que mira la tecnología y al alumnado a la vez». |
-| 17:00 | 13 | PICRAT: dos preguntas | Todas las casillas pueden ser legítimas; la matriz sirve para ver quién está pensando. | «Veámoslo con un ejemplo de Historia». |
-| 19:00 | 14 | Misma herramienta, otro pensamiento | En el «antes» el pensamiento histórico lo hizo el docente; en el «después», el alumnado. | «Esto tiene nombre en la investigación sobre creación de conocimiento: pasar al modo diseño». |
-| 21:30 | 15 | Del modo creencia al modo diseño. | Generar conocimiento es mejorar ideas en comunidad, no acertar la respuesta del libro. | «Y ahora el elefante en la habitación: la IA generativa». |
+| 13:00 | 12 | ICAP: ¿qué hace el alumno con la información? | El salto grande está entre manipular y generar: que produzcan algo que no estaba en el material. | «Pensad en la última vez que vuestro alumnado usó tecnología. Votad». |
+| 15:00 | 13 | Votación v2: La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo? | Lo normal es que salga mucho «recibir» y «manipular»: es el punto de partida, no una crítica. | «Segunda lente: PICRAT, que mira la tecnología y al alumnado a la vez». |
+| 17:00 | 14 | PICRAT: dos preguntas | Todas las casillas pueden ser legítimas; la matriz sirve para ver quién está pensando. | «Veámoslo con un ejemplo de Historia». |
+| 19:00 | 15 | Misma herramienta, otro pensamiento | En el «antes» el pensamiento histórico lo hizo el docente; en el «después», el alumnado. | «Esto tiene nombre en la investigación sobre creación de conocimiento: pasar al modo diseño». |
+| 21:30 | 16 | Del modo creencia al modo diseño. | Generar conocimiento es mejorar ideas en comunidad, no acertar la respuesta del libro. | «Y ahora el elefante en la habitación: la IA generativa». |
 | **24–35** | | **Acto IV · IA: ¿muleta o tutor?** | | |
-| 24:00 | 16 | −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, el daño se mitiga. | La IA sin diseño pedagógico mejora el ejercicio y empeora el aprendizaje. | «¿Por qué pasa esto? Tiene nombre: pereza metacognitiva». |
-| 26:00 | 17 | Pereza metacognitiva | Si la IA lo hace fácil, el alumno deja de vigilar su propio pensamiento. | «Votemos qué os preocupa más». |
-| 27:30 | 18 | Votación v3: ¿Qué te preocupa más de la IA generativa en tu aula? | Sea cual sea la preocupación, la respuesta no es prohibir: es diseñar. | «Tres maneras de poner fricción productiva». |
-| 29:30 | 19 | Fricción productiva | Que la IA haga más difícil no pensar: el alumno pregunta, explica, verifica y decide. | «Una condición antes de probar nada de esto: los datos». |
-| 33:00 | 20 | Ningún dato personal del alumnado | Describe situaciones, nunca personas. | «Recapitulemos todo en siete claves». |
+| 24:00 | 17 | −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, el daño se mitiga. | La IA sin diseño pedagógico mejora el ejercicio y empeora el aprendizaje. | «¿Por qué pasa esto? Tiene nombre: pereza metacognitiva». |
+| 26:00 | 18 | Pereza metacognitiva | Si la IA lo hace fácil, el alumno deja de vigilar su propio pensamiento. | «Votemos qué os preocupa más». |
+| 27:30 | 19 | Votación v3: ¿Qué te preocupa más de la IA generativa en tu aula? | Sea cual sea la preocupación, la respuesta no es prohibir: es diseñar. | «Tres maneras de poner fricción productiva». |
+| 29:30 | 20 | Fricción productiva | Que la IA haga más difícil no pensar: el alumno pregunta, explica, verifica y decide. | «Una condición antes de probar nada de esto: los datos». |
+| 33:00 | 21 | Ningún dato personal del alumnado | Describe situaciones, nunca personas. | «Recapitulemos todo en siete claves». |
 | **35–45** | | **Acto V · Siete claves y un reto** | | |
-| 35:00 | 21 | 7 claves | Siete preguntas para revisar cualquier tarea, de cualquier etapa y con cualquier herramienta. | «Y si solo os lleváis una pregunta, que sea esta». |
-| 38:30 | 22 | ¿Qué tiene que pensar el alumno ahora que antes no pensaba? | Es la pregunta que resume las siete claves y sirve para cualquier herramienta. | «Os propongo un reto concreto para el lunes. Votad». |
-| 39:30 | 23 | Votación v4: ¿Qué vas a probar el lunes? | Una sola tarea, una sola mejora, la semana que viene. | «Para hacerlo, os dejo el kit». |
-| 41:30 | 24 | Para el lunes | Analiza una tarea con la guía, mejórala con los prompts y compártela con un compañero. | «Gracias». |
-| 44:00 | 25 | Gracias | El alumnado no nace digitalmente competente: necesita docentes digitalmente competentes. |  |
+| 35:00 | 22 | 7 claves | Siete preguntas para revisar cualquier tarea, de cualquier etapa y con cualquier herramienta. | «Y si solo os lleváis una pregunta, que sea esta». |
+| 37:30 | 23 | ¿Qué tiene que pensar el alumno ahora que antes no pensaba? | Es la pregunta que resume las siete claves y sirve para cualquier herramienta. | «¿Recordáis la pregunta del principio? Volvemos a votarla». |
+| 38:00 | 24 | Votación v5: El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento? | La misma pregunta, con todo lo que hemos visto hoy. | «Comparemos con el principio». |
+| 39:00 | 25 | ¿Ha cambiado algo? | Lo que más genera conocimiento no es la aplicación: es lo que el alumnado tiene que pensar y con quién. | «Y ahora, un compromiso para el lunes». |
+| 40:30 | 26 | Votación v4: ¿Qué vas a probar el lunes? | Una sola tarea, una sola mejora, la semana que viene. | «Para hacerlo, os dejo el kit». |
+| 42:00 | 27 | Para el lunes | Analiza una tarea con la guía, mejórala con los prompts y compártela con un compañero. | «Gracias». |
+| 44:00 | 28 | Gracias | El alumnado no nace digitalmente competente: necesita docentes digitalmente competentes. |  |
 
 ## Notas del ponente
 
@@ -66,10 +69,20 @@ Saludo en una frase. Sin currículum. Promesa: «En 45 minutos os vais con una f
 Funciona sin conexión una vez abierta. En Android: menú → Instalar aplicación. En iPhone: Compartir → Añadir a pantalla de inicio. Destaca dos secciones: «Las 7 claves» y «Descargas».
 
 - **Haz:** Deja 30 segundos con el QR a la vista. Si alguien no puede escanear, di la dirección corta en voz alta.
-- **Transición:** *«Empecemos con un experimento. Os enseño dos tareas».*
+- **Transición:** *«Antes de empezar, una pregunta. La repetiremos al final para ver si algo ha cambiado».*
 - **Si vas tarde:** Deja el QR solo 15 segundos: volverá al final.
 
-#### 3. [01:00] Dos tareas
+#### 3. [01:00] Votación v0: El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?
+
+**Idea fuerza:** Es una foto de partida, no un examen: nadie ve quién vota qué.
+
+Pregunta diagnóstica anónima. No comentes las respuestas ni digas cuál es la buena: solo «la volveremos a hacer al final». La opción que buscamos es la tercera (explicar con sus palabras y contrastar con un compañero: constructivo e interactivo en ICAP).
+
+- **Haz:** Un minuto para votar. Sin conexión: pide que la apunten en el móvil o en un papel y vuelve a preguntarla al final a mano alzada.
+- **Transición:** *«Guardamos el resultado. Ahora, dos tareas».*
+- **Si vas tarde:** Mantenla aunque vayas justo: sin ella no hay comparación.
+
+#### 4. [02:00] Dos tareas
 
 > En pantalla: Dos tareas · Redacción: la importancia del agua. · Mide el agua de casa, compáralo y propón una medida. · A · B
 
@@ -81,7 +94,7 @@ Lee las dos en voz alta. La B también puede usar IA para analizar datos, pero l
 - **Transición:** *«Votad: ¿cuál puede resolver una IA sola, en segundos?».*
 - **Si vas tarde:** Lee solo los títulos de A y B.
 
-#### 4. [02:00] Votación v1: ¿Cuál de las dos tareas puede resolver una IA sola, en segundos?
+#### 5. [02:30] Votación v1: ¿Cuál de las dos tareas puede resolver una IA sola, en segundos?
 
 **Idea fuerza:** Muchas de nuestras tareas son tipo A: las resuelve una máquina sin que nadie aprenda.
 
@@ -91,7 +104,7 @@ Comenta el resultado. Casi todo el mundo ve que la A la hace una IA sola. Pregun
 - **Transición:** *«Y si pasamos la tarea A a un formato digital, ¿mejora?».*
 - **Si vas tarde:** Vota a mano alzada en 30 segundos.
 
-#### 5. [03:30] Digitalizar ≠ innovar
+#### 6. [04:00] Digitalizar ≠ innovar
 
 > En pantalla: Digitalizar ≠ innovar · Cambiar el soporte no cambia lo que el alumnado piensa.
 
@@ -103,7 +116,7 @@ Tres ejemplos rápidos y reconocibles. Eso es digitalizar. Innovar es cambiar lo
 - **Transición:** *«Pero —diréis— ellos ya son digitales, nacieron con una pantalla en la mano…».*
 - **Si vas tarde:** Un solo ejemplo.
 
-#### 6. [04:30] No hay nativos digitales.
+#### 7. [05:00] No hay nativos digitales.
 
 > En pantalla: No hay nativos digitales. · Tampoco multitarea: alternar tareas empeora el aprendizaje.
 
@@ -117,7 +130,7 @@ Kirschner y De Bruyckere (2017) revisan la evidencia: no existe el nativo digita
 - **Si vas tarde:** Salta la pregunta a la sala.
 - **Cita en pantalla:** Kirschner y De Bruyckere, 2017
 
-#### 7. [05:30] −11 · puntos en Matemáticas por cada desviación de distracción entre compañeros. Prohibir el móvil no cambió la asociación.
+#### 8. [06:00] −11 · puntos en Matemáticas por cada desviación de distracción entre compañeros. Prohibir el móvil no cambió la asociación.
 
 > En pantalla: puntos en Matemáticas por cada desviación de distracción entre compañeros. Prohibir el móvil no cambió la asociación.
 
@@ -133,7 +146,7 @@ Estudio con datos de PISA 2022 en 80 sistemas educativos. Cada desviación típi
 
 ### 7–13 min · Acto II · Lo que sí multiplica
 
-#### 8. [07:00] 0,35 · Efecto medio de la tecnología en 40 años de investigación. Modesto y muy variable: depende del diseño.
+#### 9. [07:00] 0,35 · Efecto medio de la tecnología en 40 años de investigación. Modesto y muy variable: depende del diseño.
 
 > En pantalla: Efecto medio de la tecnología en 40 años de investigación. Modesto y muy variable: depende del diseño.
 
@@ -147,7 +160,7 @@ Metaanálisis de segundo orden: 25 metaanálisis y 1055 estudios, efecto medio 0
 - **Si vas tarde:** Omite Hillmayr.
 - **Cita en pantalla:** Tamim et al., 2011
 
-#### 9. [08:30] No decide el equipamiento: decide el docente.
+#### 10. [08:30] No decide el equipamiento: decide el docente.
 
 > En pantalla: No decide el equipamiento: decide el docente. · Pesan más las competencias didácticas digitales que los dispositivos.
 
@@ -161,7 +174,7 @@ Sailer, Murböck y Fischer (2021), muestra representativa de docentes de Baviera
 - **Si vas tarde:** Omite TPACK.
 - **Cita en pantalla:** Sailer et al., 2021
 
-#### 10. [10:30] La competencia docente se nota en lo que logra el alumnado.
+#### 11. [10:30] La competencia docente se nota en lo que logra el alumnado.
 
 > En pantalla: La competencia docente se nota en lo que logra el alumnado. · MRCDD: 4 de sus 6 áreas miran al aula.
 
@@ -177,7 +190,7 @@ MRCDD (Resolución de 4 de mayo de 2022, BOE de 16 de mayo). Áreas 1 y 2: compr
 
 ### 13–24 min · Acto III · Cruzar el umbral
 
-#### 11. [13:00] ICAP: ¿qué hace el alumno con la información?
+#### 12. [13:00] ICAP: ¿qué hace el alumno con la información?
 
 > En pantalla: ICAP: ¿qué hace el alumno con la información? · Pasivo · recibe · Activo · manipula · Constructivo · genera · Interactivo · co-construye
 
@@ -191,7 +204,7 @@ Chi y Wylie (2014). Ejemplos de la misma clase: ver un vídeo (P), subrayar o co
 - **Si vas tarde:** Un solo ejemplo, el del vídeo.
 - **Cita en pantalla:** Chi y Wylie, 2014
 
-#### 12. [15:00] Votación v2: La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo?
+#### 13. [15:00] Votación v2: La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo?
 
 **Idea fuerza:** Lo normal es que salga mucho «recibir» y «manipular»: es el punto de partida, no una crítica.
 
@@ -201,7 +214,7 @@ Comenta el resultado sin juzgar. Conecta con Sailer et al. (2021): en la prácti
 - **Transición:** *«Segunda lente: PICRAT, que mira la tecnología y al alumnado a la vez».*
 - **Si vas tarde:** Mano alzada rápida y sigue.
 
-#### 13. [17:00] PICRAT: dos preguntas
+#### 14. [17:00] PICRAT: dos preguntas
 
 > En pantalla: PICRAT: dos preguntas · Pasivo, interactivo o creativo · Reemplaza, amplifica o transforma · Alumnado · Tecnología
 
@@ -215,7 +228,7 @@ Kimmons, Graham y West (2020). Dos preguntas: ¿qué relación tiene el alumnado
 - **Si vas tarde:** No menciones SAMR.
 - **Cita en pantalla:** Kimmons et al., 2020
 
-#### 14. [19:00] Misma herramienta, otro pensamiento
+#### 15. [19:00] Misma herramienta, otro pensamiento
 
 > En pantalla: Misma herramienta, otro pensamiento · Recorren la línea temporal del docente. · Construyen la suya con fuentes y la defienden. · Antes · Después
 
@@ -227,7 +240,7 @@ Antes: Interactivo-Reemplaza; recorren un muro digital que hizo el profesor y re
 - **Transición:** *«Esto tiene nombre en la investigación sobre creación de conocimiento: pasar al modo diseño».*
 - **Si vas tarde:** Sin preguntas a la sala; menciona solo el ejemplo de tu público mayoritario.
 
-#### 15. [21:30] Del modo creencia al modo diseño.
+#### 16. [21:30] Del modo creencia al modo diseño.
 
 > En pantalla: Del modo creencia al modo diseño. · Las ideas del alumnado, borradores que el grupo mejora.
 
@@ -243,7 +256,7 @@ Scardamalia y Bereiter: en modo creencia se aceptan o rechazan ideas ya hechas; 
 
 ### 24–35 min · Acto IV · IA: ¿muleta o tutor?
 
-#### 16. [24:00] −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, el daño se mitiga.
+#### 17. [24:00] −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, el daño se mitiga.
 
 > En pantalla: Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, el daño se mitiga.
 
@@ -257,7 +270,7 @@ Bastani et al. (2025), PNAS: experimento de campo con casi mil estudiantes de Ma
 - **Si vas tarde:** Quédate con número + frase clave.
 - **Cita en pantalla:** Bastani et al., 2025
 
-#### 17. [26:00] Pereza metacognitiva
+#### 18. [26:00] Pereza metacognitiva
 
 > En pantalla: Pereza metacognitiva · Mejor producto, igual aprendizaje: la facilidad puede apagar la autorregulación.
 
@@ -271,7 +284,7 @@ Fan et al. (2025), experimento aleatorizado con 117 universitarios: el grupo con
 - **Si vas tarde:** Sin la pregunta a la sala.
 - **Cita en pantalla:** Fan et al., 2025
 
-#### 18. [27:30] Votación v3: ¿Qué te preocupa más de la IA generativa en tu aula?
+#### 19. [27:30] Votación v3: ¿Qué te preocupa más de la IA generativa en tu aula?
 
 **Idea fuerza:** Sea cual sea la preocupación, la respuesta no es prohibir: es diseñar.
 
@@ -281,7 +294,7 @@ Recoge la preocupación mayoritaria y conéctala con lo que viene: si sale «cop
 - **Transición:** *«Tres maneras de poner fricción productiva».*
 - **Si vas tarde:** Mano alzada y comenta solo la opción ganadora.
 
-#### 19. [29:30] Fricción productiva
+#### 20. [29:30] Fricción productiva
 
 > En pantalla: Fricción productiva · La IA pregunta, no responde · La IA hace de alumno que se equivoca · Se evalúan borradores y decisiones
 
@@ -295,7 +308,7 @@ Recoge la preocupación mayoritaria y conéctala con lo que viene: si sale «cop
 - **Si vas tarde:** No hagas la demostración.
 - **Cita en pantalla:** Mollick y Mollick, 2023
 
-#### 20. [33:00] Ningún dato personal del alumnado
+#### 21. [33:00] Ningún dato personal del alumnado
 
 > En pantalla: Ningún dato personal del alumnado · RGPD y LOPDGDD · Reglamento de IA: alfabetización (art. 4) · Cuentas corporativas del centro
 
@@ -311,7 +324,7 @@ Nunca nombres, notas, diagnósticos ni fotos en herramientas de IA. Ejemplo corr
 
 ### 35–45 min · Acto V · Siete claves y un reto
 
-#### 21. [35:00] 7 claves
+#### 22. [35:00] 7 claves
 
 > En pantalla: 7 claves · Pedagogía primero · Construir, no recibir · Atención cuidada · Feedback de proceso · DUA de origen · IA con fricción · Ética compartida
 
@@ -323,7 +336,7 @@ Recorre rápido: 1) primero el obstáculo de la materia, después la herramienta
 - **Transición:** *«Y si solo os lleváis una pregunta, que sea esta».*
 - **Si vas tarde:** Lee solo los títulos y remite a la app.
 
-#### 22. [38:30] ¿Qué tiene que pensar el alumno ahora que antes no pensaba?
+#### 23. [37:30] ¿Qué tiene que pensar el alumno ahora que antes no pensaba?
 
 > En pantalla: ¿Qué tiene que pensar el alumno ahora que antes no pensaba?
 
@@ -332,10 +345,33 @@ Recorre rápido: 1) primero el obstáculo de la materia, después la herramienta
 Léela y calla cinco segundos. Si la respuesta es «nada», has digitalizado. Si la respuesta es «comparar, decidir, explicar, defender», estás generando conocimiento.
 
 - **Haz:** Cinco segundos de silencio. De verdad.
-- **Transición:** *«Os propongo un reto concreto para el lunes. Votad».*
+- **Transición:** *«¿Recordáis la pregunta del principio? Volvemos a votarla».*
 - **Si vas tarde:** Nada que recortar.
 
-#### 23. [39:30] Votación v4: ¿Qué vas a probar el lunes?
+#### 24. [38:00] Votación v5: El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?
+
+**Idea fuerza:** La misma pregunta, con todo lo que hemos visto hoy.
+
+No digas aún cuál es la respuesta buena. Deja votar y pasa a la comparación.
+
+- **Haz:** Un minuto. Sin conexión: mano alzada.
+- **Transición:** *«Comparemos con el principio».*
+- **Si vas tarde:** Medio minuto de votación.
+
+#### 25. [39:00] ¿Ha cambiado algo?
+
+> En pantalla: ¿Ha cambiado algo? · Antes Después
+
+**Idea fuerza:** Lo que más genera conocimiento no es la aplicación: es lo que el alumnado tiene que pensar y con quién.
+
+Comenta el cambio en la opción «explicar con sus palabras y contrastar con un compañero» (constructivo e interactivo). Si sube, celébralo; si no, úsalo: «Pues la tarea del lunes es justo esa». Aclara que es una medida orientativa: votos anónimos, sin emparejar personas, y puede votar gente distinta al principio y al final.
+
+- **Haz:** Señala en pantalla la línea con el porcentaje antes → después.
+- **Dato y fuente:** Comparación de distribuciones de v0 (minuto 1) y v5 (minuto 38). Los datos quedan en tus formularios de Google; puedes exportarlos a una hoja de cálculo.
+- **Transición:** *«Y ahora, un compromiso para el lunes».*
+- **Si vas tarde:** Lee solo el porcentaje antes → después.
+
+#### 26. [40:30] Votación v4: ¿Qué vas a probar el lunes?
 
 **Idea fuerza:** Una sola tarea, una sola mejora, la semana que viene.
 
@@ -345,7 +381,7 @@ Comenta la opción más votada y relaciónala con el kit: guía de análisis, pr
 - **Transición:** *«Para hacerlo, os dejo el kit».*
 - **Si vas tarde:** Sáltala si vas más de 3 minutos tarde: pasa al QR.
 
-#### 24. [41:30] Para el lunes
+#### 27. [42:00] Para el lunes
 
 > En pantalla: Para el lunes · Guía y descargas · Banco de prompts
 
@@ -357,7 +393,7 @@ Descargas: guía para analizar tareas (PDF y editable), cuaderno de prompts y la
 - **Transición:** *«Gracias».*
 - **Si vas tarde:** 30 segundos de QR.
 
-#### 25. [44:00] Gracias
+#### 28. [44:00] Gracias
 
 > En pantalla: Gracias
 

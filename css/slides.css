@@ -249,6 +249,14 @@
 .s-results .is-top .vote-label { font-weight: 700; }
 .s-results .vote-num { text-align: end; font-weight: 700; font-variant-numeric: tabular-nums; }
 
+/* Antes / después */
+.s-prepost { display: grid; align-content: center; gap: 32px; }
+.s-prepost h2 { font-size: 72px; }
+.s-prepost .s-col { padding: 36px; }
+.s-prepost .s-results .vote-row { font-size: 40px; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) 4ch; gap: 20px; }
+.s-prepost .s-results .vote-track { block-size: 36px; }
+.s-delta { font-size: 52px; font-weight: 700; color: var(--md-sys-color-primary); min-block-size: 1.2em; }
+
 /* Final */
 .s-end { display: grid; align-content: center; gap: 24px; }
 .s-end h2 { font-size: 160px; color: var(--md-sys-color-primary); }

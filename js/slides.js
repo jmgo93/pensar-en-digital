@@ -92,6 +92,25 @@ const slideContent = (s, ctx) => {
         vote.formUrl ? h('figure', { class: 's-vote-qr' }, qr(vote.id), h('figcaption', {}, vote.formUrl.replace(/^https?:\/\//, ''))) : null,
       );
     }
+    case 'prepost': {
+      const pre = ctx.votes[s.pre];
+      const post = ctx.votes[s.post];
+      if (!pre || !post) return h('div');
+      /** @param {import('./types').Vote} v @param {string} label @param {string} cls */
+      const col = (v, label, cls) => {
+        const box = h('div', { class: 's-results', 'data-vote': v.id });
+        renderResults(box, v, null);
+        return h('div', { class: `s-col ${cls}` }, h('p', { class: 's-label' }, label), box);
+      };
+      return h(
+        'div',
+        { class: 's-prepost' },
+        h('h2', {}, loc(s.title)),
+        h('div', { class: 's-cols' }, col(pre, t('inclusiva.before'), 'before'), col(post, t('inclusiva.after'), 'after')),
+        h('p', { class: 's-delta', 'aria-live': 'polite' }),
+        h('p', { class: 's-status' }),
+      );
+    }
     case 'end':
       return h(
         'div',
@@ -183,10 +202,54 @@ const init = async () => {
   /* -------- Vista de notas -------- */
   const notesRoot = document.getElementById('notes');
 
+  /**
+   * Comparación antes/después: sondea las dos votaciones y muestra el cambio en la opción buscada.
+   * @param {Slide} s
+   * @param {HTMLElement} el
+   */
+  const startPrePost = (s, el) => {
+    const pre = ctx.votes[s.pre];
+    const post = ctx.votes[s.post];
+    const status = /** @type {HTMLElement} */ (el.querySelector('.s-status'));
+    const delta = /** @type {HTMLElement} */ (el.querySelector('.s-delta'));
+    if (!pre || !post) return;
+    if (!site.votingEndpoint) {
+      status.textContent = t('votes.notConfigured');
+      return;
+    }
+    /** @type {Record<string, import('./votes.js').VoteResult>} */
+    const last = {};
+    const target = pre.target ?? 0;
+    /** @param {import('./votes.js').VoteResult | undefined} r */
+    const pct = (r) => (r && r.total ? Math.round(((r.counts[target] ?? 0) / r.total) * 100) : 0);
+    const update = () => {
+      const a = last[pre.id];
+      const b = last[post.id];
+      if (a && b) delta.textContent = t('slides.delta', { option: loc(pre.options[target]), pre: String(pct(a)), post: String(pct(b)) });
+    };
+    const stops = [pre, post].map((v) =>
+      poll(
+        () => fetchResults(site.votingEndpoint, v.id),
+        (r) => {
+          last[v.id] = r;
+          renderResults(/** @type {HTMLElement} */ (el.querySelector(`.s-results[data-vote="${v.id}"]`)), v, r);
+          status.textContent = '';
+          update();
+        },
+        () => (status.textContent = t('votes.offline')),
+      ),
+    );
+    stopPoll = () => stops.forEach((f) => f());
+  };
+
   /** Arranca el sondeo de resultados si la diapositiva es una votación. */
   const startVote = () => {
     stopPoll();
     const s = deck.slides[index];
+    if (!notesMode && s?.type === 'prepost' && slideEls[index]) {
+      startPrePost(s, /** @type {HTMLElement} */ (slideEls[index]));
+      return;
+    }
     if (notesMode || s?.type !== 'vote') return;
     const vote = ctx.votes[s.vote];
     const el = slideEls[index];

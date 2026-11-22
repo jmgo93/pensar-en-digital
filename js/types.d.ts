@@ -72,6 +72,10 @@ export interface Vote {
   options: Localized[];
   /** URL corta del formulario (para el QR). */
   formUrl: string;
+  /** Índice de la opción buscada (votaciones de antes/después). */
+  target?: number;
+  /** Id de la votación emparejada (v0 ↔ v5). */
+  pair?: string;
 }
 
 export type Strings = Record<string, string>;

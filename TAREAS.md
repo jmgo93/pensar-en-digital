@@ -9,7 +9,7 @@ Cada fase termina con un commit. Push autorizado (20/11): cada push publica en P
 
 | # | Asunto | Bloquea | Estado |
 |---|---|---|---|
-| P7 | **En standby (pedido por el usuario el 20/11).** El usuario sigue `docs/votaciones.md` y envía las 4 URL de los formularios y la URL `/exec` del contador | 5.4, 5.5 | **Esperando al usuario** |
+| P7 | **En standby (pedido por el usuario el 20/11).** El usuario sigue `docs/votaciones.md` y envía las 6 URL de los formularios (v0–v5, con antes/después) y la URL `/exec` del contador | 5.4, 5.5 | **Esperando al usuario** |
 
 ### Decisiones tomadas
 
@@ -256,6 +256,6 @@ Depende de: Fases 1–5.
 
 ## Pendiente fuera de las fases (por el usuario)
 
-- [ ] **Votaciones (P7, en standby):** seguir `docs/votaciones.md` y enviar las 4 URL de los formularios y la URL `/exec`. Después: rellenar `formUrl` y `votingEndpoint`, ejecutar `npm run qr` y `npm run build:all`, y hacer push.
+- [ ] **Votaciones (P7, en standby):** seguir `docs/votaciones.md` y enviar las 6 URL de los formularios (v0–v5) y la URL `/exec`. Después: rellenar `formUrl` y `votingEndpoint`, ejecutar `npm run qr` y `npm run build:all`, y hacer push.
 - [ ] Probar los prompts publicados con `docs/pruebas-prompts.md`, sobre todo la precarga de Claude con sesión iniciada.
 - [ ] Probar en Android e iOS reales con `docs/pruebas-dispositivos.md`, y el mando real del auditorio.

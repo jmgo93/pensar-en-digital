@@ -199,7 +199,8 @@
     "slides.escaleta": "Escaleta",
     "app.navBar": "Navegación inferior",
     "app.navRail": "Navegación lateral",
-    "claves.download": "Descargar la guía y los resúmenes"
+    "claves.download": "Descargar la guía y los resúmenes",
+    "slides.delta": "«{option}»: {pre} % → {post} %"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -401,6 +402,7 @@
     "slides.escaleta": "Run sheet",
     "app.navBar": "Bottom navigation",
     "app.navRail": "Side navigation",
-    "claves.download": "Download the guide and summaries"
+    "claves.download": "Download the guide and summaries",
+    "slides.delta": "“{option}”: {pre}% → {post}%"
   }
 }

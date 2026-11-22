@@ -1,5 +1,46 @@
 [
   {
+    "id": "v0",
+    "minute": "0–7",
+    "block": {
+      "es": "Antes: pregunta diagnóstica",
+      "en": "Before: diagnostic question"
+    },
+    "context": {
+      "es": [
+        "Pregunta diagnóstica: se hace al empezar y se repite igual al final para medir el cambio."
+      ],
+      "en": [
+        "Diagnostic question: asked at the start and repeated unchanged at the end to measure change."
+      ]
+    },
+    "question": {
+      "es": "El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?",
+      "en": "Students watch a video and take a quiz on a tablet. Which change would generate most knowledge?"
+    },
+    "options": [
+      {
+        "es": "Una aplicación más interactiva y atractiva",
+        "en": "A more interactive, attractive app"
+      },
+      {
+        "es": "Puntos, insignias y clasificación",
+        "en": "Points, badges and a leaderboard"
+      },
+      {
+        "es": "Que lo expliquen con sus palabras y lo contrasten con un compañero",
+        "en": "They explain it in their own words and compare with a classmate"
+      },
+      {
+        "es": "Que usen una IA para resolverlo más rápido",
+        "en": "They use AI to solve it faster"
+      }
+    ],
+    "target": 2,
+    "formUrl": "",
+    "pair": "v5"
+  },
+  {
     "id": "v1",
     "minute": "0–7",
     "block": {
@@ -152,5 +193,46 @@
       }
     ],
     "formUrl": ""
+  },
+  {
+    "id": "v5",
+    "minute": "35–45",
+    "block": {
+      "es": "Después: la misma pregunta",
+      "en": "After: the same question"
+    },
+    "context": {
+      "es": [
+        "Pregunta diagnóstica: se hace al empezar y se repite igual al final para medir el cambio."
+      ],
+      "en": [
+        "Diagnostic question: asked at the start and repeated unchanged at the end to measure change."
+      ]
+    },
+    "question": {
+      "es": "El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento?",
+      "en": "Students watch a video and take a quiz on a tablet. Which change would generate most knowledge?"
+    },
+    "options": [
+      {
+        "es": "Una aplicación más interactiva y atractiva",
+        "en": "A more interactive, attractive app"
+      },
+      {
+        "es": "Puntos, insignias y clasificación",
+        "en": "Points, badges and a leaderboard"
+      },
+      {
+        "es": "Que lo expliquen con sus palabras y lo contrasten con un compañero",
+        "en": "They explain it in their own words and compare with a classmate"
+      },
+      {
+        "es": "Que usen una IA para resolverlo más rápido",
+        "en": "They use AI to solve it faster"
+      }
+    ],
+    "target": 2,
+    "formUrl": "",
+    "pair": "v0"
   }
 ]

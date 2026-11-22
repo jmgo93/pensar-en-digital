@@ -36,6 +36,7 @@ const visible = (/** @type {any} */ s, /** @type {'es' | 'en'} */ l) => {
   for (const st of s.steps ?? []) add(st);
   for (const tg of s.targets ?? []) add(tg.label);
   if (s.type === 'vote') add(votes[s.vote].question);
+  if (s.type === 'prepost') parts.push(l === 'es' ? 'Antes Después' : 'Before After');
   if (s.type === 'title') return []; // la portada lleva el título oficial completo
   return parts.filter(Boolean);
 };
