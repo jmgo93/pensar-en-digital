@@ -3,7 +3,8 @@
  * Banco de prompts (ia/): guía breve + tarjetas con [variables] rellenables,
  * Copiar · Gemini · ChatGPT · Claude · Compartir. Filtros por categoría y etapa.
  */
-import { loadContent, loc, inline } from './content.js';
+import { loadContent, loadSources, loc, inline } from './content.js';
+import { fromRoot } from './router.js';
 import { h, icon } from './ui.js';
 import { t, getLang } from './i18n.js';
 import { getStage, byProfile, stageChips, loadProfiles } from './profile.js';
@@ -11,8 +12,9 @@ import { AI_SERVICES, copyWithFeedback, openInAI, share } from './ai.js';
 
 /**
  * @typedef {import('./types').Localized} L
- * @typedef {{ es: string, en: string, sample: L }} PromptVar
- * @typedef {{ id: string, category: string, stages: string[], title: L, goal: L, prompt: L, vars: PromptVar[], example: L }} PromptCard
+ * @typedef {{ es: string, en: string, sample: L, options?: L[] }} PromptVar
+ * @typedef {{ id: string, category: string, stages: string[], title: L, goal: L, prompt: L, vars: PromptVar[], example: L, see?: string[], next?: string[], sources?: string[] }} PromptCard
+ * @typedef {{ titles: Map<string, string>, keys: Map<string, { n: number, title: L }>, goTo: (id: string) => void }} CardLinks
  * @typedef {{ id: string, icon: string, label: L }} Category
  * @typedef {{ checked: string, guide: { icon: string, title: L, body: L }[], categories: Category[], cards: PromptCard[] }} PromptBank
  */
@@ -49,8 +51,9 @@ const isLong = (/** @type {string} */ name) => /^(pega|paste)/i.test(name);
  * @param {PromptCard} card
  * @param {Category | undefined} cat
  * @param {Record<string, string>} stageLabels
+ * @param {CardLinks} links
  */
-const renderCard = (card, cat, stageLabels) => {
+const renderCard = (card, cat, stageLabels, links) => {
   const lang = getLang();
   const template = card.prompt[lang];
   /** @type {Record<string, string>} */
@@ -63,7 +66,9 @@ const renderCard = (card, cat, stageLabels) => {
     const name = v[lang];
     const id = `${card.id}-v${i}`;
     const sample = loc(v.sample);
-    const input = isLong(name)
+    const input = v.options
+      ? h('select', { id, class: 'field' }, h('option', { value: '' }, t('ia.choose')), ...v.options.map((o) => h('option', { value: loc(o) }, loc(o))))
+      : isLong(name)
       ? h('textarea', { id, class: 'field', rows: 4, placeholder: t('ia.pasteHint') })
       : h('input', { id, class: 'field', type: 'text', placeholder: sample ? `${t('ia.eg')} ${sample}` : '', autocomplete: 'off' });
     input.addEventListener('input', () => {
@@ -79,12 +84,13 @@ const renderCard = (card, cat, stageLabels) => {
   return h(
     'article',
     { class: 'card card-elevated prompt-card', id: card.id, 'aria-labelledby': `${card.id}-t`, 'data-tts': '' },
-    h('div', { class: 'card-header' }, h('span', { class: 'card-icon' }, icon(cat?.icon ?? 'smart_toy')), h('div', {}, h('p', { class: 'label-medium muted' }, cat ? loc(cat.label) : ''), h('h3', { id: `${card.id}-t`, class: 'title-medium' }, loc(card.title)))),
+    h('div', { class: 'card-header' }, h('span', { class: 'card-icon' }, icon(cat?.icon ?? 'smart_toy')), h('div', {}, h('p', { class: 'label-medium muted' }, cat ? loc(cat.label) : ''), h('h3', { id: `${card.id}-t`, class: 'title-medium', tabindex: '-1' }, loc(card.title)))),
     h('p', {}, loc(card.goal)),
     h('p', { class: 'stage-list label-medium' }, card.stages.length === 4 ? t('profile.allStages') : card.stages.map((s) => stageLabels[s]).join(' · ')),
     h('div', { class: 'prompt-box' }, h('p', { class: 'label-medium muted' }, t('ia.prompt')), view),
     fields.length ? h('details', { class: 'prompt-form' }, h('summary', { class: 'label-large' }, icon('edit'), t('ia.fill')), h('div', { class: 'stack' }, ...fields)) : null,
     h('details', { class: 'prompt-example' }, h('summary', { class: 'label-large' }, icon('lightbulb'), t('ia.example')), h('p', {}, loc(card.example))),
+    relatedLinks(card, links),
     h(
       'div',
       { class: 'prompt-actions' },
@@ -97,12 +103,57 @@ const renderCard = (card, cat, stageLabels) => {
   );
 };
 
+/**
+ * Enlaces de la tarjeta: claves relacionadas, siguiente paso y fuentes.
+ * @param {PromptCard} card
+ * @param {CardLinks} links
+ */
+const relatedLinks = (card, links) => {
+  const keys = (card.see ?? []).flatMap((id) => {
+    const k = links.keys.get(id);
+    return k ? [h('a', { class: 'chip-link', href: `${fromRoot('claves/').href}#${id}` }, `${k.n}. ${loc(k.title)}`)] : [];
+  });
+  const next = (card.next ?? [])
+    .filter((id) => links.titles.has(id))
+    .map((id) => h('a', { class: 'chip-link', href: `#${id}`, onclick: (/** @type {Event} */ e) => { e.preventDefault(); links.goTo(id); } }, links.titles.get(id) ?? id));
+  const sources = card.sources ?? [];
+  if (!keys.length && !next.length && !sources.length) return null;
+  return h(
+    'div',
+    { class: 'prompt-links' },
+    keys.length ? h('p', { class: 'link-row' }, h('span', { class: 'label-medium muted' }, icon('key'), t('ia.see')), ...keys) : null,
+    next.length ? h('p', { class: 'link-row' }, h('span', { class: 'label-medium muted' }, icon('east'), t('ia.next')), ...next) : null,
+    sources.length ? h('p', { class: 'body-small muted' }, t('ia.basedOn'), ' ', inline(sources.map((s) => `[@${s}]`).join(' '))) : null,
+  );
+};
+
 /** Pinta la página del banco de prompts en #view. */
 export const renderPrompts = async () => {
   const view = document.getElementById('view');
   if (!view) return;
   /** @type {PromptBank} */
   const bank = await loadContent('prompts');
+  await loadSources();
+  /** @type {{ keys: { id: string, n: number, title: L }[] }} */
+  const claves = await loadContent('claves');
+  /** @type {CardLinks} */
+  const links = {
+    titles: new Map(bank.cards.map((c) => [c.id, loc(c.title)])),
+    keys: new Map(claves.keys.map((k) => [k.id, { n: k.n, title: k.title }])),
+    goTo: (id) => {
+      const target = document.getElementById(id);
+      if (target) {
+        history.replaceState(null, '', `#${id}`);
+        target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+        target.querySelector('details.prompt-form')?.setAttribute('open', '');
+        /** @type {HTMLElement | null} */ (target.querySelector('h3'))?.focus({ preventScroll: true });
+        return;
+      }
+      // La tarjeta está oculta por un filtro: se recarga sin filtros apuntando a ella.
+      location.hash = id;
+      location.reload();
+    },
+  };
   const profiles = await loadProfiles();
   const stageLabels = Object.fromEntries(profiles.stages.map((s) => [s.id, loc(s.label)]));
   const cats = new Map(bank.categories.map((c) => [c.id, c]));
@@ -120,7 +171,7 @@ export const renderPrompts = async () => {
     );
     // Primeras tarjetas al momento; el resto por tandas para no bloquear el hilo principal.
     const FIRST = location.hash ? cards.length : 2;
-    grid.replaceChildren(...cards.slice(0, FIRST).map((c) => renderCard(c, cats.get(c.category), stageLabels)));
+    grid.replaceChildren(...cards.slice(0, FIRST).map((c) => renderCard(c, cats.get(c.category), stageLabels, links)));
     count.textContent = t('ia.count', { n: cards.length });
     const rest = cards.slice(FIRST);
     const token = (drawToken = Symbol('draw'));
@@ -132,7 +183,7 @@ export const renderPrompts = async () => {
       if (token !== drawToken) return;
       do {
         const next = rest.shift();
-        if (next) grid.append(renderCard(next, cats.get(next.category), stageLabels));
+        if (next) grid.append(renderCard(next, cats.get(next.category), stageLabels, links));
       } while (rest.length && deadline.timeRemaining() > 6);
       if (rest.length) idle(step);
       else delete grid.dataset.pending;
@@ -157,6 +208,7 @@ export const renderPrompts = async () => {
   draw();
   view.replaceChildren(
     h('p', { class: 'lead' }, t('ia.intro')),
+    h('div', { class: 'btn-row' }, h('a', { class: 'btn btn-tonal interactive', href: `${fromRoot('recursos/').href}#prompts` }, icon('download'), h('span', {}, t('ia.download')))),
     h(
       'details',
       { class: 'card card-filled guide', open: true },

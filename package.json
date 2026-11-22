@@ -14,15 +14,17 @@
     "app-icons": "node tools/build-app-icons.mjs",
     "sw": "node tools/build-sw.mjs",
     "qr": "node tools/build-qr.mjs",
-    "guion": "node tools/build-guion.mjs",
-    "build:all": "npm run pages && npm run search && npm run prompt-tests && npm run qr && npm run guion && npm run sw",
+    "build:all": "npm run pages && npm run search && npm run prompt-tests && npm run qr && npm run escaleta && npm run docs && npm run sw",
     "prompt-tests": "node tools/build-prompt-tests.mjs",
     "typecheck": "tsc -p jsconfig.json",
     "check:ui": "node tools/check-ui.mjs http://127.0.0.1:8765/pensar-en-digital/",
     "check:links": "node tools/check-links.mjs",
     "check:lighthouse": "node tools/check-lighthouse.mjs",
     "check:html": "html-validate \"*.html\" \"*/*.html\"",
-    "serve": "python -m http.server 8000"
+    "serve": "python -m http.server 8000",
+    "escaleta": "node tools/build-escaleta.mjs",
+    "docs": "node tools/build-docs.mjs",
+    "docs:pdf": "node tools/build-docs.mjs --pdf"
   },
   "devDependencies": {
     "@material/material-color-utilities": "0.3.0",

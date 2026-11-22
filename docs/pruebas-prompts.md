@@ -19,9 +19,65 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | Claude | `claude.ai/new?q=` | Pide iniciar sesión y conserva el parámetro tras hacerlo. **No verificado con sesión iniciada**: compruébalo tú. | Prompt copiado: pegarlo. |
 | Gemini | `gemini.google.com/app` | No admite prompt precargado (`?q=` se ignora). | Se copia, se abre Gemini y aparece el aviso «Prompt copiado: pégalo en Gemini». |
 
-## Prompts (23)
+## Prompts (32)
 
-### 1. Material en tres niveles · _Crear contenido_
+### 1. Radiografía de una tarea · _Analiza tu tarea_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#analizar-tarea
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **etapa** = ESO · **materia y curso** = Geografía e Historia, 2.º de ESO · **objetivo o criterio** = explicar causas y consecuencias de un proceso histórico · **tecnología disponible** = un dispositivo por pareja · **pega aquí el enunciado de la tarea** = (pega un texto breve sin datos personales) · **foco del análisis** = las siete claves por igual
+- Resultado esperado: Una tabla con el nivel ICAP, la casilla PICRAT, la puntuación de cada clave y el resultado de la prueba de la IA, seguida de dos mejoras concretas (por ejemplo: «que cada pareja elija dos fuentes contradictorias y justifique cuál es más fiable»).
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 2. Sube un escalón ICAP · _Analiza tu tarea_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#analizar-icap
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **etapa** = ESO · **materia y curso** = Geografía e Historia, 2.º de ESO · **pega aquí la actividad** = (pega un texto breve sin datos personales) · **nivel actual** = activo (manipula: copia, subraya, completa) · **nivel al que quiero llegar** = constructivo (genera: explica, crea algo nuevo) · **tecnología disponible** = un dispositivo por pareja · **duración** = una sesión
+- Resultado esperado: La misma actividad convertida en una secuencia con tiempos, un producto propio del alumnado (p. ej., una explicación grabada o un mapa de causas), frases de inicio, un indicador observable y una fase «pantallas abajo» para debatir.
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 3. Sitúa tu tarea en PICRAT · _Analiza tu tarea_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#analizar-picrat
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **materia y curso** = Geografía e Historia, 2.º de ESO · **pega aquí la actividad** = (pega un texto breve sin datos personales) · **casilla a la que quiero llegar** = la que tenga más sentido para el objetivo
+- Resultado esperado: «Interactivo-Reemplaza: el alumnado recorre una línea temporal que construyó el docente y responde preguntas cerradas; quien pensó la historia fue el docente». Propuesta Creativo-Transforma: los equipos seleccionan fuentes, construyen su línea temporal con hipótesis causales y comparan lo que cada grupo priorizó.
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 4. ¿Qué competencia digital desarrolla tu alumnado? · _Analiza tu tarea_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#analizar-cd-alumnado
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **etapa** = ESO · **materia y curso** = Geografía e Historia, 2.º de ESO · **pega aquí la tarea** = (pega un texto breve sin datos personales)
+- Resultado esperado: Una lista por competencia (p. ej., «6.1: sí, al comparar dos fuentes; 6.3: solo usan una plantilla, no crean») con un cambio pequeño, una consigna para el alumnado y un indicador observable.
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 5. Material en tres niveles · _Crear contenido_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#crear-graduado
 - Etapas: primaria, eso
@@ -35,7 +91,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 2. Texto graduado por nivel MCER · _Crear contenido_
+### 6. Texto graduado por nivel MCER · _Crear contenido_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#crear-mcer
 - Etapas: eoi
@@ -49,7 +105,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 3. Lectura musical y análisis guiado · _Crear contenido_
+### 7. Lectura musical y análisis guiado · _Crear contenido_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#crear-musica
 - Etapas: conservatorio
@@ -63,7 +119,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 4. Revisión de errores y nivel · _Auditar contenido_
+### 8. Revisión de errores y nivel · _Auditar contenido_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#auditar-errores
 - Etapas: primaria, eso, eoi, conservatorio
@@ -77,7 +133,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 5. Versión en lectura fácil · _Auditar contenido_
+### 9. Versión en lectura fácil · _Auditar contenido_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#auditar-lectura-facil
 - Etapas: primaria, eso, eoi, conservatorio
@@ -91,7 +147,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 6. Comprobar la accesibilidad de un recurso · _Auditar contenido_
+### 10. Comprobar la accesibilidad de un recurso · _Auditar contenido_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#auditar-accesibilidad
 - Etapas: primaria, eso, eoi, conservatorio
@@ -105,7 +161,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 7. Detectar barreras DUA en una actividad · _Barreras DUA_
+### 11. Detectar barreras DUA en una actividad · _Barreras DUA_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#dua-barreras
 - Etapas: primaria, eso, eoi, conservatorio
@@ -119,7 +175,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 8. Tres formas de demostrar lo aprendido · _Barreras DUA_
+### 12. Tres formas de demostrar lo aprendido · _Barreras DUA_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#dua-alternativas
 - Etapas: primaria, eso, eoi, conservatorio
@@ -133,7 +189,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 9. Situación de aprendizaje · _Planificar_
+### 13. Situación de aprendizaje · _Planificar_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#planificar-sa
 - Etapas: primaria, eso
@@ -147,7 +203,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 10. Secuencia de sesiones con tarea final · _Planificar_
+### 14. Secuencia de sesiones con tarea final · _Planificar_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#planificar-eoi-cons
 - Etapas: eoi, conservatorio
@@ -161,7 +217,35 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 11. Rúbrica que evalúa el proceso · _Evaluar_
+### 15. Sesión con fricción productiva · _Planificar_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#planificar-secuencia
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **etapa** = ESO · **materia y curso** = Geografía e Historia, 2.º de ESO · **tema u objetivo** = interpretar un gráfico de población · **duración de la sesión** = 55 minutos · **tecnología disponible** = un dispositivo por pareja · **uso de IA** = sin IA
+- Resultado esperado: Una tabla de fases (p. ej., 5 min de predicción sin pantalla, 15 min de exploración en parejas, 10 min de debate con pantallas cerradas…), con la fricción, la consigna generativa, el cierre y las evidencias.
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 16. Diario de práctica reflexiva · _Planificar_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#planificar-reflexion
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **etapa** = ESO · **pega aquí lo que planifiqué** = (pega un texto breve sin datos personales) · **pega aquí lo que observé** = (pega un texto breve sin datos personales) · **mi duda** = por qué el debate final se apagó tan pronto
+- Resultado esperado: Tres preguntas del tipo «¿qué viste exactamente que te hace pensar que no lo entendieron?», una lectura ICAP de la sesión, un ajuste concreto y una idea para hablar con el tutor o la tutora.
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 17. Rúbrica que evalúa el proceso · _Evaluar_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#evaluar-rubrica
 - Etapas: primaria, eso, eoi, conservatorio
@@ -175,7 +259,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 12. Lista de cotejo rápida · _Evaluar_
+### 18. Lista de cotejo rápida · _Evaluar_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#evaluar-cotejo
 - Etapas: primaria, eso, eoi, conservatorio
@@ -189,7 +273,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 13. Retroalimentación formativa · _Evaluar_
+### 19. Retroalimentación formativa · _Evaluar_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#evaluar-feedback
 - Etapas: primaria, eso, eoi, conservatorio
@@ -203,7 +287,35 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 14. Tutor socrático que no da la respuesta · _Tutor socrático_
+### 20. Evaluar el proceso, no solo el producto · _Evaluar_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#evaluar-proceso
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **etapa** = ESO · **materia y curso** = Geografía e Historia, 2.º de ESO · **producto final** = texto escrito · **duración** = dos o tres sesiones · **pega aquí la tarea** = (pega un texto breve sin datos personales)
+- Resultado esperado: Un calendario de evidencias (borrador 1, registro de decisiones, verificación de fuentes, defensa oral), una rúbrica de cuatro niveles con el proceso al 50 % y tres preguntas de defensa como «¿qué descartaste y por qué?».
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 21. Ejemplares y revisión entre pares · _Evaluar_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#evaluar-ejemplares
+- Etapas: primaria, eso, eoi, conservatorio
+- Valores de prueba: **materia y curso** = Geografía e Historia, 2.º de ESO · **tipo de producción** = un texto argumentativo · **criterios de evaluación** = tesis clara, dos argumentos con datos, contraargumento, conclusión
+- Resultado esperado: Dos textos breves (uno sólido y otro con una tesis vaga y datos sin fuente), cinco preguntas de comparación, una plantilla de revisión de tres apartados y un registro «acepté / descarté / porque».
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 22. Tutor socrático que no da la respuesta · _Tutor socrático_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#tutor-socratico
 - Etapas: primaria, eso, eoi, conservatorio
@@ -217,7 +329,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 15. Compañero de conversación que no corrige por ti · _Tutor socrático_
+### 23. Compañero de conversación que no corrige por ti · _Tutor socrático_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#tutor-idiomas
 - Etapas: eoi
@@ -231,7 +343,21 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 16. De copiable a generadora de conocimiento · _Tareas resistentes a la IA_
+### 24. La IA como alumno que se equivoca · _Tutor socrático_
+
+- Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#tutor-ia-alumno
+- Etapas: eso, eoi, conservatorio
+- Valores de prueba: **curso** = 4.º de ESO · **materia** = Física y Química · **tema** = las fuerzas y el movimiento · **cantidad de errores** = dos o tres
+- Resultado esperado: Un diálogo en el que la IA defiende, por ejemplo, que «si no hay fuerza, el objeto se para», y el alumno tiene que explicarlo y corregirlo. Se entrega el diálogo anotado, con cada corrección comprobada en el libro o los apuntes.
+- Comprueba también: ¿pide o incluye datos personales? (debe ser **no**) · ¿inventa normativa o referencias? · ¿respeta el formato pedido?
+
+| Servicio | Abre y precarga | Respuesta útil | Sin datos personales | Notas |
+|---|---|---|---|---|
+| Gemini | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+| Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
+
+### 25. De copiable a generadora de conocimiento · _Tareas resistentes a la IA_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#resistentes-redisenar
 - Etapas: primaria, eso, eoi, conservatorio
@@ -245,7 +371,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 17. Ponla a prueba: el alumno que quiere copiar · _Tareas resistentes a la IA_
+### 26. Ponla a prueba: el alumno que quiere copiar · _Tareas resistentes a la IA_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#resistentes-test
 - Etapas: eso, eoi
@@ -259,7 +385,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 18. Caso de ciberconvivencia para debatir · _Convivencia y bienestar digital_
+### 27. Caso de ciberconvivencia para debatir · _Convivencia y bienestar digital_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#convivencia-caso
 - Etapas: primaria, eso
@@ -273,7 +399,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 19. Dilema de bienestar digital · _Convivencia y bienestar digital_
+### 28. Dilema de bienestar digital · _Convivencia y bienestar digital_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#convivencia-bienestar
 - Etapas: eso, eoi, conservatorio
@@ -287,7 +413,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 20. Detectar estereotipos en un material · _Igualdad_
+### 29. Detectar estereotipos en un material · _Igualdad_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#igualdad-materiales
 - Etapas: primaria, eso, eoi, conservatorio
@@ -301,7 +427,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 21. ¿Está sesgada la IA? Un experimento para el aula · _Igualdad_
+### 30. ¿Está sesgada la IA? Un experimento para el aula · _Igualdad_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#igualdad-ia
 - Etapas: eso, eoi
@@ -315,7 +441,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 22. Adaptaciones de acceso · _Atención a la diversidad_
+### 31. Adaptaciones de acceso · _Atención a la diversidad_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#diversidad-acceso
 - Etapas: primaria, eso, eoi, conservatorio
@@ -329,7 +455,7 @@ GENERADO por `tools/build-prompt-tests.mjs` a partir de `content/prompts.json`. 
 | ChatGPT | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 | Claude | ☐ OK ☐ KO | ☐ OK ☐ KO | ☐ OK ☐ KO | |
 
-### 23. Enriquecimiento para altas capacidades · _Atención a la diversidad_
+### 32. Enriquecimiento para altas capacidades · _Atención a la diversidad_
 
 - Enlace: https://jmgo93.github.io/pensar-en-digital/ia/#diversidad-altas
 - Etapas: primaria, eso, eoi, conservatorio

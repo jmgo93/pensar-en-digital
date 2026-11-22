@@ -1,0 +1,257 @@
+{
+  "intro": {
+    "es": "La tecnología no genera conocimiento por estar en el aula: amplifica el diseño didáctico de quien la usa. Estas siete claves resumen qué hace un docente digitalmente competente para que su alumnado piense, construya y decida. Cada una se ancla en el MRCDD, explica el mecanismo, propone ejemplos por etapa y señala el antipatrón que evita.",
+    "en": "Technology does not generate knowledge just by being in the classroom: it amplifies the teaching design of whoever uses it. These seven keys summarise what a digitally competent teacher does so that students think, build and decide. Each one is anchored in the Spanish framework (MRCDD), explains the mechanism, offers examples by stage and names the anti-pattern it avoids."
+  },
+  "evidence": {
+    "title": { "es": "Lo que dice la evidencia, en cinco datos", "en": "What the evidence says, in five facts" },
+    "items": [
+      {
+        "id": "ev-tamim",
+        "figure": { "es": "0,35", "en": "0.35" },
+        "text": {
+          "es": "Efecto medio de la tecnología en el rendimiento tras 40 años de investigación (25 metaanálisis, 1055 estudios): positivo, moderado y muy heterogéneo [@tamim]. En Matemáticas y Ciencias de secundaria, el efecto global de las herramientas digitales es g = 0,65 (92 estudios) [@hillmayr].",
+          "en": "Average effect of technology on achievement after 40 years of research (25 meta-analyses, 1,055 studies): positive, moderate and highly heterogeneous [@tamim]. In secondary maths and science, the overall effect of digital tools is g = 0.65 (92 studies) [@hillmayr]."
+        }
+      },
+      {
+        "id": "ev-sailer",
+        "figure": { "es": "Docente > equipo", "en": "Teacher > kit" },
+        "text": {
+          "es": "En una muestra representativa de Baviera, lo que explica el tipo de actividades con tecnología son las competencias digitales básicas y didácticas del profesorado, más que los recursos disponibles [@sailer]. Una revisión paraguas sitúa también al docente en el centro de la digitalización [@wohlfart].",
+          "en": "In a representative sample from Bavaria, teachers' basic and teaching-related digital skills, rather than available resources, explain the kind of technology-based activities [@sailer]. An umbrella review also places teachers at the centre of digitalisation [@wohlfart]."
+        }
+      },
+      {
+        "id": "ev-nativos",
+        "figure": { "es": "0 nativos", "en": "0 natives" },
+        "text": {
+          "es": "No existe el «nativo digital» competente por haber nacido entre pantallas, ni la multitarea: alternar tareas empeora el aprendizaje, y diseñar la enseñanza suponiendo lo contrario lo obstaculiza [@kirschner].",
+          "en": "There is no such thing as a «digital native» who is skilled just by being born among screens, nor real multitasking: switching tasks harms learning, and designing teaching as if it worked hinders it [@kirschner]."
+        }
+      },
+      {
+        "id": "ev-distraccion",
+        "figure": { "es": "−11 puntos", "en": "−11 points" },
+        "text": {
+          "es": "En PISA 2022 (80 sistemas educativos), cada desviación típica de distracción digital entre compañeros del centro se asocia con 11,31 puntos menos en Matemáticas; la prohibición del móvil no modificó significativamente esa asociación. Es un estudio observacional: muestra asociación, no causa [@sung-distraccion].",
+          "en": "In PISA 2022 (80 education systems), each standard deviation of school-level peer digital distraction is associated with 11.31 fewer points in mathematics; phone bans did not significantly change that association. It is observational: it shows association, not cause [@sung-distraccion]."
+        }
+      },
+      {
+        "id": "ev-ia",
+        "figure": { "es": "−17 %", "en": "−17%" },
+        "text": {
+          "es": "Con GPT-4 sin límites, el alumnado mejora en la práctica pero rinde peor cuando se le retira; un tutor con pistas diseñadas por el profesorado mitiga ese daño [@bastani]. La facilidad de la IA puede provocar «pereza metacognitiva»: mejor producto, igual aprendizaje [@fan-pereza].",
+          "en": "With unrestricted GPT-4, students improve during practice but perform worse once it is removed; a tutor with teacher-designed hints mitigates that harm [@bastani]. AI's ease can trigger «metacognitive laziness»: better product, same learning [@fan-pereza]."
+        }
+      }
+    ],
+    "caveat": {
+      "es": "Rigor ante todo: PISA y los estudios a gran escala muestran asociaciones, no causas, y las primeras síntesis sobre IA generativa son todavía muy heterogéneas. Úsalos como pistas para diseñar, no como recetas.",
+      "en": "Rigour first: PISA and large-scale studies show associations, not causes, and early syntheses on generative AI are still very heterogeneous. Use them as clues for design, not as recipes."
+    }
+  },
+  "threshold": {
+    "title": { "es": "Cruzar el umbral: tres lentes para mirar una tarea", "en": "Crossing the threshold: three lenses on a task" },
+    "lenses": [
+      {
+        "id": "lente-icap",
+        "icon": "stairs",
+        "title": { "es": "ICAP: ¿qué hace el alumno con la información?", "en": "ICAP: what do students do with information?" },
+        "body": {
+          "es": "Pasivo (recibe), Activo (manipula), Constructivo (genera algo que no estaba en el material) e Interactivo (co-construye con otro). El aprendizaje tiende a crecer en ese orden, y el salto más grande suele estar entre Activo y Constructivo [@icap] [@icap-chi].",
+          "en": "Passive (receives), Active (manipulates), Constructive (generates something not in the material) and Interactive (co-constructs with someone else). Learning tends to grow in that order, and the biggest leap is usually from Active to Constructive [@icap] [@icap-chi]."
+        }
+      },
+      {
+        "id": "lente-picrat",
+        "icon": "grid_view",
+        "title": { "es": "PICRAT: dos preguntas, nueve casillas", "en": "PICRAT: two questions, nine cells" },
+        "body": {
+          "es": "¿Qué relación tiene el alumnado con la tecnología? **P**asiva, **I**nteractiva o **C**reativa. ¿Qué le hace la tecnología a tu práctica? **R**eemplaza, **A**mplifica o **T**ransforma. Todas las casillas pueden ser legítimas; la matriz sirve para detectar cuándo quien piensa sigue siendo el docente [@picrat]. A diferencia de SAMR, mira al alumnado y no solo a la herramienta [@samr-critica].",
+          "en": "What is the students' relationship with the technology? **P**assive, **I**nteractive or **C**reative. What does the technology do to your practice? **R**eplace, **A**mplify or **T**ransform. Every cell can be legitimate; the matrix helps you see when the teacher is still the one doing the thinking [@picrat]. Unlike SAMR, it looks at students, not only at the tool [@samr-critica]."
+        }
+      },
+      {
+        "id": "lente-diseno",
+        "icon": "architecture",
+        "title": { "es": "Del «modo creencia» al «modo diseño»", "en": "From «belief mode» to «design mode»" },
+        "body": {
+          "es": "En modo creencia, el alumnado acepta o rechaza ideas ya hechas. En modo diseño, trata sus ideas como borradores que la comunidad mejora: teoriza, contrasta con fuentes y reformula [@knowledge-building]. Andamios útiles: «Mi teoría…», «Necesito entender…», «Antes pensábamos… y ahora pensamos…».",
+          "en": "In belief mode, students accept or reject ready-made ideas. In design mode, they treat their ideas as drafts the community improves: they theorise, check against sources and rephrase [@knowledge-building]. Useful scaffolds: «My theory…», «I need to understand…», «We used to think… and now we think…»."
+        }
+      }
+    ]
+  },
+  "keysTitle": { "es": "Las siete claves", "en": "The seven keys" },
+  "labels": {
+    "anchor": { "es": "Anclaje", "en": "Anchor" },
+    "mechanism": { "es": "Por qué funciona", "en": "Why it works" },
+    "antipattern": { "es": "Antipatrón que evita", "en": "Anti-pattern it avoids" },
+    "check": { "es": "Pregúntate", "en": "Ask yourself" },
+    "prompts": { "es": "Prompts para trabajarla", "en": "Prompts to work on it" }
+  },
+  "keys": [
+    {
+      "id": "clave-1",
+      "n": 1,
+      "icon": "school",
+      "title": { "es": "Pedagogía primero, herramienta después", "en": "Pedagogy first, tool second" },
+      "anchor": { "es": "MRCDD área 3 · TPACK con conocimiento del contexto", "en": "MRCDD area 3 · TPACK with contextual knowledge" },
+      "mechanism": {
+        "es": "La tecnología ayuda cuando se integra con lo que se enseña y cómo se enseña, en un contexto concreto [@tpack] [@tpack-xk]. La pregunta inicial no es «¿qué app uso?», sino «¿qué obstáculo de mi materia necesita desbloquear mi alumnado?».",
+        "en": "Technology helps when it is integrated with what is taught and how, in a specific context [@tpack] [@tpack-xk]. The first question is not «which app?» but «which obstacle in my subject do my students need to overcome?»."
+      },
+      "examples": {
+        "primaria": { "es": "En Matemáticas, parejas con una tableta y una herramienta de geometría dinámica: mueven un vértice, anotan qué cambia y qué no, y formulan su regla antes de que la maestra la diga.", "en": "In maths, pairs with one tablet and a dynamic geometry tool: they move a vertex, note what changes and what stays, and state their rule before the teacher does." },
+        "eso": { "es": "En lugar de proyectar gráficas estáticas, las parejas varían parámetros de una función, escriben una conjetura y la contrastan con la de otra pareja antes de formalizar.", "en": "Instead of projecting static graphs, pairs vary a function's parameters, write a conjecture and compare it with another pair's before formalising." },
+        "eoi": { "es": "El obstáculo es la interacción oral espontánea: la tecnología se elige para registrar y comparar intercambios reales, no para rellenar huecos.", "en": "The obstacle is spontaneous spoken interaction: technology is chosen to record and compare real exchanges, not to fill in gaps." },
+        "conservatorio": { "es": "La grabación se usa porque resuelve un problema musical concreto (afinación, rubato, balance), no porque «toca» usar tecnología.", "en": "Recording is used because it solves a specific musical problem (intonation, rubato, balance), not because technology «has» to be used." }
+      },
+      "antipattern": { "es": "La aplicación de moda sin propósito curricular.", "en": "The trendy app with no curricular purpose." },
+      "check": { "es": "¿Qué no podría aprender mi alumnado (o le costaría mucho más) sin esta tecnología?", "en": "What could my students not learn (or learn only with much more effort) without this technology?" },
+      "prompts": ["analizar-tarea", "analizar-picrat"],
+      "lecturaFacil": { "es": "Primero piensa qué deben aprender. Después elige la herramienta.", "en": "First think about what they must learn. Then choose the tool." }
+    },
+    {
+      "id": "clave-2",
+      "n": 2,
+      "icon": "construction",
+      "title": { "es": "Construir, no solo recibir", "en": "Build, don't just receive" },
+      "anchor": { "es": "MRCDD áreas 2 y 3 · ICAP · modo diseño", "en": "MRCDD areas 2 and 3 · ICAP · design mode" },
+      "mechanism": {
+        "es": "El aula digital tiende por inercia a la recepción pasiva [@sailer]. Diseñar para cruzar de Activo a Constructivo o Interactivo [@icap] y tratar las ideas del alumnado como mejorables [@knowledge-building] es lo que convierte el uso en conocimiento.",
+        "en": "Digital classrooms drift towards passive reception [@sailer]. Designing to cross from Active to Constructive or Interactive [@icap] and treating students' ideas as improvable [@knowledge-building] is what turns use into knowledge."
+      },
+      "examples": {
+        "primaria": { "es": "Inventan un problema con datos de su barrio, lo graban y otra pareja lo resuelve y les devuelve una pregunta.", "en": "They invent a problem with data from their neighbourhood, record it, and another pair solves it and sends back a question." },
+        "eso": { "es": "Historia: en vez de recorrer una línea temporal que hizo el docente, los equipos seleccionan fuentes, construyen la suya con hipótesis causales y critican qué omitió cada grupo.", "en": "History: instead of browsing a timeline the teacher built, teams select sources, build their own with causal hypotheses and critique what each group left out." },
+        "eoi": { "es": "Mensaje de voz a otro estudiante y reformulación a partir de su respuesta: el intercambio no se puede delegar.", "en": "Voice message to another learner and rephrasing after their reply: the exchange cannot be delegated." },
+        "conservatorio": { "es": "Comparan tres grabaciones de la misma obra, eligen una interpretación propia y la defienden ante el grupo.", "en": "They compare three recordings of the same piece, choose their own interpretation and defend it to the group." }
+      },
+      "antipattern": { "es": "Digitalizar la clase magistral: mismo pensamiento, otro soporte.", "en": "Digitising the lecture: same thinking, different medium." },
+      "check": { "es": "¿Qué produce el alumnado que no estaba ya en el material que le di?", "en": "What do students produce that was not already in the material I gave them?" },
+      "prompts": ["analizar-tarea", "analizar-icap"],
+      "lecturaFacil": { "es": "Los alumnos crean algo nuevo. No solo miran o copian.", "en": "Students create something new. They do not just watch or copy." }
+    },
+    {
+      "id": "clave-3",
+      "n": 3,
+      "icon": "center_focus_strong",
+      "title": { "es": "Cuidar la atención y la carga cognitiva", "en": "Protect attention and cognitive load" },
+      "anchor": { "es": "MRCDD 1.5, área 3 y 6.4 · aprendizaje multimedia", "en": "MRCDD 1.5, area 3 and 6.4 · multimedia learning" },
+      "mechanism": {
+        "es": "La memoria de trabajo es limitada: lo decorativo y lo redundante estorban, y las consignas generativas (resumir, esquematizar, explicar) ayudan a transferir [@mayer2024]. La multitarea no existe [@kirschner] y la distracción es un clima compartido que una prohibición sobre el papel no corrige [@sung-distraccion].",
+        "en": "Working memory is limited: decoration and redundancy get in the way, and generative prompts (summarise, map, explain) support transfer [@mayer2024]. Multitasking does not exist [@kirschner] and distraction is a shared climate that a ban on paper does not fix [@sung-distraccion]."
+      },
+      "examples": {
+        "primaria": { "es": "Rutina visible: «pantallas arriba» para investigar en una sola pestaña, «pantallas abajo» para contar a la pareja lo que han descubierto.", "en": "Visible routine: «screens up» to research in a single tab, «screens down» to tell their partner what they found." },
+        "eso": { "es": "Aula invertida con microvídeos de pocos minutos y dos pausas con preguntas generativas; en clase no se repite la explicación, se trabaja sobre los errores detectados [@strelan].", "en": "Flipped classroom with short micro-videos and two pauses with generative questions; class time is not a repeat of the explanation but work on the errors found [@strelan]." },
+        "eoi": { "es": "Audio sin subtítulos para la escucha y transcripción solo después, para no duplicar canales mientras se procesa.", "en": "Audio without subtitles for listening and the transcript only afterwards, to avoid duplicating channels while processing." },
+        "conservatorio": { "es": "Estudio con grabación por bloques cortos: tocar, escuchar una vez, anotar un solo objetivo, volver a tocar.", "en": "Practice with recording in short blocks: play, listen once, note a single goal, play again." }
+      },
+      "antipattern": { "es": "Multitarea ilusoria y prohibiciones que solo existen en el papel.", "en": "Illusory multitasking and bans that exist only on paper." },
+      "check": { "es": "¿En qué momentos de la sesión tiene sentido que la pantalla esté cerrada?", "en": "At which moments of the lesson does it make sense for screens to be closed?" },
+      "prompts": ["planificar-secuencia", "auditar-accesibilidad"],
+      "lecturaFacil": { "es": "Poca información cada vez. Una sola tarea cada vez.", "en": "A little information at a time. One task at a time." }
+    },
+    {
+      "id": "clave-4",
+      "n": 4,
+      "icon": "rate_review",
+      "title": { "es": "Retroalimentación de proceso", "en": "Process feedback" },
+      "anchor": { "es": "MRCDD área 4", "en": "MRCDD area 4" },
+      "mechanism": {
+        "es": "El feedback que solo marca acierto o error se transfiere poco; el que actúa sobre el proceso y la autorregulación sí [@feedback]. Además, el alumnado tiene que aprender a usarlo: valorar, juzgar la calidad, gestionar la emoción y actuar [@feedback-literacy].",
+        "en": "Feedback that only marks right or wrong transfers little; feedback on process and self-regulation does [@feedback]. Students also need to learn to use it: appreciate it, judge quality, manage emotions and act [@feedback-literacy]."
+      },
+      "examples": {
+        "primaria": { "es": "Antes de escribir, comentan dos textos anónimos de distinto nivel con la diana de criterios proyectada.", "en": "Before writing, they discuss two anonymous texts of different levels with the criteria target projected." },
+        "eso": { "es": "Revisión entre pares de borradores en un documento compartido y un registro final: «qué sugerencias acepté y cuáles descarté y por qué».", "en": "Peer review of drafts in a shared document and a final log: «which suggestions I accepted and which I rejected, and why»." },
+        "eoi": { "es": "Grabación oral, autoevaluación con los descriptores del nivel MCER y una sola meta para la siguiente grabación.", "en": "Spoken recording, self-assessment with the CEFR level descriptors and a single goal for the next recording." },
+        "conservatorio": { "es": "Escuchan su grabación de la semana 1 y la de la semana 4 y describen con vocabulario técnico qué ha cambiado.", "en": "They listen to their week 1 and week 4 recordings and describe what has changed using technical vocabulary." }
+      },
+      "antipattern": { "es": "Cuestionarios automáticos memorísticos que no cierran el ciclo.", "en": "Automated rote quizzes that never close the loop." },
+      "check": { "es": "¿Qué hace mi alumnado con el feedback que recibe? ¿Le doy tiempo para usarlo?", "en": "What do my students do with the feedback they receive? Do I give them time to use it?" },
+      "prompts": ["evaluar-ejemplares", "evaluar-proceso", "evaluar-feedback"],
+      "lecturaFacil": { "es": "El profesor te dice cómo mejorar. Tú lo usas en el siguiente intento.", "en": "The teacher tells you how to improve. You use it in your next try." }
+    },
+    {
+      "id": "clave-5",
+      "n": 5,
+      "icon": "diversity_3",
+      "title": { "es": "DUA desde el diseño", "en": "UDL by design" },
+      "anchor": { "es": "MRCDD área 5 · Pautas DUA 3.0", "en": "MRCDD area 5 · UDL Guidelines 3.0" },
+      "mechanism": {
+        "es": "Las pautas DUA 3.0 buscan una agencia del aprendiz con propósito, estratégica y reflexiva, ofreciendo varias vías de implicación, representación y expresión [@cast-udl]. Lo digital facilita esas alternativas para todo el grupo, pero no sustituye los apoyos individuales cuando hacen falta. Sin mediación escolar, la brecha ya no es de acceso, sino de lo que cada uno consigue hacer con la tecnología [@gem2023].",
+        "en": "UDL Guidelines 3.0 aim at purposeful, strategic and reflective learner agency, offering several ways of engagement, representation and expression [@cast-udl]. Digital tools make those options easier for the whole group, but they do not replace individual support when it is needed. Without school mediation, the gap is no longer about access but about what each person manages to do with technology [@gem2023]."
+      },
+      "examples": {
+        "primaria": { "es": "El mismo objetivo se puede demostrar con un texto, un audio o un dibujo explicado; todos usan la misma rúbrica.", "en": "The same goal can be shown through a text, an audio or an explained drawing; everyone uses the same rubric." },
+        "eso": { "es": "Materiales en tres niveles de lectura sobre la misma idea central, con subtítulos y transcripción en los vídeos.", "en": "Materials at three reading levels on the same core idea, with captions and transcripts on videos." },
+        "eoi": { "es": "Tareas de mediación con apoyos visuales y glosarios opcionales que cada estudiante activa si los necesita.", "en": "Mediation tasks with visual support and optional glossaries each learner switches on if needed." },
+        "conservatorio": { "es": "Partituras ampliables, grabaciones a distintas velocidades y la opción de mostrar el análisis armónico con un esquema o explicándolo oralmente.", "en": "Zoomable scores, recordings at different speeds and the option to show harmonic analysis as a diagram or orally." }
+      },
+      "antipattern": { "es": "Un vídeo sin subtítulos como única vía; el DUA como lista de comprobación mecánica.", "en": "A video without captions as the only way in; UDL as a mechanical checklist." },
+      "check": { "es": "¿Quién se queda fuera de esta tarea y qué alternativa le ofrezco desde el principio?", "en": "Who is left out of this task, and which alternative do I offer from the start?" },
+      "prompts": ["dua-barreras", "dua-alternativas", "crear-graduado"],
+      "lecturaFacil": { "es": "Hay varias formas de aprender y de demostrar lo que sabes.", "en": "There are several ways to learn and to show what you know." }
+    },
+    {
+      "id": "clave-6",
+      "n": 6,
+      "icon": "psychology",
+      "title": { "es": "IA con fricción productiva", "en": "AI with productive friction" },
+      "anchor": { "es": "MRCDD áreas 3, 5 y 6 · Marco de competencias en IA de la UNESCO", "en": "MRCDD areas 3, 5 and 6 · UNESCO AI competency framework" },
+      "mechanism": {
+        "es": "Sin salvaguardas, la IA funciona como muleta: mejora la práctica y empeora el aprendizaje autónomo [@bastani] y puede inducir pereza metacognitiva [@fan-pereza]. La respuesta no es prohibir, sino diseñar fricciones (pistas en lugar de soluciones, verificar, explicar) y evaluar evidencias de proceso [@sanchez-mendiola]. Asignar roles a la IA —tutor, coach, compañero, alumno que se equivoca— mantiene a la persona al mando [@mollick] [@unesco-ia].",
+        "en": "Without safeguards, AI works as a crutch: it improves practice and worsens independent learning [@bastani] and can induce metacognitive laziness [@fan-pereza]. The answer is not banning but designing friction (hints instead of solutions, verifying, explaining) and assessing process evidence [@sanchez-mendiola]. Assigning roles to AI —tutor, coach, teammate, student who makes mistakes— keeps the human in charge [@mollick] [@unesco-ia]."
+      },
+      "examples": {
+        "primaria": { "es": "La IA, proyectada y manejada por la maestra, comete errores a propósito y el grupo tiene que encontrarlos y explicar por qué lo son.", "en": "AI, projected and run by the teacher, makes deliberate mistakes and the group has to find them and explain why they are wrong." },
+        "eso": { "es": "El alumno enseña a una IA que hace de estudiante con confusiones verosímiles; entrega el diálogo anotado y la verificación con el libro de texto.", "en": "Students teach an AI acting as a student with plausible misconceptions; they hand in the annotated dialogue and checks against the textbook." },
+        "eoi": { "es": "La IA hace de interlocutor que solo pide aclaraciones y reformulaciones; se evalúa el registro de la conversación, no un texto final.", "en": "AI acts as an interlocutor that only asks for clarification and rephrasing; the conversation log is assessed, not a final text." },
+        "conservatorio": { "es": "La IA plantea preguntas sobre el contexto histórico de la obra; el alumnado contrasta cada respuesta con fuentes de la biblioteca antes de usarla en su comentario.", "en": "AI asks questions about the historical context of the piece; students check every answer against library sources before using it in their commentary." }
+      },
+      "antipattern": { "es": "El chatbot generalista como muleta que entrega el producto terminado.", "en": "The general chatbot as a crutch that hands over the finished product." },
+      "check": { "es": "Si mi alumno pega el enunciado en una IA, ¿qué parte del trabajo sigue teniendo que pensar él?", "en": "If my student pastes the task into an AI, which part of the work do they still have to think through?" },
+      "prompts": ["tutor-socratico", "tutor-ia-alumno", "resistentes-redisenar"],
+      "lecturaFacil": { "es": "La IA te hace preguntas. Tú piensas las respuestas.", "en": "AI asks you questions. You think of the answers." }
+    },
+    {
+      "id": "clave-7",
+      "n": 7,
+      "icon": "groups",
+      "title": { "es": "Ética crítica y práctica en comunidad", "en": "Critical ethics and community practice" },
+      "anchor": { "es": "MRCDD áreas 1 y 6 (incluida la 1.5) · modelo holístico", "en": "MRCDD areas 1 and 6 (including 1.5) · holistic model" },
+      "mechanism": {
+        "es": "La competencia digital docente es también compromiso social y práctica reflexiva conectada con otros docentes [@holistico]. Preguntarse qué deshace una tecnología, además de qué hace, protege al alumnado [@selwyn]: privacidad, sesgos y derechos de los menores [@gem2023] [@rgpd].",
+        "en": "Teacher digital competence is also social commitment and reflective practice connected with other teachers [@holistico]. Asking what a technology undoes, not just what it does, protects students [@selwyn]: privacy, bias and children's rights [@gem2023] [@rgpd]."
+      },
+      "examples": {
+        "primaria": { "es": "Comparan las imágenes que genera una IA para «una persona que cuida» y «una persona que dirige» y hablan de estereotipos.", "en": "They compare the images an AI generates for «a person who cares» and «a person who leads» and talk about stereotypes." },
+        "eso": { "es": "Auditoría guiada: la misma pregunta en dos buscadores o IA y en dos idiomas; contrastan fuentes y analizan qué perspectivas faltan.", "en": "Guided audit: the same question in two search engines or AIs and two languages; they check sources and analyse which perspectives are missing." },
+        "eoi": { "es": "Analizan cómo una IA traduce expresiones con carga cultural o de género entre la lengua meta y su lengua.", "en": "They analyse how an AI translates culturally loaded or gendered expressions between the target language and their own." },
+        "conservatorio": { "es": "Debaten sobre derechos de autor, grabaciones y música generada por IA a partir de casos reales de su especialidad.", "en": "They debate copyright, recordings and AI-generated music using real cases from their specialty." }
+      },
+      "antipattern": { "es": "Ingenuidad algorítmica y datos del alumnado en herramientas sin garantías.", "en": "Algorithmic naivety and student data in tools without safeguards." },
+      "check": { "es": "¿Con quién de mi claustro voy a compartir y revisar esta tarea?", "en": "Which colleague am I going to share and review this task with?" },
+      "prompts": ["igualdad-ia", "convivencia-caso", "planificar-reflexion"],
+      "lecturaFacil": { "es": "Usa la tecnología con cuidado. Comparte y mejora con otros profesores.", "en": "Use technology with care. Share and improve with other teachers." }
+    }
+  ],
+  "frameworks": {
+    "title": { "es": "Marcos que convergen", "en": "Frameworks that converge" },
+    "body": {
+      "es": [
+        "El MRCDD español [@mrcdd] adapta DigCompEdu [@digcompedu] [@digcompedu-es]. La UNESCO añade un marco específico de competencias en IA para docentes [@unesco-ia]; los estándares ISTE insisten en que tratan del aprendizaje, no de las herramientas [@iste]; y el modelo holístico de Castañeda, Esteve y Adell amplía la mirada a la práctica reflexiva, el entorno personal de aprendizaje y el compromiso social [@holistico].",
+        "Todos convergen en lo mismo: la competencia digital docente es, sobre todo, **competencia pedagógica** y su fin es lo que consigue el alumnado."
+      ],
+      "en": [
+        "The Spanish MRCDD [@mrcdd] adapts DigCompEdu [@digcompedu] [@digcompedu-es]. UNESCO adds a specific AI competency framework for teachers [@unesco-ia]; the ISTE standards stress that they are about learning, not tools [@iste]; and the holistic model by Castañeda, Esteve and Adell widens the view to reflective practice, personal learning environments and social commitment [@holistico].",
+        "They all converge on the same point: teacher digital competence is, above all, **pedagogical competence**, and its goal is what students achieve."
+      ]
+    }
+  }
+}

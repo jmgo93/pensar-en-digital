@@ -50,6 +50,16 @@ add('#puente', 'inicio', inicio.bridge.title, inicio.bridge.body);
 const ponencia = read('ponencia');
 for (const b of ponencia.blocks) add(`ponencia/#${b.id}`, 'ponencia', b.title, b.summary);
 
+const claves = read('claves');
+for (const e of claves.evidence.items) add(`claves/#${e.id}`, 'claves', e.figure, e.text);
+for (const l of claves.threshold.lenses) add(`claves/#${l.id}`, 'claves', l.title, l.body);
+for (const k of claves.keys)
+  add(`claves/#${k.id}`, 'claves', { es: `${k.n}. ${k.title.es}`, en: `${k.n}. ${k.title.en}` }, k.anchor, k.mechanism, k.antipattern, k.check, ...Object.values(k.examples));
+add('claves/#marcos', 'claves', claves.frameworks.title, claves.frameworks.body);
+
+const recursos = read('recursos');
+for (const f of recursos.files) add(`recursos/#${f.id}`, 'recursos', f.title, f.body);
+
 const marco = read('marco');
 for (const a of marco.areas) {
   const comps = { es: a.competences.map((/** @type {any} */ k) => `${k.code} ${k.es}`), en: a.competences.map((/** @type {any} */ k) => `${k.code} ${k.en}`) };

@@ -1,59 +1,10 @@
 {
   "blocks": [
-    {
-      "id": "b1",
-      "from": 0,
-      "to": 5,
-      "title": {
-        "es": "Puente y gancho",
-        "en": "Bridge and hook"
-      }
-    },
-    {
-      "id": "b2",
-      "from": 5,
-      "to": 10,
-      "title": {
-        "es": "El MRCDD en una diapositiva",
-        "en": "The framework in one slide"
-      }
-    },
-    {
-      "id": "b3",
-      "from": 10,
-      "to": 20,
-      "title": {
-        "es": "De consumir a construir",
-        "en": "From consuming to constructing"
-      }
-    },
-    {
-      "id": "b4",
-      "from": 20,
-      "to": 32,
-      "title": {
-        "es": "Escuela inclusiva + digital",
-        "en": "Inclusive + digital school"
-      }
-    },
-    {
-      "id": "b5",
-      "from": 32,
-      "to": 40,
-      "title": {
-        "es": "IA generativa",
-        "en": "Generative AI"
-      }
-    },
-    {
-      "id": "b6",
-      "from": 40,
-      "to": 45,
-      "title": {
-        "es": "Cierre y reto",
-        "en": "Closing and challenge"
-      }
-    }
+    { "id": "b1", "from": 0, "to": 7, "title": { "es": "Acto I · La provocación", "en": "Act I · The provocation" } },
+    { "id": "b2", "from": 7, "to": 13, "title": { "es": "Acto II · Lo que sí multiplica", "en": "Act II · What really multiplies" } },
+    { "id": "b3", "from": 13, "to": 24, "title": { "es": "Acto III · Cruzar el umbral", "en": "Act III · Crossing the threshold" } },
+    { "id": "b4", "from": 24, "to": 35, "title": { "es": "Acto IV · IA: ¿muleta o tutor?", "en": "Act IV · AI: crutch or tutor?" } },
+    { "id": "b5", "from": 35, "to": 45, "title": { "es": "Acto V · Siete claves y un reto", "en": "Act V · Seven keys and a challenge" } }
   ],
   "slides": [
     {
@@ -61,629 +12,375 @@
       "block": "b1",
       "at": 0,
       "type": "title",
-      "title": {
-        "es": "Competencia Digital Docente como medio para generar conocimiento en el alumnado",
-        "en": "Teacher Digital Competence as a means to generate knowledge in students"
-      },
-      "subtitle": {
-        "es": "Juan María Gámez Ortiz",
-        "en": "Juan María Gámez Ortiz"
-      },
-      "notes": "Saludo breve. Nada de currículum: el público quiere saber qué se lleva. Anuncia que hay app, votaciones y una plantilla para el lunes."
+      "title": { "es": "Competencia Digital Docente como medio para generar conocimiento en el alumnado", "en": "Teacher Digital Competence as a means to generate knowledge in students" },
+      "subtitle": { "es": "Juan María Gámez Ortiz", "en": "Juan María Gámez Ortiz" },
+      "key": "Hoy no vamos a hablar de aplicaciones, sino de qué tiene que pensar vuestro alumnado.",
+      "notes": "Saludo en una frase. Sin currículum. Promesa: «En 45 minutos os vais con una forma de mirar vuestras tareas y un kit para mejorarlas el lunes». Anuncia que habrá cuatro votaciones con el móvil.",
+      "do": "Sonríe, mira a la sala y espera el silencio antes de empezar. Cronómetro: pulsa T al pasar a la siguiente.",
+      "bridge": "«Antes de nada, sacad el móvil: todo lo de hoy está en una app».",
+      "cut": "Nada que recortar: 30 segundos."
     },
     {
       "id": "instala",
       "block": "b1",
       "at": 0.5,
       "type": "qr",
-      "title": {
-        "es": "Llévatelo: instala la app",
-        "en": "Take it with you: install the app"
-      },
-      "targets": [
-        {
-          "qr": "inicio",
-          "label": {
-            "es": "Pensar en Digital",
-            "en": "Pensar en Digital"
-          }
-        }
-      ],
-      "notes": "Deja 30 segundos. Funciona sin conexión una vez abierta. En iPhone: Compartir → Añadir a pantalla de inicio. Todo lo de hoy está ahí: no hace falta apuntar."
-    },
-    {
-      "id": "puente",
-      "block": "b1",
-      "at": 1,
-      "type": "compare",
-      "title": {
-        "es": "Dos ponencias, una misma escuela",
-        "en": "Two talks, one school"
-      },
-      "items": [
-        {
-          "label": {
-            "es": "Antes",
-            "en": "Before"
-          },
-          "text": {
-            "es": "¿Para quién? ¿En qué clima?",
-            "en": "For whom? In what climate?"
-          }
-        },
-        {
-          "label": {
-            "es": "Ahora",
-            "en": "Now"
-          },
-          "text": {
-            "es": "¿Con qué y cómo?",
-            "en": "With what and how?"
-          }
-        }
-      ],
-      "notes": "Conecta con la ponencia anterior: inclusión, diversidad, convivencia, igualdad, clima de aula, motivación, cooperativo. Hoy no repetimos eso: vemos qué le hace lo digital."
-    },
-    {
-      "id": "multiplica",
-      "block": "b1",
-      "at": 1.5,
-      "type": "statement",
-      "text": {
-        "es": "Lo digital multiplica todo eso… o lo destruye.",
-        "en": "Digital technology multiplies all of that… or destroys it."
-      },
-      "notes": "Pausa. Esta es la frase que vertebra la charla. Lo digital no es neutro: amplifica lo que ya hacemos, lo bueno y lo malo."
+      "title": { "es": "Llévatelo: instala la app", "en": "Take it with you: install the app" },
+      "targets": [{ "qr": "inicio", "label": { "es": "Pensar en Digital", "en": "Pensar en Digital" } }],
+      "key": "No hace falta apuntar nada: diapositivas, prompts, guía y bibliografía están en la app.",
+      "notes": "Funciona sin conexión una vez abierta. En Android: menú → Instalar aplicación. En iPhone: Compartir → Añadir a pantalla de inicio. Destaca dos secciones: «Las 7 claves» y «Descargas».",
+      "do": "Deja 30 segundos con el QR a la vista. Si alguien no puede escanear, di la dirección corta en voz alta.",
+      "bridge": "«Empecemos con un experimento. Os enseño dos tareas».",
+      "cut": "Deja el QR solo 15 segundos: volverá al final."
     },
     {
       "id": "tareas",
       "block": "b1",
-      "at": 2,
+      "at": 1,
       "type": "compare",
-      "title": {
-        "es": "Dos tareas",
-        "en": "Two tasks"
-      },
+      "title": { "es": "Dos tareas", "en": "Two tasks" },
       "items": [
-        {
-          "label": {
-            "es": "A",
-            "en": "A"
-          },
-          "text": {
-            "es": "Redacción: la importancia del agua.",
-            "en": "Essay: the importance of water."
-          }
-        },
-        {
-          "label": {
-            "es": "B",
-            "en": "B"
-          },
-          "text": {
-            "es": "Mide el agua de casa, compáralo y propón una medida.",
-            "en": "Measure water at home, compare, propose a measure."
-          }
-        }
+        { "label": { "es": "A", "en": "A" }, "text": { "es": "Redacción: la importancia del agua.", "en": "Essay: the importance of water." } },
+        { "label": { "es": "B", "en": "B" }, "text": { "es": "Mide el agua de casa, compáralo y propón una medida.", "en": "Measure water at home, compare, propose a measure." } }
       ],
-      "notes": "Lee las dos tareas. Ojo: la B también puede usar IA para analizar datos, pero los datos y la decisión son del alumnado. Pide que voten en la siguiente."
+      "key": "La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.",
+      "notes": "Lee las dos en voz alta. La B también puede usar IA para analizar datos, pero los datos son del alumnado, la comparación es con un compañero y la propuesta se defiende ante el centro.",
+      "do": "Lee despacio. No des tu opinión todavía.",
+      "bridge": "«Votad: ¿cuál puede resolver una IA sola, en segundos?».",
+      "cut": "Lee solo los títulos de A y B."
     },
     {
       "id": "voto1",
       "block": "b1",
-      "at": 2.5,
+      "at": 2,
       "type": "vote",
       "vote": "v1",
-      "notes": "Da un minuto. Comenta el resultado: casi todo el mundo ve que la A la hace una IA sola. Pregunta retórica: ¿cuántas de nuestras tareas son tipo A?"
+      "key": "Muchas de nuestras tareas son tipo A: las resuelve una máquina sin que nadie aprenda.",
+      "notes": "Comenta el resultado. Casi todo el mundo ve que la A la hace una IA sola. Pregunta retórica: «¿Cuántas de las tareas que pusimos el mes pasado son tipo A?». No culpabilices: «Todos tenemos tareas A; las diseñamos para otro mundo».",
+      "do": "Da un minuto para votar. Sin conexión: mano alzada (A, B, las dos, ninguna).",
+      "bridge": "«Y si pasamos la tarea A a un formato digital, ¿mejora?».",
+      "cut": "Vota a mano alzada en 30 segundos."
     },
     {
       "id": "digitalizar",
       "block": "b1",
-      "at": 4,
+      "at": 3.5,
       "type": "statement",
-      "text": {
-        "es": "Digitalizar ≠ innovar",
-        "en": "Digitising ≠ innovating"
-      },
-      "small": {
-        "es": "Cambiar el soporte no cambia lo que el alumnado piensa.",
-        "en": "Changing the medium does not change what students think."
-      },
-      "notes": "Ejemplos rápidos: ficha a PDF, examen a formulario, apuntes a presentación. Mismo pensamiento, distinto soporte. Eso es digitalizar, no innovar."
+      "text": { "es": "Digitalizar ≠ innovar", "en": "Digitising ≠ innovating" },
+      "small": { "es": "Cambiar el soporte no cambia lo que el alumnado piensa.", "en": "Changing the medium does not change what students think." },
+      "key": "Ficha a PDF, examen a formulario, apuntes a presentación: mismo pensamiento, otro soporte.",
+      "notes": "Tres ejemplos rápidos y reconocibles. Eso es digitalizar. Innovar es cambiar lo que el alumnado tiene que pensar, con o sin pantalla.",
+      "do": "Pausa de dos segundos después de leer la frase.",
+      "bridge": "«Pero —diréis— ellos ya son digitales, nacieron con una pantalla en la mano…».",
+      "cut": "Un solo ejemplo."
     },
     {
-      "id": "mrcdd",
+      "id": "nativos",
+      "block": "b1",
+      "at": 4.5,
+      "type": "statement",
+      "text": { "es": "No hay nativos digitales.", "en": "There are no digital natives." },
+      "small": { "es": "Tampoco multitarea: alternar tareas empeora el aprendizaje.", "en": "Nor multitasking: switching tasks harms learning." },
+      "cite": "kirschner",
+      "key": "Nacer entre pantallas no te hace competente: alguien te lo tiene que enseñar. Ese alguien sois vosotros.",
+      "notes": "Kirschner y De Bruyckere (2017) revisan la evidencia: no existe el nativo digital competente por haber nacido en un mundo digital, y la multitarea no existe; es alternancia rápida que deteriora el aprendizaje. Diseñar como si existieran obstaculiza el aprendizaje.",
+      "data": "Kirschner, P. A., y De Bruyckere, P. (2017). Teaching and Teacher Education, 67, 135–142.",
+      "do": "Pregunta a la sala: «¿Quién ha visto a un alumno con veinte pestañas abiertas «estudiando»?».",
+      "bridge": "«Y no es solo cosa de cada alumno: la distracción se contagia».",
+      "cut": "Salta la pregunta a la sala."
+    },
+    {
+      "id": "distraccion",
+      "block": "b1",
+      "at": 5.5,
+      "type": "big",
+      "number": "−11",
+      "text": { "es": "puntos en Matemáticas por cada desviación de distracción entre compañeros. Prohibir el móvil no cambió la asociación.", "en": "maths points per standard deviation of peer distraction. Phone bans did not change the association." },
+      "cite": "sung-distraccion",
+      "key": "La atención es un clima compartido: se gestiona con diseño didáctico, no solo con normas sobre el papel.",
+      "notes": "Estudio con datos de PISA 2022 en 80 sistemas educativos. Cada desviación típica de distracción digital entre compañeros del centro se asocia con 11,31 puntos menos en Matemáticas, y las prohibiciones del móvil no modificaron significativamente esa asociación. Insiste en el rigor: es observacional, asociación y no causa.",
+      "data": "Sung et al. (2026). Journal of Global Health, 16, 04351: −11,31 puntos en Matemáticas y −1,19 en pensamiento creativo por desviación típica intrapaís; interacción con prohibiciones no significativa.",
+      "do": "Di explícitamente «asociación, no causa»: da credibilidad.",
+      "bridge": "«Entonces, ¿la tecnología funciona o no funciona? Vamos a lo que dice la investigación de 40 años».",
+      "cut": "Quédate solo con la frase clave."
+    },
+    {
+      "id": "tamim",
       "block": "b2",
-      "at": 5,
-      "type": "list",
-      "title": {
-        "es": "6 áreas; 4 miran al aula",
-        "en": "6 areas; 4 look at the classroom"
-      },
-      "items": [
-        {
-          "es": "3 · Enseñanza",
-          "en": "3 · Teaching"
-        },
-        {
-          "es": "4 · Evaluación",
-          "en": "4 · Assessment"
-        },
-        {
-          "es": "5 · Empoderamiento del alumnado",
-          "en": "5 · Empowering students"
-        },
-        {
-          "es": "6 · Competencia digital del alumnado",
-          "en": "6 · Students' digital competence"
-        }
-      ],
-      "cite": "mrcdd",
-      "notes": "Marco estatal vigente: Resolución de 4 de mayo de 2022, BOE de 16 de mayo. Las áreas 1 y 2 son del docente (compromiso profesional, contenidos). Las 3 a 6 son lo que ocurre con el alumnado."
+      "at": 7,
+      "type": "big",
+      "number": "0,35",
+      "text": { "es": "Efecto medio de la tecnología en 40 años de investigación. Modesto y muy variable: depende del diseño.", "en": "Average effect of technology across 40 years of research. Modest and highly variable: it depends on design." },
+      "cite": "tamim",
+      "key": "La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico.",
+      "notes": "Metaanálisis de segundo orden: 25 metaanálisis y 1055 estudios, efecto medio 0,35, positivo pero moderado y muy heterogéneo. Hay estudios donde funciona muy bien y otros donde no. Si queréis una cifra más reciente y concreta: en Matemáticas y Ciencias de secundaria, Hillmayr et al. (2020) obtienen g = 0,65 en 92 estudios. La pregunta interesante no es «¿funciona?», sino «¿cuándo funciona?».",
+      "data": "Tamim et al. (2011), Review of Educational Research, 81(1): 0,35 (efectos aleatorios); validación 0,33. Hillmayr et al. (2020), Computers & Education, 153: g = 0,65, k = 92.",
+      "do": "No te enredes con estadística: «0,35 es un efecto modesto; la variación es lo importante».",
+      "bridge": "«¿Y de qué depende? No del equipamiento».",
+      "cut": "Omite Hillmayr."
+    },
+    {
+      "id": "docente",
+      "block": "b2",
+      "at": 8.5,
+      "type": "statement",
+      "text": { "es": "No decide el equipamiento: decide el docente.", "en": "Equipment doesn't decide: the teacher does." },
+      "small": { "es": "Pesan más las competencias didácticas digitales que los dispositivos.", "en": "Teaching-related digital skills matter more than devices." },
+      "cite": "sailer",
+      "key": "Más tabletas no cambian el aula; un docente que sabe para qué usarlas, sí.",
+      "notes": "Sailer, Murböck y Fischer (2021), muestra representativa de docentes de Baviera: lo que explica qué actividades se hacen con tecnología son las competencias digitales básicas y didácticas del profesorado, no los recursos. Una revisión paraguas (Wohlfart y Wagner, 2023) coloca también al docente en el centro. Por eso el marco TPACK insiste en integrar tecnología, pedagogía, materia y contexto: por separado no sirven.",
+      "data": "Sailer et al. (2021), Teaching and Teacher Education, 103, 103346. Wohlfart y Wagner (2023), ETR&D, 71(2). Mishra (2019): TPACK con conocimiento del contexto.",
+      "do": "Señala a la sala: «Esto va de vosotros».",
+      "bridge": "«Y el marco oficial dice lo mismo, aunque lo leamos poco así».",
+      "cut": "Omite TPACK."
     },
     {
       "id": "logra",
       "block": "b2",
-      "at": 6.5,
+      "at": 10.5,
       "type": "statement",
-      "text": {
-        "es": "La competencia docente se nota en lo que logra el alumnado.",
-        "en": "Teacher competence shows in what students achieve."
-      },
-      "notes": "Esta es nuestra lectura del marco, no una cita literal. Un docente con cien aplicaciones y un alumnado que solo copia no es digitalmente competente."
-    },
-    {
-      "id": "niveles",
-      "block": "b2",
-      "at": 8,
-      "type": "ladder",
-      "title": {
-        "es": "Niveles: conocer → transformar",
-        "en": "Levels: knowing → transforming"
-      },
-      "steps": [
-        {
-          "es": "A · Conocer con guía",
-          "en": "A · Know with guidance"
-        },
-        {
-          "es": "B · Usar con autonomía",
-          "en": "B · Use autonomously"
-        },
-        {
-          "es": "C · Investigar y transformar",
-          "en": "C · Research and transform"
-        }
-      ],
+      "text": { "es": "La competencia docente se nota en lo que logra el alumnado.", "en": "Teacher competence shows in what students achieve." },
+      "small": { "es": "MRCDD: 4 de sus 6 áreas miran al aula.", "en": "MRCDD: 4 of its 6 areas look at the classroom." },
       "cite": "mrcdd",
-      "notes": "Tres etapas con dos niveles cada una (A1–C2). En Andalucía: la Orden de 29 de marzo de 2021 adopta DigCompEdu para el profesorado; el Plan de Actuación Digital se hace en Séneca; la acreditación, Orden de 11 de mayo de 2025. Detalle en la app."
+      "key": "Un docente con cien aplicaciones y un alumnado que solo copia no es digitalmente competente.",
+      "notes": "MRCDD (Resolución de 4 de mayo de 2022, BOE de 16 de mayo). Áreas 1 y 2: compromiso profesional y contenidos. Áreas 3 a 6: enseñanza, evaluación, empoderamiento del alumnado y desarrollo de su competencia digital. Etapas A, B y C (acceso, experiencia, liderazgo). En Andalucía: Orden de 29/03/2021 (DigCompEdu para profesorado), Plan de Actuación Digital en Séneca y acreditación por la Orden de 11/05/2025. Aclara que la frase es nuestra lectura del marco, no una cita literal.",
+      "data": "BOE-A-2022-8042. Detalle de áreas, competencias y niveles en la sección «Marco CDD» de la app.",
+      "do": "Cuenta con los dedos: 3, 4, 5, 6.",
+      "bridge": "«Si se nota en el alumnado, necesitamos una forma de mirar qué hace el alumnado. Os doy tres lentes».",
+      "cut": "Omite la normativa andaluza: está en la app."
     },
     {
       "id": "icap",
       "block": "b3",
-      "at": 10,
+      "at": 13,
       "type": "ladder",
-      "title": {
-        "es": "ICAP: ¿qué hace el alumno con la información?",
-        "en": "ICAP: what do students do with information?"
-      },
+      "title": { "es": "ICAP: ¿qué hace el alumno con la información?", "en": "ICAP: what do students do with information?" },
       "steps": [
-        {
-          "es": "Pasivo · recibe",
-          "en": "Passive · receives"
-        },
-        {
-          "es": "Activo · manipula",
-          "en": "Active · manipulates"
-        },
-        {
-          "es": "Constructivo · genera",
-          "en": "Constructive · generates"
-        },
-        {
-          "es": "Interactivo · co-construye",
-          "en": "Interactive · co-constructs"
-        }
+        { "es": "Pasivo · recibe", "en": "Passive · receives" },
+        { "es": "Activo · manipula", "en": "Active · manipulates" },
+        { "es": "Constructivo · genera", "en": "Constructive · generates" },
+        { "es": "Interactivo · co-construye", "en": "Interactive · co-constructs" }
       ],
       "cite": "icap",
-      "notes": "Chi y Wylie, 2014. El aprendizaje tiende a aumentar de pasivo a interactivo. Ejemplos: ver un vídeo (P), subrayar o copiar (A), explicar con tus palabras (C), debatir y construir con otro que piensa distinto (I)."
+      "key": "El salto grande está entre manipular y generar: que produzcan algo que no estaba en el material.",
+      "notes": "Chi y Wylie (2014). Ejemplos de la misma clase: ver un vídeo (P), subrayar o copiar (A), explicar con sus palabras o hacer un mapa propio (C), debatir y construir con alguien que piensa distinto (I). El aprendizaje tiende a crecer en ese orden. Úsalo como filtro antes de elegir herramienta, no como etiqueta para juzgar.",
+      "data": "Chi, M. T. H., y Wylie, R. (2014). Educational Psychologist, 49(4), 219–243.",
+      "do": "Sube físicamente la mano un escalón por cada nivel.",
+      "bridge": "«Pensad en la última vez que vuestro alumnado usó tecnología. Votad».",
+      "cut": "Un solo ejemplo, el del vídeo."
     },
     {
       "id": "voto2",
       "block": "b3",
-      "at": 12,
+      "at": 15,
       "type": "vote",
       "vote": "v2",
-      "notes": "Normalmente sale mucho «recibir» y «manipular». No es una crítica: es el punto de partida. La pregunta es cómo subir un escalón."
+      "key": "Lo normal es que salga mucho «recibir» y «manipular»: es el punto de partida, no una crítica.",
+      "notes": "Comenta el resultado sin juzgar. Conecta con Sailer et al. (2021): en la práctica real, el alumnado pasa mucho tiempo pasivo cuando se usa tecnología. La pregunta no es «qué app», sino «cómo subo un escalón».",
+      "do": "Un minuto para votar. Sin conexión: mano alzada por niveles.",
+      "bridge": "«Segunda lente: PICRAT, que mira la tecnología y al alumnado a la vez».",
+      "cut": "Mano alzada rápida y sigue."
     },
     {
-      "id": "filtro",
+      "id": "picrat",
       "block": "b3",
-      "at": 14,
-      "type": "statement",
-      "text": {
-        "es": "ICAP como filtro, no como etiqueta.",
-        "en": "ICAP as a filter, not a label."
-      },
-      "small": {
-        "es": "Antes de elegir herramienta: ¿qué hará el alumno con la información?",
-        "en": "Before choosing a tool: what will students do with the information?"
-      },
-      "notes": "Propuesta práctica: antes de elegir aplicación, pregúntate en qué letra de ICAP cae la actividad. Si es P o A, busca cómo llevarla a C o I."
+      "at": 17,
+      "type": "compare",
+      "title": { "es": "PICRAT: dos preguntas", "en": "PICRAT: two questions" },
+      "items": [
+        { "label": { "es": "Alumnado", "en": "Students" }, "text": { "es": "Pasivo, interactivo o creativo", "en": "Passive, interactive or creative" } },
+        { "label": { "es": "Tecnología", "en": "Technology" }, "text": { "es": "Reemplaza, amplifica o transforma", "en": "Replaces, amplifies or transforms" } }
+      ],
+      "cite": "picrat",
+      "key": "Todas las casillas pueden ser legítimas; la matriz sirve para ver quién está pensando.",
+      "notes": "Kimmons, Graham y West (2020). Dos preguntas: ¿qué relación tiene el alumnado con la tecnología? y ¿qué le hace la tecnología a tu práctica? Frente a SAMR, que solo mira la herramienta y tiene escasa base empírica (Hamilton et al., 2016), PICRAT obliga a mirar al alumnado. No se trata de llegar siempre a la esquina «Creativo-Transforma».",
+      "data": "Kimmons et al. (2020), CITE Journal, 20(1), 176–198. Crítica a SAMR: Hamilton, Rosenberg y Akcaoglu (2016), TechTrends, 60(5).",
+      "do": "Dibuja en el aire la matriz 3 × 3 con las manos.",
+      "bridge": "«Veámoslo con un ejemplo de Historia».",
+      "cut": "No menciones SAMR."
     },
     {
-      "id": "samr",
+      "id": "padlet",
       "block": "b3",
-      "at": 15.5,
-      "type": "statement",
-      "text": {
-        "es": "SAMR describe la tecnología, no el pensamiento.",
-        "en": "SAMR describes technology, not thinking."
-      },
-      "small": {
-        "es": "Subir de escalón no garantiza aprender.",
-        "en": "Climbing a step does not guarantee learning."
-      },
-      "cite": "samr-critica",
-      "notes": "SAMR (Puentedura) es popular, pero como meta es un antipatrón: invita a «redefinir» con más tecnología sin preguntar por el aprendizaje. Hamilton, Rosenberg y Akcaoglu (2016) señalan su escasa base empírica. Úsalo para describir, no para evaluar."
+      "at": 19,
+      "type": "compare",
+      "title": { "es": "Misma herramienta, otro pensamiento", "en": "Same tool, different thinking" },
+      "items": [
+        { "label": { "es": "Antes", "en": "Before" }, "text": { "es": "Recorren la línea temporal del docente.", "en": "They browse the teacher's timeline." } },
+        { "label": { "es": "Después", "en": "After" }, "text": { "es": "Construyen la suya con fuentes y la defienden.", "en": "They build their own from sources and defend it." } }
+      ],
+      "key": "En el «antes» el pensamiento histórico lo hizo el docente; en el «después», el alumnado.",
+      "notes": "Antes: Interactivo-Reemplaza; recorren un muro digital que hizo el profesor y responden preguntas cerradas. Después: Creativo-Transforma; los equipos eligen fuentes, construyen su línea temporal con hipótesis causales y comparan qué priorizó u omitió cada grupo. Adáptalo a la sala: en Primaria, problemas del barrio que resuelve otra pareja; en EOI, mensajes de voz y reformulación; en Conservatorio, comparar tres grabaciones y defender una interpretación propia (están en la app, «Las 7 claves», filtrando por etapa).",
+      "do": "Pregunta: «¿Quién tiene ya una tarea así en mente?». Deja que dos personas lo digan.",
+      "bridge": "«Esto tiene nombre en la investigación sobre creación de conocimiento: pasar al modo diseño».",
+      "cut": "Sin preguntas a la sala; menciona solo el ejemplo de tu público mayoritario."
     },
     {
-      "id": "tpack",
+      "id": "diseno",
       "block": "b3",
-      "at": 18,
+      "at": 21.5,
       "type": "statement",
-      "text": {
-        "es": "Tecnología + pedagogía + materia.",
-        "en": "Technology + pedagogy + content."
-      },
-      "small": {
-        "es": "Por separado, no sirven.",
-        "en": "Separately, they do not work."
-      },
-      "cite": "tpack",
-      "notes": "TPACK, Mishra y Koehler (2006). El conocimiento tecnológico solo es útil cuando se integra con cómo se enseña y qué se enseña. Por eso la formación en «herramientas» sola no cambia el aula."
-    },
-    {
-      "id": "inclusiva",
-      "block": "b4",
-      "at": 20,
-      "type": "statement",
-      "text": {
-        "es": "Escuela inclusiva + digital",
-        "en": "Inclusive + digital school"
-      },
-      "small": {
-        "es": "Cinco temas. Lo que los multiplica y lo que los destruye.",
-        "en": "Five topics. What multiplies them and what destroys them."
-      },
-      "notes": "Volvemos a la ponencia anterior: cinco temas y su versión digital. La tabla completa está en la app, sección «Escuela inclusiva + digital»."
-    },
-    {
-      "id": "p-diversidad",
-      "block": "b4",
-      "at": 20.5,
-      "type": "bridge",
-      "from": {
-        "es": "Diversidad",
-        "en": "Diversity"
-      },
-      "to": {
-        "es": "DUA",
-        "en": "UDL"
-      },
-      "good": {
-        "es": "Varias vías, desde el diseño",
-        "en": "Several options, by design"
-      },
-      "bad": {
-        "es": "Vídeo sin subtítulos como única vía",
-        "en": "A video without captions as the only option"
-      },
-      "cite": "cast-udl",
-      "notes": "Pautas CAST UDL 3.0 (2024): implicación, representación, acción y expresión. Lo digital facilita ofrecer alternativas a todo el grupo, no solo adaptaciones individuales."
-    },
-    {
-      "id": "p-convivencia",
-      "block": "b4",
-      "at": 22,
-      "type": "bridge",
-      "from": {
-        "es": "Convivencia",
-        "en": "Coexistence"
-      },
-      "to": {
-        "es": "Ciberconvivencia",
-        "en": "Online coexistence"
-      },
-      "good": {
-        "es": "Normas pactadas y casos reales",
-        "en": "Agreed rules and real cases"
-      },
-      "bad": {
-        "es": "Grupos de clase sin normas ni adulto",
-        "en": "Class groups with no rules or adult"
-      },
-      "notes": "MRCDD 6.2 y 6.4: ciudadanía digital y bienestar digital. El conflicto ya no termina con el timbre. En la app hay un prompt para crear casos de debate."
-    },
-    {
-      "id": "p-igualdad",
-      "block": "b4",
-      "at": 23.5,
-      "type": "bridge",
-      "from": {
-        "es": "Igualdad",
-        "en": "Equality"
-      },
-      "to": {
-        "es": "Sesgos y brecha",
-        "en": "Bias and gaps"
-      },
-      "good": {
-        "es": "Analizar los estereotipos de la IA",
-        "en": "Analysing AI stereotypes"
-      },
-      "bad": {
-        "es": "Creer que la IA es neutral",
-        "en": "Believing AI is neutral"
-      },
-      "notes": "La brecha ya no es solo de acceso, también de uso: unos crean con tecnología, otros solo consumen. Y la IA reproduce estereotipos. Experimento de aula en el banco de prompts."
-    },
-    {
-      "id": "p-clima",
-      "block": "b4",
-      "at": 25,
-      "type": "bridge",
-      "from": {
-        "es": "Clima y motivación",
-        "en": "Climate and motivation"
-      },
-      "to": {
-        "es": "Retroalimentación",
-        "en": "Feedback"
-      },
-      "good": {
-        "es": "¿Adónde voy? ¿Cómo voy? ¿Y después?",
-        "en": "Where am I going? How am I going? Where next?"
-      },
-      "bad": {
-        "es": "Insignias que premian la rapidez",
-        "en": "Badges that reward speed"
-      },
-      "cite": "feedback",
-      "notes": "Hattie y Timperley (2007): las tres preguntas de la retroalimentación. La gamificación tiene sentido si los elementos de juego sirven al aprendizaje (Deterding et al., 2011), no si premian solo acertar rápido."
-    },
-    {
-      "id": "p-cooperativo",
-      "block": "b4",
-      "at": 26.5,
-      "type": "bridge",
-      "from": {
-        "es": "Cooperativo",
-        "en": "Cooperation"
-      },
-      "to": {
-        "es": "Coautoría real",
-        "en": "Real co-authorship"
-      },
-      "good": {
-        "es": "Nadie termina sin los demás",
-        "en": "No one finishes without the others"
-      },
-      "bad": {
-        "es": "Documento compartido que escribe uno",
-        "en": "A shared document written by one person"
-      },
-      "cite": "cooperativo",
-      "notes": "Johnson y Johnson (2009): interdependencia positiva y responsabilidad individual. El historial de versiones del documento compartido es una evidencia de proceso estupenda."
-    },
-    {
-      "id": "ba-primaria",
-      "block": "b4",
-      "at": 28,
-      "type": "ba",
-      "stage": "primaria",
-      "before": {
-        "es": "Ficha interactiva de sumas: arrastrar el número.",
-        "en": "Interactive sums worksheet: drag the number."
-      },
-      "after": {
-        "es": "Inventan un problema de su barrio, lo graban y otra pareja lo resuelve.",
-        "en": "They invent a local problem, record it, and another pair solves it."
-      },
-      "notes": "De activo a interactivo. La herramienta es casi la misma (una tableta), cambia lo que el alumnado tiene que pensar."
-    },
-    {
-      "id": "ba-eso",
-      "block": "b4",
-      "at": 29,
-      "type": "ba",
-      "stage": "eso",
-      "before": {
-        "es": "Presentación sobre la Revolución Industrial copiada de la web.",
-        "en": "Industrial Revolution slides copied from the web."
-      },
-      "after": {
-        "es": "Dos fuentes contradictorias: decidir cuál es fiable y defenderlo.",
-        "en": "Two contradictory sources: decide which is reliable, defend it."
-      },
-      "notes": "Sirve para cualquier materia de ESO o Bachillerato: dos fuentes, datos o modelos que no coinciden, y una decisión justificada."
-    },
-    {
-      "id": "ba-eoi",
-      "block": "b4",
-      "at": 30,
-      "type": "ba",
-      "stage": "eoi",
-      "before": {
-        "es": "Redacción «mis vacaciones»: la escribe una IA.",
-        "en": "“My holidays” essay: AI writes it."
-      },
-      "after": {
-        "es": "Mensaje de voz a otro estudiante y reformular tras su respuesta.",
-        "en": "Voice message to another learner; reformulate after the reply."
-      },
-      "notes": "En EOI el riesgo de la IA en la producción escrita es enorme. La interacción oral real y la reformulación a partir de la respuesta son difíciles de delegar."
-    },
-    {
-      "id": "ba-cons",
-      "block": "b4",
-      "at": 31,
-      "type": "ba",
-      "stage": "conservatorio",
-      "before": {
-        "es": "Ver un vídeo de un intérprete y tocar «igual».",
-        "en": "Watch a performer's video and play “the same”."
-      },
-      "after": {
-        "es": "Comparar tres grabaciones, elegir una interpretación propia y justificarla.",
-        "en": "Compare three recordings, choose your own interpretation and justify it."
-      },
-      "notes": "En conservatorio la grabación propia es una herramienta de autorregulación magnífica (MRCDD 3.4). Pasamos de imitar a decidir."
-    },
-    {
-      "id": "ia-muleta",
-      "block": "b5",
-      "at": 32,
-      "type": "statement",
-      "text": {
-        "es": "IA generativa: ¿muleta o tutor?",
-        "en": "Generative AI: crutch or tutor?"
-      },
-      "notes": "Entramos en IA. La pregunta no es si usarla, sino para qué y cómo."
+      "text": { "es": "Del modo creencia al modo diseño.", "en": "From belief mode to design mode." },
+      "small": { "es": "Las ideas del alumnado, borradores que el grupo mejora.", "en": "Students' ideas as drafts the group improves." },
+      "cite": "knowledge-building",
+      "key": "Generar conocimiento es mejorar ideas en comunidad, no acertar la respuesta del libro.",
+      "notes": "Scardamalia y Bereiter: en modo creencia se aceptan o rechazan ideas ya hechas; en modo diseño se teoriza, se contrasta con fuentes y se reformula. Andamios sencillos para el aula: «Mi teoría…», «Necesito entender…», «Antes pensábamos… y ahora pensamos…». Esa es la respuesta al título de la ponencia: la CDD genera conocimiento cuando hace posible este trabajo con ideas.",
+      "data": "Scardamalia, M., y Bereiter, C. (2014). The Cambridge Handbook of the Learning Sciences (2.ª ed., pp. 397–417).",
+      "do": "Lee los tres andamios despacio; son lo que la gente apunta.",
+      "bridge": "«Y ahora el elefante en la habitación: la IA generativa».",
+      "cut": "Solo la frase y un andamio."
     },
     {
       "id": "ia-dato",
-      "block": "b5",
-      "at": 33,
+      "block": "b4",
+      "at": 24,
       "type": "big",
       "number": "−17 %",
-      "text": {
-        "es": "Notas tras retirar ChatGPT sin límites. Con un tutor que pregunta, el efecto casi desaparece.",
-        "en": "Grades after removing unrestricted ChatGPT. With a tutor that asks, the effect largely disappears."
-      },
+      "text": { "es": "Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, el daño se mitiga.", "en": "Exam without AI after practising with unrestricted GPT-4. With a hint-giving tutor, the harm is mitigated." },
       "cite": "bastani",
-      "notes": "Bastani et al. (2025), PNAS: experimento con casi mil estudiantes de matemáticas de secundaria. Con GPT-4 libre mejoraron en la práctica, pero al retirarlo rindieron un 17 % peor que quien nunca lo tuvo. La versión «GPT Tutor», con salvaguardas, mitigó en gran parte ese daño. Descarga cognitiva: la IA como muleta."
+      "key": "La IA sin diseño pedagógico mejora el ejercicio y empeora el aprendizaje.",
+      "notes": "Bastani et al. (2025), PNAS: experimento de campo con casi mil estudiantes de Matemáticas de secundaria. Con GPT-4 sin límites mejoraron durante la práctica, pero al retirarlo rindieron un 17 % peor que el grupo sin IA. La versión «GPT Tutor», con pistas diseñadas por el profesorado en lugar de respuestas, mitigó en gran parte ese efecto. Idea: la IA usada como muleta.",
+      "data": "Bastani, H., et al. (2025). PNAS, 122(26), e2422633122.",
+      "do": "Pausa larga después del número.",
+      "bridge": "«¿Por qué pasa esto? Tiene nombre: pereza metacognitiva».",
+      "cut": "Quédate con número + frase clave."
+    },
+    {
+      "id": "pereza",
+      "block": "b4",
+      "at": 26,
+      "type": "statement",
+      "text": { "es": "Pereza metacognitiva", "en": "Metacognitive laziness" },
+      "small": { "es": "Mejor producto, igual aprendizaje: la facilidad puede apagar la autorregulación.", "en": "Better product, same learning: ease can switch off self-regulation." },
+      "cite": "fan-pereza",
+      "key": "Si la IA lo hace fácil, el alumno deja de vigilar su propio pensamiento.",
+      "notes": "Fan et al. (2025), experimento aleatorizado con 117 universitarios: el grupo con ChatGPT mejoró más la nota del texto, pero no ganó más conocimiento ni transferencia, y mostró procesos de autorregulación distintos. Los autores hablan de posible «pereza metacognitiva». Sánchez Mendiola (2025) lo resume: el reto docente es diseñar fricciones productivas y leer evidencias de proceso.",
+      "data": "Fan, Y., et al. (2025). British Journal of Educational Technology, 56(2), 489–530. Sánchez Mendiola (2025), Investigación en Educación Médica, 14(56).",
+      "do": "Pregunta: «¿Os suena un trabajo impecable de alguien que luego no sabe explicarlo?».",
+      "bridge": "«Votemos qué os preocupa más».",
+      "cut": "Sin la pregunta a la sala."
     },
     {
       "id": "voto3",
-      "block": "b5",
-      "at": 34.5,
+      "block": "b4",
+      "at": 27.5,
       "type": "vote",
       "vote": "v3",
-      "notes": "Recoge la preocupación mayoritaria y conéctala con lo que viene: tutor socrático, sesgos, evaluar el proceso y datos."
+      "key": "Sea cual sea la preocupación, la respuesta no es prohibir: es diseñar.",
+      "notes": "Recoge la preocupación mayoritaria y conéctala con lo que viene: si sale «copiar», fricción y evaluación del proceso; si sale «privacidad», la diapositiva de datos; si sale «sesgos», la clave 7 en la app.",
+      "do": "Un minuto. Sin conexión: mano alzada.",
+      "bridge": "«Tres maneras de poner fricción productiva».",
+      "cut": "Mano alzada y comenta solo la opción ganadora."
     },
     {
-      "id": "socratico",
-      "block": "b5",
-      "at": 36,
-      "type": "statement",
-      "text": {
-        "es": "Tutor socrático: la IA pregunta, el alumno piensa.",
-        "en": "Socratic tutor: AI asks, students think."
-      },
-      "small": {
-        "es": "Hay un prompt listo en la app.",
-        "en": "There is a ready-made prompt in the app."
-      },
-      "notes": "Enseña rápidamente la tarjeta «Tutor socrático» si hay conexión. Clave: que entreguen la conversación, no la respuesta."
-    },
-    {
-      "id": "proceso",
-      "block": "b5",
-      "at": 37.5,
-      "type": "statement",
-      "text": {
-        "es": "Evalúa el proceso, no solo el producto.",
-        "en": "Assess the process, not just the product."
-      },
-      "small": {
-        "es": "Borradores, decisiones, conversaciones: lo que la IA no puede fingir.",
-        "en": "Drafts, decisions, conversations: what AI cannot fake."
-      },
-      "notes": "Si solo evaluamos el producto final, la IA gana. Si evaluamos borradores, decisiones justificadas y defensa oral, el aprendizaje se ve."
+      "id": "friccion",
+      "block": "b4",
+      "at": 29.5,
+      "type": "list",
+      "title": { "es": "Fricción productiva", "en": "Productive friction" },
+      "items": [
+        { "es": "La IA pregunta, no responde", "en": "AI asks, it doesn't answer" },
+        { "es": "La IA hace de alumno que se equivoca", "en": "AI plays a student who makes mistakes" },
+        { "es": "Se evalúan borradores y decisiones", "en": "Drafts and decisions are assessed" }
+      ],
+      "cite": "mollick",
+      "key": "Que la IA haga más difícil no pensar: el alumno pregunta, explica, verifica y decide.",
+      "notes": "1) Tutor socrático: un prompt que impide dar la respuesta y hace una pregunta cada vez (está en la app). 2) IA como estudiante con errores verosímiles: el alumno enseña, detecta y corrige verificando con sus fuentes (Mollick y Mollick, 2023, proponen siete roles para la IA). 3) Evaluar evidencias de proceso: borradores, registro de decisiones, verificación de fuentes y una defensa oral breve; lo que la IA no puede fingir. Recuerda: en Primaria, la IA la maneja el docente.",
+      "data": "Mollick, E. R., y Mollick, L. (2023). Assigning AI: Seven approaches for students, with prompts. SSRN.",
+      "do": "Si hay conexión y tiempo, enseña 20 segundos la tarjeta «La IA como alumno que se equivoca» en la app.",
+      "bridge": "«Una condición antes de probar nada de esto: los datos».",
+      "cut": "No hagas la demostración."
     },
     {
       "id": "datos",
-      "block": "b5",
-      "at": 38.5,
+      "block": "b4",
+      "at": 33,
       "type": "list",
-      "title": {
-        "es": "Ningún dato personal del alumnado",
-        "en": "No personal student data"
-      },
+      "title": { "es": "Ningún dato personal del alumnado", "en": "No personal student data" },
       "items": [
-        {
-          "es": "RGPD y LOPDGDD",
-          "en": "GDPR and Spanish data law"
-        },
-        {
-          "es": "Reglamento de IA: alfabetización (art. 4)",
-          "en": "EU AI Act: AI literacy (Art. 4)"
-        },
-        {
-          "es": "Cuentas corporativas del centro",
-          "en": "School institutional accounts"
-        }
+        { "es": "RGPD y LOPDGDD", "en": "GDPR and Spanish data law" },
+        { "es": "Reglamento de IA: alfabetización (art. 4)", "en": "EU AI Act: AI literacy (Art. 4)" },
+        { "es": "Cuentas corporativas del centro", "en": "School institutional accounts" }
       ],
       "cite": "rgia",
-      "notes": "Nunca nombres, notas, diagnósticos ni fotos en herramientas de IA. Describir situaciones, no personas. El art. 4 del Reglamento (UE) 2024/1689, aplicable desde el 2 de febrero de 2025, obliga a proveedores y responsables del despliegue a procurar alfabetización en IA de su personal."
+      "key": "Describe situaciones, nunca personas.",
+      "notes": "Nunca nombres, notas, diagnósticos ni fotos en herramientas de IA. Ejemplo correcto: «un alumno de 3.º con dislexia». El art. 4 del Reglamento (UE) 2024/1689, aplicable desde el 2 de febrero de 2025, obliga a procurar la alfabetización en IA del personal. Usa las herramientas y cuentas que ofrezca el centro o la Consejería.",
+      "data": "Reglamento (UE) 2024/1689, art. 4. RGPD y LOPDGDD (Ley Orgánica 3/2018).",
+      "do": "Dilo en tono serio y breve.",
+      "bridge": "«Recapitulemos todo en siete claves».",
+      "cut": "Solo la frase clave."
+    },
+    {
+      "id": "claves",
+      "block": "b5",
+      "at": 35,
+      "type": "keys",
+      "title": { "es": "7 claves", "en": "7 keys" },
+      "items": [
+        { "es": "Pedagogía primero", "en": "Pedagogy first" },
+        { "es": "Construir, no recibir", "en": "Build, don't receive" },
+        { "es": "Atención cuidada", "en": "Protected attention" },
+        { "es": "Feedback de proceso", "en": "Process feedback" },
+        { "es": "DUA de origen", "en": "UDL by design" },
+        { "es": "IA con fricción", "en": "AI with friction" },
+        { "es": "Ética compartida", "en": "Shared ethics" }
+      ],
+      "key": "Siete preguntas para revisar cualquier tarea, de cualquier etapa y con cualquier herramienta.",
+      "notes": "Recorre rápido: 1) primero el obstáculo de la materia, después la herramienta (TPACK, área 3); 2) que produzcan algo nuevo (ICAP, modo diseño); 3) carga cognitiva y momentos sin pantalla; 4) feedback sobre el proceso que el alumnado usa (Hattie y Timperley; Carless y Boud); 5) DUA 3.0: varias vías desde el diseño; 6) fricción productiva con la IA; 7) ética, datos y trabajo con el claustro. Cada clave tiene en la app ejemplos por etapa, una pregunta para revisarse y prompts enlazados.",
+      "do": "Una frase por clave, máximo 20 segundos cada una.",
+      "bridge": "«Y si solo os lleváis una pregunta, que sea esta».",
+      "cut": "Lee solo los títulos y remite a la app."
     },
     {
       "id": "pregunta",
-      "block": "b6",
-      "at": 40,
+      "block": "b5",
+      "at": 38.5,
       "type": "statement",
-      "text": {
-        "es": "¿Qué tiene que pensar el alumno ahora que antes no pensaba?",
-        "en": "What do students have to think about now that they did not before?"
-      },
-      "notes": "Silencio de cinco segundos. Es la pregunta que quiero que se lleven. Sirve para cualquier etapa, materia y herramienta."
+      "text": { "es": "¿Qué tiene que pensar el alumno ahora que antes no pensaba?", "en": "What do students have to think about now that they did not before?" },
+      "key": "Es la pregunta que resume las siete claves y sirve para cualquier herramienta.",
+      "notes": "Léela y calla cinco segundos. Si la respuesta es «nada», has digitalizado. Si la respuesta es «comparar, decidir, explicar, defender», estás generando conocimiento.",
+      "do": "Cinco segundos de silencio. De verdad.",
+      "bridge": "«Os propongo un reto concreto para el lunes. Votad».",
+      "cut": "Nada que recortar."
     },
     {
       "id": "voto4",
-      "block": "b6",
-      "at": 41,
+      "block": "b5",
+      "at": 39.5,
       "type": "vote",
       "vote": "v4",
-      "notes": "Reto: elegir ahora una tarea concreta para la semana que viene."
+      "key": "Una sola tarea, una sola mejora, la semana que viene.",
+      "notes": "Comenta la opción más votada y relaciónala con el kit: guía de análisis, prompts encadenados y plantilla socrática. Insiste en «una sola tarea»: pequeño y real.",
+      "do": "Un minuto. Sin conexión: mano alzada.",
+      "bridge": "«Para hacerlo, os dejo el kit».",
+      "cut": "Sáltala si vas más de 3 minutos tarde: pasa al QR."
     },
     {
       "id": "qr-final",
-      "block": "b6",
-      "at": 43,
+      "block": "b5",
+      "at": 41.5,
       "type": "qr",
-      "title": {
-        "es": "Para el lunes",
-        "en": "For Monday"
-      },
+      "title": { "es": "Para el lunes", "en": "For Monday" },
       "targets": [
-        {
-          "qr": "plantilla",
-          "label": {
-            "es": "Plantilla socrática",
-            "en": "Socratic template"
-          }
-        },
-        {
-          "qr": "ia",
-          "label": {
-            "es": "Banco de prompts",
-            "en": "Prompt bank"
-          }
-        }
+        { "qr": "recursos", "label": { "es": "Guía y descargas", "en": "Guide and downloads" } },
+        { "qr": "ia", "label": { "es": "Banco de prompts", "en": "Prompt bank" } }
       ],
-      "notes": "Plantilla: una actividad, siete preguntas, propuestas de mejora. Banco: 23 prompts por etapa. Todo funciona sin conexión salvo abrir la IA."
+      "key": "Analiza una tarea con la guía, mejórala con los prompts y compártela con un compañero.",
+      "notes": "Descargas: guía para analizar tareas (PDF y editable), cuaderno de prompts y las siete claves en una página, en español e inglés. Banco de prompts: empieza por «Radiografía de una tarea» y sigue los enlaces de «Siguiente paso». Todo funciona sin conexión salvo abrir la IA.",
+      "do": "Deja el QR un minuto mientras respondes preguntas.",
+      "bridge": "«Gracias».",
+      "cut": "30 segundos de QR."
     },
     {
       "id": "gracias",
-      "block": "b6",
+      "block": "b5",
       "at": 44,
       "type": "end",
-      "title": {
-        "es": "Gracias",
-        "en": "Thank you"
-      },
-      "notes": "Agradece. Recuerda que todo el material es CC BY-NC-SA 4.0: pueden usarlo y adaptarlo citando la autoría, sin fines comerciales y compartiendo con la misma licencia. Formación en centros: a través del CEP de Almería."
+      "title": { "es": "Gracias", "en": "Thank you" },
+      "key": "El alumnado no nace digitalmente competente: necesita docentes digitalmente competentes.",
+      "notes": "Agradece. Todo el material es CC BY-NC-SA 4.0: pueden usarlo y adaptarlo citando la autoría, sin fines comerciales y con la misma licencia. Formación en centros: a través del CEP de Almería.",
+      "do": "Termina en hora. Si hay preguntas, vuelve a la diapositiva del QR (número + Intro).",
+      "cut": "—"
     }
   ]
 }

@@ -15,7 +15,11 @@ import { renderResults } from './vote-bars.js';
 import { fetchResults, poll } from './votes.js';
 
 /** @typedef {import('./types').Localized} L */
-/** @typedef {Record<string, any> & { id: string, block: string, at: number, type: string, notes: string }} Slide */
+/**
+ * Notas del ponente (solo en español): notes = qué decir; key = idea fuerza; do = acción; data = dato y fuente;
+ * bridge = frase de transición; cut = qué recortar si vas tarde.
+ * @typedef {Record<string, any> & { id: string, block: string, at: number, type: string, notes: string, key?: string, do?: string, data?: string, bridge?: string, cut?: string }} Slide
+ */
 /** @typedef {{ blocks: { id: string, from: number, to: number, title: L }[], slides: Slide[] }} Deck */
 
 const CHANNEL = 'pd-presentacion';
@@ -44,7 +48,10 @@ const slideContent = (s, ctx) => {
         { class: 's-compare' },
         h('h2', {}, loc(s.title)),
         h('div', { class: 's-cols' }, ...s.items.map((/** @type {any} */ it) => h('div', { class: 's-col' }, h('p', { class: 's-label' }, loc(it.label)), h('p', { class: 's-text' }, loc(it.text))))),
+        cite,
       );
+    case 'keys':
+      return h('div', { class: 's-keys' }, h('h2', {}, loc(s.title)), h('ol', {}, ...s.items.map((/** @type {L} */ it, /** @type {number} */ i) => h('li', {}, h('span', { class: 's-key-n', 'aria-hidden': 'true' }, String(i + 1)), h('span', {}, loc(it))))), cite);
     case 'list':
       return h('div', { class: 's-list' }, h('h2', {}, loc(s.title)), h('ul', {}, ...s.items.map((/** @type {L} */ it) => h('li', {}, loc(it)))), cite);
     case 'ladder':
@@ -113,6 +120,25 @@ const slideEl = (s, i, total, ctx) =>
     slideContent(s, ctx),
     h('footer', { class: 's-footer' }, h('span', {}, `© ${ctx.site.year} ${ctx.site.author} · ${ctx.site.licenseShort} · ${t('footer.claude')}`), h('span', {}, `${i + 1} / ${total}`)),
   );
+
+/**
+ * Panel de notas del ponente: idea fuerza destacada, guion, acción, dato, transición y recorte.
+ * @param {Slide} s
+ */
+const notesPanel = (s) => {
+  /** @param {string} cls @param {string} label @param {string | undefined} text */
+  const row = (cls, label, text) => (text ? h('div', { class: `n-row ${cls}` }, h('p', { class: 'n-label' }, label), h('p', {}, text)) : null);
+  return h(
+    'div',
+    { class: 'n-notes' },
+    s?.key ? h('p', { class: 'n-key' }, s.key) : null,
+    h('p', {}, s?.notes ?? ''),
+    row('n-do', t('slides.do'), s?.do),
+    row('n-data', t('slides.data'), s?.data),
+    row('n-bridge', t('slides.bridge'), s?.bridge),
+    row('n-cut', t('slides.cut'), s?.cut),
+  );
+};
 
 /** Escala el lienzo 1920×1080 a la ventana. */
 const fit = (/** @type {HTMLElement} */ stage, /** @type {HTMLElement} */ box = document.documentElement) => {
@@ -191,7 +217,7 @@ const init = async () => {
     notesRoot.replaceChildren(
       h('header', { class: 'n-head' }, h('p', { class: 'n-block' }, block ? `${block.from}–${block.to} min · ${loc(block.title)}` : ''), h('p', { class: 'n-count' }, `${index + 1} / ${total}`), h('p', { class: 'n-timer', id: 'timer' }), h('p', { class: 'n-plan', id: 'plan' })),
       h('div', { class: 'n-previews' }, h('div', {}, h('p', { class: 'n-label' }, t('slides.current')), curPrev), h('div', {}, h('p', { class: 'n-label' }, t('slides.next')), nextPrev)),
-      h('div', { class: 'n-notes' }, h('p', {}, s?.notes ?? '')),
+      notesPanel(/** @type {Slide} */ (s)),
       h(
         'nav',
         { class: 'n-controls' },

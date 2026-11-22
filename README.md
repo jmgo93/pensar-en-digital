@@ -11,12 +11,13 @@ Web de apoyo a la ponencia *"Competencia Digital Docente como medio para generar
 
 | Entregable | Ruta |
 |---|---|
-| PWA: Inicio, La ponencia, Marco CDD, Escuela inclusiva + digital, Ideas para el lunes, Bibliografía, Buscador | `/`, `/ponencia/`, `/marco/`, `/inclusiva/`, `/lunes/`, `/bibliografia/`, `/buscar/` |
+| PWA: Inicio, La ponencia, Las 7 claves, Marco CDD, Escuela inclusiva + digital, Ideas para el lunes, Descargas, Bibliografía, Buscador | `/`, `/ponencia/`, `/claves/`, `/marco/`, `/inclusiva/`, `/lunes/`, `/recursos/`, `/bibliografia/`, `/buscar/` |
 | Plantilla socrática "¿Digitalización o innovación?" (+ PDF en blanco) | `/plantilla/` |
-| Banco de prompts de IA | `/ia/` |
+| Banco de prompts de IA (con desplegables, enlazados entre sí y con las claves) | `/ia/` |
+| Descargables: guía para analizar tareas, cuaderno de prompts y las siete claves (PDF y .md, es/en) | [`assets/descargas/`](assets/descargas/) |
 | Presentación 16:9 con votaciones en directo | `/presentacion/` |
 | Pantalla de resultados de votación | `/presentacion/resultados.html?v=v1` |
-| Guion con notas y tiempos | [`docs/guion.md`](docs/guion.md) |
+| Escaleta del ponente con tiempos, idea fuerza, transiciones y notas | [`docs/escaleta.md`](docs/escaleta.md) · [`docs/escaleta.pdf`](docs/escaleta.pdf) |
 | QR en SVG | [`assets/qr/`](assets/qr/) |
 
 Accesibilidad: WCAG 2.2 AA, tamaño de letra del 100 al 200 %, tema claro, oscuro o del sistema, alto contraste, interlineado amplio, lectura en voz alta, modo pictográfico (ARASAAC) y español o inglés.
@@ -37,17 +38,18 @@ Para reproducir el subdirectorio de GitHub Pages, sirve la **carpeta padre** y a
 
 ## Actualizar el contenido
 
-Todo el texto está en [`content/`](content/), en JSON y en español e inglés. Es la única fuente para la PWA, la presentación, el buscador y el guion.
+Todo el texto está en [`content/`](content/), en JSON y en español e inglés. Es la única fuente para la PWA, la presentación, el buscador, la escaleta y los descargables.
 
 | Archivo | Contenido |
 |---|---|
 | `ui.json` | Textos de la interfaz |
 | `routes.json` | Secciones y menú |
-| `inicio.json`, `ponencia.json`, `marco.json`, `inclusiva.json`, `lunes.json` | Secciones |
+| `inicio.json`, `ponencia.json`, `claves.json`, `marco.json`, `inclusiva.json`, `lunes.json`, `recursos.json` | Secciones |
+| `guia.json` | Guía descargable para analizar tareas |
 | `fuentes.json` | Bibliografía APA 7 (cítala en el texto con `[@id]`) |
 | `prompts.json` | Banco de prompts |
 | `plantilla.json` | Plantilla socrática |
-| `presentacion.json` | Diapositivas y notas (máximo 20 palabras por diapositiva) |
+| `presentacion.json` | Diapositivas y notas del ponente (`notes`, `key`, `do`, `data`, `bridge`, `cut`; máximo 20 palabras visibles por diapositiva) |
 | `votaciones.json` | Preguntas de votación |
 | `perfiles.json` | Etapas y especialidades |
 | `site.json` | URL, licencia, contacto del CEP y endpoint de votación |
@@ -56,7 +58,8 @@ Después de editar, regenera los archivos derivados y comprueba:
 
 ```bash
 npm install                 # una vez (solo herramientas de desarrollo)
-npm run build:all           # páginas, índice de búsqueda, QR, guion, hoja de pruebas y precarga del service worker
+npm run build:all           # páginas, índice de búsqueda, QR, escaleta, descargables .md, hoja de pruebas y precarga del service worker
+npm run docs:pdf            # PDF descargables y docs/escaleta.pdf (a mano, con Chrome o Edge; no son deterministas)
 npm run typecheck           # TypeScript estricto sobre JSDoc
 npm run check:html          # validación HTML
 npm run check:links         # enlaces externos (bibliografía)

@@ -51,7 +51,7 @@ cambiar `content/` o el generador y ejecutar `npm run pages`). Rutas en `content
 
 ```
 /                  index.html (Inicio), manifest.webmanifest, sw.js
-ponencia/ marco/ plantilla/ inclusiva/ ia/ lunes/ bibliografia/ buscar/   (secciones)
+ponencia/ claves/ marco/ plantilla/ inclusiva/ ia/ lunes/ recursos/ bibliografia/ buscar/   (secciones)
 presentacion/      motor de diapositivas (notas: ?notas)
 plantilla/         plantilla socrática
 ia/                banco de prompts
@@ -61,7 +61,8 @@ css/               tokens-color.css (generado), tokens.css, base.css, components
 js/                boot (clásico, en <head>), app, router, i18n, ui, a11y, types.d.ts; después tts, picto, search, prompts, socratic
 assets/            icons/, qr/, img/, fonts/
 tools/             scripts Node de desarrollo (no se ejecutan en producción)
-docs/              guion.md, especificacion.md, pruebas de prompts
+docs/              escaleta.md/.pdf (generadas), especificacion.md, pruebas de prompts
+assets/descargas/  guía de análisis de tareas, cuaderno de prompts y siete claves (generados por tools/build-docs.mjs)
 ```
 
 ## Previsualizar y comprobar
@@ -72,6 +73,7 @@ docs/              guion.md, especificacion.md, pruebas de prompts
 - `npm run check:html` (html-validate), `npm run check:links` (enlaces externos; DOI por API), `npm run check:lighthouse` (mediana de 3 pasadas en la web publicada; objetivo ≥ 95).
 - `npm run check:ui`: axe, overflow y errores de consola en todas las rutas y esquemas (necesita el servidor del 8765 y Chrome o Edge).
 - `npm run tokens` / `icons` / `app-icons` / `picto` / `blank`: regeneran recursos derivados (raramente).
+- `npm run docs:pdf`: regenera los PDF descargables y `docs/escaleta.pdf` (Chrome o Edge). Ejecutarlo a mano cuando cambien `guia.json`, `claves.json`, `prompts.json` o `presentacion.json`. Los PDF de `assets/descargas/` no se precargan: el SW los guarda al descargarlos.
 - **Antes de cada commit que se vaya a publicar: `npm run build:all`** (páginas, índice de búsqueda, hoja de pruebas y lista de precarga del SW). Si no se regenera `sw-precache.js`, los usuarios no reciben la nueva versión.
 
 ## Workflow de GitHub Pages

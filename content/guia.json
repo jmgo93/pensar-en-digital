@@ -1,0 +1,193 @@
+{
+  "title": { "es": "Analiza tus tareas", "en": "Analyse your tasks" },
+  "subtitle": {
+    "es": "Guía para favorecer la competencia digital y el aprendizaje del alumnado a través de lo que le pides que haga",
+    "en": "A guide to fostering students' digital competence and learning through what you ask them to do"
+  },
+  "intro": {
+    "es": [
+      "Esta guía sirve para mirar una tarea concreta —una actividad, un ejercicio, un proyecto— y decidir **una mejora** que haga que tu alumnado piense, construya y decida más, con o sin tecnología.",
+      "Necesitas unos 20 minutos por tarea. Funciona mejor en pareja o con tu tutor o tutora de prácticas. Rellénala a mano o edita la versión de texto. No escribas ningún dato personal del alumnado."
+    ],
+    "en": [
+      "This guide helps you look at one specific task —an activity, an exercise, a project— and decide on **one improvement** that makes your students think, build and decide more, with or without technology.",
+      "You need about 20 minutes per task. It works better in pairs or with your school mentor. Fill it in by hand or edit the text version. Do not write any personal data about students."
+    ]
+  },
+  "how": {
+    "title": { "es": "Cómo usarla", "en": "How to use it" },
+    "items": {
+      "es": [
+        "Elige una tarea real que vayas a poner pronto, no la mejor que tengas.",
+        "Recorre los ocho pasos en orden; no hace falta escribir mucho: marca y anota.",
+        "Termina siempre con un único cambio, pequeño y comprobable.",
+        "Si quieres una segunda opinión, usa los prompts del final (o la web) con cualquier IA y revisa lo que te proponga."
+      ],
+      "en": [
+        "Choose a real task you will set soon, not your best one.",
+        "Go through the eight steps in order; there is no need to write much: tick and jot down.",
+        "Always finish with one single change, small and testable.",
+        "If you want a second opinion, use the prompts at the end (or the website) with any AI and check what it suggests."
+      ]
+    }
+  },
+  "labels": {
+    "step": { "es": "Paso", "en": "Step" },
+    "yes": { "es": "Sí", "en": "Yes" },
+    "partly": { "es": "En parte", "en": "Partly" },
+    "no": { "es": "No", "en": "No" },
+    "key": { "es": "Clave", "en": "Key" },
+    "question": { "es": "Pregúntate", "en": "Ask yourself" },
+    "competence": { "es": "Competencia (MRCDD, área 6)", "en": "Competence (MRCDD, area 6)" },
+    "really": { "es": "La trabaja de verdad", "en": "Really develops it" },
+    "couldBe": { "es": "Podría, con un cambio", "en": "Could, with a change" },
+    "na": { "es": "No aplica", "en": "Not applicable" },
+    "students": { "es": "Relación del alumnado con la tecnología", "en": "Students' relationship with the technology" },
+    "practice": { "es": "Efecto en tu práctica", "en": "Effect on your practice" },
+    "tip": { "es": "Pista", "en": "Tip" },
+    "example": { "es": "Ejemplo resuelto", "en": "Worked example" },
+    "prompts": { "es": "Sigue con la IA: prompts enlazados", "en": "Continue with AI: linked prompts" },
+    "promptsIntro": {
+      "es": "Copia el prompt desde la web (tiene desplegables y botones para abrirlo en Gemini, ChatGPT o Claude) o desde el cuaderno de prompts. Sigue el orden: cada uno lleva al siguiente.",
+      "en": "Copy the prompt from the website (it has drop-downs and buttons to open it in Gemini, ChatGPT or Claude) or from the prompt workbook. Follow the order: each one leads to the next."
+    },
+    "refs": { "es": "Referencias", "en": "References" },
+    "write": { "es": "Anota", "en": "Write" }
+  },
+  "picrat": {
+    "cols": [{ "es": "Pasiva", "en": "Passive" }, { "es": "Interactiva", "en": "Interactive" }, { "es": "Creativa", "en": "Creative" }],
+    "rows": [{ "es": "Transforma", "en": "Transforms" }, { "es": "Amplifica", "en": "Amplifies" }, { "es": "Reemplaza", "en": "Replaces" }]
+  },
+  "steps": [
+    {
+      "id": "describe",
+      "title": { "es": "Describe la tarea", "en": "Describe the task" },
+      "goal": { "es": "Ten delante exactamente lo que recibe el alumnado.", "en": "Have exactly what students receive in front of you." },
+      "fields": [
+        { "label": { "es": "Etapa, curso y materia", "en": "Stage, year and subject" } },
+        { "label": { "es": "Objetivo o criterio de evaluación", "en": "Learning goal or assessment criterion" } },
+        { "label": { "es": "Enunciado tal como lo recibe el alumnado", "en": "The task exactly as students receive it" }, "big": true },
+        { "label": { "es": "Producto que se entrega · duración · agrupamiento", "en": "Product handed in · duration · grouping" } },
+        { "label": { "es": "Tecnología que se usa (o ninguna)", "en": "Technology used (or none)" } }
+      ]
+    },
+    {
+      "id": "icap",
+      "title": { "es": "ICAP: ¿qué hace el alumnado con la información?", "en": "ICAP: what do students do with information?" },
+      "goal": { "es": "Mira lo que hace el alumnado, no la herramienta. Marca el nivel predominante.", "en": "Look at what students do, not the tool. Tick the main level." },
+      "options": [
+        { "label": { "es": "Pasivo: recibe (ve, escucha, lee)", "en": "Passive: receives (watches, listens, reads)" } },
+        { "label": { "es": "Activo: manipula (copia, subraya, completa, elige)", "en": "Active: manipulates (copies, underlines, completes, chooses)" } },
+        { "label": { "es": "Constructivo: genera algo que no estaba en el material (explica, compara, crea)", "en": "Constructive: generates something not in the material (explains, compares, creates)" } },
+        { "label": { "es": "Interactivo: co-construye con otra persona que también aporta", "en": "Interactive: co-constructs with someone else who also contributes" } }
+      ],
+      "fields": [{ "label": { "es": "Evidencia: ¿qué verías u oirías en el aula que lo demuestre?", "en": "Evidence: what would you see or hear in class that shows it?" } }],
+      "tip": {
+        "es": "El salto más grande suele estar entre Activo y Constructivo. Pregunta para subir un escalón: ¿qué producirá el alumnado que no estaba ya en lo que le di?",
+        "en": "The biggest leap is usually from Active to Constructive. Question to climb one step: what will students produce that was not already in what I gave them?"
+      }
+    },
+    {
+      "id": "picrat",
+      "title": { "es": "PICRAT: ¿quién está pensando?", "en": "PICRAT: who is doing the thinking?" },
+      "goal": { "es": "Marca la casilla donde está tu tarea y, con una flecha, la casilla a la que quieres llevarla.", "en": "Mark the cell where your task is and, with an arrow, the cell you want to move it to." },
+      "grid": "picrat",
+      "fields": [{ "label": { "es": "¿Quién hace el trabajo intelectual principal: tú o tu alumnado? ¿En qué momento?", "en": "Who does the main intellectual work: you or your students? At what moment?" } }],
+      "tip": {
+        "es": "Todas las casillas pueden ser legítimas según el objetivo. La matriz sirve para detectar cuándo una actividad «digital» deja el pensamiento en manos del docente.",
+        "en": "Every cell can be legitimate depending on the goal. The matrix helps you spot when a «digital» activity leaves the thinking in the teacher's hands."
+      }
+    },
+    {
+      "id": "claves",
+      "title": { "es": "Las siete claves", "en": "The seven keys" },
+      "goal": { "es": "Valora cada clave con sinceridad. Rodea la que más te interesa mejorar.", "en": "Rate each key honestly. Circle the one you most want to improve." },
+      "table": "claves",
+      "fields": [{ "label": { "es": "La clave que voy a mejorar y una primera idea", "en": "The key I will improve and a first idea" } }]
+    },
+    {
+      "id": "ia",
+      "title": { "es": "La prueba de la IA", "en": "The AI test" },
+      "goal": {
+        "es": "Pega el enunciado (sin datos personales) en una IA generativa y pídele que haga la tarea como si fuera un alumno. ¿Qué pasa?",
+        "en": "Paste the task (without personal data) into a generative AI and ask it to do the task as if it were a student. What happens?"
+      },
+      "options": [
+        { "label": { "es": "La resuelve sola y bien, en segundos", "en": "It solves it alone and well, in seconds" } },
+        { "label": { "es": "La resuelve en parte", "en": "It solves part of it" } },
+        { "label": { "es": "No puede: hacen falta datos propios, decisiones justificadas o interacción con otras personas", "en": "It cannot: it needs students' own data, justified decisions or interaction with others" } }
+      ],
+      "fields": [{ "label": { "es": "¿Qué parte del trabajo sigue teniendo que pensar el alumnado?", "en": "Which part of the work do students still have to think through?" } }],
+      "tip": {
+        "es": "No se trata de prohibir la IA, sino de que la tarea siga exigiendo pensar. Añade algo que la IA no tenga: datos de tu aula, una decisión que haya que defender, una conversación o evidencias del proceso.",
+        "en": "It is not about banning AI but about making sure the task still requires thinking. Add something the AI does not have: data from your classroom, a decision to defend, a conversation or process evidence."
+      }
+    },
+    {
+      "id": "cd",
+      "title": { "es": "Competencia digital del alumnado", "en": "Students' digital competence" },
+      "goal": {
+        "es": "Usar una herramienta no es desarrollar una competencia. Marca solo lo que el alumnado hace de verdad.",
+        "en": "Using a tool is not developing a competence. Tick only what students really do."
+      },
+      "table": "cd",
+      "fields": [{ "label": { "es": "Una consigna para hacerla explícita (p. ej., cómo comprobar una fuente o citar una imagen)", "en": "An instruction to make it explicit (e.g. how to check a source or credit an image)" } }]
+    },
+    {
+      "id": "evaluacion",
+      "title": { "es": "Evaluación y retroalimentación", "en": "Assessment and feedback" },
+      "goal": { "es": "¿Qué evidencias del proceso recoges? Marca todas las que haya.", "en": "Which process evidence do you collect? Tick all that apply." },
+      "options": [
+        { "label": { "es": "Borradores o versiones intermedias", "en": "Drafts or intermediate versions" } },
+        { "label": { "es": "Registro de decisiones («qué cambié y por qué»)", "en": "Decision log («what I changed and why»)" } },
+        { "label": { "es": "Verificación de fuentes", "en": "Source checks" } },
+        { "label": { "es": "Diálogos con la IA anotados, si se usa", "en": "Annotated AI dialogues, if used" } },
+        { "label": { "es": "Defensa oral breve", "en": "Short oral defence" } },
+        { "label": { "es": "Autoevaluación o revisión entre pares con criterios", "en": "Self or peer assessment with criteria" } },
+        { "label": { "es": "Solo el producto final", "en": "Only the final product" } }
+      ],
+      "fields": [{ "label": { "es": "¿Qué hará el alumnado con el feedback que reciba? ¿Cuándo?", "en": "What will students do with the feedback they get? When?" } }]
+    },
+    {
+      "id": "plan",
+      "title": { "es": "Plan de mejora", "en": "Improvement plan" },
+      "goal": { "es": "Un solo cambio, pequeño y comprobable.", "en": "One single change, small and testable." },
+      "fields": [
+        { "label": { "es": "El cambio que voy a probar", "en": "The change I will try" } },
+        { "label": { "es": "¿Qué tendrá que pensar ahora el alumnado que antes no pensaba?", "en": "What will students now have to think about that they did not before?" }, "big": true },
+        { "label": { "es": "¿Cómo sabré si ha funcionado? (evidencia observable)", "en": "How will I know if it worked? (observable evidence)" } },
+        { "label": { "es": "Cuándo lo pruebo · con quién lo comparto", "en": "When I will try it · who I will share it with" } }
+      ]
+    }
+  ],
+  "example": {
+    "task": {
+      "es": "Tarea original (2.º de ESO): «Escribe una redacción de 300 palabras sobre la importancia del agua».",
+      "en": "Original task (Year 8): «Write a 300-word essay on the importance of water»."
+    },
+    "lines": {
+      "es": [
+        "**ICAP:** Activo tirando a pasivo: reorganiza información que ya existe.",
+        "**PICRAT:** si se entrega en un procesador de textos, Pasiva-Reemplaza: el soporte cambia, el pensamiento no.",
+        "**Siete claves:** construcción 0, feedback de proceso 0, IA con fricción 0.",
+        "**Prueba de la IA:** la resuelve sola en segundos.",
+        "**Competencia digital:** ninguna de verdad; como mucho, escribir en un documento (6.3 superficial).",
+        "**Cambio:** «Mide durante una semana el agua que se gasta en tu casa, compara tus datos con los de un compañero y proponed al centro una medida basada en ellos. La IA puede ayudaros a analizar los datos, pero los datos y la decisión son vuestros».",
+        "**Ahora el alumnado tiene que:** recoger datos, compararlos, interpretar diferencias, decidir y defender una propuesta (Constructivo e Interactivo; 6.1 y 6.5).",
+        "**Evidencias:** hoja de datos, registro de decisiones de la pareja y defensa de dos minutos."
+      ],
+      "en": [
+        "**ICAP:** Active, close to passive: it reorganises existing information.",
+        "**PICRAT:** if handed in on a word processor, Passive-Replace: the medium changes, the thinking does not.",
+        "**Seven keys:** building 0, process feedback 0, AI with friction 0.",
+        "**AI test:** it solves it alone in seconds.",
+        "**Digital competence:** none really; at most, writing in a document (shallow 6.3).",
+        "**Change:** «Measure the water used at home for a week, compare your data with a classmate's and propose a measure to the school based on them. AI may help you analyse the data, but the data and the decision are yours».",
+        "**Now students have to:** collect data, compare it, interpret differences, decide and defend a proposal (Constructive and Interactive; 6.1 and 6.5).",
+        "**Evidence:** data sheet, the pair's decision log and a two-minute defence."
+      ]
+    }
+  },
+  "prompts": ["analizar-tarea", "analizar-icap", "analizar-picrat", "analizar-cd-alumnado", "resistentes-redisenar", "evaluar-proceso", "evaluar-ejemplares", "planificar-secuencia", "planificar-reflexion"],
+  "refs": ["mrcdd", "icap", "picrat", "knowledge-building", "cast-udl", "feedback", "feedback-literacy", "kirschner", "sung-distraccion", "tamim", "sailer", "bastani", "fan-pereza", "mollick"]
+}

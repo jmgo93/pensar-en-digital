@@ -1,0 +1,91 @@
+{
+  "intro": {
+    "es": "Material para llevarte y usar con tus propias tareas: imprímelo, rellénalo a mano o edítalo. Todo está en español y en inglés, funciona sin conexión una vez descargado y no pide ningún dato del alumnado.",
+    "en": "Material to take away and use with your own tasks: print it, fill it in by hand or edit it. Everything is in Spanish and English, works offline once downloaded and asks for no student data."
+  },
+  "stepsTitle": { "es": "Cómo usar el kit en 30 minutos", "en": "How to use the kit in 30 minutes" },
+  "steps": [
+    {
+      "icon": "fact_check",
+      "title": { "es": "1. Analiza una tarea (15 min)", "en": "1. Analyse a task (15 min)" },
+      "body": {
+        "es": "Elige una tarea real de la próxima semana y recórrela con la guía: ICAP, PICRAT, las siete claves, la prueba de la IA y la competencia digital del alumnado.",
+        "en": "Pick a real task for next week and go through it with the guide: ICAP, PICRAT, the seven keys, the AI test and students' digital competence."
+      }
+    },
+    {
+      "icon": "smart_toy",
+      "title": { "es": "2. Mejórala con la IA (10 min)", "en": "2. Improve it with AI (10 min)" },
+      "body": {
+        "es": "Usa la «Radiografía de una tarea» y sigue la cadena de prompts: subir un escalón ICAP, evaluar el proceso y planificar la sesión. Revisa todo lo que te proponga.",
+        "en": "Use the «X-ray of a task» prompt and follow the chain: climb one ICAP step, assess the process and plan the lesson. Check everything it suggests."
+      }
+    },
+    {
+      "icon": "groups",
+      "title": { "es": "3. Pruébala y compártela (5 min)", "en": "3. Try it and share it (5 min)" },
+      "body": {
+        "es": "Anota un único cambio, cómo sabrás si funciona y con quién lo vas a comentar. Después de la clase, usa el «Diario de práctica reflexiva».",
+        "en": "Write down one single change, how you will know if it works and who you will discuss it with. After the lesson, use the «Reflective practice journal»."
+      }
+    }
+  ],
+  "filesTitle": { "es": "Descargas", "en": "Downloads" },
+  "files": [
+    {
+      "id": "guia",
+      "icon": "fact_check",
+      "title": { "es": "Guía para analizar tus tareas", "en": "Guide to analysing your tasks" },
+      "body": {
+        "es": "Cuaderno de trabajo en ocho pasos para analizar una tarea y diseñar una mejora: describir la tarea, ICAP, PICRAT, las siete claves, la prueba de la IA, la competencia digital del alumnado, la evaluación del proceso y un plan de mejora. Incluye un ejemplo resuelto, los prompts para continuar y las referencias.",
+        "en": "Eight-step workbook to analyse a task and design an improvement: describe the task, ICAP, PICRAT, the seven keys, the AI test, students' digital competence, process assessment and an improvement plan. Includes a worked example, the prompts to continue and the references."
+      },
+      "formats": [
+        { "label": { "es": "PDF para imprimir", "en": "Printable PDF" }, "icon": "picture_as_pdf", "path": "assets/descargas/guia-analisis-tareas-{lang}.pdf" },
+        { "label": { "es": "Texto editable (.md)", "en": "Editable text (.md)" }, "icon": "description", "path": "assets/descargas/guia-analisis-tareas-{lang}.md" }
+      ]
+    },
+    {
+      "id": "prompts",
+      "icon": "smart_toy",
+      "title": { "es": "Cuaderno de prompts", "en": "Prompt workbook" },
+      "body": {
+        "es": "Todos los prompts del banco, ordenados por categoría, con los huecos que hay que rellenar, las opciones de cada desplegable, el siguiente paso recomendado y el enlace a la tarjeta en la web para abrirlos directamente en Gemini, ChatGPT o Claude.",
+        "en": "All the prompts in the bank, ordered by category, with the gaps to fill in, the options for each drop-down, the recommended next step and the link to the card on the website to open them directly in Gemini, ChatGPT or Claude."
+      },
+      "formats": [
+        { "label": { "es": "PDF para imprimir", "en": "Printable PDF" }, "icon": "picture_as_pdf", "path": "assets/descargas/cuaderno-prompts-{lang}.pdf" },
+        { "label": { "es": "Texto para copiar (.md)", "en": "Text to copy (.md)" }, "icon": "description", "path": "assets/descargas/cuaderno-prompts-{lang}.md" }
+      ]
+    },
+    {
+      "id": "claves",
+      "icon": "key",
+      "title": { "es": "Las siete claves en una página", "en": "The seven keys on one page" },
+      "body": {
+        "es": "Resumen para tener a mano o colgar en la sala de profesorado: cada clave con su anclaje en el MRCDD, la pregunta para revisarte y el antipatrón que evita.",
+        "en": "A summary to keep at hand or pin up in the staffroom: each key with its MRCDD anchor, the question to check yourself and the anti-pattern it avoids."
+      },
+      "formats": [
+        { "label": { "es": "PDF para imprimir", "en": "Printable PDF" }, "icon": "picture_as_pdf", "path": "assets/descargas/siete-claves-{lang}.pdf" }
+      ]
+    },
+    {
+      "id": "plantilla",
+      "icon": "psychology",
+      "title": { "es": "Plantilla socrática en blanco", "en": "Blank Socratic template" },
+      "body": {
+        "es": "La plantilla «¿Digitalización o innovación?» para rellenar a mano con tu equipo.",
+        "en": "The «Digitisation or innovation?» template to fill in by hand with your team."
+      },
+      "formats": [
+        { "label": { "es": "PDF para imprimir", "en": "Printable PDF" }, "icon": "picture_as_pdf", "path": "assets/plantilla-en-blanco-{lang}.pdf" }
+      ]
+    }
+  ],
+  "otherLang": { "es": "In English", "en": "En español" },
+  "note": {
+    "es": "Licencia CC BY-NC-SA 4.0: puedes copiar, adaptar y compartir este material citando la autoría, sin fines comerciales y con la misma licencia. Cuando uses los prompts, no incluyas nunca datos personales del alumnado.",
+    "en": "CC BY-NC-SA 4.0 licence: you may copy, adapt and share this material with attribution, for non-commercial purposes and under the same licence. When using the prompts, never include personal data about students."
+  }
+}

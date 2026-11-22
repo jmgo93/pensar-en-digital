@@ -224,6 +224,34 @@ Depende de: Fases 1–5.
 - [x] **6.7a Pages activado** (Source: GitHub Actions) y primer despliegue OK el 20/11.
 - [x] **6.7b Comprobación final** de la URL publicada (20/11): todas las rutas y recursos responden 200; el pie muestra la licencia nueva.
 
+## Fase 7 · Revisión con el informe «A Incluir» (22/11)
+
+> **Resultado (22/11):**
+> - Fuente: `A Incluir/Competencia Digital Docente y Conocimiento.md` (informe de evidencia con unas 60 referencias). Solo se ha incorporado lo verificable.
+> - **Bibliografía: de 25 a 51 referencias**, todas comprobadas (DOI en Crossref y enlace en `npm run check:links`: 56 enlaces, 0 errores). Tema nuevo «Evidencia».
+> - Cifras usadas en web y diapositivas comprobadas en el resumen oficial (Crossref, Semantic Scholar o ERIC): Tamim et al. 2011 (0,35 / 0,33), Hillmayr et al. 2020 (g = 0,65; k = 92), Sailer et al. 2021, Kirschner y De Bruyckere 2017, Strelan et al. 2020 (g = 0,50), Sung et al. 2026 (−11,31 puntos; prohibiciones no significativas), Fan et al. 2025 y Bastani et al. 2025.
+> - **Presentación: de 35 a 25 diapositivas en cinco actos** con un único hilo («¿qué tiene que pensar el alumno ahora que antes no pensaba?»). Se quitan los puentes de la escuela inclusiva y los cuatro antes/después por etapa (siguen en la web y en las notas). Nuevo tipo de diapositiva `keys` (7 claves).
+> - **Notas del ponente** ampliadas en cada diapositiva: idea fuerza, guion, qué hacer, dato y fuente, transición y qué recortar si vas tarde. Se ven en `?notas` y en la **escaleta** (`docs/escaleta.md`, `docs/escaleta.pdf`), que sustituye a `docs/guion.md`. `npm run escaleta` comprueba ≤ 20 palabras y que no falte ningún campo.
+> - **Sección nueva «Las 7 claves»** (`claves/`): cinco datos de evidencia, tres lentes (ICAP, PICRAT, modo diseño), siete claves con anclaje MRCDD, mecanismo, ejemplos por etapa, pregunta de autorrevisión, antipatrón y prompts enlazados; marcos convergentes.
+> - **Sección nueva «Descargas»** (`recursos/`): guía para analizar tareas en 8 pasos (PDF y .md), cuaderno de prompts (PDF y .md), siete claves en una página (PDF) y plantilla en blanco, en es/en. Generados desde `content/` por `tools/build-docs.mjs`.
+> - **Banco de prompts: de 23 a 32.** Categoría nueva «Analiza tu tarea» (radiografía, ICAP, PICRAT, competencia digital del alumnado) y prompts de evaluación del proceso, ejemplares y revisión entre pares, IA como alumno que se equivoca, sesión con fricción productiva y diario de práctica reflexiva. Variables con **desplegables** (`options`), enlaces a las claves (`see`), **siguiente paso** (`next`) y fuentes (`sources`).
+> - typecheck 0 errores · HTML válido · axe, desbordes y consola sin problemas en las 11 rutas.
+
+- [x] 7.1 Verificar referencias y cifras del informe; incorporar solo las comprobadas.
+- [x] 7.2 Presentación más corta y directa + notas del ponente + escaleta (MD y PDF).
+- [x] 7.3 Sección «Las 7 claves» y actualización de «La ponencia» y de los minutos de las votaciones.
+- [x] 7.4 Descargables (guía de análisis de tareas, cuaderno de prompts, siete claves) en es/en.
+- [x] 7.5 Prompts con desplegables, enlazados entre sí y con las claves y las fuentes.
+- [ ] 7.6 Revisión del usuario: ensayar con la escaleta y cronometrar (objetivo: 45 min).
+
+### Del informe, sin verificar (no se usa)
+
+- Cifras de ICILS 2023 (España 495, media UE 493, internacional 476; 43 % del alumnado de la UE por debajo del nivel básico; brecha de 69 puntos por ISEC): no se pudo acceder al informe del INEE ni al de la Comisión.
+- Subgrupos de Hillmayr et al. (2020): formación docente g = 0,84; parejas g = 0,72 frente a 0,46; visualizaciones dinámicas g = 1,02. El artículo (acceso abierto) no se pudo leer desde aquí; solo se usa el efecto global del resumen.
+- Datos de OCDE 2026 y TALIS 2024 (37 % del profesorado usa IA; −31 % de tiempo de planificación; 72 % preocupado por la integridad): el informe está en la bibliografía, pero esas cifras no se citan.
+- Estudio CEDEC–Universidad de Jaén sobre el Proyecto EDIA y las experiencias de centros concretos: no localizado.
+- Lohr et al. (2024): existe (DOI 10.1016/j.tate.2024.104788), pero su contenido no se ha comprobado; no se cita.
+
 ---
 
 ## Pendiente fuera de las fases (por el usuario)

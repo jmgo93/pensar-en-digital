@@ -12,6 +12,7 @@ const VERSION = self.PD_VERSION;
 const STATIC = `pd-static-${VERSION}`;
 const ARASAAC = 'pd-arasaac-v1';
 const SCOPE = self.registration.scope;
+const DOWNLOADS = /\/assets\/descargas\/[^/]+\.pdf$/;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -51,7 +52,10 @@ const cacheFirst = async (request) => {
   const cached = await cache.match(request, { ignoreSearch: request.mode === 'navigate' });
   if (cached) return cached;
   try {
-    return await fetch(request);
+    const res = await fetch(request);
+    // Los PDF descargables no se precargan (pesan): se guardan la primera vez que se piden.
+    if (res.ok && DOWNLOADS.test(new URL(request.url).pathname)) cache.put(request, res.clone());
+    return res;
   } catch (err) {
     if (request.mode === 'navigate') {
       const home = await cache.match(new URL('./', SCOPE).href);

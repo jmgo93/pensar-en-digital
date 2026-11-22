@@ -10,9 +10,14 @@ import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
-const INCLUDE_DIRS = ['css', 'js', 'content', 'assets', 'presentacion', 'ponencia', 'marco', 'plantilla', 'inclusiva', 'ia', 'lunes', 'bibliografia', 'buscar'];
+/** @type {{ path: string }[]} */
+const routes = JSON.parse(readFileSync(join(root, 'content/routes.json'), 'utf8'));
+// Carpetas de las secciones (content/routes.json) + recursos comunes.
+const INCLUDE_DIRS = ['css', 'js', 'content', 'assets', 'presentacion', ...routes.map((r) => r.path.replace(/\/$/, '')).filter(Boolean)];
 const ROOT_FILES = ['index.html', 'manifest.webmanifest'];
-const EXCLUDE = [/\.d\.ts$/, /\.md$/, /(^|\/)\./];
+// Los .md se excluyen salvo los descargables de assets/ (assets/descargas/*.md).
+// Los PDF de assets/descargas/ no se precargan (≈ 2 MB): sw.js los guarda la primera vez que se descargan.
+const EXCLUDE = [/\.d\.ts$/, /^(?!assets\/).*\.md$/, /^assets\/descargas\/.*\.pdf$/, /(^|\/)\./];
 
 /** @param {string} dir @returns {string[]} */
 const walk = (dir) =>

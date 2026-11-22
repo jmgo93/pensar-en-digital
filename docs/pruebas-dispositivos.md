@@ -29,6 +29,6 @@ Lo que ya está comprobado de forma automática (Edge/Chromium de escritorio con
 ## Antes del día
 
 - [ ] Abrir la presentación en el equipo de la sala, pulsar **F** (pantalla completa) y comprobar la legibilidad desde el fondo.
-- [ ] Abrir `?notas` en el portátil (si hay dos pantallas) o confiar en `docs/guion.md` impreso.
+- [ ] Abrir `?notas` en el portátil (si hay dos pantallas) o confiar en `docs/escaleta.pdf` impresa.
 - [ ] Si hay votación: probar el formulario con un móvil y comprobar que las barras se mueven (ver `docs/votaciones.md`). Ejecutar `vaciarRespuestas` después.
 - [ ] Sin wifi: la presentación funciona sin conexión si se ha abierto antes en ese navegador. Las votaciones pasan a «mano alzada».

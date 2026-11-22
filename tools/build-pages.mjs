@@ -50,7 +50,7 @@ const ROUTE_MODULES = { buscar: ['search'], ia: ['prompts', 'profile', 'ai'], pl
 const modulesFor = (id) => [...CORE, ...(ROUTE_MODULES[id] ?? ['sections', 'profile'])];
 
 /** Secciones cuyo contenido pinta js/sections.js o js/search.js. */
-const RENDERED = new Set(['ponencia', 'marco', 'plantilla', 'inclusiva', 'ia', 'lunes', 'bibliografia', 'buscar']);
+const RENDERED = new Set(routes.filter((r) => r.id !== 'inicio').map((r) => r.id));
 
 /** Contenido principal: cabecera estática + #view que rellena JS. */
 const mainContent = (/** @type {import('../js/types').Route} */ route, /** @type {string} */ rel) => {

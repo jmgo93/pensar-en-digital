@@ -1,6 +1,10 @@
 {
-  "verified": "2026-11-20",
+  "verified": "2026-11-22",
   "topics": {
+    "evidencia": {
+      "es": "Evidencia",
+      "en": "Evidence"
+    },
     "cdd": {
       "es": "Competencia digital",
       "en": "Digital competence"
@@ -274,6 +278,251 @@
       "apa": "Ley Orgánica 3/2020, de 29 de diciembre, por la que se modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación. *Boletín Oficial del Estado*, 340, de 30 de diciembre de 2020.",
       "url": "https://www.boe.es/buscar/act.php?id=BOE-A-2020-17264",
       "cite": "LOMLOE"
+    },
+    {
+      "id": "tamim",
+      "topics": [
+        "evidencia"
+      ],
+      "apa": "Tamim, R. M., Bernard, R. M., Borokhovski, E., Abrami, P. C., & Schmid, R. F. (2011). What forty years of research says about the impact of technology on learning: A second-order meta-analysis and validation study. *Review of Educational Research, 81*(1), 4–28.",
+      "url": "https://doi.org/10.3102/0034654310393361",
+      "cite": "Tamim et al., 2011"
+    },
+    {
+      "id": "hillmayr",
+      "topics": [
+        "evidencia"
+      ],
+      "apa": "Hillmayr, D., Ziernwald, L., Reinhold, F., Hofer, S. I., & Reiss, K. M. (2020). The potential of digital tools to enhance mathematics and science learning in secondary schools: A context-specific meta-analysis. *Computers & Education, 153*, 103897.",
+      "url": "https://doi.org/10.1016/j.compedu.2020.103897",
+      "cite": "Hillmayr et al., 2020"
+    },
+    {
+      "id": "sailer",
+      "topics": [
+        "evidencia",
+        "cdd"
+      ],
+      "apa": "Sailer, M., Murböck, J., & Fischer, F. (2021). Digital learning in schools: What does it take beyond digital technology? *Teaching and Teacher Education, 103*, 103346.",
+      "url": "https://doi.org/10.1016/j.tate.2021.103346",
+      "cite": "Sailer et al., 2021"
+    },
+    {
+      "id": "wohlfart",
+      "topics": [
+        "evidencia",
+        "cdd"
+      ],
+      "apa": "Wohlfart, O., & Wagner, I. (2023). Teachers’ role in digitalizing education: An umbrella review. *Educational Technology Research and Development, 71*(2), 339–365.",
+      "url": "https://doi.org/10.1007/s11423-022-10166-0",
+      "cite": "Wohlfart y Wagner, 2023"
+    },
+    {
+      "id": "kirschner",
+      "topics": [
+        "evidencia",
+        "aprendizaje"
+      ],
+      "apa": "Kirschner, P. A., & De Bruyckere, P. (2017). The myths of the digital native and the multitasker. *Teaching and Teacher Education, 67*, 135–142.",
+      "url": "https://doi.org/10.1016/j.tate.2017.06.001",
+      "cite": "Kirschner y De Bruyckere, 2017"
+    },
+    {
+      "id": "sung-distraccion",
+      "topics": [
+        "evidencia"
+      ],
+      "apa": "Sung, C.-M., Lin, C.-H., Pan, H.-H., Lin, K.-F., & Ho, Y.-C. (2026). School-level peer digital distraction, mathematics performance, creative thinking, and adolescent well-being across 80 education systems: Global evidence from PISA 2022. *Journal of Global Health, 16*, 04351.",
+      "url": "https://doi.org/10.7189/jogh.16.04351",
+      "cite": "Sung et al., 2026"
+    },
+    {
+      "id": "pisa2022",
+      "topics": [
+        "evidencia"
+      ],
+      "apa": "OECD. (2023). *PISA 2022 results (Volume II): Learning during – and from – disruption*. OECD Publishing.",
+      "url": "https://doi.org/10.1787/a97db61c-en",
+      "cite": "OCDE, 2023"
+    },
+    {
+      "id": "strelan",
+      "topics": [
+        "evidencia",
+        "aprendizaje"
+      ],
+      "apa": "Strelan, P., Osborn, A., & Palmer, E. (2020). The flipped classroom: A meta-analysis of effects on student performance across disciplines and education levels. *Educational Research Review, 30*, 100314.",
+      "url": "https://doi.org/10.1016/j.edurev.2020.100314",
+      "cite": "Strelan et al., 2020"
+    },
+    {
+      "id": "hattie2023",
+      "topics": [
+        "evidencia",
+        "aprendizaje"
+      ],
+      "apa": "Hattie, J. (2023). *Visible learning: The sequel. A synthesis of over 2,100 meta-analyses relating to achievement*. Routledge.",
+      "url": "https://doi.org/10.4324/9781003380542",
+      "cite": "Hattie, 2023"
+    },
+    {
+      "id": "gem2023",
+      "topics": [
+        "evidencia",
+        "cdd"
+      ],
+      "apa": "UNESCO. (2023). *Global education monitoring report 2023: Technology in education: A tool on whose terms?* GEM Report UNESCO.",
+      "url": "https://doi.org/10.54676/UZQV8501",
+      "cite": "UNESCO, 2023"
+    },
+    {
+      "id": "picrat",
+      "topics": [
+        "aprendizaje",
+        "cdd"
+      ],
+      "apa": "Kimmons, R., Graham, C. R., & West, R. E. (2020). The PICRAT model for technology integration in teacher preparation. *Contemporary Issues in Technology and Teacher Education, 20*(1), 176–198.",
+      "url": "https://citejournal.org/volume-20/issue-1-20/general/the-picrat-model-for-technology-integration-in-teacher-preparation/",
+      "cite": "Kimmons et al., 2020"
+    },
+    {
+      "id": "icap-chi",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Chi, M. T. H. (2009). Active-constructive-interactive: A conceptual framework for differentiating learning activities. *Topics in Cognitive Science, 1*(1), 73–105.",
+      "url": "https://doi.org/10.1111/j.1756-8765.2008.01005.x",
+      "cite": "Chi, 2009"
+    },
+    {
+      "id": "knowledge-building",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Scardamalia, M., & Bereiter, C. (2014). Knowledge building and knowledge creation: Theory, pedagogy, and technology. En R. K. Sawyer (Ed.), *The Cambridge handbook of the learning sciences* (2.ª ed., pp. 397–417). Cambridge University Press.",
+      "url": "https://doi.org/10.1017/CBO9781139519526.025",
+      "cite": "Scardamalia y Bereiter, 2014"
+    },
+    {
+      "id": "tpack-xk",
+      "topics": [
+        "aprendizaje",
+        "cdd"
+      ],
+      "apa": "Mishra, P. (2019). Considering contextual knowledge: The TPACK diagram gets an upgrade. *Journal of Digital Learning in Teacher Education, 35*(2), 76–78.",
+      "url": "https://doi.org/10.1080/21532974.2019.1588611",
+      "cite": "Mishra, 2019"
+    },
+    {
+      "id": "tpack-ia",
+      "topics": [
+        "ia",
+        "cdd"
+      ],
+      "apa": "Mishra, P., Warr, M., & Islam, R. (2023). TPACK in the age of ChatGPT and generative AI. *Journal of Digital Learning in Teacher Education, 39*(4), 235–251.",
+      "url": "https://doi.org/10.1080/21532974.2023.2247480",
+      "cite": "Mishra et al., 2023"
+    },
+    {
+      "id": "mayer2024",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Mayer, R. E. (2024). The past, present, and future of the cognitive theory of multimedia learning. *Educational Psychology Review, 36*(1), 8.",
+      "url": "https://doi.org/10.1007/s10648-023-09842-1",
+      "cite": "Mayer, 2024"
+    },
+    {
+      "id": "panadero",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Panadero, E. (2017). A review of self-regulated learning: Six models and four directions for research. *Frontiers in Psychology, 8*, 422.",
+      "url": "https://doi.org/10.3389/fpsyg.2017.00422",
+      "cite": "Panadero, 2017"
+    },
+    {
+      "id": "feedback-literacy",
+      "topics": [
+        "aprendizaje"
+      ],
+      "apa": "Carless, D., & Boud, D. (2018). The development of student feedback literacy: Enabling uptake of feedback. *Assessment & Evaluation in Higher Education, 43*(8), 1315–1325.",
+      "url": "https://doi.org/10.1080/02602938.2018.1463354",
+      "cite": "Carless y Boud, 2018"
+    },
+    {
+      "id": "holistico",
+      "topics": [
+        "cdd"
+      ],
+      "apa": "Castañeda, L., Esteve, F., & Adell, J. (2018). ¿Por qué es necesario repensar la competencia docente para el mundo digital? *RED. Revista de Educación a Distancia, 56*, Artículo 6.",
+      "url": "https://doi.org/10.6018/red/56/6",
+      "cite": "Castañeda et al., 2018"
+    },
+    {
+      "id": "digcompedu-es",
+      "topics": [
+        "cdd"
+      ],
+      "apa": "Cabero-Almenara, J., & Palacios-Rodríguez, A. (2020). Marco europeo de competencia digital docente «DigCompEdu». Traducción y adaptación del cuestionario «DigCompEdu Check-In». *EDMETIC, 9*(1), 213–234.",
+      "url": "https://doi.org/10.21071/edmetic.v9i1.12462",
+      "cite": "Cabero-Almenara y Palacios-Rodríguez, 2020"
+    },
+    {
+      "id": "selwyn",
+      "topics": [
+        "cdd"
+      ],
+      "apa": "Selwyn, N. (2011). Editorial: In praise of pessimism—The need for negativity in educational technology. *British Journal of Educational Technology, 42*(5), 713–718.",
+      "url": "https://doi.org/10.1111/j.1467-8535.2011.01215.x",
+      "cite": "Selwyn, 2011"
+    },
+    {
+      "id": "iste",
+      "topics": [
+        "cdd"
+      ],
+      "apa": "ISTE. (s. f.). *ISTE Standards: For educators*. International Society for Technology in Education.",
+      "url": "https://iste.org/standards/educators",
+      "cite": "ISTE, s. f."
+    },
+    {
+      "id": "fan-pereza",
+      "topics": [
+        "ia",
+        "aprendizaje"
+      ],
+      "apa": "Fan, Y., Tang, L., Le, H., Shen, K., Tan, S., Zhao, Y., Shen, Y., Li, X., & Gašević, D. (2025). Beware of metacognitive laziness: Effects of generative artificial intelligence on learning motivation, processes, and performance. *British Journal of Educational Technology, 56*(2), 489–530.",
+      "url": "https://doi.org/10.1111/bjet.13544",
+      "cite": "Fan et al., 2025"
+    },
+    {
+      "id": "mollick",
+      "topics": [
+        "ia"
+      ],
+      "apa": "Mollick, E. R., & Mollick, L. (2023). *Assigning AI: Seven approaches for students, with prompts* [Preprint]. SSRN.",
+      "url": "https://doi.org/10.2139/ssrn.4475995",
+      "cite": "Mollick y Mollick, 2023"
+    },
+    {
+      "id": "oecd-deo2026",
+      "topics": [
+        "ia",
+        "evidencia"
+      ],
+      "apa": "OECD. (2026). *OECD digital education outlook 2026: Exploring effective uses of generative AI in education*. OECD Publishing.",
+      "url": "https://doi.org/10.1787/062a7394-en",
+      "cite": "OCDE, 2026"
+    },
+    {
+      "id": "sanchez-mendiola",
+      "topics": [
+        "ia"
+      ],
+      "apa": "Sánchez Mendiola, M. (2025). Pereza metacognitiva y descarga cognitiva en la era de la IA generativa: Riesgos y uso responsable. *Investigación en Educación Médica, 14*(56), 6–9.",
+      "url": "https://doi.org/10.22201/fm.20075057e.2025.56.25743",
+      "cite": "Sánchez Mendiola, 2025"
     }
   ]
 }

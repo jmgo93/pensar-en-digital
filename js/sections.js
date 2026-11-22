@@ -5,7 +5,7 @@
  */
 import { loadContent, loadSources, loc, paragraphs, easyRead, inline, citeLabel } from './content.js';
 import { h, icon } from './ui.js';
-import { t } from './i18n.js';
+import { t, getLang } from './i18n.js';
 import { fromRoot } from './router.js';
 import { installCard } from './pwa.js';
 import { getStage, byProfile, stageChips, profileCard, openProfilePicker, loadProfiles } from './profile.js';
@@ -218,6 +218,112 @@ const renderLunes = async (view) => {
   view.replaceChildren(h('p', { class: 'lead' }, loc(c.intro)), h('div', { class: 'filter-row' }, await stageChips(getStage(), draw)), box);
 };
 
+/* ---------------- Las 7 claves ---------------- */
+
+/** @param {HTMLElement} view */
+const renderClaves = async (view) => {
+  /** @type {any} */
+  const c = await loadContent('claves');
+  /** @type {any} */
+  const prompts = await loadContent('prompts');
+  /** @type {Map<string, string>} */
+  const promptTitles = new Map(prompts.cards.map((/** @type {any} */ p) => [p.id, loc(p.title)]));
+  const labels = await stageLabels();
+  const box = h('div', { class: 'stack' });
+  const L = c.labels;
+
+  /** @param {string | null} stage */
+  const draw = (stage) => {
+    box.replaceChildren(
+      ...c.keys.map((/** @type {any} */ k) => {
+        const entries = Object.entries(k.examples).filter(([st]) => !stage || st === stage);
+        const links = (k.prompts ?? []).filter((/** @type {string} */ id) => promptTitles.has(id));
+        return h(
+          'section',
+          { class: 'card card-filled content-block key-card', id: k.id, 'data-tts': '', 'aria-labelledby': `${k.id}-t` },
+          h('div', { class: 'card-header' }, h('span', { class: 'key-n', 'aria-hidden': 'true' }, String(k.n)), h('h3', { id: `${k.id}-t`, class: 'title-large' }, h('span', { class: 'visually-hidden' }, `${k.n}. `), loc(k.title))),
+          h(
+            'dl',
+            { class: 'key-facts' },
+            h('div', {}, h('dt', {}, loc(L.anchor)), h('dd', {}, loc(k.anchor))),
+            h('div', {}, h('dt', {}, loc(L.mechanism)), h('dd', {}, inline(loc(k.mechanism)))),
+            h('div', {}, h('dt', {}, loc(L.antipattern)), h('dd', {}, loc(k.antipattern))),
+          ),
+          h('h4', { class: 'title-small' }, entries.length > 1 ? t('marco.examples') : t('marco.example')),
+          h('ul', { class: 'examples' }, ...entries.map(([st, ex]) => h('li', { class: 'example' }, h('span', { class: 'stage-tag label-medium' }, labels[st] ?? st), h('p', {}, loc(/** @type {L} */ (ex)))))),
+          h('p', { class: 'key-check' }, h('strong', {}, `${loc(L.check)}: `), loc(k.check)),
+          links.length
+            ? h('p', { class: 'link-row' }, h('span', { class: 'label-medium muted' }, icon('smart_toy'), loc(L.prompts)), ...links.map((/** @type {string} */ id) => h('a', { class: 'chip-link', href: `${fromRoot('ia/').href}#${id}` }, promptTitles.get(id) ?? id)))
+            : null,
+          easyRead(k.lecturaFacil),
+        );
+      }),
+    );
+  };
+  draw(getStage());
+
+  view.replaceChildren(
+    h('p', { class: 'lead' }, loc(c.intro)),
+    h('div', { class: 'btn-row' }, h('a', { class: 'btn btn-tonal interactive', href: fromRoot('recursos/').href }, icon('download'), h('span', {}, t('claves.download')))),
+    h('h2', { class: 'section-title headline-small', id: 'evidencia' }, loc(c.evidence.title)),
+    h(
+      'div',
+      { class: 'evidence-grid' },
+      ...c.evidence.items.map((/** @type {any} */ e) => h('section', { class: 'card card-outlined', id: e.id, 'data-tts': '' }, h('p', { class: 'evidence-figure' }, loc(e.figure)), h('p', {}, inline(loc(e.text))))),
+    ),
+    h('p', { class: 'muted' }, loc(c.evidence.caveat)),
+    h('h2', { class: 'section-title headline-small', id: 'umbral' }, loc(c.threshold.title)),
+    ...c.threshold.lenses.map((/** @type {any} */ l) => blockCard({ id: l.id, icon: l.icon, title: loc(l.title), body: [loc(l.body)], level: 'h3', variant: 'card-outlined' })),
+    h('h2', { class: 'section-title headline-small', id: 'claves' }, loc(c.keysTitle)),
+    h('div', { class: 'filter-row' }, h('span', { class: 'label-large' }, t('profile.examplesFor')), await stageChips(getStage(), draw)),
+    box,
+    blockCard({ id: 'marcos', icon: 'library_books', title: loc(c.frameworks.title), body: loc(c.frameworks.body) }),
+  );
+  if (location.hash) document.getElementById(location.hash.slice(1))?.scrollIntoView();
+};
+
+/* ---------------- Descargas ---------------- */
+
+/** @param {HTMLElement} view */
+const renderRecursos = async (view) => {
+  /** @type {any} */
+  const c = await loadContent('recursos');
+  const lang = getLang();
+  const other = lang === 'es' ? 'en' : 'es';
+  /** @param {string} path @param {string} l */
+  const href = (path, l) => fromRoot(path.replace('{lang}', l)).href;
+  view.replaceChildren(
+    h('p', { class: 'lead' }, loc(c.intro)),
+    h('h2', { class: 'section-title headline-small' }, loc(c.filesTitle)),
+    h(
+      'div',
+      { class: 'grid-cards' },
+      ...c.files.map((/** @type {any} */ f) =>
+        h(
+          'section',
+          { class: 'card card-elevated download-card', id: f.id, 'data-tts': '', 'aria-labelledby': `${f.id}-t` },
+          h('div', { class: 'card-header' }, h('span', { class: 'card-icon' }, icon(f.icon)), h('h3', { id: `${f.id}-t`, class: 'title-medium' }, loc(f.title))),
+          h('p', {}, loc(f.body)),
+          h(
+            'div',
+            { class: 'btn-row' },
+            ...f.formats.map((/** @type {any} */ fm, /** @type {number} */ i) => h('a', { class: `btn ${i === 0 ? 'btn-filled' : 'btn-outlined'} interactive`, href: href(fm.path, lang), download: '' }, icon(fm.icon), h('span', {}, loc(fm.label)))),
+          ),
+          h(
+            'p',
+            { class: 'link-row' },
+            h('span', { class: 'label-medium muted' }, icon('translate'), loc(c.otherLang)),
+            ...f.formats.map((/** @type {any} */ fm) => h('a', { class: 'chip-link', href: href(fm.path, other), hreflang: other, lang: other, download: '' }, fm.label[other])),
+          ),
+        ),
+      ),
+    ),
+    h('h2', { class: 'section-title headline-small' }, loc(c.stepsTitle)),
+    h('div', { class: 'grid-cards' }, ...c.steps.map((/** @type {any} */ st) => blockCard({ icon: st.icon, title: loc(st.title), body: [loc(st.body)], level: 'h3' }))),
+    h('p', { class: 'body-small muted' }, loc(c.note)),
+  );
+};
+
 /* ---------------- Bibliografía ---------------- */
 
 /** @param {HTMLElement} view */
@@ -265,6 +371,8 @@ const RENDERERS = {
   inicio: renderInicio,
   ponencia: renderPonencia,
   marco: renderMarco,
+  claves: renderClaves,
+  recursos: renderRecursos,
   inclusiva: renderInclusiva,
   lunes: renderLunes,
   bibliografia: renderBibliografia,
