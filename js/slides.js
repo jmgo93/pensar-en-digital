@@ -181,6 +181,21 @@ const slideContent = (s, ctx) => {
         h('p', { class: 's-status' }),
       );
     }
+    case 'areas':
+      return h(
+        'div',
+        { class: 's-areas' },
+        h('h2', {}, ...rich(loc(s.title))),
+        h(
+          'ol',
+          { class: 's-area-grid' },
+          ...s.items.map((/** @type {any} */ a, /** @type {number} */ i) =>
+            h('li', { class: a.focus ? 'is-focus' : undefined, style: `--i:${i}` }, h('span', { class: 's-area-n', 'aria-hidden': 'true' }, String(a.n)), icon(a.icon), h('span', {}, loc(a.title))),
+          ),
+        ),
+        s.small ? h('p', { class: 's-small' }, ...rich(loc(s.small))) : null,
+        cite,
+      );
     case 'columns':
       return h(
         'div',
@@ -458,6 +473,7 @@ const init = async () => {
         h('button', { type: 'button', class: 'btn btn-tonal interactive', onclick: () => go(index - 1) }, icon('arrow_back'), t('plantilla.back')),
         h('button', { type: 'button', class: 'btn btn-text interactive', onclick: resetTimer }, icon('timer'), t('slides.resetTimer')),
         archiveButton(site, 'btn btn-text interactive'),
+        h('a', { class: 'btn btn-text interactive', href: fromRoot('ponente/').href }, icon('home'), t('slides.backToWeb')),
         h('button', { type: 'button', class: 'btn btn-filled interactive', onclick: () => go(index + 1) }, t('plantilla.next'), icon('arrow_forward')),
       ),
     );
@@ -585,7 +601,9 @@ const init = async () => {
   );
   const prevBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-tonal interactive', 'aria-label': t('slides.prev'), title: t('slides.prev'), onclick: () => go(index - 1) }, icon('chevron_left')));
   const nextBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-filled interactive', 'aria-label': t('slides.nextBtn'), title: t('slides.nextBtn'), onclick: () => go(index + 1) }, icon('chevron_right')));
-  const controls = h('nav', { class: 'slide-controls', 'aria-label': t('slides.deck') }, prevBtn, fsBtn, nextBtn);
+  // Volver a la web (al panel del ponente) por si se sale de la presentación sin teclado.
+  const homeBtn = h('a', { class: 'icon-btn icon-btn-tonal interactive', href: fromRoot('ponente/').href, 'aria-label': t('slides.backToWeb'), title: t('slides.backToWeb') }, icon('home'));
+  const controls = h('nav', { class: 'slide-controls', 'aria-label': t('slides.deck') }, homeBtn, prevBtn, fsBtn, nextBtn);
   function updateControls() {
     const full = Boolean(document.fullscreenElement);
     fsIcon.textContent = full ? 'fullscreen_exit' : 'fullscreen';

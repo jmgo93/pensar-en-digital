@@ -6,13 +6,15 @@
  * - Palabras que falten: búsqueda en la API con caché en localStorage; las imágenes las cachea el SW.
  * Pictogramas: Sergio Palao. Propiedad: Gobierno de Aragón. Origen: ARASAAC. Licencia CC BY-NC-SA 4.0.
  */
-import { fetchJson } from './router.js';
+import { fetchJson, fromRoot } from './router.js';
 import { getLang, t } from './i18n.js';
 import { h } from './ui.js';
 import { SKIP, words } from './picto-words.js';
 
 const API = 'https://api.arasaac.org/v1/pictograms';
-const IMG = (/** @type {number} */ id) => `https://static.arasaac.org/pictograms/${id}/${id}_300.png`;
+/** Copia local (assets/picto, `npm run picto-img`); si falta, la API oficial de ARASAAC. */
+const IMG = (/** @type {number} */ id) => fromRoot(`assets/picto/${id}.webp`).href;
+const IMG_API = (/** @type {number} */ id) => `https://api.arasaac.org/v1/pictograms/${id}`;
 const CACHE_KEY = 'pd-picto-cache';
 
 /** @type {{ es: Record<string, number>, en: Record<string, number> } | null} */
@@ -62,6 +64,16 @@ const pictoFor = async (lang, word) => {
 };
 
 /**
+ * Imagen del pictograma: local y, si no está (palabra buscada en directo), la de la API.
+ * @param {number} id
+ */
+const pictoImg = (id) => {
+  const img = /** @type {HTMLImageElement} */ (h('img', { src: IMG(id), alt: '', width: 240, height: 240, loading: 'lazy', decoding: 'async' }));
+  img.addEventListener('error', () => { if (!img.src.startsWith('https://api.')) img.src = IMG_API(id); }, { once: true });
+  return img;
+};
+
+/**
  * Pinta la tira de pictogramas de un bloque de lectura fácil.
  * @param {HTMLElement} box
  */
@@ -78,7 +90,7 @@ const renderStrip = async (box) => {
       h(
         'li',
         { class: id ? 'picto' : 'picto is-word' },
-        id ? h('img', { src: IMG(id), alt: '', width: 300, height: 300, loading: 'lazy', decoding: 'async' }) : null,
+        id ? pictoImg(id) : null,
         h('span', {}, w),
       ),
     );

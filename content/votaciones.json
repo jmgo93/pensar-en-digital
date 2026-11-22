@@ -1,7 +1,7 @@
 [
   {
     "id": "v0",
-    "minute": "0–3",
+    "minute": "0–5",
     "block": {
       "es": "Antes: pregunta diagnóstica",
       "en": "Before: diagnostic question"
@@ -42,7 +42,7 @@
   },
   {
     "id": "v1",
-    "minute": "3–11",
+    "minute": "5–12",
     "block": {
       "es": "Bloque 1: ¿qué tarea resuelve la IA sola?",
       "en": "Block 1: which task can AI solve alone?"
@@ -83,7 +83,7 @@
   },
   {
     "id": "v2",
-    "minute": "11–19",
+    "minute": "12–19",
     "block": {
       "es": "Bloque 2: ¿qué hace hoy tu alumnado?",
       "en": "Block 2: what do your students do today?"
@@ -118,7 +118,7 @@
   },
   {
     "id": "v6",
-    "minute": "19–27",
+    "minute": "19–26",
     "block": {
       "es": "Bloque 3: ¿verdadero o falso?",
       "en": "Block 3: true or false?"
@@ -153,7 +153,7 @@
   },
   {
     "id": "v3",
-    "minute": "27–36",
+    "minute": "26–34",
     "block": {
       "es": "Bloque 4: predice el resultado",
       "en": "Block 4: predict the result"
@@ -192,7 +192,7 @@
   },
   {
     "id": "v7",
-    "minute": "36–42",
+    "minute": "34–40",
     "block": {
       "es": "Bloque 5: ¿qué hacen con tu feedback?",
       "en": "Block 5: what do they do with your feedback?"
@@ -231,7 +231,7 @@
   },
   {
     "id": "v5",
-    "minute": "42–45",
+    "minute": "40–45",
     "block": {
       "es": "Después: la misma pregunta",
       "en": "After: the same question"

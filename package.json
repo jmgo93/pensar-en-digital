@@ -10,7 +10,7 @@
     "icons": "node tools/build-icons.mjs",
     "search": "node tools/build-search-index.mjs",
     "blank": "node tools/build-blank-template.mjs",
-    "picto": "node tools/build-picto-map.mjs",
+    "picto": "node tools/build-picto-map.mjs && node tools/build-picto-images.mjs",
     "app-icons": "node tools/build-app-icons.mjs",
     "sw": "node tools/build-sw.mjs",
     "qr": "node tools/build-qr.mjs",
@@ -25,7 +25,8 @@
     "escaleta": "node tools/build-escaleta.mjs",
     "docs": "node tools/build-docs.mjs",
     "docs:pdf": "node tools/build-docs.mjs --pdf",
-    "ponente": "node tools/set-speaker-password.mjs"
+    "ponente": "node tools/set-speaker-password.mjs",
+    "picto-img": "node tools/build-picto-images.mjs"
   },
   "devDependencies": {
     "@material/material-color-utilities": "0.3.0",

@@ -12,7 +12,8 @@ const VERSION = self.PD_VERSION;
 const STATIC = `pd-static-${VERSION}`;
 const ARASAAC = 'pd-arasaac-v1';
 const SCOPE = self.registration.scope;
-const DOWNLOADS = /\/assets\/descargas\/[^/]+\.pdf$/;
+// Se guardan la primera vez que se piden (no van en la precarga): PDF descargables y pictogramas.
+const DOWNLOADS = /\/assets\/(descargas\/[^/]+\.pdf|picto\/\d+\.webp)$/;
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

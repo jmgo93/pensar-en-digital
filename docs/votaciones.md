@@ -26,13 +26,13 @@ Cada votación abre su bloque y va **justo antes** del contenido que la responde
 
 | Id | Diap. | Min | Bloque | Pregunta | Opciones |
 |---|---|---|---|---|---|
-| **v0** | 3 | 1 | Apertura · diagnóstico (antes) | El alumnado ve un vídeo y responde un test en la tableta. ¿Qué cambio generaría más conocimiento? | Una aplicación más interactiva y atractiva · Puntos, insignias y clasificación · **Que lo expliquen con sus palabras y lo contrasten con un compañero** · Que usen una IA para resolverlo más rápido |
-| v1 | 6 | 3,75 | 1 · Primaria | ¿Cuál de las dos tareas puede resolver una IA sola, en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
-| v2 | 13 | 11,25 | 2 · ESO | La última vez que tu alumnado usó tecnología en clase, ¿qué hacía sobre todo? | Recibir · Manipular · Generar · Co-construir |
-| **v6** | 20 | 19,25 | 3 · Bachillerato | ¿Verdadero o falso? El alumnado actual aprende igual de bien estudiando con el móvil y varias pestañas abiertas. | Verdadero · Falso · Depende de la persona |
-| v3 | 27 | 27,25 | 4 · EOI | Practican Matemáticas con ChatGPT sin límites y después hacen un examen sin IA. ¿Qué pasó? | Mejor nota · Misma nota · Peor nota · Depende de cómo se usó la IA |
-| **v7** | 35 | 36,25 | 5 · Conservatorio | Cuando devuelves un trabajo corregido, ¿qué hace la mayoría de tu alumnado? | Mira la nota y lo guarda · Lee los comentarios · Lo corrige y lo vuelve a entregar · No lo sé |
-| **v5** | 41 | 42,75 | Cierre · después | Igual que v0 | Igual que v0 |
+| **v0** | 3 | 1 | Apertura | Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | Usar una aplicación más interactiva y atractiva · Añadir puntos, insignias y clasificación · Que lo expliquen con sus palabras y lo contrasten con un compañero · Que usen una IA para resolverlo más rápido |
+| v1 | 8 | 5,25 | 1 · ¿Digitalizar o innovar? (Primaria) | Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
+| v2 | 15 | 12,25 | 2 · ¿Qué hace con la información? (ESO) | Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado? | Recibir: ver, escuchar, leer · Manipular: copiar, completar, subrayar · Generar: explicar, crear algo nuevo · Co-construir: debatir y crear con otros |
+| v6 | 22 | 19,25 | 3 · Atención y «nativos digitales» (Bachillerato) | Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien? | Sí, aprenderá igual de bien · No, aprenderá peor · Dependerá de la persona |
+| v3 | 29 | 26,25 | 4 · IA: ¿muleta o tutor? (EOI) | Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá? | Sacarán mejor nota que quien no usó IA · Sacarán la misma nota · Sacarán peor nota · Dependerá de cómo usen la IA |
+| v7 | 37 | 34,25 | 5 · Evaluar para aprender (Conservatorio) | Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado? | Mirará la nota y lo guardará · Leerá los comentarios · Lo corregirá y lo volverá a entregar · No lo sé |
+| **v5** | 43 | 41,25 | Cierre | Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | Usar una aplicación más interactiva y atractiva · Añadir puntos, insignias y clasificación · Que lo expliquen con sus palabras y lo contrasten con un compañero · Que usen una IA para resolverlo más rápido |
 
 La v4 («¿Qué vas a probar el lunes?») ya no está en la presentación: el compromiso se pide de palabra al mostrar el kit. Su formulario se conserva y se archiva con las demás.
 

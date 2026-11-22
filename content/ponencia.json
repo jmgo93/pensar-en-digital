@@ -1,14 +1,14 @@
 {
   "intro": {
-    "es": "45 minutos en cinco bloques, cada uno con el mismo recorrido: una pregunta para la sala, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta concreta. Hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba?",
-    "en": "45 minutes in five blocks, each following the same path: a question for the audience, what research says, a classroom case and an improvement with a specific tool. Guiding question: what do students have to think about now that they did not before?"
+    "es": "45 minutos. Empezamos situando el Marco de Referencia de la Competencia Digital Docente y sus seis áreas; después, cinco bloques con el mismo recorrido: una pregunta para la sala, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta concreta. Hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba?",
+    "en": "45 minutes. We start by placing the Spanish Teacher Digital Competence Framework and its six areas; then five blocks following the same path: a question for the audience, what research says, a classroom case and an improvement with a specific tool. Guiding question: what do students have to think about now that they did not before?"
   },
   "blocks": [
     {
       "id": "b1",
       "minutes": [
-        3,
-        11
+        5,
+        12
       ],
       "icon": "school",
       "title": {
@@ -33,7 +33,7 @@
     {
       "id": "b2",
       "minutes": [
-        11,
+        12,
         19
       ],
       "icon": "stairs",
@@ -60,7 +60,7 @@
       "id": "b3",
       "minutes": [
         19,
-        27
+        26
       ],
       "icon": "center_focus_strong",
       "title": {
@@ -85,8 +85,8 @@
     {
       "id": "b4",
       "minutes": [
-        27,
-        36
+        26,
+        34
       ],
       "icon": "smart_toy",
       "title": {
@@ -111,8 +111,8 @@
     {
       "id": "b5",
       "minutes": [
-        36,
-        42
+        34,
+        40
       ],
       "icon": "rate_review",
       "title": {
@@ -137,7 +137,7 @@
     {
       "id": "b6",
       "minutes": [
-        42,
+        40,
         45
       ],
       "icon": "key",

@@ -245,7 +245,8 @@
     "slides.improve": "Propuesta de mejora",
     "slides.tool": "Herramientas",
     "slides.example2": "Ejemplo para defenderlo",
-    "speaker.estudios": "Guía de estudios (PDF)"
+    "speaker.estudios": "Guía de estudios (PDF)",
+    "slides.backToWeb": "Volver a la web"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -493,6 +494,7 @@
     "slides.improve": "Improvement",
     "slides.tool": "Tools",
     "slides.example2": "Example to back it up",
-    "speaker.estudios": "Studies guide (PDF, Spanish)"
+    "speaker.estudios": "Studies guide (PDF, Spanish)",
+    "slides.backToWeb": "Back to the website"
   }
 }

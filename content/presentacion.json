@@ -3,16 +3,16 @@
     {
       "id": "b0",
       "from": 0,
-      "to": 3,
+      "to": 5,
       "title": {
-        "es": "Apertura",
-        "en": "Opening"
+        "es": "Apertura y marco CDD",
+        "en": "Opening and framework"
       }
     },
     {
       "id": "b1",
-      "from": 3,
-      "to": 11,
+      "from": 5,
+      "to": 12,
       "title": {
         "es": "1 · ¿Digitalizar o innovar? (Primaria)",
         "en": "1 · Digitise or innovate? (Primary)"
@@ -20,7 +20,7 @@
     },
     {
       "id": "b2",
-      "from": 11,
+      "from": 12,
       "to": 19,
       "title": {
         "es": "2 · ¿Qué hace con la información? (ESO)",
@@ -30,7 +30,7 @@
     {
       "id": "b3",
       "from": 19,
-      "to": 27,
+      "to": 26,
       "title": {
         "es": "3 · Atención y «nativos digitales» (Bachillerato)",
         "en": "3 · Attention and «digital natives» (Upper secondary)"
@@ -38,8 +38,8 @@
     },
     {
       "id": "b4",
-      "from": 27,
-      "to": 36,
+      "from": 26,
+      "to": 34,
       "title": {
         "es": "4 · IA: ¿muleta o tutor? (EOI)",
         "en": "4 · AI: crutch or tutor? (Language school)"
@@ -47,8 +47,8 @@
     },
     {
       "id": "b5",
-      "from": 36,
-      "to": 42,
+      "from": 34,
+      "to": 40,
       "title": {
         "es": "5 · Evaluar para aprender (Conservatorio)",
         "en": "5 · Assessing for learning (Conservatoire)"
@@ -56,7 +56,7 @@
     },
     {
       "id": "b6",
-      "from": 42,
+      "from": 40,
       "to": 45,
       "title": {
         "es": "Cierre",
@@ -111,19 +111,154 @@
     {
       "id": "voto0",
       "block": "b0",
-      "at": 1.25,
+      "at": 1,
       "type": "vote",
       "vote": "v0",
       "key": "Es una foto de partida, no un examen: nadie ve quién vota qué.",
       "notes": "Pregunta diagnóstica anónima. No comentes las respuestas ni digas cuál es la buena: solo «la volveremos a hacer al final». La opción que buscamos es la tercera (explicar con sus palabras y contrastar con un compañero: constructivo e interactivo en ICAP).",
       "do": "Un minuto para votar. Sin conexión: pide que la apunten en el móvil o en un papel y vuelve a preguntarla al final a mano alzada.",
-      "bridge": "«Guardamos el resultado. Primer bloque: ¿digitalizar o innovar?».",
+      "bridge": "«Antes de los casos, ¿de qué marco hablamos?».",
       "cut": "Mantenla aunque vayas justo: sin ella no hay comparación."
+    },
+    {
+      "id": "mrcdd",
+      "block": "b0",
+      "type": "areas",
+      "title": {
+        "es": "El marco: **6 áreas** de competencia digital docente",
+        "en": "The framework: **6 areas** of teacher digital competence"
+      },
+      "items": [
+        {
+          "n": 1,
+          "icon": "groups",
+          "title": {
+            "es": "Compromiso profesional",
+            "en": "Professional engagement"
+          }
+        },
+        {
+          "n": 2,
+          "icon": "edit",
+          "title": {
+            "es": "Contenidos digitales",
+            "en": "Digital content"
+          }
+        },
+        {
+          "n": 3,
+          "icon": "co_present",
+          "title": {
+            "es": "Enseñanza y aprendizaje",
+            "en": "Teaching and learning"
+          },
+          "focus": true
+        },
+        {
+          "n": 4,
+          "icon": "check_circle",
+          "title": {
+            "es": "Evaluación y retroalimentación",
+            "en": "Assessment and feedback"
+          },
+          "focus": true
+        },
+        {
+          "n": 5,
+          "icon": "accessibility_new",
+          "title": {
+            "es": "Empoderamiento del alumnado",
+            "en": "Empowering students"
+          },
+          "focus": true
+        },
+        {
+          "n": 6,
+          "icon": "lightbulb",
+          "title": {
+            "es": "Competencia digital del alumnado",
+            "en": "Students' digital competence"
+          },
+          "focus": true
+        }
+      ],
+      "small": {
+        "es": "Las áreas 3 a 6 miran al aula: son las que veremos en cada caso.",
+        "en": "Areas 3 to 6 look at the classroom: we will see them in every case."
+      },
+      "src": {
+        "es": "Marco estatal vigente · BOE de 16 de mayo de 2022",
+        "en": "Current Spanish framework · Official State Gazette, 16 May 2022"
+      },
+      "cite": "mrcdd",
+      "key": "Todo lo que veremos hoy está en el marco oficial: no es una moda, es lo que se espera de un docente.",
+      "notes": "El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco estatal vigente desde 2022 (Resolución de 4 de mayo de 2022, BOE de 16 de mayo) y se inspira en el europeo DigCompEdu. Tiene seis áreas. Las áreas 1 (compromiso profesional: comunicarse, colaborar, formarse, protección de datos) y 2 (contenidos digitales: buscar, crear y compartir recursos) hablan del docente. Las áreas 3 a 6 hablan de lo que pasa en el aula: 3, enseñar y que el alumnado aprenda entre iguales y se autorregule; 4, evaluar viendo el proceso y dar feedback útil; 5, quitar barreras para que todo el alumnado participe; 6, enseñar al alumnado a buscar información, colaborar, crear y cuidarse en la red. Cada caso de hoy llevará su área marcada. En la app, sección «Marco CDD», hay ejemplos de cada área por etapa.",
+      "example": "«Fijaos en que cuatro de las seis áreas no hablan de lo que sabe hacer el profesor con la tecnología, sino de lo que hace y consigue el alumnado. Un docente que domina veinte aplicaciones pero cuyo alumnado solo copia no estaría desarrollando las áreas 3 a 6».",
+      "do": "Señala las cuatro áreas iluminadas mientras las nombras.",
+      "bridge": "«Y dentro de cada área, no se es competente o no: se avanza por etapas».",
+      "cut": "Lee solo el título y la frase de abajo.",
+      "at": 2.5
+    },
+    {
+      "id": "niveles",
+      "block": "b0",
+      "type": "ladder",
+      "title": {
+        "es": "De conocer a transformar",
+        "en": "From knowing to transforming"
+      },
+      "steps": [
+        {
+          "es": "A · Conocer y aplicar con guía",
+          "en": "A · Know and apply with guidance"
+        },
+        {
+          "es": "B · Usar con autonomía y adaptar",
+          "en": "B · Use autonomously and adapt"
+        },
+        {
+          "es": "C · Investigar y transformar",
+          "en": "C · Research and transform"
+        }
+      ],
+      "highlight": 1,
+      "src": {
+        "es": "Seis niveles: A1–A2, B1–B2, C1–C2",
+        "en": "Six levels: A1–A2, B1–B2, C1–C2"
+      },
+      "cite": "mrcdd",
+      "key": "En prácticas lo normal es estar en la etapa A; el objetivo de hoy es dar pasos hacia la B.",
+      "notes": "Tres etapas con dos niveles cada una (A1 a C2). A: conozco las tecnologías del centro y las uso con guía. B: las uso por mi cuenta, integradas en mi programación, y adapto mi práctica a contextos nuevos. C: investigo, evalúo y transformo mi práctica y ayudo a otros. En Andalucía la competencia digital docente se puede acreditar (Orden de 11 de mayo de 2025) y los centros tienen su Plan de Actuación Digital en Séneca. Detalle en la app.",
+      "example": "«Ejemplo con una misma herramienta, un cuestionario en línea: en A, lo uso porque me lo ha preparado el tutor del centro; en B, diseño mis propios cuestionarios y uso los resultados para decidir qué repaso; en C, comparo con un compañero si mejora el aprendizaje y lo compartimos con el claustro».",
+      "do": "Señala la etapa B: «Hoy vamos hacia aquí».",
+      "bridge": "«Una idea antes de empezar con los casos».",
+      "cut": "Solo nombra las tres etapas.",
+      "at": 3.5
+    },
+    {
+      "id": "logra",
+      "block": "b0",
+      "type": "statement",
+      "text": {
+        "es": "La competencia digital docente se nota en **lo que logra el alumnado**.",
+        "en": "Teacher digital competence shows in **what students achieve**."
+      },
+      "small": {
+        "es": "En cada caso miraremos qué hace el alumnado.",
+        "en": "In every case we will look at what students do."
+      },
+      "key": "No se trata de cuántas aplicaciones uso, sino de qué consigue mi alumnado gracias a cómo las uso.",
+      "notes": "Es nuestra lectura del marco (no una cita literal): cuatro de sus seis áreas miran al aula. A partir de aquí, cada bloque sigue el mismo recorrido: una pregunta para vosotros, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta.",
+      "example": "«Si mañana viniera alguien a ver si soy digitalmente competente, no debería mirar mi pantalla, sino los cuadernos, las grabaciones y las conversaciones de mi alumnado».",
+      "do": "Pausa de dos segundos después de la frase.",
+      "bridge": "«Primer bloque: ¿digitalizar o innovar?».",
+      "cut": "Solo la frase.",
+      "at": 4.25
     },
     {
       "id": "sec1",
       "block": "b1",
-      "at": 3,
+      "at": 5,
       "type": "section",
       "n": 1,
       "title": {
@@ -143,7 +278,7 @@
     {
       "id": "voto1",
       "block": "b1",
-      "at": 3.25,
+      "at": 5.25,
       "type": "vote",
       "vote": "v1",
       "key": "La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.",
@@ -173,7 +308,7 @@
     {
       "id": "tamim",
       "block": "b1",
-      "at": 5,
+      "at": 6.75,
       "type": "big",
       "number": "0,35",
       "text": {
@@ -196,7 +331,7 @@
     {
       "id": "docente",
       "block": "b1",
-      "at": 6,
+      "at": 7.75,
       "type": "statement",
       "text": {
         "es": "No decide el equipamiento: decide **el docente**.",
@@ -222,7 +357,7 @@
     {
       "id": "caso1",
       "block": "b1",
-      "at": 7,
+      "at": 8.5,
       "type": "case",
       "where": {
         "es": "Primaria · Matemáticas · 5.º",
@@ -253,7 +388,7 @@
     {
       "id": "mejora1",
       "block": "b1",
-      "at": 8.5,
+      "at": 9.75,
       "type": "improve",
       "title": {
         "es": "Problemas del barrio: **trabajo en parejas**",
@@ -308,7 +443,7 @@
     {
       "id": "tool1",
       "block": "b1",
-      "at": 10.25,
+      "at": 11.25,
       "type": "tool",
       "title": {
         "es": "Grabar, ver y entender",
@@ -327,7 +462,7 @@
     {
       "id": "sec2",
       "block": "b2",
-      "at": 11,
+      "at": 12,
       "type": "section",
       "n": 2,
       "title": {
@@ -347,7 +482,7 @@
     {
       "id": "voto2",
       "block": "b2",
-      "at": 11.25,
+      "at": 12.25,
       "type": "vote",
       "vote": "v2",
       "key": "Vuestra respuesta es el punto de partida: en la siguiente diapositiva le ponemos nombre.",
@@ -359,7 +494,7 @@
     {
       "id": "icap",
       "block": "b2",
-      "at": 12.75,
+      "at": 13.5,
       "type": "ladder",
       "title": {
         "es": "ICAP: ¿qué hace el alumno con la información?",
@@ -400,7 +535,7 @@
     {
       "id": "picrat",
       "block": "b2",
-      "at": 14,
+      "at": 14.75,
       "cite": "picrat",
       "key": "Todas las casillas pueden ser legítimas; la matriz sirve para ver quién está pensando.",
       "notes": "Kimmons, Graham y West (2020) diseñaron PICRAT para la formación inicial del profesorado, como alternativa más clara a SAMR (que solo mira la herramienta y tiene escasa base empírica: Hamilton et al., 2016). Son dos preguntas y cada actividad cae en una casilla de una matriz de 3 × 3. Todas las casillas pueden ser legítimas: la matriz sirve para ver quién está pensando.",
@@ -466,7 +601,7 @@
     {
       "id": "caso2",
       "block": "b2",
-      "at": 15,
+      "at": 15.5,
       "type": "case",
       "where": {
         "es": "ESO · Historia · 2.º",
@@ -497,7 +632,7 @@
     {
       "id": "mejora2",
       "block": "b2",
-      "at": 16.25,
+      "at": 16.5,
       "type": "improve",
       "title": {
         "es": "Construyen la suya **y la defienden**",
@@ -552,7 +687,7 @@
     {
       "id": "tool2",
       "block": "b2",
-      "at": 18,
+      "at": 18.25,
       "type": "tool",
       "title": {
         "es": "Construir en equipo",
@@ -603,7 +738,7 @@
     {
       "id": "nativos",
       "block": "b3",
-      "at": 20.5,
+      "at": 20.25,
       "type": "statement",
       "text": {
         "es": "No hay **nativos digitales**.",
@@ -629,7 +764,7 @@
     {
       "id": "distraccion",
       "block": "b3",
-      "at": 21.5,
+      "at": 21.25,
       "type": "big",
       "number": "−11",
       "text": {
@@ -652,7 +787,7 @@
     {
       "id": "caso3",
       "block": "b3",
-      "at": 22.75,
+      "at": 22.25,
       "type": "case",
       "where": {
         "es": "Bachillerato · Biología · 1.º",
@@ -683,7 +818,7 @@
     {
       "id": "mejora3",
       "block": "b3",
-      "at": 24,
+      "at": 23.5,
       "type": "improve",
       "title": {
         "es": "Vídeos cortos y clase **a partir de los errores**",
@@ -751,7 +886,7 @@
     {
       "id": "tool3",
       "block": "b3",
-      "at": 26,
+      "at": 25.25,
       "type": "tool",
       "title": {
         "es": "Vídeo que hace pensar",
@@ -770,7 +905,7 @@
     {
       "id": "sec4",
       "block": "b4",
-      "at": 27,
+      "at": 26,
       "type": "section",
       "n": 4,
       "title": {
@@ -790,7 +925,7 @@
     {
       "id": "voto3",
       "block": "b4",
-      "at": 27.25,
+      "at": 26.25,
       "type": "vote",
       "vote": "v3",
       "key": "Predecir antes de ver el dato hace que el dato se recuerde.",
@@ -802,7 +937,7 @@
     {
       "id": "ia-dato",
       "block": "b4",
-      "at": 28.75,
+      "at": 27.5,
       "type": "big",
       "number": "−17 %",
       "text": {
@@ -825,7 +960,7 @@
     {
       "id": "pereza",
       "block": "b4",
-      "at": 30,
+      "at": 28.75,
       "type": "statement",
       "text": {
         "es": "Pereza metacognitiva",
@@ -851,7 +986,7 @@
     {
       "id": "caso4",
       "block": "b4",
-      "at": 31,
+      "at": 29.5,
       "type": "case",
       "where": {
         "es": "EOI · Inglés · B1",
@@ -882,7 +1017,7 @@
     {
       "id": "mejora4",
       "block": "b4",
-      "at": 32.5,
+      "at": 31,
       "type": "improve",
       "title": {
         "es": "Conversación real **con fricción**",
@@ -937,7 +1072,7 @@
     {
       "id": "tool4",
       "block": "b4",
-      "at": 34.5,
+      "at": 32.75,
       "type": "tool",
       "title": {
         "es": "IA que pregunta, voz que conversa",
@@ -956,7 +1091,7 @@
     {
       "id": "datos",
       "block": "b4",
-      "at": 35.25,
+      "at": 33.25,
       "type": "list",
       "title": {
         "es": "Ningún dato personal del alumnado",
@@ -988,7 +1123,7 @@
     {
       "id": "sec5",
       "block": "b5",
-      "at": 36,
+      "at": 34,
       "type": "section",
       "n": 5,
       "title": {
@@ -1008,7 +1143,7 @@
     {
       "id": "voto7",
       "block": "b5",
-      "at": 36.25,
+      "at": 34.25,
       "type": "vote",
       "vote": "v7",
       "key": "Si la mayoría mira la nota y lo guarda, nuestro feedback no está funcionando.",
@@ -1020,7 +1155,7 @@
     {
       "id": "feedback",
       "block": "b5",
-      "at": 37.5,
+      "at": 35.5,
       "type": "statement",
       "text": {
         "es": "El feedback sirve **si el alumnado lo usa**.",
@@ -1046,7 +1181,7 @@
     {
       "id": "caso5",
       "block": "b5",
-      "at": 38.5,
+      "at": 36.5,
       "type": "case",
       "where": {
         "es": "Conservatorio · Instrumento",
@@ -1077,7 +1212,7 @@
     {
       "id": "mejora5",
       "block": "b5",
-      "at": 39.5,
+      "at": 37.5,
       "type": "improve",
       "title": {
         "es": "Grabarse, **compararse** y decidir",
@@ -1132,7 +1267,7 @@
     {
       "id": "tool5",
       "block": "b5",
-      "at": 41,
+      "at": 39,
       "type": "tool",
       "title": {
         "es": "Grabar y evaluar con criterio",
@@ -1151,7 +1286,7 @@
     {
       "id": "claves",
       "block": "b6",
-      "at": 42,
+      "at": 40,
       "type": "keys",
       "title": {
         "es": "7 claves",
@@ -1196,7 +1331,7 @@
     {
       "id": "voto5",
       "block": "b6",
-      "at": 42.75,
+      "at": 41.25,
       "type": "vote",
       "vote": "v5",
       "key": "La misma pregunta, con todo lo que hemos visto hoy.",
@@ -1208,7 +1343,7 @@
     {
       "id": "progreso",
       "block": "b6",
-      "at": 43.5,
+      "at": 42.5,
       "type": "prepost",
       "pre": "v0",
       "post": "v5",
@@ -1244,7 +1379,7 @@
     {
       "id": "qr-final",
       "block": "b6",
-      "at": 44.25,
+      "at": 43.75,
       "type": "qr",
       "title": {
         "es": "¿Qué pensará tu alumnado **el lunes**?",
@@ -1275,7 +1410,7 @@
     {
       "id": "gracias",
       "block": "b6",
-      "at": 44.75,
+      "at": 44.5,
       "type": "end",
       "title": {
         "es": "Gracias",

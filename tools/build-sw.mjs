@@ -17,7 +17,7 @@ const INCLUDE_DIRS = ['css', 'js', 'content', 'assets', 'presentacion', ...route
 const ROOT_FILES = ['index.html', 'manifest.webmanifest'];
 // Los .md se excluyen salvo los descargables de assets/ (assets/descargas/*.md).
 // Los PDF de assets/descargas/ no se precargan (≈ 2 MB): sw.js los guarda la primera vez que se descargan.
-const EXCLUDE = [/\.d\.ts$/, /^(?!assets\/).*\.md$/, /^assets\/descargas\/.*\.pdf$/, /(^|\/)\./];
+const EXCLUDE = [/\.d\.ts$/, /^(?!assets\/).*\.md$/, /^assets\/descargas\/.*\.pdf$/, /^assets\/picto\//, /(^|\/)\./];
 
 /** @param {string} dir @returns {string[]} */
 const walk = (dir) =>
