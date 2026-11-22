@@ -96,13 +96,14 @@ function doGet(e) {
 }
 
 function count(id, form) {
-  const item = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE)[0].asMultipleChoiceItem();
-  const options = item.getChoices().map(function (c) { return c.getValue(); });
+  // getResponseForItem() necesita el Item genérico, no el MultipleChoiceItem.
+  const item = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE)[0];
+  const options = item.asMultipleChoiceItem().getChoices().map(function (c) { return c.getValue(); });
   const counts = options.map(function () { return 0; });
   form.getResponses().forEach(function (r) {
     const ir = r.getResponseForItem(item);
     if (!ir) return;
-    const i = options.indexOf(ir.getResponse());
+    const i = options.indexOf(String(ir.getResponse()));
     if (i >= 0) counts[i]++;
   });
   return {
