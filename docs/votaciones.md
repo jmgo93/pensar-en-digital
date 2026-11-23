@@ -45,7 +45,7 @@ La v4 («¿Qué vas a probar el lunes?») ya no está en la presentación: el co
 
 ### Antes y después (v0 → v5)
 
-- **La diapositiva 25, «¿Ha cambiado algo?»,** muestra las dos distribuciones una al lado de la otra (con etiquetas cortas) y una línea grande con el cambio en la opción buscada: *«Explicar y contrastar»: 23 % → 61 %*. La opción buscada está marcada en `content/votaciones.json` con `"target": 2`.
+- **La diapositiva 47, «¿Ha cambiado algo?»,** muestra las dos distribuciones una al lado de la otra (con etiquetas cortas) y una línea grande con el cambio en la opción buscada: *«Explicar y contrastar»: 23 % → 61 %*. La opción buscada está marcada en `content/votaciones.json` con `"target": 2`.
 - No digas en v0 cuál es la buena. Es una medida orientativa: votos anónimos, sin emparejar personas.
 
 ## Perfil de ponente

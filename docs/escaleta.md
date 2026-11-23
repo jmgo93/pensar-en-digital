@@ -683,7 +683,7 @@ No digas aún cuál es la respuesta buena. Deja votar y pasa a la comparación.
 Comenta el cambio en la opción «explicar con sus palabras y contrastar con un compañero» (constructivo e interactivo). Si sube, celébralo; si no, úsalo: «Pues la tarea del lunes es justo esa». Aclara que es una medida orientativa: votos anónimos, sin emparejar personas, y puede votar gente distinta al principio y al final.
 
 - **Haz:** Señala en pantalla la línea con el porcentaje antes → después.
-- **Dato y fuente:** Comparación de distribuciones de v0 (minuto 1) y v5 (minuto 38). Los datos quedan en tus formularios de Google; puedes exportarlos a una hoja de cálculo.
+- **Dato y fuente:** Comparación de distribuciones de v0 (minuto 1) y v5 (minuto 41). Los datos quedan en tus formularios de Google; puedes exportarlos a una hoja de cálculo.
 - **Transición:** *«Para seguir, os dejo el kit».*
 - **Si vas tarde:** Lee solo el porcentaje antes → después.
 

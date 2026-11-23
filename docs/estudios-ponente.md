@@ -122,7 +122,7 @@ Referencia habitual para leerlos: 0,2 pequeño, 0,5 medio, 0,8 grande. Y lo más
 
 ## ICAP: qué hace el alumno con la información
 
-*Bloque 2 · escalera ICAP*
+*Apertura · escalera ICAP (primera lente) y bloque 2 · «El salto grande: de manipular a generar»*
 
 **Qué es.** Marco teórico de Chi y Wylie que clasifica las actividades por lo que hace el alumnado, no por la herramienta.
 
@@ -140,7 +140,7 @@ Referencia habitual para leerlos: 0,2 pequeño, 0,5 medio, 0,8 grande. Y lo más
 
 ## PICRAT: dos preguntas para cualquier actividad con tecnología
 
-*Bloque 2 · diapositiva PICRAT*
+*Apertura · PICRAT (segunda lente) y análisis de cada mejora*
 
 **Qué es.** Modelo de Kimmons, Graham y West creado para la formación inicial del profesorado.
 
