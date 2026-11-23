@@ -1,14 +1,14 @@
 {
   "intro": {
-    "es": "45 minutos. Empezamos situando el Marco de Referencia de la Competencia Digital Docente y sus seis áreas; después, cinco bloques con el mismo recorrido: una pregunta para la sala, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta concreta. Hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba?",
-    "en": "45 minutes. We start by placing the Spanish Teacher Digital Competence Framework and its six areas; then five blocks following the same path: a question for the audience, what research says, a classroom case and an improvement with a specific tool. Guiding question: what do students have to think about now that they did not before?"
+    "es": "45 minutos. Empezamos situando el Marco de Referencia de la Competencia Digital Docente, sus seis áreas (con detalle en las cuatro que miran al aula) y las tres lentes con las que analizaremos cada caso: ICAP, PICRAT y las siete claves. Después, cinco bloques con el mismo recorrido: una pregunta para la sala, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta concreta. Hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba?",
+    "en": "45 minutes. We start by placing the Spanish Teacher Digital Competence Framework, its six areas (in detail, the four that look at the classroom) and the three lenses we will use to analyse each case: ICAP, PICRAT and the seven keys. Then five blocks following the same path: a question for the audience, what research says, a classroom case and an improvement with a specific tool. Guiding question: what do students have to think about now that they did not before?"
   },
   "blocks": [
     {
       "id": "b1",
       "minutes": [
-        5,
-        12
+        8,
+        14
       ],
       "icon": "school",
       "title": {
@@ -33,8 +33,8 @@
     {
       "id": "b2",
       "minutes": [
-        12,
-        19
+        14,
+        20
       ],
       "icon": "stairs",
       "title": {
@@ -43,11 +43,11 @@
       },
       "summary": {
         "es": [
-          "Votamos qué hizo el alumnado en nuestra última clase con tecnología y le ponemos nombre con ICAP: recibir, manipular, generar, co-construir [@icap]. PICRAT añade qué le hace la tecnología a nuestra práctica [@picrat].",
+          "Votamos qué hizo el alumnado en nuestra última clase con tecnología y lo situamos en la escalera ICAP que presentamos al principio, junto con PICRAT [@picrat] y las siete claves: recibir, manipular, generar, co-construir [@icap]. El salto grande está entre manipular y generar: que el alumnado produzca algo que no estaba en el material.",
           "**Caso:** el alumnado recorre la línea temporal que hizo el docente en un muro digital. **Mejora:** cada equipo construye la suya con fuentes y una hipótesis y critica la de otro: del «modo creencia» al «modo diseño» [@knowledge-building]. Herramientas: Padlet y CryptPad."
         ],
         "en": [
-          "We vote on what students did in our last technology lesson and name it with ICAP: receive, manipulate, generate, co-construct [@icap]. PICRAT adds what technology does to our practice [@picrat].",
+          "We vote on what students did in our last lesson with technology and place it on the ICAP ladder introduced at the start, together with PICRAT [@picrat] and the seven keys: receiving, manipulating, generating, co-constructing [@icap]. The big leap is between manipulating and generating: students producing something that was not in the material.",
           "**Case:** students browse the timeline the teacher made on a digital wall. **Improvement:** each team builds its own from sources with a hypothesis and critiques another's: from «belief mode» to «design mode» [@knowledge-building]. Tools: Padlet and CryptPad."
         ]
       },
@@ -59,7 +59,7 @@
     {
       "id": "b3",
       "minutes": [
-        19,
+        20,
         26
       ],
       "icon": "center_focus_strong",

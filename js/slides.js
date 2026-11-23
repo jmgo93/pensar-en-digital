@@ -188,9 +188,9 @@ const slideContent = (s, ctx) => {
         h('h2', {}, ...rich(loc(s.title))),
         h(
           'ol',
-          { class: 's-area-grid' },
+          { class: `s-area-grid${s.items.some((/** @type {any} */ a) => a.text) ? ' has-text' : ''}` },
           ...s.items.map((/** @type {any} */ a, /** @type {number} */ i) =>
-            h('li', { class: a.focus ? 'is-focus' : undefined, style: `--i:${i}` }, h('span', { class: 's-area-n', 'aria-hidden': 'true' }, String(a.n)), icon(a.icon), h('span', {}, loc(a.title))),
+            h('li', { class: a.focus ? 'is-focus' : undefined, style: `--i:${i}` }, h('span', { class: 's-area-n', 'aria-hidden': 'true' }, String(a.n)), icon(a.icon), a.text ? h('span', { class: 's-area-body' }, h('strong', {}, loc(a.title)), h('span', {}, loc(a.text))) : h('span', {}, loc(a.title))),
           ),
         ),
         s.small ? h('p', { class: 's-small' }, ...rich(loc(s.small))) : null,

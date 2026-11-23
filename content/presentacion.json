@@ -3,16 +3,16 @@
     {
       "id": "b0",
       "from": 0,
-      "to": 5,
+      "to": 8,
       "title": {
-        "es": "Apertura y marco CDD",
-        "en": "Opening and framework"
+        "es": "Apertura: el marco y tres lentes",
+        "en": "Opening: the framework and three lenses"
       }
     },
     {
       "id": "b1",
-      "from": 5,
-      "to": 12,
+      "from": 8,
+      "to": 14,
       "title": {
         "es": "1 · ¿Digitalizar o innovar? (Primaria)",
         "en": "1 · Digitise or innovate? (Primary)"
@@ -20,8 +20,8 @@
     },
     {
       "id": "b2",
-      "from": 12,
-      "to": 19,
+      "from": 14,
+      "to": 20,
       "title": {
         "es": "2 · ¿Qué hace con la información? (ESO)",
         "en": "2 · What do they do with information? (Secondary)"
@@ -29,7 +29,7 @@
     },
     {
       "id": "b3",
-      "from": 19,
+      "from": 20,
       "to": 26,
       "title": {
         "es": "3 · Atención y «nativos digitales» (Bachillerato)",
@@ -194,10 +194,85 @@
       "key": "Todo lo que veremos hoy está en el marco oficial: no es una moda, es lo que se espera de un docente.",
       "notes": "El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco estatal vigente desde 2022 (Resolución de 4 de mayo de 2022, BOE de 16 de mayo) y se inspira en el europeo DigCompEdu. Tiene seis áreas. Las áreas 1 (compromiso profesional: comunicarse, colaborar, formarse, protección de datos) y 2 (contenidos digitales: buscar, crear y compartir recursos) hablan del docente. Las áreas 3 a 6 hablan de lo que pasa en el aula: 3, enseñar y que el alumnado aprenda entre iguales y se autorregule; 4, evaluar viendo el proceso y dar feedback útil; 5, quitar barreras para que todo el alumnado participe; 6, enseñar al alumnado a buscar información, colaborar, crear y cuidarse en la red. Cada caso de hoy llevará su área marcada. En la app, sección «Marco CDD», hay ejemplos de cada área por etapa.",
       "example": "«Fijaos en que cuatro de las seis áreas no hablan de lo que sabe hacer el profesor con la tecnología, sino de lo que hace y consigue el alumnado. Un docente que domina veinte aplicaciones pero cuyo alumnado solo copia no estaría desarrollando las áreas 3 a 6».",
-      "do": "Señala las cuatro áreas iluminadas mientras las nombras.",
-      "bridge": "«Y dentro de cada área, no se es competente o no: se avanza por etapas».",
+      "do": "Señala las cuatro áreas iluminadas; la siguiente diapositiva las explica.",
+      "bridge": "«Veamos qué significa cada una de esas cuatro áreas».",
       "cut": "Lee solo el título y la frase de abajo.",
-      "at": 2.5
+      "at": 2.25
+    },
+    {
+      "id": "areas-aula",
+      "block": "b0",
+      "type": "areas",
+      "title": {
+        "es": "Las 4 áreas que **miran al aula**",
+        "en": "The 4 areas that **look at the classroom**"
+      },
+      "items": [
+        {
+          "n": 3,
+          "icon": "co_present",
+          "focus": true,
+          "title": {
+            "es": "Enseñanza y aprendizaje",
+            "en": "Teaching and learning"
+          },
+          "text": {
+            "es": "Clases que hacen pensar: aprender con otros y regularse",
+            "en": "Lessons that make students think: learning with peers and self-regulating"
+          }
+        },
+        {
+          "n": 4,
+          "icon": "check_circle",
+          "focus": true,
+          "title": {
+            "es": "Evaluación y retroalimentación",
+            "en": "Assessment and feedback"
+          },
+          "text": {
+            "es": "Ver el proceso, dar feedback útil y decidir qué hacer",
+            "en": "Seeing the process, giving useful feedback and deciding next steps"
+          }
+        },
+        {
+          "n": 5,
+          "icon": "accessibility_new",
+          "focus": true,
+          "title": {
+            "es": "Empoderamiento del alumnado",
+            "en": "Empowering students"
+          },
+          "text": {
+            "es": "Quitar barreras para que todos participen y decidan",
+            "en": "Removing barriers so everyone takes part and decides"
+          }
+        },
+        {
+          "n": 6,
+          "icon": "lightbulb",
+          "focus": true,
+          "title": {
+            "es": "Competencia digital del alumnado",
+            "en": "Students' digital competence"
+          },
+          "text": {
+            "es": "Buscar, contrastar, crear y cuidarse en la red",
+            "en": "Searching, checking, creating and staying safe online"
+          }
+        }
+      ],
+      "src": {
+        "es": "Áreas y competencias del MRCDD · ejemplos por etapa en la app",
+        "en": "MRCDD areas and competences · examples by stage in the app"
+      },
+      "cite": "mrcdd",
+      "key": "Cada área del aula responde a una pregunta: ¿piensan?, ¿ven su progreso?, ¿pueden todos?, ¿saben moverse en lo digital?",
+      "notes": "Una frase por área, siempre desde el alumnado. Área 3, Enseñanza y aprendizaje (3.1 enseñanza, 3.2 orientación y apoyo, 3.3 aprendizaje entre iguales, 3.4 aprendizaje autorregulado): diseñar clases con tecnología que hagan pensar, que el alumnado aprenda de sus compañeros y aprenda a gestionar su propio aprendizaje. Área 4, Evaluación y retroalimentación (4.1 estrategias, 4.2 analíticas y evidencias, 4.3 retroalimentación y toma de decisiones): usar lo digital para ver el proceso y no solo el resultado, y devolver un feedback que se use. Área 5, Empoderamiento del alumnado (5.1 accesibilidad e inclusión, 5.2 diferencias personales, 5.3 compromiso activo): quitar barreras desde el diseño para que todos accedan y participen, y que sean protagonistas. Área 6, Competencia digital del alumnado (6.1 información y datos, 6.2 comunicación y ciudadanía digital, 6.3 creación de contenidos, 6.4 uso responsable y bienestar, 6.5 resolución de problemas): no basta con que usen tecnología; hay que enseñarles a usarla bien. En la app, sección «Marco CDD», cada área tiene ejemplos de Primaria, ESO, EOI y Conservatorio. En cada mejora de hoy aparecerá el código de la competencia (por ejemplo, 3.3).",
+      "example": "«Un mismo proyecto de radio escolar toca las cuatro: el alumnado graba entrevistas por parejas y se escucha (3, aprende de otros), revisa sus grabaciones con una lista de criterios (4, feedback de proceso), quien no quiere hablar puede editar o escribir el guion (5, nadie se queda fuera) y aprende a pedir permiso antes de publicar una voz (6, uso responsable)».",
+      "do": "Señala cada tarjeta mientras la nombras; una frase por área.",
+      "bridge": "«Y en cada área no se es competente o no: se avanza por etapas».",
+      "cut": "Lee solo los cuatro nombres.",
+      "at": 3
     },
     {
       "id": "niveles",
@@ -231,274 +306,18 @@
       "notes": "Tres etapas con dos niveles cada una (A1 a C2). A: conozco las tecnologías del centro y las uso con guía. B: las uso por mi cuenta, integradas en mi programación, y adapto mi práctica a contextos nuevos. C: investigo, evalúo y transformo mi práctica y ayudo a otros. En Andalucía la competencia digital docente se puede acreditar (Orden de 11 de mayo de 2025) y los centros tienen su Plan de Actuación Digital en Séneca. Detalle en la app.",
       "example": "«Ejemplo con una misma herramienta, un cuestionario en línea: en A, lo uso porque me lo ha preparado el tutor del centro; en B, diseño mis propios cuestionarios y uso los resultados para decidir qué repaso; en C, comparo con un compañero si mejora el aprendizaje y lo compartimos con el claustro».",
       "do": "Señala la etapa B: «Hoy vamos hacia aquí».",
-      "bridge": "«Una idea antes de empezar con los casos».",
+      "bridge": "«Para mirar los casos usaremos tres lentes. La primera: ICAP».",
       "cut": "Solo nombra las tres etapas.",
-      "at": 3.5
-    },
-    {
-      "id": "logra",
-      "block": "b0",
-      "type": "statement",
-      "text": {
-        "es": "La competencia digital docente se nota en **lo que logra el alumnado**.",
-        "en": "Teacher digital competence shows in **what students achieve**."
-      },
-      "small": {
-        "es": "En cada caso miraremos qué hace el alumnado.",
-        "en": "In every case we will look at what students do."
-      },
-      "key": "No se trata de cuántas aplicaciones uso, sino de qué consigue mi alumnado gracias a cómo las uso.",
-      "notes": "Es nuestra lectura del marco (no una cita literal): cuatro de sus seis áreas miran al aula. A partir de aquí, cada bloque sigue el mismo recorrido: una pregunta para vosotros, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta.",
-      "example": "«Si mañana viniera alguien a ver si soy digitalmente competente, no debería mirar mi pantalla, sino los cuadernos, las grabaciones y las conversaciones de mi alumnado».",
-      "do": "Pausa de dos segundos después de la frase.",
-      "bridge": "«Primer bloque: ¿digitalizar o innovar?».",
-      "cut": "Solo la frase.",
-      "at": 4.25
-    },
-    {
-      "id": "sec1",
-      "block": "b1",
-      "at": 5,
-      "type": "section",
-      "n": 1,
-      "title": {
-        "es": "¿Digitalizar o **innovar**?",
-        "en": "Digitise or **innovate**?"
-      },
-      "small": {
-        "es": "Primaria · Matemáticas · DUA",
-        "en": "Primary · Maths · UDL"
-      },
-      "key": "Cambiar el soporte no cambia lo que el alumnado piensa.",
-      "notes": "Diapositiva de paso: anuncia el bloque y el caso (Primaria, Matemáticas). Diez segundos.",
-      "do": "Anuncia la etapa y la materia: que quien sea de Primaria levante la vista.",
-      "bridge": "«Empezamos con dos tareas».",
-      "cut": "Pásala sin comentar."
-    },
-    {
-      "id": "voto1",
-      "block": "b1",
-      "at": 5.25,
-      "type": "vote",
-      "vote": "v1",
-      "key": "La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.",
-      "notes": "Lee las dos tareas en voz alta y deja votar. Comenta el resultado: casi todo el mundo ve que la A la resuelve una IA sola en segundos. La B también puede usar IA para analizar datos, pero los datos son del alumnado, la comparación es con un compañero y la propuesta se defiende ante el centro. Pregunta retórica: «¿Cuántas de nuestras tareas son tipo A?». Digitalizar es pasar la A a un formulario; innovar es pasar de la A a la B.",
-      "do": "Un minuto para votar. Sin conexión: mano alzada (A, B, las dos, ninguna).",
-      "bridge": "«¿Y la tecnología, por sí sola, hace que se aprenda más? Cuarenta años de investigación».",
-      "cut": "Mano alzada en 30 segundos.",
-      "show": [
-        {
-          "label": "A",
-          "icon": "edit",
-          "text": {
-            "es": "Redacción: «La importancia del agua».",
-            "en": "Essay: «The importance of water»."
-          }
-        },
-        {
-          "label": "B",
-          "icon": "water_drop",
-          "text": {
-            "es": "Mide el agua de casa una semana, compárala con un compañero y propón una medida.",
-            "en": "Measure water at home for a week, compare with a classmate and propose a measure."
-          }
-        }
-      ]
-    },
-    {
-      "id": "tamim",
-      "block": "b1",
-      "at": 6.75,
-      "type": "big",
-      "number": "0,35",
-      "text": {
-        "es": "El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**.",
-        "en": "The average student with technology outperforms 64% of those without it (no effect: 50%). **It depends on design**."
-      },
-      "cite": "tamim",
-      "key": "La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico.",
-      "notes": "Tamim y colaboradores (2011) reunieron 25 metaanálisis (1055 estudios, cuarenta años) que comparan clases con y sin ordenador. Efecto medio: 0,35. Qué significa: si ponemos en fila a 100 alumnos de una clase sin tecnología, el alumno medio de la clase con tecnología quedaría por delante de 64 de ellos, en lugar de 50. Es una mejora real, pero modesta. Y, sobre todo, muy variable: hay estudios donde funciona muy bien y otros donde nada. La pregunta interesante no es «¿funciona?», sino «¿cuándo funciona?».",
-      "data": "Tamim et al. (2011), Review of Educational Research, 81(1): 0,35 (validación: 0,33). Hillmayr et al. (2020), Computers & Education, 153: g = 0,65, k = 92.",
-      "do": "No te enredes con estadística: «0,35 es un efecto modesto; la variación es lo importante».",
-      "bridge": "«¿Y de qué depende? No del equipamiento».",
-      "cut": "Omite Hillmayr.",
-      "src": {
-        "es": "25 metaanálisis · 1055 estudios · 40 años",
-        "en": "25 meta-analyses · 1,055 studies · 40 years"
-      },
-      "example": "Para explicarlo sin estadística: «Imaginad 100 alumnos ordenados por nota. El del medio ocupa el puesto 50. Con tecnología, el alumno medio pasa al puesto 64: sube, pero no da un salto. Y en unos estudios sube mucho y en otros nada: eso es lo que nos dice que depende de cómo se use». Dato de apoyo más reciente: en Matemáticas y Ciencias de secundaria, Hillmayr et al. (2020) obtienen 0,65 con 92 estudios (el alumno medio pasaría del puesto 50 al 74). Referencia habitual para leer estos tamaños de efecto: 0,2 pequeño, 0,5 medio, 0,8 grande."
-    },
-    {
-      "id": "docente",
-      "block": "b1",
-      "at": 7.75,
-      "type": "statement",
-      "text": {
-        "es": "No decide el equipamiento: decide **el docente**.",
-        "en": "Equipment doesn't decide: **the teacher** does."
-      },
-      "small": {
-        "es": "Pesan más las competencias didácticas digitales que los dispositivos.",
-        "en": "Teaching-related digital skills matter more than devices."
-      },
-      "cite": "sailer",
-      "key": "Más tablets no cambian el aula; un docente que sabe para qué usarlas, sí.",
-      "notes": "Sailer, Murböck y Fischer (2021) preguntaron a una muestra representativa de docentes de Baviera cuánto usan la tecnología y qué actividades hace el alumnado con ella, y lo cruzaron con el equipamiento del centro y con sus competencias. Resultado: lo que explica el tipo de actividades no son los recursos, sino las competencias digitales básicas y, sobre todo, las didácticas del profesorado. Hace falta un mínimo de equipamiento, pero a partir de ahí decide el docente. Una revisión paraguas (Wohlfart y Wagner, 2023) llega a lo mismo.",
-      "data": "Sailer et al. (2021), Teaching and Teacher Education, 103, 103346. Wohlfart y Wagner (2023), ETR&D, 71(2). Mishra (2019): TPACK con conocimiento del contexto.",
-      "do": "Señala a la sala: «Esto va de vosotros».",
-      "bridge": "«Veamos un caso de Primaria».",
-      "cut": "Omite TPACK.",
-      "src": {
-        "es": "Encuesta representativa a 410 docentes de Baviera (Alemania)",
-        "en": "Representative survey of 410 teachers in Bavaria (Germany)"
-      },
-      "example": "«Dos aulas del mismo centro, con la misma pizarra digital y las mismas tablets. En una, la pizarra es un proyector de diapositivas y las tablets, fichas de rellenar. En la otra, el alumnado graba explicaciones, compara datos y se corrige entre parejas. Mismo equipamiento, aprendizajes muy distintos: lo que cambia es el docente». Si alguien objeta «sin recursos no se puede», respuesta: el estudio también dice que hace falta un umbral mínimo, pero que comprar más no cambia lo que se hace en clase."
-    },
-    {
-      "id": "caso1",
-      "block": "b1",
-      "at": 8.5,
-      "type": "case",
-      "where": {
-        "es": "Primaria · Matemáticas · 5.º",
-        "en": "Primary · Maths · Year 6"
-      },
-      "title": {
-        "es": "Repaso con una app de «arrastra y suelta»",
-        "en": "Review with a «drag and drop» app"
-      },
-      "text": {
-        "es": "Arrastran números hasta que la app dice «¡Correcto!»: **aciertan por tanteo**. Un alumno con dislexia no lee bien el enunciado y se bloquea.",
-        "en": "They drag numbers until the app says «Correct!»: **they guess their way through**. A student with dyslexia cannot read the problem and gets stuck."
-      },
-      "ask": {
-        "es": "¿Cómo podemos sortear esta barrera desde el diseño?",
-        "en": "How can we get round this barrier by design?"
-      },
-      "key": "Parece digital y moderno, pero el pensamiento es el de una ficha de papel, y deja fuera a quien lee con dificultad.",
-      "notes": "Ejemplo de aula muy reconocible: la app es vistosa y el alumnado está entretenido, pero acierta probando números, sin entender el problema. Y quien tiene dificultades de lectura se queda fuera porque todo depende de leer un enunciado escrito. En ICAP: activo (manipula). En PICRAT: interactivo-reemplaza (la tablet sustituye a la ficha). Deja que la sala proponga soluciones de diseño (audio, pictogramas, parejas, inventar el problema) y recógelas: la diapositiva siguiente las ordena.",
-      "do": "Pregunta a dos personas de Primaria. No corrijas: recoge.",
-      "bridge": "«¿Cómo la subimos de escalón sin cambiar el objetivo?».",
-      "cut": "Haz tú la pregunta y respóndela en una frase.",
-      "context": {
-        "es": "5.º de Primaria · 24 alumnos · una tablet por alumno",
-        "en": "Year 6 · 24 students · one tablet each"
-      }
-    },
-    {
-      "id": "mejora1",
-      "block": "b1",
-      "at": 9.75,
-      "type": "improve",
-      "title": {
-        "es": "Problemas del barrio: **trabajo en parejas**",
-        "en": "Neighbourhood problems: **pair work**"
-      },
-      "text": {
-        "es": "Inventan un problema con datos del barrio, lo graban y otra pareja lo resuelve.",
-        "en": "They invent a problem with local data, record it, and another pair solves it."
-      },
-      "analysis": [
-        {
-          "icon": "stairs",
-          "k": "ICAP",
-          "v": {
-            "es": "Activo → Interactivo: crean y explican",
-            "en": "Active → Interactive: create and explain"
-          }
-        },
-        {
-          "icon": "grid_view",
-          "k": "PICRAT",
-          "v": {
-            "es": "Reemplaza → Transforma",
-            "en": "Replace → Transform"
-          }
-        },
-        {
-          "icon": "key",
-          "k": "Claves",
-          "v": {
-            "es": "1 Pedagogía primero · 2 Construir · 5 DUA",
-            "en": "1 Pedagogy first · 2 Build · 5 UDL"
-          }
-        },
-        {
-          "icon": "school",
-          "k": "MRCDD",
-          "v": {
-            "es": "3.3 Aprendizaje entre iguales · 5.1 Inclusión",
-            "en": "3.3 Peer learning · 5.1 Inclusion"
-          }
-        }
-      ],
-      "cite": "cast-udl",
-      "key": "El alumnado pasa de elegir respuestas a crear problemas y explicarlos a otros; el audio y los pictogramas abren la puerta a todos.",
-      "notes": "Recorre el análisis de abajo arriba sin tecnicismos: «Antes elegían; ahora crean (constructivo) y explican a otra pareja (interactivo)». DUA (CAST, 2024): el enunciado llega en audio y con pictogramas para todo el grupo, no solo para el alumno con dislexia; y cada pareja puede responder grabando, escribiendo o dibujando. MRCDD 3.3 aprendizaje entre iguales, 5.1 accesibilidad e inclusión, 6.3 creación de contenidos.",
-      "do": "Señala cada casilla del análisis mientras la nombras.",
-      "bridge": "«¿Con qué herramientas?».",
-      "cut": "Lee solo la propuesta y la fila ICAP.",
-      "example": "Concreta el DUA en tres gestos: el enunciado se escucha además de leerse (audio grabado por el docente o por otra pareja), lleva pictogramas en las palabras clave, y cada pareja puede responder grabando, escribiendo o dibujando. No es una adaptación para un alumno: es un diseño que sirve a todo el grupo (CAST, 2024)."
-    },
-    {
-      "id": "tool1",
-      "block": "b1",
-      "at": 11.25,
-      "type": "tool",
-      "title": {
-        "es": "Grabar, ver y entender",
-        "en": "Record, see and understand"
-      },
-      "tools": [
-        "vocaroo",
-        "arasaac"
-      ],
-      "key": "Herramientas gratuitas y sin cuenta del alumnado: la grabación del problema y los pictogramas para la consigna.",
-      "notes": "Vocaroo: grabar el problema y compartir un enlace, sin cuenta. ARASAAC: pictogramas para la consigna (los que usa esta misma web en el modo pictográfico). Si hay wifi, enseña 20 segundos ARASAAC buscando «sumar». Alternativa para el caso: GeoGebra para representar el problema. Todas están en la sección Herramientas de la app.",
-      "do": "Si hay conexión, demostración de 20 segundos; si no, señala el QR.",
-      "bridge": "«Segundo bloque: ¿qué hace vuestro alumnado con la información? Votad».",
-      "cut": "Solo nombra las herramientas."
-    },
-    {
-      "id": "sec2",
-      "block": "b2",
-      "at": 12,
-      "type": "section",
-      "n": 2,
-      "title": {
-        "es": "¿Qué hace tu alumnado **con la información**?",
-        "en": "What do your students do **with information**?"
-      },
-      "small": {
-        "es": "ESO · Geografía e Historia",
-        "en": "Lower secondary · History"
-      },
-      "key": "Mirar lo que hace el alumnado, no la herramienta.",
-      "notes": "Paso de bloque: Secundaria e Historia.",
-      "do": "Diez segundos.",
-      "bridge": "«Pensad en vuestra última clase con tecnología».",
-      "cut": "Pásala sin comentar."
-    },
-    {
-      "id": "voto2",
-      "block": "b2",
-      "at": 12.25,
-      "type": "vote",
-      "vote": "v2",
-      "key": "Vuestra respuesta es el punto de partida: en la siguiente diapositiva le ponemos nombre.",
-      "notes": "Activa la experiencia de la sala antes de dar la teoría. No comentes todavía: deja ver el resultado y pasa a ICAP. Cada opción es un nivel (recibir = pasivo, manipular = activo, generar = constructivo, co-construir = interactivo). Lo habitual es que salga mucho «recibir» y «manipular»: es el punto de partida, no una crítica.",
-      "do": "Un minuto para votar. Sin conexión: mano alzada por opciones.",
-      "bridge": "«Estas cuatro opciones tienen nombre en la investigación: ICAP».",
-      "cut": "Mano alzada rápida y sigue."
+      "at": 4
     },
     {
       "id": "icap",
-      "block": "b2",
-      "at": 13.5,
+      "block": "b0",
+      "at": 4.75,
       "type": "ladder",
       "title": {
-        "es": "ICAP: ¿qué hace el alumno con la información?",
-        "en": "ICAP: what do students do with information?"
+        "es": "ICAP: ¿qué hace el alumno **con la información**?",
+        "en": "ICAP: what do students do **with information**?"
       },
       "steps": [
         {
@@ -519,30 +338,30 @@
         }
       ],
       "cite": "icap",
-      "key": "El salto grande está entre manipular y generar: que produzcan algo que no estaba en el material.",
-      "notes": "Chi y Wylie (2014). Conecta con la votación: «La mayoría habéis votado X; en la escalera está aquí». El aprendizaje tiende a crecer de pasivo a interactivo, y el salto grande (el escalón que se ilumina) está entre manipular y generar: que produzcan algo que no estaba en el material. Úsalo como filtro antes de elegir herramienta, no como etiqueta para juzgar.",
+      "key": "ICAP mira al alumnado: cuanto más genera y co-construye, más aprende. Es la primera lente para leer cada caso.",
+      "notes": "Primera lente. ICAP es un marco de Michelene Chi y Ruth Wylie (2014) que clasifica lo que hace el alumnado con la información según su conducta visible, no según la herramienta: Pasivo (recibe: escucha, mira), Activo (manipula: subraya, copia, arrastra), Constructivo (genera: explica con sus palabras, inventa ejemplos, hace su esquema) e Interactivo (co-construye: dialoga con un compañero y ambos añaden ideas). La síntesis de estudios de laboratorio y de aula muestra que el aprendizaje tiende a crecer en ese orden: I > C > A > P. El salto grande, el escalón iluminado, está entre manipular y generar. Conecta con la votación inicial: la opción que buscábamos (explicar con sus palabras y contrastar con un compañero) es constructivo e interactivo. Úsalo como filtro antes de elegir herramienta, no como etiqueta para juzgar. En el bloque 2 lo aplicaremos a fondo.",
       "data": "Chi, M. T. H., y Wylie, R. (2014). Educational Psychologist, 49(4), 219–243.",
-      "do": "Señala el escalón más votado por la sala y después el que se ilumina (Constructivo).",
-      "bridge": "«ICAP mira al alumnado; PICRAT mira también a la tecnología».",
-      "cut": "Solo el salto Activo → Constructivo.",
+      "do": "Sube la escalera con la mano mientras lees los cuatro escalones; detente en Constructivo.",
+      "bridge": "«ICAP mira al alumnado; PICRAT mira también a la tecnología y a nuestra práctica».",
+      "cut": "Solo los cuatro nombres y el salto Activo → Constructivo.",
       "highlight": 2,
       "src": {
         "es": "Síntesis de estudios de laboratorio y de aula",
         "en": "Synthesis of lab and classroom studies"
       },
-      "example": "«Mismo tema, la fotosíntesis, cuatro niveles: ver un vídeo (pasivo); subrayar el texto (activo); dibujar un esquema propio y explicarlo (constructivo); explicárselo a un compañero que te lleva la contraria y llegar a un esquema común (interactivo)». Conecta con la votación: «La mayoría habéis votado X; en la escalera está aquí»."
+      "example": "«Mismo tema, la fotosíntesis, cuatro niveles: ver un vídeo (pasivo); subrayar el texto (activo); dibujar un esquema propio y explicarlo (constructivo); explicárselo a un compañero que te lleva la contraria y llegar a un esquema común (interactivo)»."
     },
     {
       "id": "picrat",
-      "block": "b2",
-      "at": 14.75,
+      "block": "b0",
+      "at": 5.75,
       "cite": "picrat",
-      "key": "Todas las casillas pueden ser legítimas; la matriz sirve para ver quién está pensando.",
-      "notes": "Kimmons, Graham y West (2020) diseñaron PICRAT para la formación inicial del profesorado, como alternativa más clara a SAMR (que solo mira la herramienta y tiene escasa base empírica: Hamilton et al., 2016). Son dos preguntas y cada actividad cae en una casilla de una matriz de 3 × 3. Todas las casillas pueden ser legítimas: la matriz sirve para ver quién está pensando.",
+      "key": "PICRAT cruza dos preguntas: qué hace el alumnado con la tecnología y qué le hace la tecnología a mi práctica. Es la segunda lente.",
+      "notes": "Segunda lente. Kimmons, Graham y West (2020) diseñaron PICRAT para la formación inicial del profesorado, como alternativa más clara a SAMR (que solo mira la herramienta y tiene escasa base empírica: Hamilton et al., 2016). Son dos preguntas. Primera, PIC: ¿qué hace el alumnado con la tecnología? Pasivo (la consume), Interactivo (la manipula) o Creativo (produce algo nuevo). Segunda, RAT: ¿qué cambia en mi práctica? Reemplaza (lo mismo con otro soporte), Amplifica (lo mismo, pero mejor o más rápido) o Transforma (algo que antes no era posible). Cada actividad cae en una casilla de una matriz de 3 × 3, y en cada mejora de hoy veremos de qué casilla a qué casilla pasamos. Todas las casillas pueden ser legítimas: la matriz sirve para ver quién está pensando.",
       "data": "Kimmons et al. (2020), CITE Journal, 20(1), 176–198. Crítica a SAMR: Hamilton, Rosenberg y Akcaoglu (2016), TechTrends, 60(5).",
-      "do": "Señala primero la columna del alumnado y después la del docente.",
-      "bridge": "«Con estas dos lentes, miremos un caso de Historia».",
-      "cut": "No menciones SAMR.",
+      "do": "Señala primero la columna del alumnado (PIC) y después la del docente (RAT).",
+      "bridge": "«Y la tercera lente: siete preguntas para revisar cualquier tarea».",
+      "cut": "Lee solo las dos preguntas.",
       "type": "columns",
       "title": {
         "es": "PICRAT: dos preguntas",
@@ -599,9 +418,359 @@
       "example": "«Proyectar un PDF en la pizarra digital: Pasivo-Reemplaza (es el libro en grande). Un cuestionario en la tablet que se corrige solo: Interactivo-Amplifica (lo mismo que en papel, pero con corrección inmediata). Que el alumnado grabe un pódcast entrevistando a su abuela sobre cómo era el barrio: Creativo-Transforma (sin tecnología no podrían publicarlo ni compararlo con otros barrios)»."
     },
     {
+      "id": "claves-intro",
+      "block": "b0",
+      "type": "keys",
+      "title": {
+        "es": "7 claves para revisar cualquier tarea",
+        "en": "7 keys to review any task"
+      },
+      "items": [
+        {
+          "es": "Pedagogía primero",
+          "en": "Pedagogy first"
+        },
+        {
+          "es": "Construir, no recibir",
+          "en": "Build, don't receive"
+        },
+        {
+          "es": "Atención cuidada",
+          "en": "Protected attention"
+        },
+        {
+          "es": "Feedback de proceso",
+          "en": "Process feedback"
+        },
+        {
+          "es": "DUA de origen",
+          "en": "UDL by design"
+        },
+        {
+          "es": "IA con fricción",
+          "en": "AI with friction"
+        },
+        {
+          "es": "Ética compartida",
+          "en": "Shared ethics"
+        }
+      ],
+      "src": {
+        "es": "Cada clave es una pregunta · las verás numeradas en cada mejora",
+        "en": "Each key is a question · you will see them numbered in every improvement"
+      },
+      "key": "Las siete claves son la tercera lente: preguntas concretas para revisar una tarea antes de llevarla al aula.",
+      "notes": "Presenta las claves como preguntas, no como eslóganes. 1 Pedagogía primero: ¿qué no podría aprender mi alumnado sin esta tecnología? 2 Construir, no recibir: ¿qué produce que no estaba ya en el material? 3 Atención cuidada: ¿en qué momentos tiene sentido que la pantalla esté cerrada? 4 Feedback de proceso: ¿qué hace mi alumnado con el feedback y le doy tiempo para usarlo? 5 DUA de origen: ¿quién se queda fuera y qué alternativa ofrezco desde el principio? 6 IA con fricción: si pega el enunciado en una IA, ¿qué parte sigue teniendo que pensar? 7 Ética compartida: ¿con quién de mi claustro reviso esta tarea? Son una síntesis propia de la evidencia que veremos (no una cita literal de un autor): cada una está anclada al MRCDD y explicada en la app, sección «Las 7 claves», con ejemplos por etapa y prompts. Al final las repasaremos.",
+      "example": "«Pasad por las siete preguntas una tarea típica, un trabajo de búsqueda en internet: ¿qué no podrían hacer sin tecnología? (1); ¿producen algo propio o copian y pegan? (2); ¿cuántas pestañas abiertas? (3); ¿qué hacen con mi corrección? (4); ¿puede hacerlo quien lee con dificultad? (5); ¿lo resuelve una IA en un minuto? (6); ¿lo he contrastado con algún compañero? (7)».",
+      "do": "Lee las siete en voz alta, deprisa; detente solo en la 2 y la 6.",
+      "bridge": "«Tres lentes, ICAP, PICRAT y claves, y una idea de fondo».",
+      "cut": "Lee solo los títulos.",
+      "at": 6.75
+    },
+    {
+      "id": "logra",
+      "block": "b0",
+      "type": "statement",
+      "text": {
+        "es": "La competencia digital docente se nota en **lo que logra el alumnado**.",
+        "en": "Teacher digital competence shows in **what students achieve**."
+      },
+      "small": {
+        "es": "En cada mejora: **ICAP · PICRAT · claves · MRCDD**.",
+        "en": "In every improvement: **ICAP · PICRAT · keys · MRCDD**."
+      },
+      "key": "No se trata de cuántas aplicaciones uso, sino de qué consigue mi alumnado gracias a cómo las uso.",
+      "notes": "Es nuestra lectura del marco (no una cita literal): cuatro de sus seis áreas miran al aula. A partir de aquí, cada bloque sigue el mismo recorrido: una pregunta para vosotros, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta. Cada mejora lleva un pequeño análisis con las tres lentes y el área del marco: de qué escalón de ICAP a cuál, de qué casilla de PICRAT a cuál, qué claves usa y qué competencias del MRCDD desarrolla.",
+      "example": "«Si mañana viniera alguien a ver si soy digitalmente competente, no debería mirar mi pantalla, sino los cuadernos, las grabaciones y las conversaciones de mi alumnado».",
+      "do": "Pausa de dos segundos después de la frase.",
+      "bridge": "«Primer bloque: ¿digitalizar o innovar?».",
+      "cut": "Solo la frase.",
+      "at": 7.5
+    },
+    {
+      "id": "sec1",
+      "block": "b1",
+      "at": 8,
+      "type": "section",
+      "n": 1,
+      "title": {
+        "es": "¿Digitalizar o **innovar**?",
+        "en": "Digitise or **innovate**?"
+      },
+      "small": {
+        "es": "Primaria · Matemáticas · DUA",
+        "en": "Primary · Maths · UDL"
+      },
+      "key": "Cambiar el soporte no cambia lo que el alumnado piensa.",
+      "notes": "Diapositiva de paso: anuncia el bloque y el caso (Primaria, Matemáticas). Diez segundos.",
+      "do": "Anuncia la etapa y la materia: que quien sea de Primaria levante la vista.",
+      "bridge": "«Empezamos con dos tareas».",
+      "cut": "Pásala sin comentar."
+    },
+    {
+      "id": "voto1",
+      "block": "b1",
+      "at": 8.25,
+      "type": "vote",
+      "vote": "v1",
+      "key": "La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.",
+      "notes": "Lee las dos tareas en voz alta y deja votar. Comenta el resultado: casi todo el mundo ve que la A la resuelve una IA sola en segundos. La B también puede usar IA para analizar datos, pero los datos son del alumnado, la comparación es con un compañero y la propuesta se defiende ante el centro. Pregunta retórica: «¿Cuántas de nuestras tareas son tipo A?». Digitalizar es pasar la A a un formulario; innovar es pasar de la A a la B.",
+      "do": "Un minuto para votar. Sin conexión: mano alzada (A, B, las dos, ninguna).",
+      "bridge": "«¿Y la tecnología, por sí sola, hace que se aprenda más? Cuarenta años de investigación».",
+      "cut": "Mano alzada en 30 segundos.",
+      "show": [
+        {
+          "label": "A",
+          "icon": "edit",
+          "text": {
+            "es": "Redacción: «La importancia del agua».",
+            "en": "Essay: «The importance of water»."
+          }
+        },
+        {
+          "label": "B",
+          "icon": "water_drop",
+          "text": {
+            "es": "Mide el agua de casa una semana, compárala con un compañero y propón una medida.",
+            "en": "Measure water at home for a week, compare with a classmate and propose a measure."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tamim",
+      "block": "b1",
+      "at": 9.5,
+      "type": "big",
+      "number": "0,35",
+      "text": {
+        "es": "El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**.",
+        "en": "The average student with technology outperforms 64% of those without it (no effect: 50%). **It depends on design**."
+      },
+      "cite": "tamim",
+      "key": "La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico.",
+      "notes": "Tamim y colaboradores (2011) reunieron 25 metaanálisis (1055 estudios, cuarenta años) que comparan clases con y sin ordenador. Efecto medio: 0,35. Qué significa: si ponemos en fila a 100 alumnos de una clase sin tecnología, el alumno medio de la clase con tecnología quedaría por delante de 64 de ellos, en lugar de 50. Es una mejora real, pero modesta. Y, sobre todo, muy variable: hay estudios donde funciona muy bien y otros donde nada. La pregunta interesante no es «¿funciona?», sino «¿cuándo funciona?».",
+      "data": "Tamim et al. (2011), Review of Educational Research, 81(1): 0,35 (validación: 0,33). Hillmayr et al. (2020), Computers & Education, 153: g = 0,65, k = 92.",
+      "do": "No te enredes con estadística: «0,35 es un efecto modesto; la variación es lo importante».",
+      "bridge": "«¿Y de qué depende? No del equipamiento».",
+      "cut": "Omite Hillmayr.",
+      "src": {
+        "es": "25 metaanálisis · 1055 estudios · 40 años",
+        "en": "25 meta-analyses · 1,055 studies · 40 years"
+      },
+      "example": "Para explicarlo sin estadística: «Imaginad 100 alumnos ordenados por nota. El del medio ocupa el puesto 50. Con tecnología, el alumno medio pasa al puesto 64: sube, pero no da un salto. Y en unos estudios sube mucho y en otros nada: eso es lo que nos dice que depende de cómo se use». Dato de apoyo más reciente: en Matemáticas y Ciencias de secundaria, Hillmayr et al. (2020) obtienen 0,65 con 92 estudios (el alumno medio pasaría del puesto 50 al 74). Referencia habitual para leer estos tamaños de efecto: 0,2 pequeño, 0,5 medio, 0,8 grande."
+    },
+    {
+      "id": "docente",
+      "block": "b1",
+      "at": 10.25,
+      "type": "statement",
+      "text": {
+        "es": "No decide el equipamiento: decide **el docente**.",
+        "en": "Equipment doesn't decide: **the teacher** does."
+      },
+      "small": {
+        "es": "Pesan más las competencias didácticas digitales que los dispositivos.",
+        "en": "Teaching-related digital skills matter more than devices."
+      },
+      "cite": "sailer",
+      "key": "Más tablets no cambian el aula; un docente que sabe para qué usarlas, sí.",
+      "notes": "Sailer, Murböck y Fischer (2021) preguntaron a una muestra representativa de docentes de Baviera cuánto usan la tecnología y qué actividades hace el alumnado con ella, y lo cruzaron con el equipamiento del centro y con sus competencias. Resultado: lo que explica el tipo de actividades no son los recursos, sino las competencias digitales básicas y, sobre todo, las didácticas del profesorado. Hace falta un mínimo de equipamiento, pero a partir de ahí decide el docente. Una revisión paraguas (Wohlfart y Wagner, 2023) llega a lo mismo.",
+      "data": "Sailer et al. (2021), Teaching and Teacher Education, 103, 103346. Wohlfart y Wagner (2023), ETR&D, 71(2). Mishra (2019): TPACK con conocimiento del contexto.",
+      "do": "Señala a la sala: «Esto va de vosotros».",
+      "bridge": "«Veamos un caso de Primaria».",
+      "cut": "Omite TPACK.",
+      "src": {
+        "es": "Encuesta representativa a 410 docentes de Baviera (Alemania)",
+        "en": "Representative survey of 410 teachers in Bavaria (Germany)"
+      },
+      "example": "«Dos aulas del mismo centro, con la misma pizarra digital y las mismas tablets. En una, la pizarra es un proyector de diapositivas y las tablets, fichas de rellenar. En la otra, el alumnado graba explicaciones, compara datos y se corrige entre parejas. Mismo equipamiento, aprendizajes muy distintos: lo que cambia es el docente». Si alguien objeta «sin recursos no se puede», respuesta: el estudio también dice que hace falta un umbral mínimo, pero que comprar más no cambia lo que se hace en clase."
+    },
+    {
+      "id": "caso1",
+      "block": "b1",
+      "at": 11,
+      "type": "case",
+      "where": {
+        "es": "Primaria · Matemáticas · 5.º",
+        "en": "Primary · Maths · Year 6"
+      },
+      "title": {
+        "es": "Repaso con una app de «arrastra y suelta»",
+        "en": "Review with a «drag and drop» app"
+      },
+      "text": {
+        "es": "Arrastran números hasta que la app dice «¡Correcto!»: **aciertan por tanteo**. Un alumno con dislexia no lee bien el enunciado y se bloquea.",
+        "en": "They drag numbers until the app says «Correct!»: **they guess their way through**. A student with dyslexia cannot read the problem and gets stuck."
+      },
+      "ask": {
+        "es": "¿Cómo podemos sortear esta barrera desde el diseño?",
+        "en": "How can we get round this barrier by design?"
+      },
+      "key": "Parece digital y moderno, pero el pensamiento es el de una ficha de papel, y deja fuera a quien lee con dificultad.",
+      "notes": "Ejemplo de aula muy reconocible: la app es vistosa y el alumnado está entretenido, pero acierta probando números, sin entender el problema. Y quien tiene dificultades de lectura se queda fuera porque todo depende de leer un enunciado escrito. En ICAP: activo (manipula). En PICRAT: interactivo-reemplaza (la tablet sustituye a la ficha). Deja que la sala proponga soluciones de diseño (audio, pictogramas, parejas, inventar el problema) y recógelas: la diapositiva siguiente las ordena.",
+      "do": "Pregunta a dos personas de Primaria. No corrijas: recoge.",
+      "bridge": "«¿Cómo la subimos de escalón sin cambiar el objetivo?».",
+      "cut": "Haz tú la pregunta y respóndela en una frase.",
+      "context": {
+        "es": "5.º de Primaria · 24 alumnos · una tablet por alumno",
+        "en": "Year 6 · 24 students · one tablet each"
+      }
+    },
+    {
+      "id": "mejora1",
+      "block": "b1",
+      "at": 12,
+      "type": "improve",
+      "title": {
+        "es": "Problemas del barrio: **trabajo en parejas**",
+        "en": "Neighbourhood problems: **pair work**"
+      },
+      "text": {
+        "es": "Inventan un problema con datos del barrio, lo graban y otra pareja lo resuelve.",
+        "en": "They invent a problem with local data, record it, and another pair solves it."
+      },
+      "analysis": [
+        {
+          "icon": "stairs",
+          "k": "ICAP",
+          "v": {
+            "es": "Activo → Interactivo: crean y explican",
+            "en": "Active → Interactive: create and explain"
+          }
+        },
+        {
+          "icon": "grid_view",
+          "k": "PICRAT",
+          "v": {
+            "es": "Reemplaza → Transforma",
+            "en": "Replace → Transform"
+          }
+        },
+        {
+          "icon": "key",
+          "k": "Claves",
+          "v": {
+            "es": "1 Pedagogía primero · 2 Construir · 5 DUA",
+            "en": "1 Pedagogy first · 2 Build · 5 UDL"
+          }
+        },
+        {
+          "icon": "school",
+          "k": "MRCDD",
+          "v": {
+            "es": "3.3 Aprendizaje entre iguales · 5.1 Inclusión",
+            "en": "3.3 Peer learning · 5.1 Inclusion"
+          }
+        }
+      ],
+      "cite": "cast-udl",
+      "key": "El alumnado pasa de elegir respuestas a crear problemas y explicarlos a otros; el audio y los pictogramas abren la puerta a todos.",
+      "notes": "Recorre el análisis de abajo arriba sin tecnicismos: «Antes elegían; ahora crean (constructivo) y explican a otra pareja (interactivo)». DUA (CAST, 2024): el enunciado llega en audio y con pictogramas para todo el grupo, no solo para el alumno con dislexia; y cada pareja puede responder grabando, escribiendo o dibujando. MRCDD 3.3 aprendizaje entre iguales, 5.1 accesibilidad e inclusión, 6.3 creación de contenidos.",
+      "do": "Señala cada casilla del análisis mientras la nombras.",
+      "bridge": "«¿Con qué herramientas?».",
+      "cut": "Lee solo la propuesta y la fila ICAP.",
+      "example": "Concreta el DUA en tres gestos: el enunciado se escucha además de leerse (audio grabado por el docente o por otra pareja), lleva pictogramas en las palabras clave, y cada pareja puede responder grabando, escribiendo o dibujando. No es una adaptación para un alumno: es un diseño que sirve a todo el grupo (CAST, 2024)."
+    },
+    {
+      "id": "tool1",
+      "block": "b1",
+      "at": 13.25,
+      "type": "tool",
+      "title": {
+        "es": "Grabar, ver y entender",
+        "en": "Record, see and understand"
+      },
+      "tools": [
+        "vocaroo",
+        "arasaac"
+      ],
+      "key": "Herramientas gratuitas y sin cuenta del alumnado: la grabación del problema y los pictogramas para la consigna.",
+      "notes": "Vocaroo: grabar el problema y compartir un enlace, sin cuenta. ARASAAC: pictogramas para la consigna (los que usa esta misma web en el modo pictográfico). Si hay wifi, enseña 20 segundos ARASAAC buscando «sumar». Alternativa para el caso: GeoGebra para representar el problema. Todas están en la sección Herramientas de la app.",
+      "do": "Si hay conexión, demostración de 20 segundos; si no, señala el QR.",
+      "bridge": "«Segundo bloque: ¿qué hace vuestro alumnado con la información? Votad».",
+      "cut": "Solo nombra las herramientas."
+    },
+    {
+      "id": "sec2",
+      "block": "b2",
+      "at": 14,
+      "type": "section",
+      "n": 2,
+      "title": {
+        "es": "¿Qué hace tu alumnado **con la información**?",
+        "en": "What do your students do **with information**?"
+      },
+      "small": {
+        "es": "ESO · Geografía e Historia",
+        "en": "Lower secondary · History"
+      },
+      "key": "Mirar lo que hace el alumnado, no la herramienta.",
+      "notes": "Paso de bloque: Secundaria e Historia.",
+      "do": "Diez segundos.",
+      "bridge": "«Pensad en vuestra última clase con tecnología».",
+      "cut": "Pásala sin comentar."
+    },
+    {
+      "id": "voto2",
+      "block": "b2",
+      "at": 14.25,
+      "type": "vote",
+      "vote": "v2",
+      "key": "Vuestra respuesta es el punto de partida: ahora la situamos en la escalera ICAP.",
+      "notes": "Activa la experiencia de la sala antes de profundizar en ICAP. No comentes todavía: deja ver el resultado. Cada opción es un escalón de ICAP que vimos al principio (recibir = pasivo, manipular = activo, generar = constructivo, co-construir = interactivo). Lo habitual es que salga mucho «recibir» y «manipular»: es el punto de partida, no una crítica.",
+      "do": "Un minuto para votar. Sin conexión: mano alzada por opciones.",
+      "bridge": "«Estas cuatro opciones son los cuatro escalones de ICAP. Miremos el salto que más importa».",
+      "cut": "Mano alzada rápida y sigue."
+    },
+    {
+      "id": "salto",
+      "block": "b2",
+      "type": "compare",
+      "title": {
+        "es": "El salto grande: de manipular a generar",
+        "en": "The big leap: from manipulating to generating"
+      },
+      "items": [
+        {
+          "label": {
+            "es": "Activo · manipula",
+            "en": "Active · manipulates"
+          },
+          "text": {
+            "es": "Subraya, ordena, arrastra, **copia** el esquema",
+            "en": "Underlines, sorts, drags, **copies** the diagram"
+          }
+        },
+        {
+          "label": {
+            "es": "Constructivo · genera",
+            "en": "Constructive · generates"
+          },
+          "text": {
+            "es": "Explica con sus palabras, **inventa** ejemplos, hace su esquema",
+            "en": "Explains in their own words, **invents** examples, draws their own diagram"
+          }
+        }
+      ],
+      "cite": "icap",
+      "src": {
+        "es": "Síntesis de estudios de laboratorio y de aula",
+        "en": "Synthesis of lab and classroom studies"
+      },
+      "key": "Manipular ocupa al alumnado; generar le obliga a pensar. La pregunta es: ¿produce algo que no estaba en el material?",
+      "notes": "Vuelve a la escalera ICAP del principio y conéctala con la votación: «La mayoría habéis votado X; en la escalera está aquí». La diferencia entre activo y constructivo no es cuánto se mueve el alumnado, sino si produce algo que no estaba en el material: subrayar o arrastrar selecciona lo que ya hay; explicar, inventar un ejemplo o hacer un esquema propio obliga a relacionar ideas nuevas con las que ya tiene. Chi y Wylie (2014) recogen estudios en los que, con el mismo contenido, las actividades constructivas superan a las activas. Es la clave 2: construir, no recibir.",
+      "example": "«Mismo tema, la fotosíntesis: subrayar el texto en la tablet es activo; dibujar un esquema propio y explicarlo en un audio de un minuto es constructivo; explicárselo a un compañero que te lleva la contraria y llegar a un esquema común es interactivo».",
+      "data": "Chi, M. T. H., y Wylie, R. (2014). Educational Psychologist, 49(4), 219–243.",
+      "do": "Señala el verbo resaltado de cada columna: copia frente a inventa.",
+      "bridge": "«Con esta lente, miremos un caso de Historia».",
+      "cut": "Lee solo el título.",
+      "at": 15.5
+    },
+    {
       "id": "caso2",
       "block": "b2",
-      "at": 15.5,
+      "at": 17,
       "type": "case",
       "where": {
         "es": "ESO · Historia · 2.º",
@@ -632,7 +801,7 @@
     {
       "id": "mejora2",
       "block": "b2",
-      "at": 16.5,
+      "at": 17.75,
       "type": "improve",
       "title": {
         "es": "Construyen la suya **y la defienden**",
@@ -687,7 +856,7 @@
     {
       "id": "tool2",
       "block": "b2",
-      "at": 18.25,
+      "at": 19.25,
       "type": "tool",
       "title": {
         "es": "Construir en equipo",
@@ -706,7 +875,7 @@
     {
       "id": "sec3",
       "block": "b3",
-      "at": 19,
+      "at": 20,
       "type": "section",
       "n": 3,
       "title": {
@@ -726,7 +895,7 @@
     {
       "id": "voto6",
       "block": "b3",
-      "at": 19.25,
+      "at": 20.25,
       "type": "vote",
       "vote": "v6",
       "key": "Muchos pensamos que «ellos sí pueden» hacer varias cosas a la vez. La investigación dice otra cosa.",
@@ -738,7 +907,7 @@
     {
       "id": "nativos",
       "block": "b3",
-      "at": 20.25,
+      "at": 21,
       "type": "statement",
       "text": {
         "es": "No hay **nativos digitales**.",
@@ -764,7 +933,7 @@
     {
       "id": "distraccion",
       "block": "b3",
-      "at": 21.25,
+      "at": 22,
       "type": "big",
       "number": "−11",
       "text": {
@@ -787,7 +956,7 @@
     {
       "id": "caso3",
       "block": "b3",
-      "at": 22.25,
+      "at": 22.75,
       "type": "case",
       "where": {
         "es": "Bachillerato · Biología · 1.º",
@@ -818,7 +987,7 @@
     {
       "id": "mejora3",
       "block": "b3",
-      "at": 23.5,
+      "at": 23.75,
       "type": "improve",
       "title": {
         "es": "Vídeos cortos y clase **a partir de los errores**",
@@ -1289,8 +1458,8 @@
       "at": 40,
       "type": "keys",
       "title": {
-        "es": "7 claves",
-        "en": "7 keys"
+        "es": "7 claves: repaso",
+        "en": "7 keys: recap"
       },
       "items": [
         {
@@ -1323,7 +1492,7 @@
         }
       ],
       "key": "Siete preguntas para revisar cualquier tarea, de cualquier etapa y con cualquier herramienta.",
-      "notes": "Repaso rápido enlazando cada clave con el bloque en el que apareció: 1 y 2 en los casos de Primaria e Historia; 3 en Biología; 4 en Conservatorio; 5 en el DUA de Primaria; 6 en la EOI; 7 en los datos y el trabajo con el claustro. Todas tienen ejemplos por etapa y prompts en la app.",
+      "notes": "Las presentamos al principio; ahora, repaso rápido enlazando cada clave con el bloque en el que apareció: 1 y 2 en los casos de Primaria e Historia; 3 en Bachillerato; 4 en Conservatorio; 5 en el DUA de Primaria; 6 en la EOI; 7 en los datos y el trabajo con el claustro. Todas tienen ejemplos por etapa y prompts en la app.",
       "do": "Una frase por clave, máximo 5 segundos cada una.",
       "bridge": "«¿Recordáis la pregunta del principio? Volvemos a votarla».",
       "cut": "Lee solo los títulos."

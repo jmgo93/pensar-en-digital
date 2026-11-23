@@ -44,7 +44,7 @@ const visible = (/** @type {any} */ s, /** @type {'es' | 'en'} */ l) => {
     for (const it of c.items) add(it);
   }
   for (const x of s.show ?? []) add(x.text);
-  if (s.type === 'areas') for (const a of s.items) add(a.title);
+  if (s.type === 'areas') for (const a of s.items) add(a.title); // a.text ya entra por it.text
   for (const x of s.loop ?? []) add(x.label);
   add(s.ask);
   for (const a of s.analysis ?? []) parts.push(a.k, typeof a.v === 'string' ? a.v : a.v[l]);
@@ -71,7 +71,7 @@ GENERADO por \`tools/build-escaleta.mjs\` desde \`content/presentacion.json\`. P
 - Duración: 45 minutos · ${deck.slides.length} diapositivas · ${deck.blocks.length} actos.
 - Presentación: ${site.url}presentacion/ · Notas del ponente en directo: ${site.url}presentacion/?notas (o tecla N).
 - Teclas: → / Av Pág / espacio (siguiente) · ← / Re Pág (anterior) · Inicio/Fin · B o . (pantalla negra) · F (pantalla completa) · N (abrir notas) · T (reiniciar cronómetro) · número + Intro (ir a esa diapositiva).
-- Votaciones: v1–v4 (ver \`docs/votaciones.md\`). Sin conexión, la diapositiva propone votar a mano alzada.
+- Votaciones: v0 (inicio) y v5 (final) para medir el cambio, y una por bloque (ver \`docs/votaciones.md\`). Sin conexión, la diapositiva propone votar a mano alzada.
 - Hilo conductor: *¿Qué tiene que pensar el alumno ahora que antes no pensaba?*
 - Estudios explicados para contarlos: \`docs/estudios-ponente.md\` (y PDF en el Panel del ponente). Cada diapositiva de teoría tiene en las notas un «Ejemplo para defenderlo».
 
@@ -99,7 +99,7 @@ for (const b of deck.blocks) {
     const wordsEn = count(visible(s, 'en'));
     // Casos y mejoras se comentan con la sala: admiten algo más de texto.
     // Casos, mejoras y columnas se comentan con la sala; la votación con tareas lleva su contexto.
-    const limit = s.type === 'case' ? 52 : s.type === 'improve' ? 56 : s.type === 'columns' || s.type === 'areas' ? 44 : s.show ? 50 : 20;
+    const limit = s.type === 'case' ? 52 : s.type === 'improve' ? 56 : s.type === 'areas' && s.items.some((/** @type {any} */ a) => a.text) ? 64 : s.type === 'columns' || s.type === 'areas' ? 44 : s.show ? 50 : s.type === 'keys' || s.type === 'compare' ? 30 : 20;
     if (words > limit) problems.push(`${s.id}: ${words} palabras (es)`);
     if (wordsEn > limit) problems.push(`${s.id}: ${wordsEn} palabras (en)`);
     for (const k of REQUIRED) if (!s[k] && !(k === 'bridge' && i === deck.slides.length - 1)) problems.push(`${s.id}: falta «${k}» en las notas`);
