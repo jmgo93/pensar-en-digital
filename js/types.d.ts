@@ -46,6 +46,10 @@ export interface Site {
   url: string;
   shortUrl: string;
   author: string;
+  /** Centro del autor (texto visible junto al nombre). */
+  school: string;
+  /** Logo del centro (ruta relativa a la raíz). */
+  schoolLogo: string;
   year: number;
   cepUrl: string;
   licenseContentUrl: string;

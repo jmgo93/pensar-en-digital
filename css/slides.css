@@ -90,7 +90,13 @@
 .s-title { display: grid; align-content: center; gap: 48px; }
 .s-title h1 { font-size: 92px; line-height: 1.1; font-weight: 600; max-inline-size: 1560px; }
 .s-brand { display: flex; align-items: center; gap: 16px; font-size: 44px; font-weight: 600; }
-.s-author { font-size: 52px; }
+.s-author { display: grid; gap: 4px; font-size: 52px; }
+.s-school { font-size: 40px; opacity: 0.9; }
+.s-byline { display: flex; align-items: center; gap: 36px; }
+/* El sello lleva texto negro sobre fondo transparente: siempre sobre blanco, como los QR. */
+.s-school-logo { inline-size: 200px; block-size: auto; padding: 10px; border-radius: 50%; background: #fff; }
+.s-end-head { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+.s-end-head .s-school-logo { inline-size: 220px; }
 
 /* Afirmación */
 .s-statement { display: grid; align-content: center; justify-items: start; }

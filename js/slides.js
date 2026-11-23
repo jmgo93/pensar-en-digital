@@ -104,6 +104,8 @@ const startCountdown = (slide, restart = false) => {
   countdownTimers.set(el, timer);
   tick();
 };
+/** Logo del centro sobre un círculo blanco (el sello tiene texto negro y fondo transparente). @param {import('./types').Site} site @param {string} cls */
+const schoolLogo = (site, cls) => h('img', { class: cls, src: fromRoot(site.schoolLogo).href, alt: site.school, width: 512, height: 509, decoding: 'async' });
 const W = 1920;
 const H = 1080;
 
@@ -122,7 +124,13 @@ const slideContent = (s, ctx) => {
 
   switch (s.type) {
     case 'title':
-      return h('div', { class: 's-title' }, h('p', { class: 's-brand' }, icon('lightbulb'), ' Pensar en Digital'), h('h1', {}, loc(s.title)), h('p', { class: 's-author' }, loc(s.subtitle)));
+      return h(
+        'div',
+        { class: 's-title' },
+        h('p', { class: 's-brand' }, icon('lightbulb'), ' Pensar en Digital'),
+        h('h1', {}, loc(s.title)),
+        h('div', { class: 's-byline' }, schoolLogo(ctx.site, 's-school-logo'), h('p', { class: 's-author' }, loc(s.subtitle), h('span', { class: 's-school' }, ctx.site.school))),
+      );
     case 'statement':
       return h('div', { class: 's-statement' }, h('h2', {}, ...rich(loc(s.text))), s.small ? h('p', { class: 's-small' }, ...rich(loc(s.small))) : null, cite);
     case 'compare':
@@ -313,7 +321,7 @@ const slideContent = (s, ctx) => {
       return h(
         'div',
         { class: 's-end' },
-        h('h2', {}, loc(s.title)),
+        h('div', { class: 's-end-head' }, h('h2', {}, loc(s.title)), schoolLogo(ctx.site, 's-school-logo')),
         h('p', { class: 's-small' }, ctx.site.shortUrl),
         h('p', { class: 's-legal' }, `© ${ctx.site.year} ${ctx.site.author} · ${t('footer.licensePre')} ${t('footer.license')} · ${t('footer.claude')}`),
         h('p', { class: 's-legal' }, `${t('footer.cep')} ${t('footer.cepLink')} ${t('footer.cepAfter')}`),

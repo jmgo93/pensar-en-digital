@@ -780,6 +780,9 @@ input[type="range"] {
 
 /* ---------- Footer ---------- */
 
+.footer-school { display: flex; align-items: center; gap: 12px; }
+/* Sello del centro: texto negro sobre transparente, siempre sobre blanco. */
+.school-logo { inline-size: 3rem; block-size: 3rem; padding: 2px; border-radius: 50%; background: #fff; }
 .site-footer {
   inline-size: 100%;
   max-inline-size: var(--pd-content-max);

@@ -259,7 +259,7 @@ Cada sección lleva su icono Material Symbols.
 ## 12. Footer (en todas las pantallas, también en la presentación)
 
 - `© 2026 Juan María Gámez Ortiz · Contenido bajo licencia CC BY 4.0 (Atribución) · Elaborado con la ayuda de Claude (Anthropic)`
-- Línea sutil, en tipografía `bodySmall`, sin destacar: *"¿Formación en tu centro, grupo de trabajo o curso? Contacta con el CEP de Almería y pregunta por Juan María Gámez."* (el enlace se rellena con el dato de la pregunta 0.3).
+- Línea sutil, en tipografía `bodySmall`, sin destacar: *"¿Formación en tu centro, grupo de trabajo o curso? Contacta con el CEP de Almería y pregunta por Juan María Gámez Ortiz."* (el enlace se rellena con el dato de la pregunta 0.3).
 - Atribución de ARASAAC (ver §6) y "Iconos: Material Symbols (Apache 2.0)".
 - Archivo `LICENSE`: CC BY 4.0 para el contenido y MIT para el código (proponlo y confírmalo conmigo).
 

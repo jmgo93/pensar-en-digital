@@ -147,6 +147,7 @@ ${modulesFor(route.id).map((m) => `  <link rel="modulepreload" href="${rel}js/${
     </main>
 
     <footer class="site-footer">
+      <p class="footer-school"><img class="school-logo" src="${rel}${site.schoolLogo.replace('-512.', '-160.')}" alt="" width="160" height="159" loading="lazy" decoding="async"> <span>${esc(site.author)} · ${esc(site.school)}</span></p>
       <p>© ${site.year} ${esc(site.author)} · <span data-i18n="footer.licensePre">${tx('footer.licensePre')}</span> <a href="${site.licenseContentUrl}" rel="license" data-i18n="footer.license">${tx('footer.license')}</a> · <span data-i18n="footer.claude">${tx('footer.claude')}</span></p>
       <p><span data-i18n="footer.cep">${tx('footer.cep')}</span> <a href="${site.cepUrl}" data-i18n="footer.cepLink">${tx('footer.cepLink')}</a> <span data-i18n="footer.cepAfter">${tx('footer.cepAfter')}</span></p>
       <p><a href="${rel}ponente/" data-i18n="speaker.footer">${tx('speaker.footer')}</a></p>
