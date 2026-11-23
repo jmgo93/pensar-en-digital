@@ -246,9 +246,11 @@
     "slides.tool": "Herramientas",
     "slides.example2": "Ejemplo para defenderlo",
     "speaker.estudios": "Guía de estudios (PDF)",
+    "speaker.deckPdf": "Presentación en PDF (plan B sin conexión)",
     "slides.backToWeb": "Volver a la web",
     "slides.countdown": "Tiempo para votar",
-    "slides.area": "Área"
+    "slides.area": "Área",
+    "slides.restartCountdown": "Reiniciar cuenta atrás (1 min)"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -497,8 +499,10 @@
     "slides.tool": "Tools",
     "slides.example2": "Example to back it up",
     "speaker.estudios": "Studies guide (PDF, Spanish)",
+    "speaker.deckPdf": "Slides as PDF (offline plan B, Spanish)",
     "slides.backToWeb": "Back to the website",
     "slides.countdown": "Time to vote",
-    "slides.area": "Area"
+    "slides.area": "Area",
+    "slides.restartCountdown": "Restart countdown (1 min)"
   }
 }

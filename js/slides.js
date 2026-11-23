@@ -77,10 +77,14 @@ const countUp = (slide) => {
 };
 /** Cuenta atrás de las votaciones: empieza la primera vez que se muestra la diapositiva y desaparece al llegar a cero. */
 const COUNTDOWN_MS = 60_000;
-/** @param {HTMLElement} slide */
-const startCountdown = (slide) => {
+/** @type {WeakMap<HTMLElement, number>} */
+const countdownTimers = new WeakMap();
+/** @param {HTMLElement} slide @param {boolean} [restart] desde las notas o con la tecla C */
+const startCountdown = (slide, restart = false) => {
   const el = /** @type {HTMLElement | null} */ (slide.querySelector('.s-countdown'));
-  if (!el || el.dataset.started) return;
+  if (!el || (el.dataset.started && !restart)) return;
+  clearInterval(countdownTimers.get(el));
+  el.classList.remove('is-done', 'is-ending');
   el.dataset.started = '1';
   const end = Date.now() + COUNTDOWN_MS;
   el.setAttribute('aria-label', t('slides.countdown'));
@@ -97,6 +101,7 @@ const startCountdown = (slide) => {
     setTimeout(() => el.setAttribute('hidden', ''), 400);
   };
   const timer = setInterval(tick, 250);
+  countdownTimers.set(el, timer);
   tick();
 };
 const W = 1920;
@@ -518,6 +523,7 @@ const init = async () => {
         { class: 'n-controls' },
         h('button', { type: 'button', class: 'btn btn-tonal interactive', onclick: () => go(index - 1) }, icon('arrow_back'), t('plantilla.back')),
         h('button', { type: 'button', class: 'btn btn-text interactive', onclick: resetTimer }, icon('timer'), t('slides.resetTimer')),
+        s?.type === 'vote' ? h('button', { type: 'button', class: 'btn btn-tonal interactive', onclick: () => channel?.postMessage({ type: 'countdown' }) }, icon('how_to_vote'), t('slides.restartCountdown')) : null,
         archiveButton(site, 'btn btn-text interactive'),
         h('a', { class: 'btn btn-text interactive', href: fromRoot('ponente/').href }, icon('home'), t('slides.backToWeb')),
         h('button', { type: 'button', class: 'btn btn-filled interactive', onclick: () => go(index + 1) }, t('plantilla.next'), icon('arrow_forward')),
@@ -585,6 +591,7 @@ const init = async () => {
   channel?.addEventListener('message', (e) => {
     const msg = e.data;
     if (msg?.type === 'goto') go(msg.index, true);
+    if (msg?.type === 'countdown' && !notesMode && slideEls[index] && deck.slides[index]?.type === 'vote') startCountdown(/** @type {HTMLElement} */ (slideEls[index]), true);
     if (msg?.type === 'timer') {
       startTime = msg.startTime;
       sessionStorage.setItem('pd-timer', String(startTime));
@@ -610,6 +617,7 @@ const init = async () => {
       else document.documentElement.requestFullscreen?.().catch(() => undefined);
     } else if (k === 'n' || k === 'N') window.open(`${location.pathname}?notas#/${index + 1}`, 'pd-notas', 'popup,width=1280,height=800');
     else if (k === 't' || k === 'T') resetTimer();
+    else if ((k === 'c' || k === 'C') && !notesMode && slideEls[index] && deck.slides[index]?.type === 'vote') startCountdown(/** @type {HTMLElement} */ (slideEls[index]), true);
     else if (/^\d$/.test(k)) {
       typed += k;
       return;

@@ -74,6 +74,7 @@ assets/descargas/  guía de análisis de tareas, cuaderno de prompts y siete cla
 - `npm run check:ui`: axe, overflow y errores de consola en todas las rutas y esquemas (necesita el servidor del 8765 y Chrome o Edge).
 - `npm run tokens` / `icons` / `app-icons` / `picto` / `blank`: regeneran recursos derivados (raramente).
 - `npm run docs:pdf`: regenera los PDF descargables y `docs/escaleta.pdf` (Chrome o Edge). Ejecutarlo a mano cuando cambien `guia.json`, `claves.json`, `prompts.json` o `presentacion.json`. Los PDF de `assets/descargas/` no se precargan: el SW los guarda al descargarlos.
+- `npm run deck:pdf`: regenera `docs/presentacion-es.pdf` (plan B sin conexión: una captura por diapositiva; `--en` añade la versión inglesa). Ejecutarlo a mano cuando cambie `presentacion.json`, `votaciones.json` o el motor de diapositivas.
 - **Antes de cada commit que se vaya a publicar: `npm run build:all`** (páginas, índice de búsqueda, hoja de pruebas y lista de precarga del SW). Si no se regenera `sw-precache.js`, los usuarios no reciben la nueva versión.
 
 ## Workflow de GitHub Pages
