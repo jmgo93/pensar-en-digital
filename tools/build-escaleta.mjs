@@ -71,7 +71,7 @@ GENERADO por \`tools/build-escaleta.mjs\` desde \`content/presentacion.json\`. P
 - Duración: 45 minutos · ${deck.slides.length} diapositivas · ${deck.blocks.length} actos.
 - Presentación: ${site.url}presentacion/ · Notas del ponente en directo: ${site.url}presentacion/?notas (o tecla N).
 - Teclas: → / Av Pág / espacio (siguiente) · ← / Re Pág (anterior) · Inicio/Fin · B o . (pantalla negra) · F (pantalla completa) · N (abrir notas) · T (reiniciar cronómetro) · número + Intro (ir a esa diapositiva).
-- Votaciones: v0 (inicio) y v5 (final) para medir el cambio, y una por bloque (ver \`docs/votaciones.md\`). Sin conexión, la diapositiva propone votar a mano alzada.
+- Votaciones: v0 (inicio) y v5 (final) para medir el cambio, y una por bloque (ver \`docs/votaciones.md\`). Cada votación muestra una cuenta atrás de 1 minuto que desaparece al llegar a cero (empieza la primera vez que se muestra la diapositiva). Sin conexión, la diapositiva propone votar a mano alzada.
 - Hilo conductor: *¿Qué tiene que pensar el alumno ahora que antes no pensaba?*
 - Estudios explicados para contarlos: \`docs/estudios-ponente.md\` (y PDF en el Panel del ponente). Cada diapositiva de teoría tiene en las notas un «Ejemplo para defenderlo».
 

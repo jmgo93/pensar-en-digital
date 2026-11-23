@@ -238,6 +238,21 @@
 .s-vote.is-long .s-results .vote-bars { gap: 14px; }
 .s-vote.is-long .s-qr { inline-size: 440px; block-size: 440px; }
 .s-kicker { display: flex; align-items: center; gap: 16px; font-size: 40px; font-weight: 700; color: var(--md-sys-color-primary); }
+/* Cuenta atrás de la votación: el fondo se vacía con el tiempo (--p de 1 a 0) */
+.s-countdown {
+  margin-inline-start: 16px;
+  padding: 4px 28px;
+  border-radius: 999px;
+  border: 4px solid var(--md-sys-color-primary);
+  background: linear-gradient(to right, var(--md-sys-color-primary-container) calc(var(--p, 1) * 100%), transparent 0);
+  color: var(--md-sys-color-on-primary-container);
+  font-size: 48px;
+  font-variant-numeric: tabular-nums;
+  transition: opacity 400ms ease;
+}
+.s-countdown[hidden] { display: none; }
+.s-countdown.is-ending { border-color: var(--md-sys-color-error); }
+.s-countdown.is-done { opacity: 0; }
 .s-status { font-size: 40px; font-weight: 700; color: var(--md-sys-color-on-surface-variant); }
 
 .s-results .vote-bars { display: grid; gap: 18px; padding: 0; list-style: none; }
@@ -291,6 +306,7 @@
   .deck .slide.is-current .s-cite { animation: fade-in-slide 300ms ease 700ms both; }
   .deck .slide.is-current .s-area-grid li { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 110ms) both; }
   .deck .slide.is-current .s-area-grid li.is-focus { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 110ms) both, area-glow 900ms var(--md-sys-motion-easing-emphasized) 1200ms both; }
+  .deck .slide.is-current .s-countdown.is-ending { animation: delta-flash 1000ms ease-in-out infinite; }
   .deck .slide.is-current .s-vote-qr .s-qr { animation: qr-ring 2400ms ease-in-out 1200ms infinite; }
   .deck .slide.is-current .s-loop-item { animation: loop-swap 4000ms ease-in-out calc(800ms + var(--i, 0) * 2000ms) infinite; }
   .deck .slide.is-current .s-columns .s-col { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 350ms) both; }

@@ -75,6 +75,30 @@ const countUp = (slide) => {
   };
   requestAnimationFrame(step);
 };
+/** Cuenta atrás de las votaciones: empieza la primera vez que se muestra la diapositiva y desaparece al llegar a cero. */
+const COUNTDOWN_MS = 60_000;
+/** @param {HTMLElement} slide */
+const startCountdown = (slide) => {
+  const el = /** @type {HTMLElement | null} */ (slide.querySelector('.s-countdown'));
+  if (!el || el.dataset.started) return;
+  el.dataset.started = '1';
+  const end = Date.now() + COUNTDOWN_MS;
+  el.setAttribute('aria-label', t('slides.countdown'));
+  el.removeAttribute('hidden');
+  const tick = () => {
+    const left = Math.max(0, end - Date.now());
+    const secs = Math.ceil(left / 1000);
+    el.textContent = `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`;
+    el.style.setProperty('--p', String(left / COUNTDOWN_MS));
+    el.classList.toggle('is-ending', secs <= 10);
+    if (left > 0) return;
+    clearInterval(timer);
+    el.classList.add('is-done');
+    setTimeout(() => el.setAttribute('hidden', ''), 400);
+  };
+  const timer = setInterval(tick, 250);
+  tick();
+};
 const W = 1920;
 const H = 1080;
 
@@ -152,7 +176,7 @@ const slideContent = (s, ctx) => {
         h(
           'div',
           { class: 's-vote-main' },
-          h('p', { class: 's-kicker' }, icon('how_to_vote'), t('slides.vote')),
+          h('p', { class: 's-kicker' }, icon('how_to_vote'), t('slides.vote'), h('span', { class: 's-countdown', role: 'timer', hidden: '' })),
           s.show ? h('div', { class: 's-show' }, ...s.show.map((/** @type {any} */ x) => h('p', { class: 's-show-item' }, h('span', { class: 's-show-label' }, x.icon ? icon(x.icon) : null, x.label), h('span', {}, loc(x.text))))) : null,
           h('h2', {}, loc(vote.question)),
           results,
@@ -531,6 +555,7 @@ const init = async () => {
     if (current) shrinkToFit(current);
     updateControls();
     if (current && deck.slides[index]?.type === 'big') countUp(current);
+    if (current && deck.slides[index]?.type === 'vote') startCountdown(current);
     startVote();
   };
 
@@ -652,6 +677,7 @@ const init = async () => {
     if (first) {
       shrinkToFit(first);
       if (deck.slides[index]?.type === 'big') countUp(first);
+      if (deck.slides[index]?.type === 'vote') startCountdown(first);
     }
     // Por si las fuentes terminan de cargar después.
     document.fonts?.ready.then(() => slideEls[index] && shrinkToFit(/** @type {HTMLElement} */ (slideEls[index])));
