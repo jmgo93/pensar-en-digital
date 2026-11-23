@@ -1,14 +1,14 @@
 {
   "intro": {
-    "es": "45 minutos. Empezamos situando el Marco de Referencia de la Competencia Digital Docente, sus seis áreas (con detalle en las cuatro que miran al aula) y las tres lentes con las que analizaremos cada caso: ICAP, PICRAT y las siete claves. Después, cinco bloques con el mismo recorrido: una pregunta para la sala, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta concreta. Hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba?",
-    "en": "45 minutes. We start by placing the Spanish Teacher Digital Competence Framework, its six areas (in detail, the four that look at the classroom) and the three lenses we will use to analyse each case: ICAP, PICRAT and the seven keys. Then five blocks following the same path: a question for the audience, what research says, a classroom case and an improvement with a specific tool. Guiding question: what do students have to think about now that they did not before?"
+    "es": "45 minutos. Empezamos situando el Marco de Referencia de la Competencia Digital Docente, sus seis áreas (con una diapositiva para cada una de las cuatro que miran al aula y sus competencias) y las tres lentes con las que analizaremos cada caso: ICAP, PICRAT y las siete claves. Después, cinco bloques con el mismo recorrido: una pregunta para la sala, lo que dice la investigación, un caso de aula y una propuesta de mejora con una herramienta concreta. Hilo conductor: ¿qué tiene que pensar el alumno ahora que antes no pensaba?",
+    "en": "45 minutes. We start by placing the Spanish Teacher Digital Competence Framework, its six areas (one slide for each of the four that look at the classroom, with their competences) and the three lenses we will use to analyse each case: ICAP, PICRAT and the seven keys. Then five blocks following the same path: a question for the audience, what research says, a classroom case and an improvement with a specific tool. Guiding question: what do students have to think about now that they did not before?"
   },
   "blocks": [
     {
       "id": "b1",
       "minutes": [
-        8,
-        14
+        9,
+        15
       ],
       "icon": "school",
       "title": {
@@ -33,8 +33,8 @@
     {
       "id": "b2",
       "minutes": [
-        14,
-        20
+        15,
+        21
       ],
       "icon": "stairs",
       "title": {
@@ -59,8 +59,8 @@
     {
       "id": "b3",
       "minutes": [
-        20,
-        26
+        21,
+        27
       ],
       "icon": "center_focus_strong",
       "title": {
@@ -85,7 +85,7 @@
     {
       "id": "b4",
       "minutes": [
-        26,
+        27,
         34
       ],
       "icon": "smart_toy",

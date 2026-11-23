@@ -205,6 +205,26 @@ const slideContent = (s, ctx) => {
         h('p', { class: 's-status' }),
       );
     }
+    case 'competences':
+      return h(
+        'div',
+        { class: 's-comp' },
+        h('h2', {}, icon(s.icon), h('span', { class: 's-comp-n' }, `${t('slides.area')} ${s.n} · `), loc(s.title)),
+        h(
+          'ul',
+          { class: 's-comp-list' },
+          ...s.items.map((/** @type {any} */ c, /** @type {number} */ i) =>
+            h(
+              'li',
+              { class: c.focus ? 'is-focus' : undefined, style: `--i:${i}` },
+              h('span', { class: 's-comp-code' }, c.code),
+              h('span', { class: 's-comp-body' }, h('strong', {}, loc(c.title)), h('span', {}, loc(c.text))),
+              c.where ? h('span', { class: 's-comp-where' }, icon('arrow_forward'), c.where.map((/** @type {L} */ w) => loc(w)).join(' · ')) : null,
+            ),
+          ),
+        ),
+        cite,
+      );
     case 'areas':
       return h(
         'div',
@@ -343,6 +363,8 @@ const notesPanel = (s) => {
 const shrinkToFit = (slide) => {
   const body = /** @type {HTMLElement | null} */ (slide.firstElementChild);
   if (!body || !body.isConnected || getComputedStyle(slide).display === 'none') return;
+  // Sin transición: si no, el zoom no se aplica al momento y la medida sale mal (p. ej. con movimiento reducido).
+  body.style.setProperty('transition', 'none');
   body.style.removeProperty('zoom');
   delete body.dataset.fit;
   let z = 1;
@@ -552,10 +574,11 @@ const init = async () => {
     });
     live.textContent = `${t('slides.slide')} ${index + 1} / ${total}`;
     const current = slideEls[index];
+    // La cuenta atrás aparece antes de medir, para que el ajuste de tamaño la tenga en cuenta.
+    if (current && deck.slides[index]?.type === 'vote') startCountdown(current);
     if (current) shrinkToFit(current);
     updateControls();
     if (current && deck.slides[index]?.type === 'big') countUp(current);
-    if (current && deck.slides[index]?.type === 'vote') startCountdown(current);
     startVote();
   };
 
@@ -675,9 +698,9 @@ const init = async () => {
     });
     const first = slideEls[index];
     if (first) {
+      if (deck.slides[index]?.type === 'vote') startCountdown(first);
       shrinkToFit(first);
       if (deck.slides[index]?.type === 'big') countUp(first);
-      if (deck.slides[index]?.type === 'vote') startCountdown(first);
     }
     // Por si las fuentes terminan de cargar después.
     document.fonts?.ready.then(() => slideEls[index] && shrinkToFit(/** @type {HTMLElement} */ (slideEls[index])));

@@ -46,6 +46,7 @@ const visible = (/** @type {any} */ s, /** @type {'es' | 'en'} */ l) => {
   for (const x of s.show ?? []) add(x.text);
   if (s.type === 'areas') for (const a of s.items) add(a.title); // a.text ya entra por it.text
   for (const x of s.loop ?? []) add(x.label);
+  if (s.type === 'competences') for (const c of s.items) { add(c.title); for (const w of c.where ?? []) add(w); }
   add(s.ask);
   for (const a of s.analysis ?? []) parts.push(a.k, typeof a.v === 'string' ? a.v : a.v[l]);
   for (const id of s.tools ?? []) parts.push(id);
@@ -59,7 +60,7 @@ const count = (/** @type {string[]} */ parts) => parts.join(' ').split(/\s+/).fi
 const problems = [];
 const mmss = (/** @type {number} */ m) => `${String(Math.floor(m)).padStart(2, '0')}:${String(Math.round((m % 1) * 60)).padStart(2, '0')}`;
 /** @param {any} s */
-const head = (s) => (s.type === 'vote' ? `Votación ${s.vote}: ${votes[s.vote].question.es}` : s.type === 'big' ? `${s.number} · ${s.text.es}` : (s.title ?? s.text)?.es ?? '');
+const head = (s) => (s.type === 'competences' ? `Área ${s.n} · ${s.title.es}` : s.type === 'vote' ? `Votación ${s.vote}: ${votes[s.vote].question.es}` : s.type === 'big' ? `${s.number} · ${s.text.es}` : (s.title ?? s.text)?.es ?? '');
 /** @param {string} s */
 const cell = (s) => s.replace(/\|/g, '\\|');
 const REQUIRED = ['key', 'notes', 'do', 'bridge', 'cut'];
@@ -99,7 +100,7 @@ for (const b of deck.blocks) {
     const wordsEn = count(visible(s, 'en'));
     // Casos y mejoras se comentan con la sala: admiten algo más de texto.
     // Casos, mejoras y columnas se comentan con la sala; la votación con tareas lleva su contexto.
-    const limit = s.type === 'case' ? 52 : s.type === 'improve' ? 56 : s.type === 'areas' && s.items.some((/** @type {any} */ a) => a.text) ? 64 : s.type === 'columns' || s.type === 'areas' ? 44 : s.show ? 50 : s.type === 'keys' || s.type === 'compare' ? 30 : 20;
+    const limit = s.type === 'case' ? 52 : s.type === 'improve' ? 56 : s.type === 'areas' && s.items.some((/** @type {any} */ a) => a.text) ? 64 : s.type === 'columns' || s.type === 'areas' ? 44 : s.show ? 50 : s.type === 'keys' || s.type === 'compare' ? 30 : s.type === 'competences' ? 80 : 20;
     if (words > limit) problems.push(`${s.id}: ${words} palabras (es)`);
     if (wordsEn > limit) problems.push(`${s.id}: ${wordsEn} palabras (en)`);
     for (const k of REQUIRED) if (!s[k] && !(k === 'bridge' && i === deck.slides.length - 1)) problems.push(`${s.id}: falta «${k}» en las notas`);

@@ -27,12 +27,12 @@ Cada votación abre su bloque y va **justo antes** del contenido que la responde
 | Id | Diap. | Min | Bloque | Pregunta | Opciones |
 |---|---|---|---|---|---|
 | **v0** | 3 | 1 | Apertura: el marco y tres lentes | Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | Usar una aplicación más interactiva y atractiva · Añadir puntos, insignias y clasificación · Que lo expliquen con sus palabras y lo contrasten con un compañero · Que usen una IA para resolverlo más rápido |
-| v1 | 12 | 8,25 | 1 · ¿Digitalizar o innovar? (Primaria) | Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
-| v2 | 19 | 14,25 | 2 · ¿Qué hace con la información? (ESO) | Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado? | Recibir: ver, escuchar, leer · Manipular: copiar, completar, subrayar · Generar: explicar, crear algo nuevo · Co-construir: debatir y crear con otros |
-| v6 | 25 | 20,25 | 3 · Atención y «nativos digitales» (Bachillerato) | Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien? | Sí, aprenderá igual de bien · No, aprenderá peor · Dependerá de la persona |
-| v3 | 32 | 26,25 | 4 · IA: ¿muleta o tutor? (EOI) | Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá? | Sacarán mejor nota que quien no usó IA · Sacarán la misma nota · Sacarán peor nota · Dependerá de cómo usen la IA |
-| v7 | 40 | 34,25 | 5 · Evaluar para aprender (Conservatorio) | Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado? | Mirará la nota y lo guardará · Leerá los comentarios · Lo corregirá y lo volverá a entregar · No lo sé |
-| **v5** | 46 | 41,25 | Cierre | Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | Usar una aplicación más interactiva y atractiva · Añadir puntos, insignias y clasificación · Que lo expliquen con sus palabras y lo contrasten con un compañero · Que usen una IA para resolverlo más rápido |
+| v1 | 15 | 9,25 | 1 · ¿Digitalizar o innovar? (Primaria) | Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos? | Solo la A · Solo la B · Las dos · Ninguna |
+| v2 | 22 | 15,25 | 2 · ¿Qué hace con la información? (ESO) | Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado? | Recibir: ver, escuchar, leer · Manipular: copiar, completar, subrayar · Generar: explicar, crear algo nuevo · Co-construir: debatir y crear con otros |
+| v6 | 28 | 21,25 | 3 · Atención y «nativos digitales» (Bachillerato) | Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien? | Sí, aprenderá igual de bien · No, aprenderá peor · Dependerá de la persona |
+| v3 | 35 | 27,25 | 4 · IA: ¿muleta o tutor? (EOI) | Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá? | Sacarán mejor nota que quien no usó IA · Sacarán la misma nota · Sacarán peor nota · Dependerá de cómo usen la IA |
+| v7 | 43 | 34,25 | 5 · Evaluar para aprender (Conservatorio) | Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado? | Mirará la nota y lo guardará · Leerá los comentarios · Lo corregirá y lo volverá a entregar · No lo sé |
+| **v5** | 49 | 41,25 | Cierre | Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | Usar una aplicación más interactiva y atractiva · Añadir puntos, insignias y clasificación · Que lo expliquen con sus palabras y lo contrasten con un compañero · Que usen una IA para resolverlo más rápido |
 
 La v4 («¿Qué vas a probar el lunes?») ya no está en la presentación: el compromiso se pide de palabra al mostrar el kit. Su formulario se conserva y se archiva con las demás.
 
@@ -45,7 +45,7 @@ La v4 («¿Qué vas a probar el lunes?») ya no está en la presentación: el co
 
 ### Antes y después (v0 → v5)
 
-- **La diapositiva 47, «¿Ha cambiado algo?»,** muestra las dos distribuciones una al lado de la otra (con etiquetas cortas) y una línea grande con el cambio en la opción buscada: *«Explicar y contrastar»: 23 % → 61 %*. La opción buscada está marcada en `content/votaciones.json` con `"target": 2`.
+- **La diapositiva 50, «¿Ha cambiado algo?»,** muestra las dos distribuciones una al lado de la otra (con etiquetas cortas) y una línea grande con el cambio en la opción buscada: *«Explicar y contrastar»: 23 % → 61 %*. La opción buscada está marcada en `content/votaciones.json` con `"target": 2`.
 - No digas en v0 cuál es la buena. Es una medida orientativa: votos anónimos, sin emparejar personas.
 
 ## Perfil de ponente

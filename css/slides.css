@@ -181,12 +181,13 @@
 .s-keys ol {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
   gap: 24px 64px;
   padding: 0;
   list-style: none;
 }
 .s-keys li { display: flex; align-items: center; gap: 28px; font-size: 54px; font-weight: 500; }
-.s-keys li:last-child { grid-column: 1 / -1; }
 .s-key-n {
   display: inline-grid;
   place-items: center;
@@ -241,19 +242,21 @@
 /* Cuenta atrás de la votación: el fondo se vacía con el tiempo (--p de 1 a 0) */
 .s-countdown {
   margin-inline-start: 16px;
-  padding: 4px 28px;
+  padding: 0 24px;
   border-radius: 999px;
-  border: 4px solid var(--md-sys-color-primary);
+  border: 3px solid var(--md-sys-color-primary);
   background: linear-gradient(to right, var(--md-sys-color-primary-container) calc(var(--p, 1) * 100%), transparent 0);
   color: var(--md-sys-color-on-primary-container);
-  font-size: 48px;
+  font-size: 40px;
+  line-height: 1.1;
   font-variant-numeric: tabular-nums;
   transition: opacity 400ms ease;
 }
 .s-countdown[hidden] { display: none; }
 .s-countdown.is-ending { border-color: var(--md-sys-color-error); }
 .s-countdown.is-done { opacity: 0; }
-.s-status { font-size: 40px; font-weight: 700; color: var(--md-sys-color-on-surface-variant); }
+/* min-block-size: reserva la línea del estado («Esperando votos…») antes de que llegue, para que el ajuste de tamaño la cuente */
+.s-status { min-block-size: 1.3em; font-size: 40px; font-weight: 700; color: var(--md-sys-color-on-surface-variant); }
 
 .s-results .vote-bars { display: grid; gap: 18px; padding: 0; list-style: none; }
 .s-results .vote-row {
@@ -304,6 +307,8 @@
   .deck .slide.is-current .s-cols > :first-child { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) 150ms both; }
   .deck .slide.is-current .s-cols > :nth-child(2) { animation: slide-in 400ms var(--md-sys-motion-easing-emphasized-decelerate) 550ms both; }
   .deck .slide.is-current .s-cite { animation: fade-in-slide 300ms ease 700ms both; }
+  .deck .slide.is-current .s-comp-list li { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 110ms) both; }
+  .deck .slide.is-current .s-comp-list li.is-focus { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 110ms) both, area-glow 900ms var(--md-sys-motion-easing-emphasized) calc(900ms + var(--i, 0) * 150ms) both; }
   .deck .slide.is-current .s-area-grid li { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 110ms) both; }
   .deck .slide.is-current .s-area-grid li.is-focus { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) calc(200ms + var(--i, 0) * 110ms) both, area-glow 900ms var(--md-sys-motion-easing-emphasized) 1200ms both; }
   .deck .slide.is-current .s-countdown.is-ending { animation: delta-flash 1000ms ease-in-out infinite; }
@@ -323,6 +328,32 @@
 @keyframes hl-sweep { from { background-size: 0% 0.28em; } }
 @keyframes key-ring { from { box-shadow: 0 0 0 0 var(--md-sys-color-primary); scale: 1; } 60% { scale: 1.04; } }
 @keyframes delta-flash { 50% { scale: 1.06; } }
+
+/* Competencias de un área: resaltadas las que salen en los casos */
+.s-comp { display: grid; align-content: center; gap: 20px; }
+.s-comp h2 { display: flex; align-items: center; gap: 0 20px; flex-wrap: wrap; font-size: 64px; }
+.s-comp-n { color: var(--md-sys-color-primary); }
+/* Áreas con cinco competencias: algo más compactas */
+.s-comp:has(li:nth-child(5)) h2 { font-size: 56px; }
+.s-comp:has(li:nth-child(5)) .s-comp-list { gap: 10px; }
+.s-comp:has(li:nth-child(5)) .s-comp-list li { padding-block: 8px; }
+.s-comp-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.s-comp-list li {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 28px;
+  padding: 12px 32px;
+  border-radius: 28px;
+  background: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface-variant);
+}
+.s-comp-list li.is-focus { background: var(--md-sys-color-primary-container); color: var(--md-sys-color-on-primary-container); }
+.s-comp-code { font-size: 52px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.s-comp-body { display: grid; gap: 0; line-height: 1.12; }
+.s-comp-body strong { font-size: 44px; font-weight: 700; }
+.s-comp-body span { font-size: 40px; }
+.s-comp-where { display: inline-flex; align-items: center; gap: 10px; font-size: 40px; font-weight: 700; white-space: nowrap; }
 
 /* Áreas del marco */
 .s-areas { display: grid; align-content: center; gap: 36px; }
@@ -357,6 +388,7 @@
 .s-show { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .s-show-item { display: grid; gap: 8px; padding: 20px 28px; border-radius: 24px; background: var(--md-sys-color-surface-container-high); font-size: 40px; line-height: 1.2; }
 .s-show-label { display: inline-flex; align-items: center; gap: 12px; font-weight: 700; color: var(--md-sys-color-primary); }
+.slide-vote .s-vote-main:has(.s-show) { gap: 20px; }
 .slide-vote .s-vote-main:has(.s-show) h2 { font-size: 56px; }
 .slide-vote .s-vote-main:has(.s-show) .vote-row { font-size: 40px; }
 

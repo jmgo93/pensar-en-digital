@@ -247,7 +247,8 @@
     "slides.example2": "Ejemplo para defenderlo",
     "speaker.estudios": "Guía de estudios (PDF)",
     "slides.backToWeb": "Volver a la web",
-    "slides.countdown": "Tiempo para votar"
+    "slides.countdown": "Tiempo para votar",
+    "slides.area": "Área"
   },
   "en": {
     "app.name": "Pensar en Digital",
@@ -497,6 +498,7 @@
     "slides.example2": "Example to back it up",
     "speaker.estudios": "Studies guide (PDF, Spanish)",
     "slides.backToWeb": "Back to the website",
-    "slides.countdown": "Time to vote"
+    "slides.countdown": "Time to vote",
+    "slides.area": "Area"
   }
 }

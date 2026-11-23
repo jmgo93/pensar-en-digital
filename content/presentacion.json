@@ -3,7 +3,7 @@
     {
       "id": "b0",
       "from": 0,
-      "to": 8,
+      "to": 9,
       "title": {
         "es": "Apertura: el marco y tres lentes",
         "en": "Opening: the framework and three lenses"
@@ -11,8 +11,8 @@
     },
     {
       "id": "b1",
-      "from": 8,
-      "to": 14,
+      "from": 9,
+      "to": 15,
       "title": {
         "es": "1 · ¿Digitalizar o innovar? (Primaria)",
         "en": "1 · Digitise or innovate? (Primary)"
@@ -20,8 +20,8 @@
     },
     {
       "id": "b2",
-      "from": 14,
-      "to": 20,
+      "from": 15,
+      "to": 21,
       "title": {
         "es": "2 · ¿Qué hace con la información? (ESO)",
         "en": "2 · What do they do with information? (Secondary)"
@@ -29,8 +29,8 @@
     },
     {
       "id": "b3",
-      "from": 20,
-      "to": 26,
+      "from": 21,
+      "to": 27,
       "title": {
         "es": "3 · Atención y «nativos digitales» (Bachillerato)",
         "en": "3 · Attention and «digital natives» (Upper secondary)"
@@ -38,7 +38,7 @@
     },
     {
       "id": "b4",
-      "from": 26,
+      "from": 27,
       "to": 34,
       "title": {
         "es": "4 · IA: ¿muleta o tutor? (EOI)",
@@ -195,84 +195,342 @@
       "notes": "El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco estatal vigente desde 2022 (Resolución de 4 de mayo de 2022, BOE de 16 de mayo) y se inspira en el europeo DigCompEdu. Tiene seis áreas. Las áreas 1 (compromiso profesional: comunicarse, colaborar, formarse, protección de datos) y 2 (contenidos digitales: buscar, crear y compartir recursos) hablan del docente. Las áreas 3 a 6 hablan de lo que pasa en el aula: 3, enseñar y que el alumnado aprenda entre iguales y se autorregule; 4, evaluar viendo el proceso y dar feedback útil; 5, quitar barreras para que todo el alumnado participe; 6, enseñar al alumnado a buscar información, colaborar, crear y cuidarse en la red. Cada caso de hoy llevará su área marcada. En la app, sección «Marco CDD», hay ejemplos de cada área por etapa.",
       "example": "«Fijaos en que cuatro de las seis áreas no hablan de lo que sabe hacer el profesor con la tecnología, sino de lo que hace y consigue el alumnado. Un docente que domina veinte aplicaciones pero cuyo alumnado solo copia no estaría desarrollando las áreas 3 a 6».",
       "do": "Señala las cuatro áreas iluminadas; la siguiente diapositiva las explica.",
-      "bridge": "«Veamos qué significa cada una de esas cuatro áreas».",
+      "bridge": "«Veamos las cuatro áreas del aula, una a una, con las competencias que usaremos hoy».",
       "cut": "Lee solo el título y la frase de abajo.",
       "at": 2.25
     },
     {
-      "id": "areas-aula",
+      "id": "area3",
       "block": "b0",
-      "type": "areas",
+      "type": "competences",
+      "n": 3,
+      "icon": "co_present",
       "title": {
-        "es": "Las 4 áreas que **miran al aula**",
-        "en": "The 4 areas that **look at the classroom**"
+        "es": "Enseñanza y aprendizaje",
+        "en": "Teaching and learning"
       },
       "items": [
         {
-          "n": 3,
-          "icon": "co_present",
-          "focus": true,
+          "code": "3.1",
           "title": {
-            "es": "Enseñanza y aprendizaje",
-            "en": "Teaching and learning"
+            "es": "Enseñanza",
+            "en": "Teaching"
           },
           "text": {
-            "es": "Clases que hacen pensar: aprender con otros y regularse",
-            "en": "Lessons that make students think: learning with peers and self-regulating"
+            "es": "Planificar e integrar lo digital en la enseñanza",
+            "en": "Planning and integrating digital tools in teaching"
           }
         },
         {
-          "n": 4,
-          "icon": "check_circle",
-          "focus": true,
+          "code": "3.2",
           "title": {
-            "es": "Evaluación y retroalimentación",
-            "en": "Assessment and feedback"
+            "es": "Orientación y apoyo en el aprendizaje",
+            "en": "Guidance and support in learning"
           },
           "text": {
-            "es": "Ver el proceso, dar feedback útil y decidir qué hacer",
-            "en": "Seeing the process, giving useful feedback and deciding next steps"
+            "es": "Guiar y acompañar al alumnado con medios digitales",
+            "en": "Guiding and supporting students through digital means"
           }
         },
         {
-          "n": 5,
-          "icon": "accessibility_new",
-          "focus": true,
+          "code": "3.3",
           "title": {
-            "es": "Empoderamiento del alumnado",
-            "en": "Empowering students"
+            "es": "Aprendizaje entre iguales",
+            "en": "Peer learning"
           },
           "text": {
-            "es": "Quitar barreras para que todos participen y decidan",
-            "en": "Removing barriers so everyone takes part and decides"
+            "es": "Que aprendan colaborando con sus compañeros",
+            "en": "Students learning by collaborating with peers"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "Primaria",
+              "en": "Primary"
+            },
+            {
+              "es": "Historia",
+              "en": "History"
+            }
+          ]
+        },
+        {
+          "code": "3.4",
+          "title": {
+            "es": "Aprendizaje autorregulado",
+            "en": "Self-regulated learning"
+          },
+          "text": {
+            "es": "Que planifiquen, revisen y regulen su aprendizaje",
+            "en": "Students planning, monitoring and regulating their learning"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "Bachillerato",
+              "en": "Upper secondary"
+            },
+            {
+              "es": "EOI",
+              "en": "Language school"
+            },
+            {
+              "es": "Conservatorio",
+              "en": "Conservatoire"
+            }
+          ]
+        }
+      ],
+      "src": {
+        "es": "MRCDD · resaltadas: las que verás en los casos",
+        "en": "MRCDD · highlighted: the ones you will see in the cases"
+      },
+      "cite": "mrcdd",
+      "key": "Diseñar y gestionar clases con tecnología que hagan pensar: acompañar al alumnado, que aprenda de sus compañeros y que aprenda a regular su propio aprendizaje.",
+      "notes": "Área 3, Enseñanza y aprendizaje: diseñar y gestionar clases con tecnología que hagan pensar. Lee las cuatro competencias y detente en las dos resaltadas, que volverán: 3.3 Aprendizaje entre iguales (el alumnado aprende colaborando: lo veremos en los problemas del barrio de Primaria y en la línea temporal de Historia) y 3.4 Aprendizaje autorregulado (el alumnado planifica, revisa y regula su aprendizaje: aparece en Bachillerato, en la EOI y en el Conservatorio). 3.1 Enseñanza y 3.2 Orientación y apoyo están presentes siempre: son el diseño y el acompañamiento del docente. En la app, sección «Marco CDD», hay ejemplos de esta área por etapa.",
+      "example": "«3.3 no es “trabajar en grupo con tablets”: es que un alumno aprenda porque tiene que explicarle algo a otro. 3.4 no es “que trabajen solos”: es que sepan decir qué no han entendido y qué van a hacer para entenderlo».",
+      "do": "Lee el título del área y señala solo las competencias resaltadas y su caso.",
+      "bridge": "«Segunda área del aula: cómo evaluamos».",
+      "cut": "Nombra el área y las competencias resaltadas, sin explicarlas.",
+      "at": 2.75
+    },
+    {
+      "id": "area4",
+      "block": "b0",
+      "type": "competences",
+      "n": 4,
+      "icon": "check_circle",
+      "title": {
+        "es": "Evaluación y retroalimentación",
+        "en": "Assessment and feedback"
+      },
+      "items": [
+        {
+          "code": "4.1",
+          "title": {
+            "es": "Estrategias de evaluación",
+            "en": "Assessment strategies"
+          },
+          "text": {
+            "es": "Evaluar con medios variados, también el proceso",
+            "en": "Assessing with varied means, including the process"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "EOI",
+              "en": "Language school"
+            }
+          ]
+        },
+        {
+          "code": "4.2",
+          "title": {
+            "es": "Analíticas y evidencias de aprendizaje",
+            "en": "Learning analytics and evidence"
+          },
+          "text": {
+            "es": "Recoger y analizar evidencias del aprendizaje",
+            "en": "Collecting and analysing evidence of learning"
           }
         },
         {
-          "n": 6,
-          "icon": "lightbulb",
-          "focus": true,
+          "code": "4.3",
           "title": {
-            "es": "Competencia digital del alumnado",
-            "en": "Students' digital competence"
+            "es": "Retroalimentación y toma de decisiones",
+            "en": "Feedback and decision-making"
           },
           "text": {
-            "es": "Buscar, contrastar, crear y cuidarse en la red",
-            "en": "Searching, checking, creating and staying safe online"
+            "es": "Dar feedback útil y decidir qué hacer después",
+            "en": "Giving useful feedback and deciding next steps"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "Conservatorio",
+              "en": "Conservatoire"
+            }
+          ]
+        }
+      ],
+      "src": {
+        "es": "MRCDD · resaltadas: las que verás en los casos",
+        "en": "MRCDD · highlighted: the ones you will see in the cases"
+      },
+      "cite": "mrcdd",
+      "key": "Usar lo digital para ver el proceso, no solo el resultado: recoger evidencias, devolver retroalimentación útil y decidir qué hacer después, siempre respetando la protección de datos.",
+      "notes": "Área 4, Evaluación y retroalimentación: usar lo digital para ver el proceso y no solo el resultado. 4.1 Estrategias de evaluación (evaluar con medios variados y coherentes con lo que se aprende: la conversación grabada de la EOI) y 4.3 Retroalimentación y toma de decisiones (un feedback que el alumnado usa y que me ayuda a decidir: las grabaciones del Conservatorio). 4.2 Analíticas y evidencias consiste en recoger y analizar evidencias del aprendizaje, siempre respetando la protección de datos. En la app, sección «Marco CDD», hay ejemplos de esta área por etapa.",
+      "example": "«Un cuestionario que se corrige solo es 4.1; mirar qué pregunta falla la mitad de la clase y repetir esa explicación mañana es 4.2 y 4.3: la evidencia cambia mi decisión».",
+      "do": "Lee el título del área y señala solo las competencias resaltadas y su caso.",
+      "bridge": "«Tercera: que nadie se quede fuera».",
+      "cut": "Nombra el área y las competencias resaltadas, sin explicarlas.",
+      "at": 3.5
+    },
+    {
+      "id": "area5",
+      "block": "b0",
+      "type": "competences",
+      "n": 5,
+      "icon": "accessibility_new",
+      "title": {
+        "es": "Empoderamiento del alumnado",
+        "en": "Empowering students"
+      },
+      "items": [
+        {
+          "code": "5.1",
+          "title": {
+            "es": "Accesibilidad e inclusión",
+            "en": "Accessibility and inclusion"
+          },
+          "text": {
+            "es": "Que todo el alumnado pueda acceder y participar",
+            "en": "Every student can access and take part"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "Primaria",
+              "en": "Primary"
+            }
+          ]
+        },
+        {
+          "code": "5.2",
+          "title": {
+            "es": "Atención a las diferencias personales en el aprendizaje",
+            "en": "Attending to individual differences in learning"
+          },
+          "text": {
+            "es": "Ajustar ritmos, niveles y caminos",
+            "en": "Adjusting pace, levels and paths"
+          }
+        },
+        {
+          "code": "5.3",
+          "title": {
+            "es": "Compromiso activo del alumnado con su propio aprendizaje",
+            "en": "Students' active engagement in their own learning"
+          },
+          "text": {
+            "es": "Que el alumnado sea protagonista",
+            "en": "Students as protagonists"
           }
         }
       ],
       "src": {
-        "es": "Áreas y competencias del MRCDD · ejemplos por etapa en la app",
-        "en": "MRCDD areas and competences · examples by stage in the app"
+        "es": "MRCDD · resaltadas: las que verás en los casos",
+        "en": "MRCDD · highlighted: the ones you will see in the cases"
       },
       "cite": "mrcdd",
-      "key": "Cada área del aula responde a una pregunta: ¿piensan?, ¿ven su progreso?, ¿pueden todos?, ¿saben moverse en lo digital?",
-      "notes": "Una frase por área, siempre desde el alumnado. Área 3, Enseñanza y aprendizaje (3.1 enseñanza, 3.2 orientación y apoyo, 3.3 aprendizaje entre iguales, 3.4 aprendizaje autorregulado): diseñar clases con tecnología que hagan pensar, que el alumnado aprenda de sus compañeros y aprenda a gestionar su propio aprendizaje. Área 4, Evaluación y retroalimentación (4.1 estrategias, 4.2 analíticas y evidencias, 4.3 retroalimentación y toma de decisiones): usar lo digital para ver el proceso y no solo el resultado, y devolver un feedback que se use. Área 5, Empoderamiento del alumnado (5.1 accesibilidad e inclusión, 5.2 diferencias personales, 5.3 compromiso activo): quitar barreras desde el diseño para que todos accedan y participen, y que sean protagonistas. Área 6, Competencia digital del alumnado (6.1 información y datos, 6.2 comunicación y ciudadanía digital, 6.3 creación de contenidos, 6.4 uso responsable y bienestar, 6.5 resolución de problemas): no basta con que usen tecnología; hay que enseñarles a usarla bien. En la app, sección «Marco CDD», cada área tiene ejemplos de Primaria, ESO, EOI y Conservatorio. En cada mejora de hoy aparecerá el código de la competencia (por ejemplo, 3.3).",
-      "example": "«Un mismo proyecto de radio escolar toca las cuatro: el alumnado graba entrevistas por parejas y se escucha (3, aprende de otros), revisa sus grabaciones con una lista de criterios (4, feedback de proceso), quien no quiere hablar puede editar o escribir el guion (5, nadie se queda fuera) y aprende a pedir permiso antes de publicar una voz (6, uso responsable)».",
-      "do": "Señala cada tarjeta mientras la nombras; una frase por área.",
-      "bridge": "«Y en cada área no se es competente o no: se avanza por etapas».",
-      "cut": "Lee solo los cuatro nombres.",
-      "at": 3
+      "key": "Quitar barreras para que todo el alumnado pueda acceder, participar y avanzar, y convertirlo en protagonista que piensa de forma crítica y creativa.",
+      "notes": "Área 5, Empoderamiento del alumnado: quitar barreras para que todos accedan, participen y avancen. 5.1 Accesibilidad e inclusión es la que veremos en el caso de Primaria: el enunciado en audio y con pictogramas para todo el grupo (DUA). 5.2 Atención a las diferencias personales (ajustar ritmos, niveles y caminos) y 5.3 Compromiso activo (que el alumnado sea protagonista) están detrás de todas las propuestas de mejora, aunque no las nombremos. En la app, sección «Marco CDD», hay ejemplos de esta área por etapa.",
+      "example": "«Subtitular un vídeo para un alumno con hipoacusia es 5.1; ponerlo subtitulado para toda la clase desde el principio es 5.1 pensado con DUA: ayuda también a quien está aprendiendo el idioma o se distrae».",
+      "do": "Lee el título del área y señala solo las competencias resaltadas y su caso.",
+      "bridge": "«Y la cuarta: la competencia digital del propio alumnado».",
+      "cut": "Nombra el área y las competencias resaltadas, sin explicarlas.",
+      "at": 4
+    },
+    {
+      "id": "area6",
+      "block": "b0",
+      "type": "competences",
+      "n": 6,
+      "icon": "lightbulb",
+      "title": {
+        "es": "Desarrollo de la competencia digital del alumnado",
+        "en": "Developing students' digital competence"
+      },
+      "items": [
+        {
+          "code": "6.1",
+          "title": {
+            "es": "Alfabetización mediática y en el tratamiento de la información y de los datos",
+            "en": "Media and information and data literacy"
+          },
+          "text": {
+            "es": "Buscar, evaluar y contrastar información",
+            "en": "Searching, evaluating and checking information"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "Historia",
+              "en": "History"
+            }
+          ]
+        },
+        {
+          "code": "6.2",
+          "title": {
+            "es": "Comunicación, colaboración y ciudadanía digital",
+            "en": "Communication, collaboration and digital citizenship"
+          },
+          "text": {
+            "es": "Comunicarse y colaborar con respeto en la red",
+            "en": "Communicating and collaborating respectfully online"
+          }
+        },
+        {
+          "code": "6.3",
+          "title": {
+            "es": "Creación de contenidos digitales",
+            "en": "Digital content creation"
+          },
+          "text": {
+            "es": "Crear contenidos propios respetando la autoría",
+            "en": "Creating their own content, respecting authorship"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "Primaria",
+              "en": "Primary"
+            }
+          ]
+        },
+        {
+          "code": "6.4",
+          "title": {
+            "es": "Uso responsable y bienestar digital",
+            "en": "Responsible use and digital wellbeing"
+          },
+          "text": {
+            "es": "Cuidar su atención, su salud y sus datos",
+            "en": "Looking after their attention, health and data"
+          },
+          "focus": true,
+          "where": [
+            {
+              "es": "Bachillerato",
+              "en": "Upper secondary"
+            }
+          ]
+        },
+        {
+          "code": "6.5",
+          "title": {
+            "es": "Resolución de problemas",
+            "en": "Problem solving"
+          },
+          "text": {
+            "es": "Resolver problemas con tecnología",
+            "en": "Solving problems with technology"
+          }
+        }
+      ],
+      "src": {
+        "es": "MRCDD · resaltadas: las que verás en los casos",
+        "en": "MRCDD · highlighted: the ones you will see in the cases"
+      },
+      "cite": "mrcdd",
+      "key": "Enseñar al alumnado a buscar y contrastar información, comunicarse y colaborar con respeto, crear respetando la autoría, cuidarse en la red y resolver problemas con tecnología.",
+      "notes": "Área 6, Desarrollo de la competencia digital del alumnado: no basta con que usen tecnología; hay que enseñarles a usarla bien. 6.1 Alfabetización mediática e información (buscar, evaluar y contrastar fuentes: Historia), 6.3 Creación de contenidos (crear algo propio respetando la autoría: los problemas grabados de Primaria) y 6.4 Uso responsable y bienestar digital (cuidar la atención: Bachillerato). 6.2 Comunicación y ciudadanía digital y 6.5 Resolución de problemas completan el área. En la app, sección «Marco CDD», hay ejemplos de esta área por etapa.",
+      "example": "«Pedir “buscad información sobre la Revolución Francesa” no desarrolla 6.1; pedir “encontrad dos fuentes que se contradigan y decid cuál es más fiable y por qué”, sí».",
+      "do": "Lee el título del área y señala solo las competencias resaltadas y su caso.",
+      "bridge": "«Y en cada una de estas competencias, no se es competente o no: se avanza por etapas».",
+      "cut": "Nombra el área y las competencias resaltadas, sin explicarlas.",
+      "at": 4.5
     },
     {
       "id": "niveles",
@@ -308,12 +566,12 @@
       "do": "Señala la etapa B: «Hoy vamos hacia aquí».",
       "bridge": "«Para mirar los casos usaremos tres lentes. La primera: ICAP».",
       "cut": "Solo nombra las tres etapas.",
-      "at": 4
+      "at": 5.25
     },
     {
       "id": "icap",
       "block": "b0",
-      "at": 4.75,
+      "at": 5.75,
       "type": "ladder",
       "title": {
         "es": "ICAP: ¿qué hace el alumno **con la información**?",
@@ -354,7 +612,7 @@
     {
       "id": "picrat",
       "block": "b0",
-      "at": 5.75,
+      "at": 6.75,
       "cite": "picrat",
       "key": "PICRAT cruza dos preguntas: qué hace el alumnado con la tecnología y qué le hace la tecnología a mi práctica. Es la segunda lente.",
       "notes": "Segunda lente. Kimmons, Graham y West (2020) diseñaron PICRAT para la formación inicial del profesorado, como alternativa más clara a SAMR (que solo mira la herramienta y tiene escasa base empírica: Hamilton et al., 2016). Son dos preguntas. Primera, PIC: ¿qué hace el alumnado con la tecnología? Pasivo (la consume), Interactivo (la manipula) o Creativo (produce algo nuevo). Segunda, RAT: ¿qué cambia en mi práctica? Reemplaza (lo mismo con otro soporte), Amplifica (lo mismo, pero mejor o más rápido) o Transforma (algo que antes no era posible). Cada actividad cae en una casilla de una matriz de 3 × 3, y en cada mejora de hoy veremos de qué casilla a qué casilla pasamos. Todas las casillas pueden ser legítimas: la matriz sirve para ver quién está pensando.",
@@ -465,7 +723,7 @@
       "do": "Lee las siete en voz alta, deprisa; detente solo en la 2 y la 6.",
       "bridge": "«Tres lentes, ICAP, PICRAT y claves, y una idea de fondo».",
       "cut": "Lee solo los títulos.",
-      "at": 6.75
+      "at": 7.75
     },
     {
       "id": "logra",
@@ -485,12 +743,12 @@
       "do": "Pausa de dos segundos después de la frase.",
       "bridge": "«Primer bloque: ¿digitalizar o innovar?».",
       "cut": "Solo la frase.",
-      "at": 7.5
+      "at": 8.5
     },
     {
       "id": "sec1",
       "block": "b1",
-      "at": 8,
+      "at": 9,
       "type": "section",
       "n": 1,
       "title": {
@@ -510,7 +768,7 @@
     {
       "id": "voto1",
       "block": "b1",
-      "at": 8.25,
+      "at": 9.25,
       "type": "vote",
       "vote": "v1",
       "key": "La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.",
@@ -540,7 +798,7 @@
     {
       "id": "tamim",
       "block": "b1",
-      "at": 9.5,
+      "at": 10.5,
       "type": "big",
       "number": "0,35",
       "text": {
@@ -563,7 +821,7 @@
     {
       "id": "docente",
       "block": "b1",
-      "at": 10.25,
+      "at": 11.25,
       "type": "statement",
       "text": {
         "es": "No decide el equipamiento: decide **el docente**.",
@@ -589,7 +847,7 @@
     {
       "id": "caso1",
       "block": "b1",
-      "at": 11,
+      "at": 12,
       "type": "case",
       "where": {
         "es": "Primaria · Matemáticas · 5.º",
@@ -620,7 +878,7 @@
     {
       "id": "mejora1",
       "block": "b1",
-      "at": 12,
+      "at": 13,
       "type": "improve",
       "title": {
         "es": "Problemas del barrio: **trabajo en parejas**",
@@ -675,7 +933,7 @@
     {
       "id": "tool1",
       "block": "b1",
-      "at": 13.25,
+      "at": 14.25,
       "type": "tool",
       "title": {
         "es": "Grabar, ver y entender",
@@ -694,7 +952,7 @@
     {
       "id": "sec2",
       "block": "b2",
-      "at": 14,
+      "at": 15,
       "type": "section",
       "n": 2,
       "title": {
@@ -714,7 +972,7 @@
     {
       "id": "voto2",
       "block": "b2",
-      "at": 14.25,
+      "at": 15.25,
       "type": "vote",
       "vote": "v2",
       "key": "Vuestra respuesta es el punto de partida: ahora la situamos en la escalera ICAP.",
@@ -765,12 +1023,12 @@
       "do": "Señala el verbo resaltado de cada columna: copia frente a inventa.",
       "bridge": "«Con esta lente, miremos un caso de Historia».",
       "cut": "Lee solo el título.",
-      "at": 15.5
+      "at": 16.5
     },
     {
       "id": "caso2",
       "block": "b2",
-      "at": 17,
+      "at": 18,
       "type": "case",
       "where": {
         "es": "ESO · Historia · 2.º",
@@ -801,7 +1059,7 @@
     {
       "id": "mejora2",
       "block": "b2",
-      "at": 17.75,
+      "at": 18.75,
       "type": "improve",
       "title": {
         "es": "Construyen la suya **y la defienden**",
@@ -856,7 +1114,7 @@
     {
       "id": "tool2",
       "block": "b2",
-      "at": 19.25,
+      "at": 20.25,
       "type": "tool",
       "title": {
         "es": "Construir en equipo",
@@ -875,7 +1133,7 @@
     {
       "id": "sec3",
       "block": "b3",
-      "at": 20,
+      "at": 21,
       "type": "section",
       "n": 3,
       "title": {
@@ -895,7 +1153,7 @@
     {
       "id": "voto6",
       "block": "b3",
-      "at": 20.25,
+      "at": 21.25,
       "type": "vote",
       "vote": "v6",
       "key": "Muchos pensamos que «ellos sí pueden» hacer varias cosas a la vez. La investigación dice otra cosa.",
@@ -907,7 +1165,7 @@
     {
       "id": "nativos",
       "block": "b3",
-      "at": 21,
+      "at": 22,
       "type": "statement",
       "text": {
         "es": "No hay **nativos digitales**.",
@@ -933,7 +1191,7 @@
     {
       "id": "distraccion",
       "block": "b3",
-      "at": 22,
+      "at": 23,
       "type": "big",
       "number": "−11",
       "text": {
@@ -956,7 +1214,7 @@
     {
       "id": "caso3",
       "block": "b3",
-      "at": 22.75,
+      "at": 23.75,
       "type": "case",
       "where": {
         "es": "Bachillerato · Biología · 1.º",
@@ -987,7 +1245,7 @@
     {
       "id": "mejora3",
       "block": "b3",
-      "at": 23.75,
+      "at": 24.75,
       "type": "improve",
       "title": {
         "es": "Vídeos cortos y clase **a partir de los errores**",
@@ -1055,7 +1313,7 @@
     {
       "id": "tool3",
       "block": "b3",
-      "at": 25.25,
+      "at": 26.25,
       "type": "tool",
       "title": {
         "es": "Vídeo que hace pensar",
@@ -1074,7 +1332,7 @@
     {
       "id": "sec4",
       "block": "b4",
-      "at": 26,
+      "at": 27,
       "type": "section",
       "n": 4,
       "title": {
@@ -1094,7 +1352,7 @@
     {
       "id": "voto3",
       "block": "b4",
-      "at": 26.25,
+      "at": 27.25,
       "type": "vote",
       "vote": "v3",
       "key": "Predecir antes de ver el dato hace que el dato se recuerde.",
@@ -1106,7 +1364,7 @@
     {
       "id": "ia-dato",
       "block": "b4",
-      "at": 27.5,
+      "at": 28.25,
       "type": "big",
       "number": "−17 %",
       "text": {
@@ -1129,7 +1387,7 @@
     {
       "id": "pereza",
       "block": "b4",
-      "at": 28.75,
+      "at": 29.5,
       "type": "statement",
       "text": {
         "es": "Pereza metacognitiva",
@@ -1155,7 +1413,7 @@
     {
       "id": "caso4",
       "block": "b4",
-      "at": 29.5,
+      "at": 30,
       "type": "case",
       "where": {
         "es": "EOI · Inglés · B1",
@@ -1186,7 +1444,7 @@
     {
       "id": "mejora4",
       "block": "b4",
-      "at": 31,
+      "at": 31.5,
       "type": "improve",
       "title": {
         "es": "Conversación real **con fricción**",
@@ -1241,7 +1499,7 @@
     {
       "id": "tool4",
       "block": "b4",
-      "at": 32.75,
+      "at": 33,
       "type": "tool",
       "title": {
         "es": "IA que pregunta, voz que conversa",
