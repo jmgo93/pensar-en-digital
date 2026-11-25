@@ -1864,9 +1864,18 @@
         "en": "Thank you"
       },
       "key": "El alumnado no nace digitalmente competente: necesita docentes digitalmente competentes.",
-      "notes": "Agradece. Material con licencia CC BY-NC-SA 4.0. Formación en centros: CEP de Almería. **Después, en privado: pulsa «Archivar resultados y reiniciar»** (botón de esta diapositiva o de las notas).",
-      "do": "Termina en hora. Si hay preguntas, vuelve a la diapositiva del QR (número + Intro).",
-      "cut": "—"
+      "notes": "Agradece. Material con licencia CC BY-NC-SA 4.0. Formación en centros: CEP de Almería. Al terminar, los botones «Abrir la web» y «Ver los prompts» llevan directamente a la app en este ordenador para enseñarla. **Después, en privado: pulsa «Archivar resultados y reiniciar»** (botón de esta diapositiva o de las notas).",
+      "do": "Termina en hora. Deja esta diapositiva a la vista durante las preguntas: tiene el QR de la app para quien aún no la haya instalado.",
+      "cut": "—",
+      "targets": [
+        {
+          "qr": "inicio",
+          "label": {
+            "es": "¿Aún no la tienes? Instala la app",
+            "en": "Not got it yet? Install the app"
+          }
+        }
+      ]
     }
   ]
 }

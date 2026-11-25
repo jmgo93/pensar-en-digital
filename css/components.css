@@ -1176,6 +1176,11 @@ mark {
 
 /* ======================= Fase 3: prompts y plantilla ======================= */
 
+/* Contraseña con botón de ver/ocultar dentro del campo. */
+.pw-field { position: relative; }
+.pw-field .field { padding-inline-end: calc(var(--pd-touch) + 0.5rem); }
+.pw-toggle { position: absolute; inset-block-start: 50%; inset-inline-end: 0.25rem; translate: 0 -50%; }
+
 .field {
   inline-size: 100%;
   min-block-size: var(--pd-touch);

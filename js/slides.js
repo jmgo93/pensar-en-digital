@@ -322,13 +322,22 @@ const slideContent = (s, ctx) => {
     case 'end':
       return h(
         'div',
-        { class: 's-end' },
+        { class: `s-end${s.targets?.length ? ' has-qr' : ''}` },
         h('div', { class: 's-end-head' }, h('h2', {}, loc(s.title)), schoolLogo(ctx.site, 's-school-logo')),
-        h('p', { class: 's-small' }, ctx.site.shortUrl),
+        // QR de la app para quien no la instaló al principio; sin QR, solo la dirección.
+        ...(s.targets ?? []).map((/** @type {any} */ tg) => h('figure', { class: 's-end-qr' }, qr(tg.qr), h('figcaption', {}, h('strong', {}, loc(tg.label)), h('span', {}, shortUrl(tg.qr === 'inicio' ? '' : `${tg.qr}/`))))),
+        s.targets?.length ? null : h('p', { class: 's-small' }, ctx.site.shortUrl),
         h('p', { class: 's-legal' }, `© ${ctx.site.year} ${ctx.site.author} · ${t('footer.licensePre')} ${t('footer.license')} · ${t('footer.claude')}`),
         h('p', { class: 's-legal' }, `${t('footer.cep')} ${t('footer.cepLink')} ${t('footer.cepAfter')}`),
         h('p', { class: 's-legal' }, t('footer.icons')),
-        h('div', { class: 's-archive' }, archiveButton(ctx.site)),
+        // Para enseñar la web y los prompts en el ordenador al terminar (solo los ve el ponente).
+        h(
+          'div',
+          { class: 's-archive' },
+          h('a', { class: 'btn btn-filled interactive', href: fromRoot('').href }, icon('home'), h('span', {}, t('slides.openWeb'))),
+          h('a', { class: 'btn btn-tonal interactive', href: fromRoot('ia/').href }, icon('smart_toy'), h('span', {}, t('slides.openPrompts'))),
+          archiveButton(ctx.site, 'btn btn-text interactive'),
+        ),
       );
     default:
       return h('div');

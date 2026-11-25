@@ -505,12 +505,19 @@
 .s-tool-flags { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: 40px; line-height: 1.2; color: var(--md-sys-color-on-surface-variant); }
 
 /* Archivo (solo ponente: la presentación ya está tras su acceso) */
-.s-archive { margin-block-start: 24px; }
-.s-archive .btn { font-size: 28px; min-block-size: 64px; padding-inline: 32px; }
+.s-archive { display: flex; flex-wrap: wrap; gap: 24px; margin-block-start: 24px; }
+.s-archive .btn { font-size: 32px; min-block-size: 80px; padding-inline: 36px; gap: 16px; }
+.s-archive .btn .icon { font-size: 40px; }
 
 /* Final */
 .s-end { display: grid; align-content: center; gap: 24px; }
 .s-end h2 { font-size: 160px; color: var(--md-sys-color-primary); }
+.s-end.has-qr { grid-template-columns: minmax(0, 1fr) auto; column-gap: 96px; }
+.s-end.has-qr > * { grid-column: 1; }
+.s-end.has-qr > .s-end-qr { grid-column: 2; grid-row: 1 / span 6; align-self: center; display: grid; justify-items: center; gap: 16px; margin: 0; text-align: center; }
+.s-end-qr .s-qr { inline-size: 460px; block-size: 460px; }
+.s-end-qr figcaption { display: grid; gap: 4px; font-size: 36px; max-inline-size: 640px; text-wrap: balance; }
+.s-end-qr figcaption span { font-weight: 700; font-size: 32px; white-space: nowrap; }
 .s-legal { font-size: 28px; color: var(--md-sys-color-on-surface-variant); }
 
 .blackout { position: fixed; inset: 0; z-index: 10; background: #000; }

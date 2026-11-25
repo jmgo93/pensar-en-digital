@@ -64,6 +64,27 @@ export const checkPassword = async (password, site) => {
 };
 
 /**
+ * Campo de contraseña con botón para mostrarla u ocultarla.
+ * @param {HTMLInputElement} input
+ * @returns {HTMLElement}
+ */
+const passwordField = (input) => {
+  const ico = icon('visibility');
+  const btn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn interactive pw-toggle', 'aria-pressed': 'false', 'aria-controls': input.id, 'aria-label': t('speaker.showPw'), title: t('speaker.showPw') }, ico));
+  btn.addEventListener('click', () => {
+    const show = input.type === 'password';
+    input.type = show ? 'text' : 'password';
+    ico.textContent = show ? 'visibility_off' : 'visibility';
+    btn.setAttribute('aria-pressed', String(show));
+    const label = t(show ? 'speaker.hidePw' : 'speaker.showPw');
+    btn.setAttribute('aria-label', label);
+    btn.title = label;
+    input.focus();
+  });
+  return h('div', { class: 'pw-field' }, input, btn);
+};
+
+/**
  * Formulario de acceso. Llama a onSuccess cuando la contraseña es correcta.
  * @param {SiteWithSpeaker} site
  * @param {() => void} onSuccess
@@ -77,7 +98,7 @@ export const loginForm = (site, onSuccess) => {
     h('h2', { class: 'title-large' }, icon('lock'), ' ', t('speaker.title')),
     h('p', {}, t('speaker.intro')),
     passwordConfigured(site) ? null : h('p', { class: 'muted' }, icon('warning'), ' ', t('speaker.notSet')),
-    h('div', { class: 'field-wrap' }, h('label', { for: 'speaker-pw', class: 'label-medium' }, t('speaker.password')), input),
+    h('div', { class: 'field-wrap' }, h('label', { for: 'speaker-pw', class: 'label-medium' }, t('speaker.password')), passwordField(input)),
     error,
     h('div', { class: 'btn-row' }, h('button', { type: 'submit', class: 'btn btn-filled interactive' }, icon('lock_open'), h('span', {}, t('speaker.enter')))),
   );
@@ -165,7 +186,7 @@ export const openArchiveDialog = (site) => {
         h('p', {}, t('speaker.archiveIntro')),
         site.votingEndpoint ? null : h('p', { class: 'field-error' }, t('speaker.noEndpoint')),
         h('div', { class: 'field-wrap' }, h('label', { for: 'archive-label', class: 'label-medium' }, t('speaker.label')), label),
-        h('div', { class: 'field-wrap' }, h('label', { for: 'archive-pw', class: 'label-medium' }, t('speaker.confirm')), pw),
+        h('div', { class: 'field-wrap' }, h('label', { for: 'archive-pw', class: 'label-medium' }, t('speaker.confirm')), passwordField(pw)),
         status,
         h('div', { class: 'btn-row' }, h('button', { type: 'button', class: 'btn btn-text interactive', onclick: () => dialog.close() }, t('speaker.cancel')), run),
       ),

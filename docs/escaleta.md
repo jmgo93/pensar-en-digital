@@ -762,11 +762,11 @@ Pide el compromiso de palabra: «Elegid una tarea de la semana que viene y pasad
 
 #### 53. [44:30] Gracias
 
-> En pantalla: Gracias
+> En pantalla: Gracias · ¿Aún no la tienes? Instala la app
 
 **Idea fuerza:** El alumnado no nace digitalmente competente: necesita docentes digitalmente competentes.
 
-Agradece. Material con licencia CC BY-NC-SA 4.0. Formación en centros: CEP de Almería. **Después, en privado: pulsa «Archivar resultados y reiniciar»** (botón de esta diapositiva o de las notas).
+Agradece. Material con licencia CC BY-NC-SA 4.0. Formación en centros: CEP de Almería. Al terminar, los botones «Abrir la web» y «Ver los prompts» llevan directamente a la app en este ordenador para enseñarla. **Después, en privado: pulsa «Archivar resultados y reiniciar»** (botón de esta diapositiva o de las notas).
 
-- **Haz:** Termina en hora. Si hay preguntas, vuelve a la diapositiva del QR (número + Intro).
+- **Haz:** Termina en hora. Deja esta diapositiva a la vista durante las preguntas: tiene el QR de la app para quien aún no la haya instalado.
 - **Si vas tarde:** —
