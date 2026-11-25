@@ -659,16 +659,29 @@ const init = async () => {
   addEventListener('gamepadconnected', () => requestAnimationFrame(padLoop));
 
   /* -------- Botones en pantalla: anterior, siguiente y pantalla completa -------- */
+  // Con los controles ocultos, el primer toque solo los muestra: se ignora la pulsación que llega al despertarlos.
+  let wokeAt = 0;
+  /** @param {() => unknown} fn */
+  const act = (fn) => (/** @type {Event} */ e) => {
+    if (Date.now() - wokeAt < 500) e.preventDefault();
+    else fn();
+    // Tras un clic o toque (no con teclado), suelta el foco para que flechas y mando sigan funcionando.
+    if (e instanceof MouseEvent && e.detail && e.currentTarget instanceof HTMLElement) e.currentTarget.blur();
+  };
   const fsIcon = h('span', { class: 'icon', 'aria-hidden': 'true' }, 'fullscreen');
   const fsBtn = /** @type {HTMLButtonElement} */ (
-    h('button', { type: 'button', class: 'icon-btn icon-btn-tonal interactive', onclick: () => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.().catch(() => undefined)) }, fsIcon)
+    h('button', { type: 'button', class: 'icon-btn icon-btn-tonal interactive', onclick: act(() => (document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen?.().catch(() => undefined))) }, fsIcon)
   );
-  const prevBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-tonal interactive', 'aria-label': t('slides.prev'), title: t('slides.prev'), onclick: () => go(index - 1) }, icon('chevron_left')));
-  const nextBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-filled interactive', 'aria-label': t('slides.nextBtn'), title: t('slides.nextBtn'), onclick: () => go(index + 1) }, icon('chevron_right')));
+  const prevBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-tonal interactive sc-side sc-prev', 'aria-label': t('slides.prev'), title: t('slides.prev'), onclick: act(() => go(index - 1)) }, icon('chevron_left')));
+  const nextBtn = /** @type {HTMLButtonElement} */ (h('button', { type: 'button', class: 'icon-btn icon-btn-filled interactive sc-side sc-next', 'aria-label': t('slides.nextBtn'), title: t('slides.nextBtn'), onclick: act(() => go(index + 1)) }, icon('chevron_right')));
   // Volver a la web (al panel del ponente) por si se sale de la presentación sin teclado.
-  const homeBtn = h('a', { class: 'icon-btn icon-btn-tonal interactive', href: fromRoot('ponente/').href, 'aria-label': t('slides.backToWeb'), title: t('slides.backToWeb') }, icon('home'));
-  const controls = h('nav', { class: 'slide-controls', 'aria-label': t('slides.deck') }, homeBtn, prevBtn, fsBtn, nextBtn);
+  const homeBtn = h('a', { class: 'icon-btn icon-btn-tonal interactive', href: fromRoot('ponente/').href, 'aria-label': t('slides.backToWeb'), title: t('slides.backToWeb'), onclick: act(() => undefined) }, icon('home'));
+  const counter = h('span', { class: 'sc-count', 'aria-hidden': 'true' });
+  // iPhone no permite pantalla completa en páginas web: sin API, no se muestra el botón.
+  const bar = h('div', { class: 'sc-bar' }, homeBtn, counter, document.fullscreenEnabled ? fsBtn : null);
+  const controls = h('nav', { class: 'slide-controls', 'aria-label': t('slides.deck') }, bar, prevBtn, nextBtn);
   function updateControls() {
+    counter.textContent = `${index + 1} / ${total}`;
     const full = Boolean(document.fullscreenElement);
     fsIcon.textContent = full ? 'fullscreen_exit' : 'fullscreen';
     const label = full ? t('slides.exitFullscreen') : t('slides.fullscreen');
@@ -681,12 +694,19 @@ const init = async () => {
   // Se ocultan solos para no distraer: reaparecen al mover el ratón, tocar la pantalla o tabular.
   /** @type {ReturnType<typeof setTimeout> | undefined} */
   let hideTimer;
-  const showControls = () => {
+  /** @param {Event} [e] */
+  const showControls = (e) => {
+    if (e?.type === 'pointerdown' && controls.classList.contains('is-idle')) wokeAt = Date.now();
     controls.classList.remove('is-idle');
     clearTimeout(hideTimer);
+    // Con el dedo se da algo más de margen que con el ratón.
+    const touch = e instanceof PointerEvent && e.pointerType !== 'mouse';
     hideTimer = setTimeout(() => {
-      if (!controls.contains(document.activeElement)) controls.classList.add('is-idle');
-    }, 3000);
+      if (!controls.contains(document.activeElement) || touch) {
+        if (touch && document.activeElement instanceof HTMLElement && controls.contains(document.activeElement)) document.activeElement.blur();
+        controls.classList.add('is-idle');
+      }
+    }, touch ? 4000 : 3000);
   };
   addEventListener('pointermove', showControls, { passive: true });
   addEventListener('pointerdown', showControls, { passive: true });
@@ -702,7 +722,7 @@ const init = async () => {
   } else {
     notesRoot?.remove();
     stage.append(deckEl, blackout);
-    document.body.append(controls);
+    document.body.append(controls, h('p', { class: 'rotate-hint', role: 'note' }, icon('screen_rotation'), t('slides.rotate')));
     updateControls();
     showControls();
     addEventListener('resize', () => fit(stage));

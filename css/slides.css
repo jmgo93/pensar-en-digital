@@ -10,8 +10,8 @@
 .stage {
   position: fixed;
   inset: 0;
-  display: grid;
-  place-items: center;
+  display: block;
+  overflow: hidden;
   max-inline-size: none;
   padding: 0;
   --scale: 0.5;
@@ -21,11 +21,15 @@
 
 .slides-page > main { max-inline-size: none; margin: 0; padding: 0; }
 
+/* Centrado explícito desde la esquina: con place-items el lienzo de 1920 px desbordaba en pantallas
+   más estrechas (móvil, tableta, portátil) y, al escalar desde su centro, quedaba fuera de la vista. */
 .deck {
-  position: relative;
+  position: absolute;
+  inset-block-start: calc(50% - 540px * var(--scale));
+  inset-inline-start: calc(50% - 960px * var(--scale));
   inline-size: 1920px;
   block-size: 1080px;
-  flex: none;
+  transform-origin: 0 0;
   scale: var(--scale);
 }
 
@@ -592,28 +596,87 @@
   @page { size: 1920px 1080px; margin: 0; }
   .slides-page { overflow: visible; background: #fff; }
   .stage { position: static; display: block; }
-  .deck { scale: 1; inline-size: auto; block-size: auto; }
+  .deck { position: static; scale: 1; inline-size: auto; block-size: auto; }
   .slide { position: relative; display: grid !important; inline-size: 1920px; block-size: 1080px; break-after: page; }
   .slide:last-child { break-after: auto; }
   .blackout, .slides-help { display: none !important; }
 }
 
 /* -------- Botones en pantalla -------- */
+/* Capa a pantalla completa que no capta toques; solo sus botones. Arriba: web, contador y pantalla
+   completa; a los lados, anterior y siguiente (grandes, para el dedo). Se ocultan sin actividad y,
+   ocultos, no reciben toques: el primer toque solo los muestra. */
 .slide-controls {
   position: fixed;
-  inset-block-start: max(16px, env(safe-area-inset-top));
-  inset-inline-end: max(16px, env(safe-area-inset-right));
+  inset: 0;
   z-index: 20;
+  pointer-events: none;
+  touch-action: manipulation;
+}
+.slide-controls > * {
+  position: absolute;
+  pointer-events: auto;
+  box-shadow: var(--md-sys-elevation-2, 0 2px 6px rgb(0 0 0 / 0.25));
+  transition: opacity 300ms var(--md-sys-motion-easing-emphasized);
+}
+.sc-bar {
+  inset-block-start: max(12px, env(safe-area-inset-top));
+  inset-inline-end: max(12px, env(safe-area-inset-right));
   display: flex;
+  align-items: center;
   gap: 8px;
   padding: 6px;
   border-radius: var(--md-sys-shape-corner-full);
   background: color-mix(in srgb, var(--md-sys-color-surface-container-high) 92%, transparent);
-  box-shadow: var(--md-sys-elevation-2, 0 2px 6px rgb(0 0 0 / 0.25));
-  transition: opacity 300ms var(--md-sys-motion-easing-emphasized);
 }
-.slide-controls.is-idle { opacity: 0; }
-.slide-controls.is-idle:focus-within { opacity: 1; }
+.sc-count {
+  min-inline-size: 4.5rem;
+  padding-inline: 4px;
+  text-align: center;
+  font: var(--md-sys-typescale-label-large);
+  font-variant-numeric: tabular-nums;
+  color: var(--md-sys-color-on-surface);
+}
+.sc-side {
+  inset-block-start: 50%;
+  translate: 0 -50%;
+  inline-size: 4rem;
+  block-size: 4rem;
+  border-radius: var(--md-sys-shape-corner-full);
+}
+.sc-side .icon { font-size: 2.25rem; }
+.sc-prev { inset-inline-start: max(12px, env(safe-area-inset-left)); }
+.sc-next { inset-inline-end: max(12px, env(safe-area-inset-right)); }
+.icon-btn-filled { background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); }
+/* En vertical sobra espacio bajo la diapositiva: los botones bajan allí, al alcance del pulgar. */
+@media (orientation: portrait) {
+  .sc-side { inset-block: auto max(24px, env(safe-area-inset-bottom)); translate: none; }
+}
+.slide-controls.is-idle > * { opacity: 0; pointer-events: none; }
+.slide-controls.is-idle:focus-within > * { opacity: 1; pointer-events: auto; }
 .slide-controls button:disabled { opacity: 0.38; cursor: default; }
+.slide-controls.is-idle button:disabled { opacity: 0; }
+@media (hover: none) { .slides-help { display: none !important; } }
+
+/* Móvil en vertical: la diapositiva queda pequeña; se sugiere girarlo. */
+.rotate-hint { display: none; }
+@media (orientation: portrait) and (max-width: 48rem) {
+  .rotate-hint {
+    position: fixed;
+    inset-block-start: calc(max(12px, env(safe-area-inset-top)) + 80px);
+    inset-inline: 16px;
+    z-index: 15;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: var(--md-sys-shape-corner-large);
+    background: var(--md-sys-color-inverse-surface);
+    color: var(--md-sys-color-inverse-on-surface);
+    font: var(--md-sys-typescale-body-large);
+    text-align: center;
+  }
+}
 .gate-host { min-block-size: 100dvh; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface); }
 @media print { .slide-controls, .s-archive { display: none !important; } }

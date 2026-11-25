@@ -72,6 +72,7 @@ GENERADO por \`tools/build-escaleta.mjs\` desde \`content/presentacion.json\`. P
 - Duración: 45 minutos · ${deck.slides.length} diapositivas · ${deck.blocks.length} actos.
 - Presentación: ${site.url}presentacion/ · Notas del ponente en directo: ${site.url}presentacion/?notas (o tecla N).
 - Teclas: → / Av Pág / espacio (siguiente) · ← / Re Pág (anterior) · Inicio/Fin · B o . (pantalla negra) · F (pantalla completa) · N (abrir notas) · T (reiniciar cronómetro) · C (reiniciar la cuenta atrás de la votación; también con un botón en las notas) · número + Intro (ir a esa diapositiva).
+- Sin teclado (tableta, móvil, pizarra digital): al tocar la pantalla aparecen los botones anterior/siguiente, el contador y pantalla completa, que se ocultan solos a los 4 s; también se puede deslizar el dedo. La presentación se adapta a cualquier pantalla (en el móvil, mejor en horizontal).
 - Votaciones: v0 (inicio) y v5 (final) para medir el cambio, y una por bloque (ver \`docs/votaciones.md\`). Cada votación muestra una cuenta atrás de 1 minuto que desaparece al llegar a cero (empieza la primera vez que se muestra la diapositiva). Sin conexión, la diapositiva propone votar a mano alzada.
 - Plan B sin conexión: \`docs/presentacion-es.pdf\` (una página por diapositiva, sin animaciones; las votaciones, a mano alzada). Descárgalo antes al portátil o a un USB. Se regenera con \`npm run deck:pdf\`.
 - Hilo conductor: *¿Qué tiene que pensar el alumno ahora que antes no pensaba?*

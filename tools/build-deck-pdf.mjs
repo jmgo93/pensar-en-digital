@@ -36,7 +36,7 @@ const executablePath = [process.env.CHROME_PATH, 'C:/Program Files/Google/Chrome
 if (!executablePath) throw new Error('No se encontró Chrome/Edge. Define CHROME_PATH.');
 const browser = await puppeteer.launch({ executablePath, headless: true });
 
-const HIDE = '.slide-controls, #help, .s-countdown, .toast { display: none !important; }';
+const HIDE = '.slide-controls, .rotate-hint, #help, .s-countdown, .toast { display: none !important; }';
 /** @param {number} ms */
 const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
