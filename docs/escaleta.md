@@ -2,7 +2,7 @@
 
 GENERADO por `tools/build-escaleta.mjs` desde `content/presentacion.json`. Para cambiar textos o notas, edita el JSON y regenera. Versión para imprimir: `docs/escaleta.pdf` (`npm run docs:pdf`).
 
-- Duración: 45 minutos · 52 diapositivas · 7 actos.
+- Duración: 45 minutos · 53 diapositivas · 7 actos.
 - Presentación: https://jmgo93.github.io/pensar-en-digital/presentacion/ · Notas del ponente en directo: https://jmgo93.github.io/pensar-en-digital/presentacion/?notas (o tecla N).
 - Teclas: → / Av Pág / espacio (siguiente) · ← / Re Pág (anterior) · Inicio/Fin · B o . (pantalla negra) · F (pantalla completa) · N (abrir notas) · T (reiniciar cronómetro) · C (reiniciar la cuenta atrás de la votación; también con un botón en las notas) · número + Intro (ir a esa diapositiva).
 - Sin teclado (tableta, móvil, pizarra digital): al tocar la pantalla aparecen los botones anterior/siguiente, el contador y pantalla completa, que se ocultan solos a los 4 s; también se puede deslizar el dedo. La presentación se adapta a cualquier pantalla (en el móvil, mejor en horizontal).
@@ -18,62 +18,63 @@ GENERADO por `tools/build-escaleta.mjs` desde `content/presentacion.json`. Para 
 | **0–9** | | **Apertura: el marco y tres lentes** | | |
 | 00:00 | 1 | Competencia Digital Docente como medio para generar conocimiento en el alumnado | Hoy vamos a mirar casos de aula, no aplicaciones: qué tiene que pensar el alumnado. | «Antes de nada, sacad el móvil: todo lo de hoy está en una app». |
 | 00:30 | 2 | Llévatelo: instala la app | No hace falta apuntar nada: diapositivas, prompts, guía y bibliografía están en la app. | «Antes de empezar, una pregunta. La repetiremos al final para ver si algo ha cambiado». |
-| 01:00 | 3 | Votación v0: Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | Es una foto de partida, no un examen: nadie ve quién vota qué. | «Antes de los casos, ¿de qué marco hablamos?». |
-| 02:15 | 4 | El marco: **6 áreas** de competencia digital docente | Todo lo que veremos hoy está en el marco oficial: no es una moda, es lo que se espera de un docente. | «Veamos las cuatro áreas del aula, una a una, con las competencias que usaremos hoy». |
-| 02:45 | 5 | Área 3 · Enseñanza y aprendizaje | Diseñar y gestionar clases con tecnología que hagan pensar: acompañar al alumnado, que aprenda de sus compañeros y que aprenda a regular su propio aprendizaje. | «Segunda área del aula: cómo evaluamos». |
-| 03:30 | 6 | Área 4 · Evaluación y retroalimentación | Usar lo digital para ver el proceso, no solo el resultado: recoger evidencias, devolver retroalimentación útil y decidir qué hacer después, siempre respetando la protección de datos. | «Tercera: que nadie se quede fuera». |
-| 04:00 | 7 | Área 5 · Empoderamiento del alumnado | Quitar barreras para que todo el alumnado pueda acceder, participar y avanzar, y convertirlo en protagonista que piensa de forma crítica y creativa. | «Y la cuarta: la competencia digital del propio alumnado». |
-| 04:30 | 8 | Área 6 · Desarrollo de la competencia digital del alumnado | Enseñar al alumnado a buscar y contrastar información, comunicarse y colaborar con respeto, crear respetando la autoría, cuidarse en la red y resolver problemas con tecnología. | «Y en cada una de estas competencias, no se es competente o no: se avanza por etapas». |
-| 05:15 | 9 | De conocer a transformar | En prácticas lo normal es estar en la etapa A; el objetivo de hoy es dar pasos hacia la B. | «Para mirar los casos usaremos tres lentes. La primera: ICAP». |
-| 05:45 | 10 | ICAP: ¿qué hace el alumno **con la información**? | ICAP mira al alumnado: cuanto más genera y co-construye, más aprende. Es la primera lente para leer cada caso. | «ICAP mira al alumnado; PICRAT mira también a la tecnología y a nuestra práctica». |
-| 06:45 | 11 | PICRAT: dos preguntas | PICRAT cruza dos preguntas: qué hace el alumnado con la tecnología y qué le hace la tecnología a mi práctica. Es la segunda lente. | «Y la tercera lente: siete preguntas para revisar cualquier tarea». |
-| 07:45 | 12 | 7 claves para revisar cualquier tarea | Las siete claves son la tercera lente: preguntas concretas para revisar una tarea antes de llevarla al aula. | «Tres lentes, ICAP, PICRAT y claves, y una idea de fondo». |
-| 08:30 | 13 | La competencia digital docente se nota en **lo que logra el alumnado**. | No se trata de cuántas aplicaciones uso, sino de qué consigue mi alumnado gracias a cómo las uso. | «Primer bloque: ¿digitalizar o innovar?». |
+| 01:00 | 3 | Votación v0: Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | Es una foto de partida, no un examen: nadie ve quién vota qué. | «Antes de los casos, ¿de qué hablamos cuando decimos competencia digital docente?». |
+| 02:00 | 4 | ¿Qué es la competencia digital docente? | No es saber manejar aplicaciones: es saber, saber hacer y querer usar la tecnología bien, al servicio de la enseñanza. | «Y para concretarlo, tenemos un marco oficial con seis áreas». |
+| 02:30 | 5 | El marco: **6 áreas** de competencia digital docente | Todo lo que veremos hoy está en el marco oficial: no es una moda, es lo que se espera de un docente. | «Veamos las cuatro áreas del aula, una a una, con las competencias que usaremos hoy». |
+| 03:00 | 6 | Área 3 · Enseñanza y aprendizaje | Diseñar y gestionar clases con tecnología que hagan pensar: acompañar al alumnado, que aprenda de sus compañeros y que aprenda a regular su propio aprendizaje. | «Segunda área del aula: cómo evaluamos». |
+| 03:30 | 7 | Área 4 · Evaluación y retroalimentación | Usar lo digital para ver el proceso, no solo el resultado: recoger evidencias, devolver retroalimentación útil y decidir qué hacer después, siempre respetando la protección de datos. | «Tercera: que nadie se quede fuera». |
+| 04:00 | 8 | Área 5 · Empoderamiento del alumnado | Quitar barreras para que todo el alumnado pueda acceder, participar y avanzar, y convertirlo en protagonista que piensa de forma crítica y creativa. | «Y la cuarta: la competencia digital del propio alumnado». |
+| 04:30 | 9 | Área 6 · Desarrollo de la competencia digital del alumnado | Enseñar al alumnado a buscar y contrastar información, comunicarse y colaborar con respeto, crear respetando la autoría, cuidarse en la red y resolver problemas con tecnología. | «Y en cada una de estas competencias, no se es competente o no: se avanza por etapas». |
+| 05:15 | 10 | De conocer a transformar | En prácticas lo normal es estar en la etapa A; el objetivo de hoy es dar pasos hacia la B. | «Para mirar los casos usaremos tres lentes. La primera: ICAP». |
+| 05:45 | 11 | ICAP: ¿qué hace el alumno **con la información**? | ICAP mira al alumnado: cuanto más genera y co-construye, más aprende. Es la primera lente para leer cada caso. | «ICAP mira al alumnado; PICRAT mira también a la tecnología y a nuestra práctica». |
+| 06:45 | 12 | PICRAT: dos preguntas | PICRAT cruza dos preguntas: qué hace el alumnado con la tecnología y qué le hace la tecnología a mi práctica. Es la segunda lente. | «Y la tercera lente: siete preguntas para revisar cualquier tarea». |
+| 07:45 | 13 | 7 claves para revisar cualquier tarea | Las siete claves son la tercera lente: preguntas concretas para revisar una tarea antes de llevarla al aula. | «Tres lentes, ICAP, PICRAT y claves, y una idea de fondo». |
+| 08:30 | 14 | La competencia digital docente se nota en **lo que logra el alumnado**. | No se trata de cuántas aplicaciones uso, sino de qué consigue mi alumnado gracias a cómo las uso. | «Primer bloque: ¿digitalizar o innovar?». |
 | **9–15** | | **1 · ¿Digitalizar o innovar? (Primaria)** | | |
-| 09:00 | 14 | ¿Digitalizar o **innovar**? | Cambiar el soporte no cambia lo que el alumnado piensa. | «Empezamos con dos tareas». |
-| 09:15 | 15 | Votación v1: Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos? | La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión. | «¿Y la tecnología, por sí sola, hace que se aprenda más? Cuarenta años de investigación». |
-| 10:30 | 16 | 0,35 · El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**. | La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico. | «¿Y de qué depende? No del equipamiento». |
-| 11:15 | 17 | No decide el equipamiento: decide **el docente**. | Más tablets no cambian el aula; un docente que sabe para qué usarlas, sí. | «Veamos un caso de Primaria». |
-| 12:00 | 18 | Repaso con una app de «arrastra y suelta» | Parece digital y moderno, pero el pensamiento es el de una ficha de papel, y deja fuera a quien lee con dificultad. | «¿Cómo la subimos de escalón sin cambiar el objetivo?». |
-| 13:00 | 19 | Problemas del barrio: **trabajo en parejas** | El alumnado pasa de elegir respuestas a crear problemas y explicarlos a otros; el audio y los pictogramas abren la puerta a todos. | «¿Con qué herramientas?». |
-| 14:15 | 20 | Grabar, ver y entender | Herramientas gratuitas y sin cuenta del alumnado: la grabación del problema y los pictogramas para la consigna. | «Segundo bloque: ¿qué hace vuestro alumnado con la información? Votad». |
+| 09:00 | 15 | ¿Digitalizar o **innovar**? | Cambiar el soporte no cambia lo que el alumnado piensa. | «Empezamos con dos tareas». |
+| 09:15 | 16 | Votación v1: Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos? | La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión. | «¿Y la tecnología, por sí sola, hace que se aprenda más? Cuarenta años de investigación». |
+| 10:30 | 17 | 0,35 · El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**. | La tecnología no es buena ni mala por sí misma: amplifica el diseño didáctico. | «¿Y de qué depende? No del equipamiento». |
+| 11:15 | 18 | No decide el equipamiento: decide **el docente**. | Más tablets no cambian el aula; un docente que sabe para qué usarlas, sí. | «Veamos un caso de Primaria». |
+| 12:00 | 19 | Repaso con una app de «arrastra y suelta» | Parece digital y moderno, pero el pensamiento es el de una ficha de papel, y deja fuera a quien lee con dificultad. | «¿Cómo la subimos de escalón sin cambiar el objetivo?». |
+| 13:00 | 20 | Problemas del barrio: **trabajo en parejas** | El alumnado pasa de elegir respuestas a crear problemas y explicarlos a otros; el audio y los pictogramas abren la puerta a todos. | «¿Con qué herramientas?». |
+| 14:15 | 21 | Grabar, ver y entender | Herramientas gratuitas y sin cuenta del alumnado: la grabación del problema y los pictogramas para la consigna. | «Segundo bloque: ¿qué hace vuestro alumnado con la información? Votad». |
 | **15–21** | | **2 · ¿Qué hace con la información? (ESO)** | | |
-| 15:00 | 21 | ¿Qué hace tu alumnado **con la información**? | Mirar lo que hace el alumnado, no la herramienta. | «Pensad en vuestra última clase con tecnología». |
-| 15:15 | 22 | Votación v2: Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado? | Vuestra respuesta es el punto de partida: ahora la situamos en la escalera ICAP. | «Estas cuatro opciones son los cuatro escalones de ICAP. Miremos el salto que más importa». |
-| 16:30 | 23 | El salto grande: de manipular a generar | Manipular ocupa al alumnado; generar le obliga a pensar. La pregunta es: ¿produce algo que no estaba en el material? | «Con esta lente, miremos un caso de Historia». |
-| 18:00 | 24 | La línea temporal ya hecha | Quien seleccionó, ordenó y relacionó los hechos fue el docente: el alumnado solo los recorre. | «¿Cómo le devolvemos el pensamiento al alumnado?». |
-| 18:45 | 25 | Construyen la suya **y la defienden** | Las ideas del alumnado se convierten en borradores que el grupo mejora: eso es «modo diseño». | «Herramientas para construir en equipo». |
-| 20:15 | 26 | Construir en equipo | La herramienta es la misma que en el «antes»: cambia quién construye. | «Tercer bloque: atención. Primero, un verdadero o falso». |
+| 15:00 | 22 | ¿Qué hace tu alumnado **con la información**? | Mirar lo que hace el alumnado, no la herramienta. | «Pensad en vuestra última clase con tecnología». |
+| 15:15 | 23 | Votación v2: Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado? | Vuestra respuesta es el punto de partida: ahora la situamos en la escalera ICAP. | «Estas cuatro opciones son los cuatro escalones de ICAP. Miremos el salto que más importa». |
+| 16:30 | 24 | El salto grande: de manipular a generar | Manipular ocupa al alumnado; generar le obliga a pensar. La pregunta es: ¿produce algo que no estaba en el material? | «Con esta lente, miremos un caso de Historia». |
+| 18:00 | 25 | La línea temporal ya hecha | Quien seleccionó, ordenó y relacionó los hechos fue el docente: el alumnado solo los recorre. | «¿Cómo le devolvemos el pensamiento al alumnado?». |
+| 18:45 | 26 | Construyen la suya **y la defienden** | Las ideas del alumnado se convierten en borradores que el grupo mejora: eso es «modo diseño». | «Herramientas para construir en equipo». |
+| 20:15 | 27 | Construir en equipo | La herramienta es la misma que en el «antes»: cambia quién construye. | «Tercer bloque: atención. Primero, un verdadero o falso». |
 | **21–27** | | **3 · Atención y «nativos digitales» (Bachillerato)** | | |
-| 21:00 | 27 | Atención y **«nativos digitales»** | La atención se diseña. | «¿Verdadero o falso? Votad». |
-| 21:15 | 28 | Votación v6: Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien? | Muchos pensamos que «ellos sí pueden» hacer varias cosas a la vez. La investigación dice otra cosa. | «Veamos qué dice la investigación». |
-| 22:00 | 29 | No hay **nativos digitales**. | Nacer entre pantallas no te hace competente: alguien te lo tiene que enseñar. Ese alguien sois vosotros. | «Y la distracción no es solo individual: se contagia». |
-| 23:00 | 30 | −11 · puntos en Matemáticas en los centros donde los compañeros se distraen más con pantallas. **Con o sin prohibición del móvil**. | La atención es un clima compartido: se gestiona con diseño didáctico, no solo con normas sobre el papel. | «Veamos un caso de Bachillerato». |
-| 23:45 | 31 | Aula invertida con un vídeo largo | Se ha invertido el formato, no el pensamiento: vídeo pasivo en casa y clase pasiva con pantallas que compiten. | «La investigación sobre aula invertida da la pista». |
-| 24:45 | 32 | Vídeos cortos y clase **a partir de los errores** | El aula invertida funciona por lo que se hace en clase: aprendizaje activo y estructurado, no por el vídeo. | «¿Con qué herramientas?». |
-| 26:15 | 33 | Vídeo que hace pensar | Grabar corto y preguntar dentro del vídeo. | «Cuarto bloque: inteligencia artificial. Antes del dato, vuestra predicción». |
+| 21:00 | 28 | Atención y **«nativos digitales»** | La atención se diseña. | «¿Verdadero o falso? Votad». |
+| 21:15 | 29 | Votación v6: Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien? | Muchos pensamos que «ellos sí pueden» hacer varias cosas a la vez. La investigación dice otra cosa. | «Veamos qué dice la investigación». |
+| 22:00 | 30 | No hay **nativos digitales**. | Nacer entre pantallas no te hace competente: alguien te lo tiene que enseñar. Ese alguien sois vosotros. | «Y la distracción no es solo individual: se contagia». |
+| 23:00 | 31 | −11 · puntos en Matemáticas en los centros donde los compañeros se distraen más con pantallas. **Con o sin prohibición del móvil**. | La atención es un clima compartido: se gestiona con diseño didáctico, no solo con normas sobre el papel. | «Veamos un caso de Bachillerato». |
+| 23:45 | 32 | Aula invertida con un vídeo largo | Se ha invertido el formato, no el pensamiento: vídeo pasivo en casa y clase pasiva con pantallas que compiten. | «La investigación sobre aula invertida da la pista». |
+| 24:45 | 33 | Vídeos cortos y clase **a partir de los errores** | El aula invertida funciona por lo que se hace en clase: aprendizaje activo y estructurado, no por el vídeo. | «¿Con qué herramientas?». |
+| 26:15 | 34 | Vídeo que hace pensar | Grabar corto y preguntar dentro del vídeo. | «Cuarto bloque: inteligencia artificial. Antes del dato, vuestra predicción». |
 | **27–34** | | **4 · IA: ¿muleta o tutor? (EOI)** | | |
-| 27:00 | 34 | IA: ¿**muleta** o tutor? | La pregunta no es si usarla, sino para qué y cómo. | «Un experimento real. Predecid el resultado». |
-| 27:15 | 35 | Votación v3: Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá? | Predecir antes de ver el dato hace que el dato se recuerde. | «Veamos qué pasó de verdad». |
-| 28:15 | 36 | −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, **el daño se mitiga**. | La IA sin diseño pedagógico mejora el ejercicio y empeora el aprendizaje. | «¿Por qué pasa esto? Tiene nombre: pereza metacognitiva». |
-| 29:30 | 37 | Pereza metacognitiva | Si la IA lo hace fácil, el alumno deja de vigilar su propio pensamiento. | «Veamos un caso de la Escuela de Idiomas». |
-| 30:00 | 38 | La redacción para casa | Si la tarea se puede delegar en una IA, el producto ya no demuestra aprendizaje. | «No se trata de prohibir, sino de diseñar fricción». |
-| 31:30 | 39 | Conversación real **con fricción** | Lo que no se puede delegar —hablar con otra persona, reformular, explicar— es lo que se evalúa. | «Herramientas para hacerlo». |
-| 33:00 | 40 | IA que pregunta, voz que conversa | Prompts con fricción listos para usar y una grabadora sin cuenta. | «Una condición antes de probar nada con IA: los datos». |
-| 33:15 | 41 | Ningún dato personal del alumnado | Describe situaciones, nunca personas. | «Último bloque: evaluar para aprender». |
+| 27:00 | 35 | IA: ¿**muleta** o tutor? | La pregunta no es si usarla, sino para qué y cómo. | «Un experimento real. Predecid el resultado». |
+| 27:15 | 36 | Votación v3: Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá? | Predecir antes de ver el dato hace que el dato se recuerde. | «Veamos qué pasó de verdad». |
+| 28:15 | 37 | −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, **el daño se mitiga**. | La IA sin diseño pedagógico mejora el ejercicio y empeora el aprendizaje. | «¿Por qué pasa esto? Tiene nombre: pereza metacognitiva». |
+| 29:30 | 38 | Pereza metacognitiva | Si la IA lo hace fácil, el alumno deja de vigilar su propio pensamiento. | «Veamos un caso de la Escuela de Idiomas». |
+| 30:00 | 39 | La redacción para casa | Si la tarea se puede delegar en una IA, el producto ya no demuestra aprendizaje. | «No se trata de prohibir, sino de diseñar fricción». |
+| 31:30 | 40 | Conversación real **con fricción** | Lo que no se puede delegar —hablar con otra persona, reformular, explicar— es lo que se evalúa. | «Herramientas para hacerlo». |
+| 33:00 | 41 | IA que pregunta, voz que conversa | Prompts con fricción listos para usar y una grabadora sin cuenta. | «Una condición antes de probar nada con IA: los datos». |
+| 33:15 | 42 | Ningún dato personal del alumnado | Describe situaciones, nunca personas. | «Último bloque: evaluar para aprender». |
 | **34–40** | | **5 · Evaluar para aprender (Conservatorio)** | | |
-| 34:00 | 42 | Evaluar **para aprender** | El feedback solo sirve si el alumnado lo usa. | «Pensad en la última vez que devolvisteis algo corregido». |
-| 34:15 | 43 | Votación v7: Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado? | Si la mayoría mira la nota y lo guarda, nuestro feedback no está funcionando. | «¿Qué hace que el feedback funcione?». |
-| 35:30 | 44 | El feedback sirve **si el alumnado lo usa**. | Feedback sobre el proceso, con tiempo para actuar, y alumnado que aprende a usarlo. | «Un caso de Conservatorio». |
-| 36:30 | 45 | «Tócalo igual que en el vídeo» | Imitar sin decidir y recibir correcciones que se olvidan: poco juicio propio y poca autorregulación. | «La grabación como espejo». |
-| 37:30 | 46 | Grabarse, **compararse** y decidir | La grabación convierte el feedback en evidencia que el propio alumno usa para mejorar. | «Herramientas para hacerlo». |
-| 39:00 | 47 | Grabar y evaluar con criterio | Grabación libre y rúbricas compartidas. | «Recapitulemos en siete claves». |
+| 34:00 | 43 | Evaluar **para aprender** | El feedback solo sirve si el alumnado lo usa. | «Pensad en la última vez que devolvisteis algo corregido». |
+| 34:15 | 44 | Votación v7: Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado? | Si la mayoría mira la nota y lo guarda, nuestro feedback no está funcionando. | «¿Qué hace que el feedback funcione?». |
+| 35:30 | 45 | El feedback sirve **si el alumnado lo usa**. | Feedback sobre el proceso, con tiempo para actuar, y alumnado que aprende a usarlo. | «Un caso de Conservatorio». |
+| 36:30 | 46 | «Tócalo igual que en el vídeo» | Imitar sin decidir y recibir correcciones que se olvidan: poco juicio propio y poca autorregulación. | «La grabación como espejo». |
+| 37:30 | 47 | Grabarse, **compararse** y decidir | La grabación convierte el feedback en evidencia que el propio alumno usa para mejorar. | «Herramientas para hacerlo». |
+| 39:00 | 48 | Grabar y evaluar con criterio | Grabación libre y rúbricas compartidas. | «Recapitulemos en siete claves». |
 | **40–45** | | **Cierre** | | |
-| 40:00 | 48 | 7 claves: repaso | Siete preguntas para revisar cualquier tarea, de cualquier etapa y con cualquier herramienta. | «¿Recordáis la pregunta del principio? Volvemos a votarla». |
-| 41:15 | 49 | Votación v5: Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | La misma pregunta, con todo lo que hemos visto hoy. | «Comparemos con el principio». |
-| 42:30 | 50 | ¿Ha cambiado algo? | Lo que más genera conocimiento no es la aplicación: es lo que el alumnado tiene que pensar y con quién. | «Para seguir, os dejo el kit». |
-| 43:45 | 51 | ¿Qué pensará tu alumnado **el lunes**? | Una tarea, una mejora, la semana que viene. | «Gracias». |
-| 44:30 | 52 | Gracias | El alumnado no nace digitalmente competente: necesita docentes digitalmente competentes. |  |
+| 40:00 | 49 | 7 claves: repaso | Siete preguntas para revisar cualquier tarea, de cualquier etapa y con cualquier herramienta. | «¿Recordáis la pregunta del principio? Volvemos a votarla». |
+| 41:15 | 50 | Votación v5: Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más? | La misma pregunta, con todo lo que hemos visto hoy. | «Comparemos con el principio». |
+| 42:30 | 51 | ¿Ha cambiado algo? | Lo que más genera conocimiento no es la aplicación: es lo que el alumnado tiene que pensar y con quién. | «Para seguir, os dejo el kit». |
+| 43:45 | 52 | ¿Qué pensará tu alumnado **el lunes**? | Una tarea, una mejora, la semana que viene. | «Gracias». |
+| 44:30 | 53 | Gracias | El alumnado no nace digitalmente competente: necesita docentes digitalmente competentes. |  |
 
 ## Notas del ponente
 
@@ -108,10 +109,23 @@ Funciona sin conexión una vez abierta. En Android: menú → Instalar aplicaci�
 Pregunta diagnóstica anónima. No comentes las respuestas ni digas cuál es la buena: solo «la volveremos a hacer al final». La opción que buscamos es la tercera (explicar con sus palabras y contrastar con un compañero: constructivo e interactivo en ICAP).
 
 - **Haz:** Un minuto para votar. Sin conexión: pide que la apunten en el móvil o en un papel y vuelve a preguntarla al final a mano alzada.
-- **Transición:** *«Antes de los casos, ¿de qué marco hablamos?».*
+- **Transición:** *«Antes de los casos, ¿de qué hablamos cuando decimos competencia digital docente?».*
 - **Si vas tarde:** Mantenla aunque vayas justo: sin ella no hay comparación.
 
-#### 4. [02:15] El marco: **6 áreas** de competencia digital docente
+#### 4. [02:00] ¿Qué es la competencia digital docente?
+
+> En pantalla: ¿Qué es la competencia digital docente? · Es el conjunto de **conocimientos, habilidades, destrezas y actitudes** que tiene el profesorado para usar las Tecnologías de la Información y la Comunicación (TIC) de manera **segura, crítica, creativa y eficaz** en su labor educativa.
+
+**Idea fuerza:** No es saber manejar aplicaciones: es saber, saber hacer y querer usar la tecnología bien, al servicio de la enseñanza.
+
+Lee la definición despacio y detente en los dos grupos resaltados. Primero, «conocimientos, habilidades, destrezas y actitudes»: no basta con saber qué botón pulsar; también cuenta la actitud (querer probar, revisar, aprender de lo que no sale). Segundo, «segura, crítica, creativa y eficaz»: segura (protección de datos, bienestar digital), crítica (contrastar información, no creerse lo primero que aparece, tampoco lo que dice la IA), creativa (que el alumnado produzca, no solo consuma) y eficaz (que sirva para que aprendan). Cierra con «en su labor educativa»: la competencia digital docente se mide en el aula, no en el número de aplicaciones que conozco.
+
+- **Ejemplo para defenderlo:** «Un docente que domina veinte aplicaciones pero las usa para que el alumnado rellene fichas tiene destreza técnica, pero no está usando la tecnología de forma creativa ni eficaz. Otro que solo usa la grabadora del móvil, pero la usa para que el alumnado se escuche, se corrija y mejore, está siendo competente digitalmente».
+- **Haz:** Lee la definición en voz alta, sin prisa, y señala con la mano los dos grupos resaltados.
+- **Transición:** *«Y para concretarlo, tenemos un marco oficial con seis áreas».*
+- **Si vas tarde:** Lee solo los dos grupos resaltados.
+
+#### 5. [02:30] El marco: **6 áreas** de competencia digital docente
 
 > En pantalla: El marco: **6 áreas** de competencia digital docente · Las áreas 3 a 6 miran al aula: son las que veremos en cada caso. · Compromiso profesional · Contenidos digitales · Enseñanza y aprendizaje · Evaluación y retroalimentación · Empoderamiento del alumnado · Competencia digital del alumnado
 
@@ -125,7 +139,7 @@ El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco est
 - **Si vas tarde:** Lee solo el título y la frase de abajo.
 - **Cita en pantalla:** MRCDD, 2022
 
-#### 5. [02:45] Área 3 · Enseñanza y aprendizaje
+#### 6. [03:00] Área 3 · Enseñanza y aprendizaje
 
 > En pantalla: Enseñanza y aprendizaje · Planificar e integrar lo digital en la enseñanza · Guiar y acompañar al alumnado con medios digitales · Que aprendan colaborando con sus compañeros · Que planifiquen, revisen y regulen su aprendizaje · Enseñanza · Orientación y apoyo en el aprendizaje · Aprendizaje entre iguales · Primaria · Historia · Aprendizaje autorregulado · Bachillerato · EOI · Conservatorio
 
@@ -139,7 +153,7 @@ El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco est
 - **Si vas tarde:** Nombra el área y las competencias resaltadas, sin explicarlas.
 - **Cita en pantalla:** MRCDD, 2022
 
-#### 6. [03:30] Área 4 · Evaluación y retroalimentación
+#### 7. [03:30] Área 4 · Evaluación y retroalimentación
 
 > En pantalla: Evaluación y retroalimentación · Evaluar con medios variados, también el proceso · Recoger y analizar evidencias del aprendizaje · Dar feedback útil y decidir qué hacer después · Estrategias de evaluación · EOI · Analíticas y evidencias de aprendizaje · Retroalimentación y toma de decisiones · Conservatorio
 
@@ -153,7 +167,7 @@ El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco est
 - **Si vas tarde:** Nombra el área y las competencias resaltadas, sin explicarlas.
 - **Cita en pantalla:** MRCDD, 2022
 
-#### 7. [04:00] Área 5 · Empoderamiento del alumnado
+#### 8. [04:00] Área 5 · Empoderamiento del alumnado
 
 > En pantalla: Empoderamiento del alumnado · Que todo el alumnado pueda acceder y participar · Ajustar ritmos, niveles y caminos · Que el alumnado sea protagonista · Accesibilidad e inclusión · Primaria · Atención a las diferencias personales en el aprendizaje · Compromiso activo del alumnado con su propio aprendizaje
 
@@ -167,7 +181,7 @@ El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco est
 - **Si vas tarde:** Nombra el área y las competencias resaltadas, sin explicarlas.
 - **Cita en pantalla:** MRCDD, 2022
 
-#### 8. [04:30] Área 6 · Desarrollo de la competencia digital del alumnado
+#### 9. [04:30] Área 6 · Desarrollo de la competencia digital del alumnado
 
 > En pantalla: Desarrollo de la competencia digital del alumnado · Buscar, evaluar y contrastar información · Comunicarse y colaborar con respeto en la red · Crear contenidos propios respetando la autoría · Cuidar su atención, su salud y sus datos · Resolver problemas con tecnología · Alfabetización mediática y en el tratamiento de la información y de los datos · Historia · Comunicación, colaboración y ciudadanía digital · Creación de contenidos digitales · Primaria · Uso responsable y bienestar digital · Bachillerato · Resolución de problemas
 
@@ -181,7 +195,7 @@ El Marco de Referencia de la Competencia Digital Docente (MRCDD) es el marco est
 - **Si vas tarde:** Nombra el área y las competencias resaltadas, sin explicarlas.
 - **Cita en pantalla:** MRCDD, 2022
 
-#### 9. [05:15] De conocer a transformar
+#### 10. [05:15] De conocer a transformar
 
 > En pantalla: De conocer a transformar · A · Conocer y aplicar con guía · B · Usar con autonomía y adaptar · C · Investigar y transformar
 
@@ -195,7 +209,7 @@ Tres etapas con dos niveles cada una (A1 a C2). A: conozco las tecnologías del 
 - **Si vas tarde:** Solo nombra las tres etapas.
 - **Cita en pantalla:** MRCDD, 2022
 
-#### 10. [05:45] ICAP: ¿qué hace el alumno **con la información**?
+#### 11. [05:45] ICAP: ¿qué hace el alumno **con la información**?
 
 > En pantalla: ICAP: ¿qué hace el alumno **con la información**? · Pasivo · recibe · Activo · manipula · Constructivo · genera · Interactivo · co-construye
 
@@ -210,7 +224,7 @@ Primera lente. ICAP es un marco de Michelene Chi y Ruth Wylie (2014) que clasifi
 - **Si vas tarde:** Solo los cuatro nombres y el salto Activo → Constructivo.
 - **Cita en pantalla:** Chi y Wylie, 2014
 
-#### 11. [06:45] PICRAT: dos preguntas
+#### 12. [06:45] PICRAT: dos preguntas
 
 > En pantalla: PICRAT: dos preguntas · ¿Qué hace el alumnado con la tecnología? · Pasivo: la consume · Interactivo: la manipula · Creativo: produce algo nuevo · ¿Qué cambia en tu práctica? · Reemplaza: lo mismo, otro soporte · Amplifica: lo mismo, mejor · Transforma: algo antes imposible
 
@@ -225,7 +239,7 @@ Segunda lente. Kimmons, Graham y West (2020) diseñaron PICRAT para la formació
 - **Si vas tarde:** Lee solo las dos preguntas.
 - **Cita en pantalla:** Kimmons et al., 2020
 
-#### 12. [07:45] 7 claves para revisar cualquier tarea
+#### 13. [07:45] 7 claves para revisar cualquier tarea
 
 > En pantalla: 7 claves para revisar cualquier tarea · Pedagogía primero · Construir, no recibir · Atención cuidada · Feedback de proceso · DUA de origen · IA con fricción · Ética compartida
 
@@ -238,7 +252,7 @@ Presenta las claves como preguntas, no como eslóganes. 1 Pedagogía primero: ¿
 - **Transición:** *«Tres lentes, ICAP, PICRAT y claves, y una idea de fondo».*
 - **Si vas tarde:** Lee solo los títulos.
 
-#### 13. [08:30] La competencia digital docente se nota en **lo que logra el alumnado**.
+#### 14. [08:30] La competencia digital docente se nota en **lo que logra el alumnado**.
 
 > En pantalla: La competencia digital docente se nota en **lo que logra el alumnado**. · En cada mejora: **ICAP · PICRAT · claves · MRCDD**.
 
@@ -253,7 +267,7 @@ Es nuestra lectura del marco (no una cita literal): cuatro de sus seis áreas mi
 
 ### 9–15 min · 1 · ¿Digitalizar o innovar? (Primaria)
 
-#### 14. [09:00] ¿Digitalizar o **innovar**?
+#### 15. [09:00] ¿Digitalizar o **innovar**?
 
 > En pantalla: ¿Digitalizar o **innovar**? · Primaria · Matemáticas · DUA
 
@@ -265,7 +279,7 @@ Diapositiva de paso: anuncia el bloque y el caso (Primaria, Matemáticas). Diez 
 - **Transición:** *«Empezamos con dos tareas».*
 - **Si vas tarde:** Pásala sin comentar.
 
-#### 15. [09:15] Votación v1: Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos?
+#### 16. [09:15] Votación v1: Si pegas estas dos tareas en una IA, ¿cuál crees que resolverá sola en segundos?
 
 **Idea fuerza:** La diferencia no es la tecnología: es quién tiene los datos y quién toma la decisión.
 
@@ -275,7 +289,7 @@ Lee las dos tareas en voz alta y deja votar. Comenta el resultado: casi todo el 
 - **Transición:** *«¿Y la tecnología, por sí sola, hace que se aprenda más? Cuarenta años de investigación».*
 - **Si vas tarde:** Mano alzada en 30 segundos.
 
-#### 16. [10:30] 0,35 · El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**.
+#### 17. [10:30] 0,35 · El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**.
 
 > En pantalla: El alumno medio con tecnología supera al 64 % de quienes no la usan (sin efecto: 50 %). **Depende del diseño**.
 
@@ -290,7 +304,7 @@ Tamim y colaboradores (2011) reunieron 25 metaanálisis (1055 estudios, cuarenta
 - **Si vas tarde:** Omite Hillmayr.
 - **Cita en pantalla:** Tamim et al., 2011
 
-#### 17. [11:15] No decide el equipamiento: decide **el docente**.
+#### 18. [11:15] No decide el equipamiento: decide **el docente**.
 
 > En pantalla: No decide el equipamiento: decide **el docente**. · Pesan más las competencias didácticas digitales que los dispositivos.
 
@@ -305,7 +319,7 @@ Sailer, Murböck y Fischer (2021) preguntaron a una muestra representativa de do
 - **Si vas tarde:** Omite TPACK.
 - **Cita en pantalla:** Sailer et al., 2021
 
-#### 18. [12:00] Repaso con una app de «arrastra y suelta»
+#### 19. [12:00] Repaso con una app de «arrastra y suelta»
 
 > En pantalla: Repaso con una app de «arrastra y suelta» · Arrastran números hasta que la app dice «¡Correcto!»: **aciertan por tanteo**. Un alumno con dislexia no lee bien el enunciado y se bloquea. · Primaria · Matemáticas · 5.º · 5.º de Primaria · 24 alumnos · una tablet por alumno · ¿Cómo podemos sortear esta barrera desde el diseño?
 
@@ -317,7 +331,7 @@ Ejemplo de aula muy reconocible: la app es vistosa y el alumnado está entreteni
 - **Transición:** *«¿Cómo la subimos de escalón sin cambiar el objetivo?».*
 - **Si vas tarde:** Haz tú la pregunta y respóndela en una frase.
 
-#### 19. [13:00] Problemas del barrio: **trabajo en parejas**
+#### 20. [13:00] Problemas del barrio: **trabajo en parejas**
 
 > En pantalla: Problemas del barrio: **trabajo en parejas** · Inventan un problema con datos del barrio, lo graban y otra pareja lo resuelve. · ICAP · Activo → Interactivo: crean y explican · PICRAT · Reemplaza → Transforma · Claves · 1 Pedagogía primero · 2 Construir · 5 DUA · MRCDD · 3.3 Aprendizaje entre iguales · 5.1 Inclusión
 
@@ -331,7 +345,7 @@ Recorre el análisis de abajo arriba sin tecnicismos: «Antes elegían; ahora cr
 - **Si vas tarde:** Lee solo la propuesta y la fila ICAP.
 - **Cita en pantalla:** CAST, 2024
 
-#### 20. [14:15] Grabar, ver y entender
+#### 21. [14:15] Grabar, ver y entender
 
 > En pantalla: Grabar, ver y entender · vocaroo · arasaac
 
@@ -345,7 +359,7 @@ Vocaroo: grabar el problema y compartir un enlace, sin cuenta. ARASAAC: pictogra
 
 ### 15–21 min · 2 · ¿Qué hace con la información? (ESO)
 
-#### 21. [15:00] ¿Qué hace tu alumnado **con la información**?
+#### 22. [15:00] ¿Qué hace tu alumnado **con la información**?
 
 > En pantalla: ¿Qué hace tu alumnado **con la información**? · ESO · Geografía e Historia
 
@@ -357,7 +371,7 @@ Paso de bloque: Secundaria e Historia.
 - **Transición:** *«Pensad en vuestra última clase con tecnología».*
 - **Si vas tarde:** Pásala sin comentar.
 
-#### 22. [15:15] Votación v2: Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado?
+#### 23. [15:15] Votación v2: Piensa en tu próxima clase con tecnología: ¿qué hará sobre todo tu alumnado?
 
 **Idea fuerza:** Vuestra respuesta es el punto de partida: ahora la situamos en la escalera ICAP.
 
@@ -367,7 +381,7 @@ Activa la experiencia de la sala antes de profundizar en ICAP. No comentes todav
 - **Transición:** *«Estas cuatro opciones son los cuatro escalones de ICAP. Miremos el salto que más importa».*
 - **Si vas tarde:** Mano alzada rápida y sigue.
 
-#### 23. [16:30] El salto grande: de manipular a generar
+#### 24. [16:30] El salto grande: de manipular a generar
 
 > En pantalla: El salto grande: de manipular a generar · Subraya, ordena, arrastra, **copia** el esquema · Explica con sus palabras, **inventa** ejemplos, hace su esquema · Activo · manipula · Constructivo · genera
 
@@ -382,7 +396,7 @@ Vuelve a la escalera ICAP del principio y conéctala con la votación: «La mayo
 - **Si vas tarde:** Lee solo el título.
 - **Cita en pantalla:** Chi y Wylie, 2014
 
-#### 24. [18:00] La línea temporal ya hecha
+#### 25. [18:00] La línea temporal ya hecha
 
 > En pantalla: La línea temporal ya hecha · El docente cuelga en el muro la línea temporal con fechas e imágenes. El alumnado **la recorre** y contesta un cuestionario. · ESO · Historia · 2.º · 2.º de ESO · Historia · Edad Media · muro digital · ¿Cómo devolvemos el pensamiento histórico al alumnado?
 
@@ -394,7 +408,7 @@ Ejemplo de aula: es la tarea que «parece» innovadora porque usa una herramient
 - **Transición:** *«¿Cómo le devolvemos el pensamiento al alumnado?».*
 - **Si vas tarde:** Pregunta y responde tú.
 
-#### 25. [18:45] Construyen la suya **y la defienden**
+#### 26. [18:45] Construyen la suya **y la defienden**
 
 > En pantalla: Construyen la suya **y la defienden** · Cada equipo elige fuentes, construye su línea con una hipótesis y critica la de otro equipo. · ICAP · Activo → Interactivo: debaten · PICRAT · Reemplaza → Transforma · Claves · 2 Construir · 7 Ética y fuentes · MRCDD · 6.1 Información y datos · 3.3 Entre iguales
 
@@ -408,7 +422,7 @@ Misma herramienta, otro pensamiento. Scardamalia y Bereiter: del «modo creencia
 - **Si vas tarde:** Lee la propuesta y la fila PICRAT.
 - **Cita en pantalla:** Scardamalia y Bereiter, 2014
 
-#### 26. [20:15] Construir en equipo
+#### 27. [20:15] Construir en equipo
 
 > En pantalla: Construir en equipo · padlet · cryptpad
 
@@ -422,7 +436,7 @@ Padlet: el mismo muro del «antes», pero ahora lo construye cada equipo (plan g
 
 ### 21–27 min · 3 · Atención y «nativos digitales» (Bachillerato)
 
-#### 27. [21:00] Atención y **«nativos digitales»**
+#### 28. [21:00] Atención y **«nativos digitales»**
 
 > En pantalla: Atención y **«nativos digitales»** · Bachillerato · Biología
 
@@ -434,7 +448,7 @@ Paso de bloque: Bachillerato, Biología.
 - **Transición:** *«¿Verdadero o falso? Votad».*
 - **Si vas tarde:** Pásala sin comentar.
 
-#### 28. [21:15] Votación v6: Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien?
+#### 29. [21:15] Votación v6: Si un estudiante estudia con el móvil y varias pestañas abiertas, ¿aprenderá igual de bien?
 
 **Idea fuerza:** Muchos pensamos que «ellos sí pueden» hacer varias cosas a la vez. La investigación dice otra cosa.
 
@@ -444,7 +458,7 @@ No reveles la respuesta. Deja ver el resultado y pasa al dato. Suele salir basta
 - **Transición:** *«Veamos qué dice la investigación».*
 - **Si vas tarde:** Mano alzada rápida.
 
-#### 29. [22:00] No hay **nativos digitales**.
+#### 30. [22:00] No hay **nativos digitales**.
 
 > En pantalla: No hay **nativos digitales**. · Tampoco multitarea: alternar tareas empeora el aprendizaje.
 
@@ -459,7 +473,7 @@ Contrasta con la votación: «Habéis votado X; la evidencia dice que no». Kirs
 - **Si vas tarde:** Salta la pregunta a la sala.
 - **Cita en pantalla:** Kirschner y De Bruyckere, 2017
 
-#### 30. [23:00] −11 · puntos en Matemáticas en los centros donde los compañeros se distraen más con pantallas. **Con o sin prohibición del móvil**.
+#### 31. [23:00] −11 · puntos en Matemáticas en los centros donde los compañeros se distraen más con pantallas. **Con o sin prohibición del móvil**.
 
 > En pantalla: puntos en Matemáticas en los centros donde los compañeros se distraen más con pantallas. **Con o sin prohibición del móvil**.
 
@@ -474,7 +488,7 @@ Sung y colaboradores (2026) usaron los datos de PISA 2022. Para cada centro midi
 - **Si vas tarde:** Quédate solo con la frase clave.
 - **Cita en pantalla:** Sung et al., 2026
 
-#### 31. [23:45] Aula invertida con un vídeo largo
+#### 32. [23:45] Aula invertida con un vídeo largo
 
 > En pantalla: Aula invertida con un vídeo largo · En casa, un vídeo de **25 minutos**. En clase, el docente vuelve a explicarlo y el alumnado toma apuntes con el portátil abierto. · Bachillerato · Biología · 1.º · 1.º de Bachillerato · Biología · la célula · ¿Cómo diseñamos la clase para que la atención trabaje a favor?
 
@@ -486,7 +500,7 @@ Ejemplo de aula: se ha invertido el formato, no el pensamiento. Tres problemas: 
 - **Transición:** *«La investigación sobre aula invertida da la pista».*
 - **Si vas tarde:** Señala los tres problemas tú.
 
-#### 32. [24:45] Vídeos cortos y clase **a partir de los errores**
+#### 33. [24:45] Vídeos cortos y clase **a partir de los errores**
 
 > En pantalla: Vídeos cortos y clase **a partir de los errores** · Tres vídeos de 4 minutos con preguntas dentro. En clase, las parejas trabajan sus errores en dos tiempos: · Pantallas abiertas: investigar · Pantallas cerradas: debatir · ICAP · Pasivo → Constructivo · Claves · 3 Atención · 4 Feedback · MRCDD · 6.4 Bienestar digital · 3.4 Autorregulación
 
@@ -501,7 +515,7 @@ Strelan, Osborn y Palmer (2020): 198 estudios y 33 678 estudiantes; el aula inve
 - **Si vas tarde:** Lee la propuesta y el dato g = 0,50.
 - **Cita en pantalla:** Strelan et al., 2020
 
-#### 33. [26:15] Vídeo que hace pensar
+#### 34. [26:15] Vídeo que hace pensar
 
 > En pantalla: Vídeo que hace pensar · edpuzzle · obs
 
@@ -515,7 +529,7 @@ OBS Studio: grabar microvídeos de pantalla, libre. Edpuzzle: insertar preguntas
 
 ### 27–34 min · 4 · IA: ¿muleta o tutor? (EOI)
 
-#### 34. [27:00] IA: ¿**muleta** o tutor?
+#### 35. [27:00] IA: ¿**muleta** o tutor?
 
 > En pantalla: IA: ¿**muleta** o tutor? · Escuela Oficial de Idiomas · Inglés B1
 
@@ -527,7 +541,7 @@ Paso de bloque: EOI, Inglés.
 - **Transición:** *«Un experimento real. Predecid el resultado».*
 - **Si vas tarde:** Pásala sin comentar.
 
-#### 35. [27:15] Votación v3: Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá?
+#### 36. [27:15] Votación v3: Si los estudiantes practican matemáticas con ChatGPT sin límites y después hacen un examen sin IA, ¿qué crees que sucederá?
 
 **Idea fuerza:** Predecir antes de ver el dato hace que el dato se recuerde.
 
@@ -537,7 +551,7 @@ Experimento real (Bastani et al., 2025). No reveles nada: deja la predicción en
 - **Transición:** *«Veamos qué pasó de verdad».*
 - **Si vas tarde:** Mano alzada rápida.
 
-#### 36. [28:15] −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, **el daño se mitiga**.
+#### 37. [28:15] −17 % · Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, **el daño se mitiga**.
 
 > En pantalla: Examen sin IA tras practicar con GPT-4 sin límites. Con un tutor que da pistas, **el daño se mitiga**.
 
@@ -552,7 +566,7 @@ Contrasta con la predicción de la sala. Bastani et al. (2025), PNAS: experiment
 - **Si vas tarde:** Quédate con número + frase clave.
 - **Cita en pantalla:** Bastani et al., 2025
 
-#### 37. [29:30] Pereza metacognitiva
+#### 38. [29:30] Pereza metacognitiva
 
 > En pantalla: Pereza metacognitiva · Mejor producto, **igual aprendizaje**: la facilidad puede apagar la autorregulación.
 
@@ -567,7 +581,7 @@ Fan et al. (2025), experimento aleatorizado con 117 universitarios: el grupo con
 - **Si vas tarde:** Sin la pregunta a la sala.
 - **Cita en pantalla:** Fan et al., 2025
 
-#### 38. [30:00] La redacción para casa
+#### 39. [30:00] La redacción para casa
 
 > En pantalla: La redacción para casa · «Write 150 words about your holidays». Llegan textos **impecables** de quien en clase no consigue hacer esa frase (y en clase no son tan impecables). · EOI · Inglés · B1 · Escuela Oficial de Idiomas · Inglés B1 · tarea escrita · ¿Qué ha aprendido el estudiante?
 
@@ -579,7 +593,7 @@ Ejemplo de aula muy reconocible en idiomas. Es exactamente el «efecto muleta» 
 - **Transición:** *«No se trata de prohibir, sino de diseñar fricción».*
 - **Si vas tarde:** Pregunta y responde tú.
 
-#### 39. [31:30] Conversación real **con fricción**
+#### 40. [31:30] Conversación real **con fricción**
 
 > En pantalla: Conversación real **con fricción** · Mensajes de voz entre estudiantes y reformulación. La IA solo pide aclaraciones. Se evalúa el registro. · ICAP · Constructivo → Interactivo · IA · Responde → Pregunta · Claves · 6 IA con fricción · 4 Feedback · MRCDD · 3.4 Autorregulación · 4.1 Evaluación
 
@@ -593,7 +607,7 @@ Mollick y Mollick (2023): asignar a la IA un rol (tutor, interlocutor, alumno qu
 - **Si vas tarde:** Lee la propuesta y la fila IA.
 - **Cita en pantalla:** Mollick y Mollick, 2023
 
-#### 40. [33:00] IA que pregunta, voz que conversa
+#### 41. [33:00] IA que pregunta, voz que conversa
 
 > En pantalla: IA que pregunta, voz que conversa · banco-prompts · vocaroo
 
@@ -605,7 +619,7 @@ Banco de prompts de esta web: «Tutor de idiomas», «Tutor socrático», «La I
 - **Transición:** *«Una condición antes de probar nada con IA: los datos».*
 - **Si vas tarde:** Solo nombra las herramientas.
 
-#### 41. [33:15] Ningún dato personal del alumnado
+#### 42. [33:15] Ningún dato personal del alumnado
 
 > En pantalla: Ningún dato personal del alumnado · RGPD y LOPDGDD · Reglamento de IA: alfabetización (art. 4) · Cuentas corporativas del centro
 
@@ -622,7 +636,7 @@ Nunca nombres, notas, diagnósticos ni fotos en herramientas de IA. Ejemplo corr
 
 ### 34–40 min · 5 · Evaluar para aprender (Conservatorio)
 
-#### 42. [34:00] Evaluar **para aprender**
+#### 43. [34:00] Evaluar **para aprender**
 
 > En pantalla: Evaluar **para aprender** · Conservatorio · Instrumento
 
@@ -634,7 +648,7 @@ Paso de bloque: Conservatorio.
 - **Transición:** *«Pensad en la última vez que devolvisteis algo corregido».*
 - **Si vas tarde:** Pásala sin comentar.
 
-#### 43. [34:15] Votación v7: Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado?
+#### 44. [34:15] Votación v7: Si devuelves un trabajo corregido, ¿qué crees que hará la mayoría de tu alumnado?
 
 **Idea fuerza:** Si la mayoría mira la nota y lo guarda, nuestro feedback no está funcionando.
 
@@ -644,7 +658,7 @@ Suele salir mucho «mira la nota y lo guarda». No es culpa del alumnado: no le 
 - **Transición:** *«¿Qué hace que el feedback funcione?».*
 - **Si vas tarde:** Mano alzada rápida.
 
-#### 44. [35:30] El feedback sirve **si el alumnado lo usa**.
+#### 45. [35:30] El feedback sirve **si el alumnado lo usa**.
 
 > En pantalla: El feedback sirve **si el alumnado lo usa**. · ¿Adónde voy? ¿Cómo voy? ¿Qué hago después?
 
@@ -659,7 +673,7 @@ Hattie y Timperley (2007): las tres preguntas del feedback; el que solo marca ac
 - **Si vas tarde:** Solo la frase y las tres preguntas.
 - **Cita en pantalla:** Hattie y Timperley, 2007
 
-#### 45. [36:30] «Tócalo igual que en el vídeo»
+#### 46. [36:30] «Tócalo igual que en el vídeo»
 
 > En pantalla: «Tócalo igual que en el vídeo» · El alumnado imita una grabación de referencia. Las correcciones llegan **al final**, de palabra, y a la semana siguiente se han olvidado. · Conservatorio · Instrumento · Conservatorio · enseñanzas profesionales · piano · ¿Cómo convertimos la corrección en algo que el alumno use?
 
@@ -671,7 +685,7 @@ Ejemplo de aula. Vale para cualquier materia con producción oral o práctica: e
 - **Transición:** *«La grabación como espejo».*
 - **Si vas tarde:** Pregunta y responde tú.
 
-#### 46. [37:30] Grabarse, **compararse** y decidir
+#### 47. [37:30] Grabarse, **compararse** y decidir
 
 > En pantalla: Grabarse, **compararse** y decidir · Se graban la semana 1 y la 4, comparan con una rúbrica, escuchan a un compañero y eligen su interpretación. · ICAP · Activo → Constructivo · Feedback · De la tarea al proceso · Claves · 4 Feedback · 2 Construir · MRCDD · 4.3 Retroalimentación · 3.4 Autorregulación
 
@@ -685,7 +699,7 @@ La grabación es una herramienta de autorregulación magnífica (MRCDD 3.4). La 
 - **Si vas tarde:** Lee la propuesta y la fila Feedback.
 - **Cita en pantalla:** Carless y Boud, 2018
 
-#### 47. [39:00] Grabar y evaluar con criterio
+#### 48. [39:00] Grabar y evaluar con criterio
 
 > En pantalla: Grabar y evaluar con criterio · audacity · corubric
 
@@ -699,7 +713,7 @@ Audacity: grabar y comparar, libre y sin conexión. CoRubric: rúbricas y evalua
 
 ### 40–45 min · Cierre
 
-#### 48. [40:00] 7 claves: repaso
+#### 49. [40:00] 7 claves: repaso
 
 > En pantalla: 7 claves: repaso · Pedagogía primero · Construir, no recibir · Atención cuidada · Feedback de proceso · DUA de origen · IA con fricción · Ética compartida
 
@@ -711,7 +725,7 @@ Las presentamos al principio; ahora, repaso rápido enlazando cada clave con el 
 - **Transición:** *«¿Recordáis la pregunta del principio? Volvemos a votarla».*
 - **Si vas tarde:** Lee solo los títulos.
 
-#### 49. [41:15] Votación v5: Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más?
+#### 50. [41:15] Votación v5: Si el alumnado ve un vídeo y responde un test en la tablet, ¿qué cambio le hará aprender más?
 
 **Idea fuerza:** La misma pregunta, con todo lo que hemos visto hoy.
 
@@ -721,7 +735,7 @@ No digas aún cuál es la respuesta buena. Deja votar y pasa a la comparación.
 - **Transición:** *«Comparemos con el principio».*
 - **Si vas tarde:** Medio minuto de votación.
 
-#### 50. [42:30] ¿Ha cambiado algo?
+#### 51. [42:30] ¿Ha cambiado algo?
 
 > En pantalla: ¿Ha cambiado algo? · Antes Después
 
@@ -734,7 +748,7 @@ Comenta el cambio en la opción «explicar con sus palabras y contrastar con un 
 - **Transición:** *«Para seguir, os dejo el kit».*
 - **Si vas tarde:** Lee solo el porcentaje antes → después.
 
-#### 51. [43:45] ¿Qué pensará tu alumnado **el lunes**?
+#### 52. [43:45] ¿Qué pensará tu alumnado **el lunes**?
 
 > En pantalla: ¿Qué pensará tu alumnado **el lunes**? · Guía y descargas · Herramientas
 
@@ -746,7 +760,7 @@ Pide el compromiso de palabra: «Elegid una tarea de la semana que viene y pasad
 - **Transición:** *«Gracias».*
 - **Si vas tarde:** 30 segundos de QR.
 
-#### 52. [44:30] Gracias
+#### 53. [44:30] Gracias
 
 > En pantalla: Gracias
 

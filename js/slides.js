@@ -133,6 +133,8 @@ const slideContent = (s, ctx) => {
       );
     case 'statement':
       return h('div', { class: 's-statement' }, h('h2', {}, ...rich(loc(s.text))), s.small ? h('p', { class: 's-small' }, ...rich(loc(s.small))) : null, cite);
+    case 'definition':
+      return h('div', { class: 's-definition' }, h('h2', {}, loc(s.title)), h('blockquote', {}, h('p', {}, ...rich(loc(s.text)))), s.small ? h('p', { class: 's-small' }, ...rich(loc(s.small))) : null, cite);
     case 'compare':
       return h(
         'div',

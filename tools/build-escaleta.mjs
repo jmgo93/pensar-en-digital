@@ -102,7 +102,7 @@ for (const b of deck.blocks) {
     const wordsEn = count(visible(s, 'en'));
     // Casos y mejoras se comentan con la sala: admiten algo más de texto.
     // Casos, mejoras y columnas se comentan con la sala; la votación con tareas lleva su contexto.
-    const limit = s.type === 'case' ? 52 : s.type === 'improve' ? 56 : s.type === 'areas' && s.items.some((/** @type {any} */ a) => a.text) ? 64 : s.type === 'columns' || s.type === 'areas' ? 44 : s.show ? 50 : s.type === 'keys' || s.type === 'compare' ? 30 : s.type === 'competences' ? 80 : 20;
+    const limit = s.type === 'case' ? 52 : s.type === 'improve' ? 56 : s.type === 'areas' && s.items.some((/** @type {any} */ a) => a.text) ? 64 : s.type === 'columns' || s.type === 'areas' ? 44 : s.show ? 50 : s.type === 'keys' || s.type === 'compare' ? 30 : s.type === 'competences' ? 80 : s.type === 'definition' ? 50 : 20;
     if (words > limit) problems.push(`${s.id}: ${words} palabras (es)`);
     if (wordsEn > limit) problems.push(`${s.id}: ${wordsEn} palabras (en)`);
     for (const k of REQUIRED) if (!s[k] && !(k === 'bridge' && i === deck.slides.length - 1)) problems.push(`${s.id}: falta «${k}» en las notas`);

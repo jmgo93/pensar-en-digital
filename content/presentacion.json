@@ -117,8 +117,28 @@
       "key": "Es una foto de partida, no un examen: nadie ve quién vota qué.",
       "notes": "Pregunta diagnóstica anónima. No comentes las respuestas ni digas cuál es la buena: solo «la volveremos a hacer al final». La opción que buscamos es la tercera (explicar con sus palabras y contrastar con un compañero: constructivo e interactivo en ICAP).",
       "do": "Un minuto para votar. Sin conexión: pide que la apunten en el móvil o en un papel y vuelve a preguntarla al final a mano alzada.",
-      "bridge": "«Antes de los casos, ¿de qué marco hablamos?».",
+      "bridge": "«Antes de los casos, ¿de qué hablamos cuando decimos competencia digital docente?».",
       "cut": "Mantenla aunque vayas justo: sin ella no hay comparación."
+    },
+    {
+      "id": "definicion",
+      "block": "b0",
+      "at": 2,
+      "type": "definition",
+      "title": {
+        "es": "¿Qué es la competencia digital docente?",
+        "en": "What is teacher digital competence?"
+      },
+      "text": {
+        "es": "Es el conjunto de **conocimientos, habilidades, destrezas y actitudes** que tiene el profesorado para usar las Tecnologías de la Información y la Comunicación (TIC) de manera **segura, crítica, creativa y eficaz** en su labor educativa.",
+        "en": "It is the set of **knowledge, skills, abilities and attitudes** that teachers have to use Information and Communication Technologies (ICT) in a **safe, critical, creative and effective** way in their educational work."
+      },
+      "key": "No es saber manejar aplicaciones: es saber, saber hacer y querer usar la tecnología bien, al servicio de la enseñanza.",
+      "notes": "Lee la definición despacio y detente en los dos grupos resaltados. Primero, «conocimientos, habilidades, destrezas y actitudes»: no basta con saber qué botón pulsar; también cuenta la actitud (querer probar, revisar, aprender de lo que no sale). Segundo, «segura, crítica, creativa y eficaz»: segura (protección de datos, bienestar digital), crítica (contrastar información, no creerse lo primero que aparece, tampoco lo que dice la IA), creativa (que el alumnado produzca, no solo consuma) y eficaz (que sirva para que aprendan). Cierra con «en su labor educativa»: la competencia digital docente se mide en el aula, no en el número de aplicaciones que conozco.",
+      "example": "«Un docente que domina veinte aplicaciones pero las usa para que el alumnado rellene fichas tiene destreza técnica, pero no está usando la tecnología de forma creativa ni eficaz. Otro que solo usa la grabadora del móvil, pero la usa para que el alumnado se escuche, se corrija y mejore, está siendo competente digitalmente».",
+      "do": "Lee la definición en voz alta, sin prisa, y señala con la mano los dos grupos resaltados.",
+      "bridge": "«Y para concretarlo, tenemos un marco oficial con seis áreas».",
+      "cut": "Lee solo los dos grupos resaltados."
     },
     {
       "id": "mrcdd",
@@ -197,7 +217,7 @@
       "do": "Señala las cuatro áreas iluminadas; la siguiente diapositiva las explica.",
       "bridge": "«Veamos las cuatro áreas del aula, una a una, con las competencias que usaremos hoy».",
       "cut": "Lee solo el título y la frase de abajo.",
-      "at": 2.25
+      "at": 2.5
     },
     {
       "id": "area3",
@@ -292,7 +312,7 @@
       "do": "Lee el título del área y señala solo las competencias resaltadas y su caso.",
       "bridge": "«Segunda área del aula: cómo evaluamos».",
       "cut": "Nombra el área y las competencias resaltadas, sin explicarlas.",
-      "at": 2.75
+      "at": 3
     },
     {
       "id": "area4",

@@ -104,6 +104,14 @@
 
 /* Afirmación */
 .s-statement { display: grid; align-content: center; justify-items: start; }
+.s-definition { display: grid; align-content: center; gap: 48px; }
+.s-definition h2 { font-size: 64px; line-height: 1.1; color: var(--md-sys-color-primary); }
+.s-definition blockquote {
+  margin: 0;
+  padding: 8px 0 8px 56px;
+  border-inline-start: 12px solid var(--md-sys-color-primary);
+}
+.s-definition blockquote p { font-size: 68px; line-height: 1.25; max-inline-size: 1600px; text-wrap: pretty; }
 .s-statement h2 { font-size: 112px; line-height: 1.08; max-inline-size: 1600px; }
 
 /* Columnas */
@@ -301,7 +309,8 @@
 .s-delta.is-flash { animation: delta-flash 400ms var(--md-sys-motion-easing-emphasized); }
 
 @media (prefers-reduced-motion: no-preference) {
-  .deck .slide.is-current :is(.s-statement, .s-list, .s-ladder, .s-keys, .s-compare, .s-bridge, .s-ba, .s-prepost, .s-big, .s-qrs, .s-section, .s-case, .s-improve, .s-tool) > h2 {
+  .deck .slide.is-current .s-definition blockquote { animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) 250ms both; }
+  .deck .slide.is-current :is(.s-statement, .s-definition, .s-list, .s-ladder, .s-keys, .s-compare, .s-bridge, .s-ba, .s-prepost, .s-big, .s-qrs, .s-section, .s-case, .s-improve, .s-tool) > h2 {
     animation: rise-in 300ms var(--md-sys-motion-easing-emphasized-decelerate) both;
   }
   .deck .slide.is-current .s-hl { animation: hl-sweep 400ms var(--md-sys-motion-easing-emphasized) 500ms both; }
